@@ -10,6 +10,8 @@ import Footer2 from '~/components/widgets/Footer2';
 import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
 
+import { GTMnoscript, GTMscript } from '../src/components/GMT'
+
 const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
 
 export interface LayoutProps {
@@ -42,6 +44,7 @@ export default function RootLayout({ children }: LayoutProps) {
 
       </head>
       <body className="bg-white tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
+      <GTMnoscript />
         <Providers>
           <Announcement />
           <Header />
@@ -49,6 +52,7 @@ export default function RootLayout({ children }: LayoutProps) {
           <Footer2 />
         </Providers>
       </body>
+      <GTMscript />
     </html>
   );
 }
