@@ -3,7 +3,7 @@ import { SocialProofProps } from '~/shared/types';
 
 const SocialProof = ({ images }: SocialProofProps) => (
   <section id="social-proof">
-    <div className="m-auto max-w-3xl py-12">
+    <div className="m-auto max-w-3xl py-10">
       <div className="flex items-center justify-center gap-6 md:gap-9">
         {images &&
           images.map(({ src, alt, link }, index) => (

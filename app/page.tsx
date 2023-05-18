@@ -4,20 +4,27 @@ import { SITE } from '~/config.js';
 
 import Hero from '~/components/widgets/Hero';
 import SocialProof from '../src/components/widgets/SocialProof';
+
+import Features from '~/components/widgets/Features';
+import Features2 from '~/components/widgets/Features2';
+
+
 import Features3 from '~/components/widgets/Features3';
-import Content from '~/components/widgets/Content';
-import Steps from '~/components/widgets/Steps';
-import Testimonial from '~/components/widgets/Testimonial';
-import FAQs2 from '~/components/widgets/FAQs2';
-import Pricing from '~/components/widgets/Pricing';
-import Team from '~/components/widgets/Team';
-import CallToAction2 from '~/components/widgets/CallToAction2';
+// import Content from '~/components/widgets/Content';
+// import Steps from '~/components/widgets/Steps';
+// import Testimonial from '~/components/widgets/Testimonial';
+// import FAQs2 from '~/components/widgets/FAQs2';
+// import Pricing from '~/components/widgets/Pricing';
+// import Team from '~/components/widgets/Team';
+// import CallToAction2 from '~/components/widgets/CallToAction2';
+
 import {
   callToActionData,
   content2Data,
   contentData,
   faqsData2,
   featuresData,
+  features2Data,
   heroData,
   pricingData,
   socialProofData,
@@ -33,8 +40,8 @@ export default function Page() {
     <>
       <Hero data={heroData} />
       <SocialProof {...socialProofData} />
-      <Features3 {...featuresData} />
-      <Content {...contentData} />
+      <Features {...featuresData} />
+      {/*<Content {...contentData} />
       <Content {...content2Data} />
       <Steps />
       <Testimonial />
@@ -42,7 +49,7 @@ export default function Page() {
       <Pricing {...pricingData} />
       <Team />
       <Contact />
-      <CallToAction2 {...callToActionData} />
+      <CallToAction2 {...callToActionData} /> */}
     </>
   );
 }

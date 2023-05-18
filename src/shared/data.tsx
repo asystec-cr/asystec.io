@@ -26,7 +26,10 @@ import {
   IconRocket,
   IconRss,
   IconBrandBlogger,
-  IconUserPlus
+  IconUserPlus,
+  IconHelpCircle,
+  IconClipboardData,
+  IconClockHour5
 } from '@tabler/icons-react';
 import {
   AnnouncementProps,
@@ -52,7 +55,7 @@ import cameraBackImg from '~/assets/images/camera-back.jpg';
 import heroImg from '~/assets/images/hero.jpg';
 import hero2Img from '~/assets/images/hero2.jpg';
 import gasImg from '~/assets/images/gas.jpg';
-import nextJsLogo from '~/assets/images/nextjs-logo.png';
+import asystecLogo from '~/assets/images/asystec-logo.png';
 import reactLogo from '~/assets/images/react-logo.png';
 import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
 import typescriptLogo from '~/assets/images/typescript-logo.png';
@@ -74,32 +77,32 @@ export const announcementData: AnnouncementProps = {
 // Header data
 export const headerData: HeaderProps = {
   links: [
-    {
-      label: 'Pages',
-      icon: IconChevronDown,
-      links: [
-        {
-          label: 'About us',
-          href: '/about',
-        },
-        {
-          label: 'Pricing',
-          href: '/pricing',
-        },
-        {
-          label: 'FAQs',
-          href: '/faqs',
-        },
-        {
-          label: 'Privacy Policy',
-          href: '/privacy',
-        },
-        {
-          label: 'Terms & Conditions',
-          href: '/terms',
-        },
-      ],
-    },
+    // {
+    //   label: 'Pages',
+    //   icon: IconChevronDown,
+    //   links: [
+    //     {
+    //       label: 'About us',
+    //       href: '/about',
+    //     },
+    //     {
+    //       label: 'Pricing',
+    //       href: '/pricing',
+    //     },
+    //     {
+    //       label: 'FAQs',
+    //       href: '/faqs',
+    //     },
+    //     {
+    //       label: 'Privacy Policy',
+    //       href: '/privacy',
+    //     },
+    //     {
+    //       label: 'Terms & Conditions',
+    //       href: '/terms',
+    //     },
+    //   ],
+    // },
     {
       label: 'Blog',
       href: '/blog',
@@ -185,24 +188,9 @@ export const hero2Data: HeroProps = {
 export const socialProofData: SocialProofProps = {
   images: [
     {
-      link: 'https://nextjs.org/',
-      src: nextJsLogo,
-      alt: 'NextJs Logo',
-    },
-    {
-      link: 'https://react.dev/',
-      src: reactLogo,
-      alt: 'React Logo',
-    },
-    {
-      link: 'https://tailwindcss.com/',
-      src: tailwindCssLogo,
-      alt: 'Tailwind CSS Logo',
-    },
-    {
-      link: 'https://www.typescriptlang.org/',
-      src: typescriptLogo,
-      alt: 'Typescript Logo',
+      link: 'https://asystec.io',
+      src: asystecLogo,
+      alt: 'Asystec Logo',
     },
   ],
 };
@@ -479,38 +467,37 @@ export const featuresData: FeaturesProps = {
   header: {
     title: (
       <>
-        What you get with <span className="whitespace-nowrap">TailNext</span>
+        Porque elegir <span className="whitespace-nowrap">Asystec?</span>
       </>
     ),
     subtitle:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.',
-    highlight: 'Features',
+      'Aqui tienes algunas razones por las que deberias adquirir nuestras soluciones de Software',
+    highlight: 'Beneficios',
   },
   items: [
     {
-      title: 'Next.Js + Tailwind CSS Integration',
-      description:
-        'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-      icon: IconBrandTailwind,
+      title: 'Soporte y servicio al cliente excepcionales',
+      description: 'Estamos aquí para ti. Nuestro excepcional servicio al cliente brinda soporte confiable y soluciones efectivas a tus necesidades.',
+      icon: IconHelpCircle,
       link: {
         label: 'Discover now',
         href: '/',
       },
     },
     {
-      title: 'Ready-to-use Components',
+      title: 'Eficiencia y ahorro de tiempo',
       description:
-        'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-      icon: IconComponents,
+        'Gana tiempo para disfrutar con tu familia. Nuestra solución eficiente automatiza tareas, liberándote para compartir con los que mas amas.',
+      icon: IconClockHour5,
       link: {
         label: 'Discover now',
         href: '/',
       },
     },
     {
-      title: 'Best Practices',
+      title: 'Acceso a información y análisis en tiempo real',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+        'Toma decisiones estratégicas con información actualizada al instante. Accede a datos y análisis en tiempo real para impulsar tu negocio.',
       icon: IconListCheck,
       link: {
         label: 'Discover now',
@@ -518,9 +505,8 @@ export const featuresData: FeaturesProps = {
       },
     },
     {
-      title: 'Excellent Page Speed',
-      description:
-        'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+      title: 'Innovacion y actualizaion constante',
+      description: 'Destaca en el mercado. Nuestra solución se actualiza constantemente con innovaciones que te mantienen por delante de la competencia.',
       icon: IconRocket,
       link: {
         label: 'Discover now',
@@ -528,20 +514,21 @@ export const featuresData: FeaturesProps = {
       },
     },
     {
-      title: 'Search Engine Optimization (SEO)',
+      title: 'Reducción de costos',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-      icon: IconArrowsRightLeft,
+        'Optimiza tus recursos y maximiza tu rentabilidad. Nuestra solución reduce costos al automatizar tareas y optimizar procesos.',
+      icon: IconBulb,
       link: {
         label: 'Discover now',
         href: '/',
       },
     },
     {
-      title: 'Open to new ideas and contributions',
+      title: 'Facilidad de uso e interfaz intuitiva',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-      icon: IconBulb,
+        'Simplifica tu experiencia. Nuestra interfaz intuitiva y fácil de usar te permite aprovechar al máximo nuestra solución sin complicaciones.',
+      icon: IconClipboardData,
+      
       link: {
         label: 'Discover now',
         href: '/',

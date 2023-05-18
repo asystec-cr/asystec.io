@@ -2,8 +2,8 @@ import { FeaturesProps } from '~/shared/types';
 import HeaderWidget from '../common/HeaderWidget';
 
 const Features = ({ header, items }: FeaturesProps) => (
-  <section className="scroll-mt-16" id="features">
-    <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8 lg:py-20">
+  <section className="scroll-mt-8" id="features">
+    <div className="mx-auto max-w-6xl px-4 py-4 lg:px-8 lg:py-1">
       {header && <HeaderWidget header={header} titleClassname="text-4xl md:text-5xl" />}
       <div className="mx-auto grid space-y-6 md:grid-cols-2 md:space-y-0">
         {items.map(({ title, description, icon: Icon }, index) => (
