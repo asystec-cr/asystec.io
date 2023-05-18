@@ -1,5 +1,5 @@
 ---
-publishDate: 'Nov 02 2022'
+publishDate: '17 de mayo, 2023'
 title: 'Los Beneficios de Utilizar un Sistema de Facturación'
 description: 'Descubrirás cómo un sistema de facturación puede agilizar tus operaciones, reducir costos, garantizar la precisión en los cálculos y cumplir con los requisitos legales y fiscales.'
 excerpt: 'En el mundo empresarial actual, contar con un sistema de facturación eficiente es fundamental para el éxito y la gestión financiera de cualquier negocio. En este post, exploraremos los numerosos beneficios que ofrece la implementación de un sistema de facturación automatizado y cómo puede transformar la forma en que tu empresa maneja sus procesos de facturación.'
