@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     default: SITE.title,
   },
   description: SITE.description,
+  icons: {
+    icon: '/favicon/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps) {
@@ -31,6 +34,12 @@ export default function RootLayout({ children }: LayoutProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/8511549.js"></script>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+
       </head>
       <body className="bg-white tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
         <Providers>
