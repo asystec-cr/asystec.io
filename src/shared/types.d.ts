@@ -111,6 +111,7 @@ interface Link {
   href?: string;
   ariaLabel?: string;
   icon?: Function;
+  target?: string;
 }
 
 interface Price {

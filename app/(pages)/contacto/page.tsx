@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 
-import Contact2 from '~/components/widgets/Contact2';
+import Contact from '~/components/widgets/Contact';
 import Features2 from '~/components/widgets/Features2';
-import { featuresData2 } from '~/shared/data';
+import { features2Data } from '~/shared/data';
+
 
 export const metadata: Metadata = {
-  title: 'Contact us',
+  title: 'Contáctanos',
 };
 
 const Page = () => {
   return (
     <>
-      <Contact2 />
-      <Features2 {...featuresData2} />
+      <Contact />
+      <Features2 {...features2Data} />
     </>
   );
 };

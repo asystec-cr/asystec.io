@@ -30,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/8511549.js"></script>
       </head>
       <body className="bg-white tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
         <Providers>

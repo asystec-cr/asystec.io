@@ -6,8 +6,10 @@ import {
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandTailwind,
+  IconBrandWhatsapp,
   IconBrandTwitter,
   IconBulb,
+  IconRegistered,
   IconCheck,
   IconChevronDown,
   IconClock,
@@ -15,6 +17,7 @@ import {
   IconDownload,
   IconHeadset,
   IconHelp,
+  IconHeart,
   IconListCheck,
   IconMail,
   IconMapPin,
@@ -22,6 +25,8 @@ import {
   IconPhoneCall,
   IconRocket,
   IconRss,
+  IconBrandBlogger,
+  IconUserPlus
 } from '@tabler/icons-react';
 import {
   AnnouncementProps,
@@ -54,14 +59,15 @@ import typescriptLogo from '~/assets/images/typescript-logo.png';
 
 // Announcement data
 export const announcementData: AnnouncementProps = {
-  title: 'NEW',
+  title: 'SOPORTE!',
   callToAction: {
-    text: 'This template is made with Next.js 13 using the new App Router »',
-    href: 'https://nextjs.org/docs/app',
+    text: 'Contactar al equipo de Soporte! »',
+    href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+    targetBlank: true
   },
   callToAction2: {
-    text: 'Follow @onWidget on Twitter',
-    href: 'https://twitter.com/intent/user?screen_name=onwidget',
+    text: 'Síguenos en Twitter',
+    href: 'https://twitter.com/asysteccr',
   },
 };
 
@@ -79,10 +85,6 @@ export const headerData: HeaderProps = {
         {
           label: 'Pricing',
           href: '/pricing',
-        },
-        {
-          label: 'Contact us',
-          href: '/contact',
         },
         {
           label: 'FAQs',
@@ -103,14 +105,14 @@ export const headerData: HeaderProps = {
       href: '/blog',
     },
     {
-      label: 'Contact',
-      href: '/contact',
+      label: 'Contacto',
+      href: '/contacto',
     },
   ],
   actions: [
     {
-      text: 'Download',
-      href: 'https://github.com/onwidget/tailnext',
+      text: 'Iniciar Sesion',
+      href: 'https://mi.cobrosapp.com',
       targetBlank: true,
       btnType: 'primary',
     },
@@ -125,26 +127,26 @@ export const headerData: HeaderProps = {
 export const heroData: HeroProps = {
   title: (
     <>
-      Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
-      <span className="sm:whitespace-nowrap">Tailwind CSS</span>
+        Tu éxito es nuestro compromiso
+      {/* Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
+      <span className="sm:whitespace-nowrap">Tailwind CSS</span> */}
     </>
   ),
   subtitle: (
     <>
       <span className="hidden md:inline">
         <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2">
-          TailNext
+          {/* TailNext */}
         </span>{' '}
-        is a production ready template to start your new website using <em>Next.js</em> + <em>Tailwind CSS</em>.
+        {/* is a production ready template to start your new website using <em>Next.js</em> + <em>Tailwind CSS</em>. */}
       </span>{' '}
-      It has been designed following Best Practices, SEO, Accessibility, Dark Mode, great Page Speed, image
-      optimization.
+      Estamos comprometidos con tu éxito y respaldamos nuestras soluciones de software con un equipo de expertos altamente capacitados y un soporte excepcional. Confía en nosotros para impulsar la innovación y el crecimiento de tu negocio.
     </>
   ),
   callToAction: {
-    text: 'Get template',
-    href: 'https://github.com/onwidget/tailnext',
-    icon: IconDownload,
+    text: 'Crear Cuenta',
+    href: 'https://mi.cobrosapp.com/register',
+    icon: IconUserPlus,
     targetBlank: true,
     btnType: 'primary',
   },
@@ -154,7 +156,7 @@ export const heroData: HeroProps = {
   },
   image: {
     src: heroImg,
-    alt: 'Hero TailNext',
+    alt: 'Hero Asystec',
   },
 };
 
@@ -549,34 +551,35 @@ export const featuresData: FeaturesProps = {
 };
 
 // Feature2 data
-export const featuresData2: FeaturesProps = {
+export const features2Data: FeaturesProps = {
   header: {
-    title: 'Support Center',
-    subtitle: 'Looking for something in particular?',
+    title: 'Centro de Soporte',
+    subtitle: 'Estas buscando algo en particular?',
   },
   items: [
     {
-      title: 'Have a question?',
-      description: 'See our frequently asked questions',
+      title: 'Tienes una pregunta?',
+      description: 'Mira nuestra seccion de preguntas frecuentes',
       icon: IconHelp,
       link: {
         href: '/faqs',
       },
     },
     {
-      title: 'Chat with us',
-      description: 'Live chat with our support team',
+      title: 'Chatea con nosotros',
+      description: 'Chatea ahora con el equipo de Soporte',
       icon: IconMessages,
       link: {
-        href: '/',
+        href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+        target: '_blank'
       },
     },
     {
-      title: 'Get help',
-      description: 'Speak to our team today',
-      icon: IconHeadset,
+      title: 'Obtener ayuda',
+      description: 'Mira nuestro blog',
+      icon: IconBrandBlogger,
       link: {
-        href: '/',
+        href: '/blog',
       },
     },
   ],
@@ -1081,51 +1084,51 @@ export const statsData: StatsProps = {
 // Contact data
 export const contactData: ContactProps = {
   header: {
-    title: 'Get in Touch',
-    subtitle: 'In hac habitasse platea dictumst',
-    highlight: 'Contact',
+    title: 'Contáctanos',
+    subtitle: 'Nuestro equipo esta listo para ayudarte',
+    highlight: 'Contacto',
   },
   content:
-    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
+    '¡Nos encantaría saber de ti! Si tienes alguna pregunta, comentario o solicitud, no dudes en ponerte en contacto con nosotros a través de los siguientes medios:',
   items: [
     {
-      title: 'Our Address',
-      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
+      title: 'Direccion',
+      description: ['Torres Paseo Colón', 'San José, Costa Rica'],
       icon: IconMapPin,
     },
     {
-      title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
+      title: 'Teléfono',
+      description: ['Teléfono: +506 8975-4741', 'Correo: info@asystec.io'],
       icon: IconPhoneCall,
     },
     {
-      title: 'Working hours',
-      description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
+      title: 'Horario',
+      description: ['Lunes - Viernes: 8:00 - 17:00', 'Sábado y Domingo: Cerrado'],
       icon: IconClock,
     },
   ],
   form: {
-    title: 'Ready to Get Started?',
+    title: 'Listo para empezar?',
     inputs: [
       {
         type: 'text',
         name: 'name',
-        placeholder: 'Your name',
+        placeholder: 'Nombre',
       },
       {
         type: 'email',
         name: 'email',
-        placeholder: 'Your email address',
+        placeholder: 'Correo',
       },
     ],
     textarea: {
       cols: 30,
       rows: 5,
       name: 'textarea',
-      placeholder: 'Write your message...',
+      placeholder: 'Escribe aqui tu mensaje...',
     },
     btn: {
-      title: 'Send Message',
+      title: 'Enviar Mensaje',
       type: 'submit',
     },
   },
@@ -1365,44 +1368,42 @@ export const footerData: FooterProps = {
 export const footerData2: FooterProps = {
   links: [
     {
-      label: 'Terms & Conditions',
+      label: 'Términos y Condiciones',
       href: '/terms',
     },
     {
-      label: 'Privacy Policy',
+      label: 'Politica de Privacidad',
       href: '/privacy',
     },
   ],
   columns: [
     {
-      title: 'Address',
-      texts: ['51 Phasellus Avenue Maecenas', 'Aliquam, AQ 52098'],
+      title: 'Dirección',
+      texts: ['Torres Paseo Colón', 'San José, Costa Rica'],
     },
     {
-      title: 'Phone',
-      texts: ['Reception: +105 123 4567', 'Office: +107 235 7890'],
+      title: 'Teléfono',
+      texts: ['Teléfono: +506 8975-4741'],
     },
     {
-      title: 'Email',
-      texts: ['Office: info@example.com', 'Site: https://example.com'],
+      title: 'Correo',
+      texts: ['Info: info@asystec.io'],
     },
   ],
   socials: [
-    { label: 'Twitter', icon: IconBrandTwitter, href: '#' },
-    { label: 'Instagram', icon: IconBrandInstagram, href: '#' },
-    { label: 'Facebook', icon: IconBrandFacebook, href: '#' },
-    { label: 'RSS', icon: IconRss, href: '#' },
-    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
+    { label: 'Twitter', icon: IconBrandTwitter, href: 'https://twitter.com/asysteccr' },
+    { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/asystec/' },
+    { label: 'Facebook', icon: IconBrandFacebook, href: 'https://www.facebook.com/asysteccr' },
+    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/asystec-cr' },
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
       <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-      Made by{' '}
-      <a className="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/">
-        {' '}
-        onWidget
-      </a>{' '}
-      · All rights reserved.
+        Hecho con <span>&#10084; </span> 
+       por <a target='_blank' className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
+             Asystec 
+        </a> - Todos los derechos reservados.
+      
     </div>
   ),
 };

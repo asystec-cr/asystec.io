@@ -16,6 +16,7 @@ const Features2 = ({ header, items }: FeaturesProps) => (
           <Fragment key={`item-feature2-${index}`}>
             {link ? (
               <a
+                target={link.target}
                 href={link.href}
                 className="relative flex min-w-[22em] flex-col rounded border border-transparent bg-white p-6 shadow-lg transition hover:shadow-md dark:border-slate-800 dark:bg-slate-900  dark:text-white dark:shadow-[0_4px_10px_4px_rgba(30,41,59,0.3)]"
               >
