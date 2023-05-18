@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 
 import { SITE } from '~/config.js';
 
@@ -50,6 +51,7 @@ export default function Page() {
       <Team />
       <Contact />
       <CallToAction2 {...callToActionData} /> */}
+      <Analytics />
     </>
   );
 }
