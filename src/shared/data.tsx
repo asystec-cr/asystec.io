@@ -412,37 +412,37 @@ export const faqs4Data: FAQsProps = {
 
 // CallToAction data
 export const callToActionData: CallToActionProps = {
-  title: 'Next.js + Tailwind CSS',
+  title: 'Asystec + Innovación',
   subtitle:
-    'Aliquam sodales porttitor lacus ac tristique. Etiam posuere elit at leo feugiat sodales. Sed ac mauris quis sem tempor condimentum non at metus.',
+    ' Descubre cómo nuestra experiencia, pasión y compromiso se traducen en una colaboración sólida y exitosa con nuestros clientes. Confía en nuestro equipo para superar tus expectativas y lograr tus objetivos comerciales.',
   callToAction: {
-    text: 'Get template',
-    href: 'https://github.com/onwidget/tailnext',
-    icon: IconDownload,
+    text: 'Registrarme',
+    href: 'https://app.asystec.io/register',
+    icon: IconUserPlus,
   },
   items: [
+    // {
+    //   title: 'Registrarme',
+    //   description: 'Quiero tomar el control de mi negocio',
+    //   href: 'https://app.asystec.io/register',
+    // },
     {
-      title: 'Get template',
-      description: 'Aliquam sodales est lectus, quis.',
-      href: 'https://github.com/onwidget/tailnext',
+      title: 'Ver Blog',
+      description: 'Échale un vistazo a nuestro blog',
+      href: '/blog',
     },
     {
-      title: 'Learn more',
-      description: 'Class aptent taciti sociosqu ad litora torquent per conubia.',
-      href: '/',
-    },
-    {
-      title: 'Subscribe',
-      description: 'Morbi orci nunc, euismod ac dui id, convallis.',
+      title: 'Suscribirme',
+      description: 'Suscribete para enterarte de las ultimas novedades',
       form: {
         icon: IconMail,
         input: {
           type: 'email',
           name: 'email',
-          placeholder: 'Enter your email address',
+          placeholder: 'Digite a su correo',
         },
         btn: {
-          title: 'Subscribe',
+          title: 'Suscribir',
           type: 'submit',
         },
       },
@@ -714,29 +714,29 @@ export const stepsData: StepsProps = {
 // Team data
 export const teamData: TeamProps = {
   header: {
-    title: 'Team Members',
+    title: 'Nuestro Equipo',
     subtitle:
-      'Suspendisse in dui nibh. Donec enim leo, sodales et egestas id, malesuada non diam. Sed dapibus velit et mauris condimentum, vel imperdiet erat egestas.',
+      'Conoce a nuestro equipo altamente capacitado y comprometido en proporcionarte un servicio excepcional. Nuestros profesionales son expertos en sus respectivos campos y están dedicados a ofrecerte soluciones personalizadas y resultados de calidad.',
     // highlight: 'Team',
   },
   teams: [
     {
-      name: 'Cindy Belcher',
-      occupation: 'SEO Consultant',
+      name: 'Bryan Valerin',
+      occupation: 'CEO, Desarrollador, Soporte',
       image: {
-        src: 'https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Cindy Belcher',
+        src: '/images/team/bryan.png',
+        alt: 'Bryan Valerin',
       },
       items: [
         {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
+          title: 'WhatsaApp',
+          icon: IconBrandWhatsapp,
+          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
         },
         {
           title: 'Know more on Linkedin',
           icon: IconBrandLinkedin,
-          href: '#',
+          href: 'https://github.com/bvalerin',
         },
         {
           title: 'Contact by email',
@@ -746,80 +746,30 @@ export const teamData: TeamProps = {
       ],
     },
     {
-      name: 'Toby Foster',
-      occupation: 'Marketing Tech',
-      image: {
-        src: 'https://images.unsplash.com/photo-1614583224978-f05ce51ef5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2172&q=80',
-        alt: 'Toby Foster',
+        name: 'Steven Gonzalez',
+        occupation: 'Administrativo, Soporte',
+        image: {
+          src: '',
+          alt: 'Steven Gonzalez',
+        },
+        items: [
+          {
+            title: 'WhatsaApp',
+            icon: IconBrandWhatsapp,
+            href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+          },
+          {
+            title: 'Know more on Linkedin',
+            icon: IconBrandLinkedin,
+            href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+          },
+          {
+            title: 'Contact by email',
+            icon: IconMail,
+            href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+          },
+        ],
       },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Clark Bourne',
-      occupation: 'Content Manager',
-      image: {
-        src: 'https://images.unsplash.com/photo-1639628735078-ed2f038a193e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Clark Bourne',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Bella Chase',
-      occupation: 'UX Designer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Bella Chase',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
   ],
 };
 
