@@ -1,7 +1,7 @@
 ---
 publishDate: '18 de mayo, 2023'
 title: '6 Formas probadas de incrementar tus ventas y potenciar tu negocio'
-description: 'Descubre 5 estrategias comprobadas para incrementar tus ventas y hacer crecer tu negocio. Aprende técnicas de marketing, optimización de la experiencia del cliente y tácticas de venta que te ayudarán a aumentar tus ingresos. ¡Potencia tus ventas y alcanza el éxito empresarial!'
+description: 'Descubre 6 estrategias comprobadas para incrementar tus ventas y hacer crecer tu negocio. Aprende técnicas de marketing, optimización de la experiencia del cliente y tácticas de venta que te ayudarán a aumentar tus ingresos. ¡Potencia tus ventas y alcanza el éxito empresarial!'
 excerpt: ''
 image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80'
 tags: [pymes, estategias de venta]
