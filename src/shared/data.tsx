@@ -312,101 +312,118 @@ export const faqs3Data: FAQsProps = {
 // FAQS4 data
 export const faqs4Data: FAQsProps = {
   header: {
-    title: 'Frequently Asked Questions',
+    title: 'Preguntas Frecuentes',
     subtitle:
-      'Praesent rutrum purus in sem blandit, in consectetur mi pharetra. Ut sagittis sapien sit amet congue cursus. Nulla eu elementum ex, tincidunt semper nisi.',
-    highlight: 'FAQS',
+      'Aquí encontrarás respuestas a las preguntas más comunes que nuestros clientes suelen hacer. Esperamos que esta sección te ayude a aclarar cualquier duda o inquietud que puedas tener. Si no encuentras la respuesta que buscas, no dudes en contactarnos directamente y estaremos encantados de ayudarte.',
+    highlight: '',
     position: 'center',
   },
   tabs: [
     {
       link: {
-        label: 'General',
+        label: 'Factura Electrónica',
         href: '/tab1',
       },
       items: [
         {
-          title: 'What do I need to start?',
-          description: `Nunc mollis tempor quam, non fringilla elit sagittis in. Nullam vitae consectetur mi, a elementum arcu. Sed laoreet, ipsum et vehicula dignissim, leo orci pretium sem, ac condimentum tellus est quis ligula.`,
+          title: '¿Qué es una factura digital o electrónica?',
+          description: `La factura electrónica es un documento comercial con efectos tributarios generado y transmitido en formato electrónico. Debe cumplir con los requisitos legales que se exigen a las facturas tradicionales garantizando la autenticidad de su origen y la integridad de su contenido.
+          Para que la factura electrónica tenga validez debe estar firmado por una llave criptográfica.`,
         },
         {
-          title: 'How to install the NextJS + Tailwind CSS template?',
-          description: `Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eleifend vestibulum nisl in iaculis. Mauris dictum ac purus vestibulum auctor. Praesent imperdiet lectus et massa faucibus, quis viverra massa rhoncus.`,
+          title: '¿Qué es la llave criptográfica?',
+          description: `La llave criptográfica es un archivo que permite garantizar la autoría e integridad de los documentos digitales, posibilitando que éstos gocen de una característica que únicamente era propia de los documentos en papel. Esta llave criptografica es generada en el sistema ATV del Ministerio de Hacienda.`,
         },
         {
-          title: "What's something that you completely don't understand?",
-          description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
+          title: "¿Qué opciones existen para comenzar a facturar digitalmente?",
+          description: `La Dirección General de Tributación ha autorizado a los contribuyentes a desarrollar sus propias aplicaciones o a contratar a proveedores de soluciones para la facturación electrónica. Asystec es uno de los mejores proveedores de facturación electrónica en la que brindan soporte gratuito para que puedas realizar tus facturas y cobrar a tus clientes de una forma fácil y rápida.`,
         },
         {
-          title: "What's an example of when you changed your mind?",
-          description: `Nunc dapibus lacinia ipsum ut elementum. Integer in pretium sapien. Ut pretium nisl mauris, ut rutrum justo condimentum id. Etiam aliquet, arcu at iaculis laoreet, est arcu egestas sapien, eget sollicitudin odio orci et nunc.`,
+          title: "¿Qué exige Tributación dentro del sistema de factura electrónica?",
+          description: `El sistema de facturación electrónica debe contar con una opción de consulta para la utilización de la Administración Tributaria, que admita el acceso en línea a los datos, copia o descarga en un archivo electrónico de la información consultada.`,
         },
         {
-          title: 'What is something that you would really like to try again?',
-          description: `Duis in maximus mauris, id eleifend mauris. Nam a fringilla arcu. Curabitur convallis, tellus non aliquet rhoncus, lacus massa auctor eros, in interdum lectus augue sed augue. Fusce tempor ex id faucibus efficitur.`,
+          title: '¿Se debe imprimir la factura digital o solo se envía por correo?',
+          description: `En el caso de los consumidores finales se debe imprimir la factura digital a menos que el receptor especifique que prefiere recibirla por correo electrónico. Cuando la trasacción se realiza entre personas físicas o jurídicas registradas en la Administración Tributaria, para emitir y recibir documentos electrónicos no es necesaria la impresión de la factura electrónica.`,
         },
         {
-          title: 'If you could only ask one question to each person you meet, what would that question be?',
-          description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
+          title: '¿Cuáles otros documentos se pueden emitir electrónicamente además de las facturas?',
+          description: `Los comprobantes electrónicos deberán conservarse por un plazo de cinco años conforme con lo establecido en el artículo 109 del Código de Normas y Procedimientos Tributarios y sus reformas, independientemente de que los contribuyentes se encuentren obligados a enviarlos al Ministerio de Hacienda para su respectiva validación.`,
         },
+        {
+            title: '¿Cuánto tiempo deben conservarse los comprobantes electrónicos?',
+            description: `Los comprobantes electrónicos deberán conservarse por un plazo de cinco años conforme con lo establecido en el artículo 109 del Código de Normas y Procedimientos Tributarios y sus reformas, independientemente de que los contribuyentes se encuentren obligados a enviarlos al Ministerio de Hacienda para su respectiva validación.`,
+          },
+          {
+            title: '¿Qué validez tienen los comprobantes electrónicos para el Ministerio de Hacienda?',
+            description: `La validez que los comprobantes electrónicos establecidos en la Resolución DGT-R-48-2016, tienen para el Ministerio de Hacienda, para los efectos tributarios, consiste en la eficacia jurídica y fuerza probatoria en las mismas condiciones que los comprobantes físicos autorizados.`,
+          },
+          {
+            title: '¿Se puede modificar o anular la factura electrónica original?',
+            description: `La validez que los comprobantes electrónicos establecidos en la Resolución DGT-R-48-2016, tienen para el Ministerio de Hacienda, para los efectos tributarios, consiste en la eficacia jurídica y fuerza probatoria en las mismas condiciones que los comprobantes físicos autorizados.`,
+          },
+          {
+            title: '¿Hay sanciones por incumplimiento?',
+            description: `Sí. Debido a que la facturación electrónica es obligatoria en Costa Rica, las personas que incumplan con su uso se exponen a sanciones en forma de multas económicas, que dependerán del tipo de infracción y pueden ir desde dos salarios base hasta el 2% de los ingresos brutos del infractor.`,
+          },
       ],
     },
-    {
-      link: {
-        label: 'Plans, prices and payments',
-        href: '/tab2',
-      },
-      items: [
-        {
-          title: 'Which plan is best for me?',
-          description: `Nunc mollis tempor quam, non fringilla elit sagittis in. Nullam vitae consectetur mi, a elementum arcu. Sed laoreet, ipsum et vehicula dignissim, leo orci pretium sem, ac condimentum tellus est quis ligula.`,
-        },
-        {
-          title: 'What are my payment options?',
-          description: `Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eleifend vestibulum nisl in iaculis. Mauris dictum ac purus vestibulum auctor. Praesent imperdiet lectus et massa faucibus, quis viverra massa rhoncus.`,
-        },
-        {
-          title: 'How do I change my plan to a different one?',
-          description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
-        },
-        {
-          title: 'What happen at the end of my free trial?',
-          description: `Nunc dapibus lacinia ipsum ut elementum. Integer in pretium sapien. Ut pretium nisl mauris, ut rutrum justo condimentum id. Etiam aliquet, arcu at iaculis laoreet, est arcu egestas sapien, eget sollicitudin odio orci et nunc.`,
-        },
-        {
-          title: 'Can I import data from other tools?',
-          description: `Duis in maximus mauris, id eleifend mauris. Nam a fringilla arcu. Curabitur convallis, tellus non aliquet rhoncus, lacus massa auctor eros, in interdum lectus augue sed augue. Fusce tempor ex id faucibus efficitur.`,
-        },
-        {
-          title: 'Can I cancel my plan at any time?',
-          description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
-        },
-      ],
-    },
-    {
-      link: {
-        label: 'Others',
-        href: '/tab3',
-      },
-      items: [
-        {
-          title: 'How do I download the template?',
-          description: `In ullamcorper pellentesque ante, nec commodo ex euismod viverra. Phasellus facilisis, justo a bibendum pellentesque, nibh est egestas lectus, volutpat ullamcorper arcu ante ac dolor.`,
-        },
-        {
-          title: 'How do I customize the template?',
-          description: `Pellentesque semper euismod malesuada. Curabitur quis lectus tortor. Aliquam efficitur pretium tellus, ut sagittis turpis dignissim eget. Etiam scelerisque nec risus eget iaculis. Nunc maximus metus id felis dapibus, sed ullamcorper sapien faucibus.`,
-        },
-        {
-          title: 'Does the template come with any tutorials or instructions?',
-          description: `Sed sagittis arcu suscipit auctor suscipit. Nam dapibus risus vitae tristique fermentum. In egestas turpis elit, id gravida diam dictum eu. Ut dictum libero ut rhoncus egestas. Ut sit amet tortor blandit, faucibus tellus vitae, consequat purus. Nullam id odio enim.`,
-        },
-        {
-          title: 'Are there any additional fees or charges for using the template?',
-          description: `Fusce efficitur, augue et vulputate pharetra, augue turpis viverra turpis, id tempor purus eros sed erat. Curabitur blandit eget sem vitae malesuada.`,
-        },
-      ],
-    },
+    // {
+    //   link: {
+    //     label: 'Plans, prices and payments',
+    //     href: '/tab2',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'Which plan is best for me?',
+    //       description: `Nunc mollis tempor quam, non fringilla elit sagittis in. Nullam vitae consectetur mi, a elementum arcu. Sed laoreet, ipsum et vehicula dignissim, leo orci pretium sem, ac condimentum tellus est quis ligula.`,
+    //     },
+    //     {
+    //       title: 'What are my payment options?',
+    //       description: `Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eleifend vestibulum nisl in iaculis. Mauris dictum ac purus vestibulum auctor. Praesent imperdiet lectus et massa faucibus, quis viverra massa rhoncus.`,
+    //     },
+    //     {
+    //       title: 'How do I change my plan to a different one?',
+    //       description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
+    //     },
+    //     {
+    //       title: 'What happen at the end of my free trial?',
+    //       description: `Nunc dapibus lacinia ipsum ut elementum. Integer in pretium sapien. Ut pretium nisl mauris, ut rutrum justo condimentum id. Etiam aliquet, arcu at iaculis laoreet, est arcu egestas sapien, eget sollicitudin odio orci et nunc.`,
+    //     },
+    //     {
+    //       title: 'Can I import data from other tools?',
+    //       description: `Duis in maximus mauris, id eleifend mauris. Nam a fringilla arcu. Curabitur convallis, tellus non aliquet rhoncus, lacus massa auctor eros, in interdum lectus augue sed augue. Fusce tempor ex id faucibus efficitur.`,
+    //     },
+    //     {
+    //       title: 'Can I cancel my plan at any time?',
+    //       description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
+    //     },
+    //   ],
+    // },
+    // {
+    //   link: {
+    //     label: 'Others',
+    //     href: '/tab3',
+    //   },
+    //   items: [
+    //     {
+    //       title: 'How do I download the template?',
+    //       description: `In ullamcorper pellentesque ante, nec commodo ex euismod viverra. Phasellus facilisis, justo a bibendum pellentesque, nibh est egestas lectus, volutpat ullamcorper arcu ante ac dolor.`,
+    //     },
+    //     {
+    //       title: 'How do I customize the template?',
+    //       description: `Pellentesque semper euismod malesuada. Curabitur quis lectus tortor. Aliquam efficitur pretium tellus, ut sagittis turpis dignissim eget. Etiam scelerisque nec risus eget iaculis. Nunc maximus metus id felis dapibus, sed ullamcorper sapien faucibus.`,
+    //     },
+    //     {
+    //       title: 'Does the template come with any tutorials or instructions?',
+    //       description: `Sed sagittis arcu suscipit auctor suscipit. Nam dapibus risus vitae tristique fermentum. In egestas turpis elit, id gravida diam dictum eu. Ut dictum libero ut rhoncus egestas. Ut sit amet tortor blandit, faucibus tellus vitae, consequat purus. Nullam id odio enim.`,
+    //     },
+    //     {
+    //       title: 'Are there any additional fees or charges for using the template?',
+    //       description: `Fusce efficitur, augue et vulputate pharetra, augue turpis viverra turpis, id tempor purus eros sed erat. Curabitur blandit eget sem vitae malesuada.`,
+    //     },
+    //   ],
+    // },
   ],
 };
 
@@ -452,12 +469,12 @@ export const callToActionData: CallToActionProps = {
 
 // CallToAction2 data
 export const callToActionData2: CallToActionProps = {
-  title: 'Still have questions?',
+  title: 'Tu pregunta no esta en la lista?',
   subtitle:
-    'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut in leo odio. Cras finibus ex a ante convallis ullamcorper.',
+    'Contáctanos, sera un gusto responder a todas tus preguntas, incluso si aun no disfrutas de los servicios de Asystec! ',
   callToAction: {
-    text: 'Contact us',
-    href: '/contact',
+    text: 'Contáctanos',
+    href: '/contacto',
     btnType: 'primary',
   },
 };
