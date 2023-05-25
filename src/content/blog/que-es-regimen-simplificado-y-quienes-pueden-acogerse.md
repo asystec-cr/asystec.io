@@ -13,7 +13,7 @@ Posiblemente tendrás unas cuantas dudas al respecto, así que, acá te lo conta
 
 Lo primero que debés saber es que, la inscripción a este régimen es completamente voluntaria, ya que los contribuyentes pueden elegir libremente si desean utilizar el régimen tributario simplificado o el régimen tradicional.
 
-Podés inscribirte directamente en el sistema ATV de Hacienda en la opción de Registro Único Tributario. Si tienes dificultades, escríbenos y con gusto te ayudaremos con este proceso.
+Podés inscribirte directamente en el sistema ATV de Hacienda en la opción de Registro Único Tributario.
 
 ### Existen una serie de requisitos que el contribuyente deberá cumplir para poder optar por el régimen simplificado, dentro de los más importantes encontramos los siguientes:
 
