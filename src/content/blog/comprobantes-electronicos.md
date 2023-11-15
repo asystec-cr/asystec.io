@@ -1,5 +1,5 @@
 ---
-publishDate: '25 de mayo 2023'
+publishDate: '13 de Noviembre 2023'
 title: 'Comprobantes Electrónicos en Costa Rica: Simplificando tu Facturación con FacturacionApp'
 description: 'Descubre cómo los comprobantes electrónicos respaldan la venta de productos y servicios, y cómo FacturacionApp de Asystec simplifica este proceso para tu empresa.'
 excerpt: 'Todo lo que necesitas saber sobre comprobantes electrónicos y cómo FacturacionApp puede hacer tu vida más fácil.'
@@ -15,7 +15,7 @@ Un documento XML (Extensible Markup Language / Lenguaje de Marcas Extensibles) e
 
 Desde el 14 de febrero de 2017, la Dirección General de Tributación lanzó un proyecto piloto con la intención de introducir la facturación electrónica en Costa Rica. Ahora, las empresas están obligadas a inscribirse en el sistema del Ministerio de Hacienda a través del portal de la Administración Tributaria Virtual (ATV) y emitir sus comprobantes electrónicos.
 
-🚀 **#AsystecTip:** Si quieres saber más, puedes conocer todo sobre los comprobantes electrónicos en [esta nota](link-to-more-info).
+🚀 **#AsystecTip:** Si quieres saber más, puedes conocer todo sobre los comprobantes electrónicos en [esta nota](https://edicom.com.ar/blog/como-es-la-factura-electronica-en-costa-rica).
 
 ## ¿Cómo ayudan los comprobantes electrónicos a las PYMES con FacturacionApp?
 
@@ -40,10 +40,6 @@ Si bien el Ministerio de Hacienda posee un portal que permite a los contribuyent
 
 En FacturacionApp, contamos con la funcionalidad de facturación electrónica, la cual permite enviar todas las facturas de ventas directamente a la Dirección General de Tributación (DGT), cumpliendo así con las leyes tributarias y permitiéndote tener un control total de todas tus ventas.
 
-Aquí podrás ver el paso de cómo crear tu comprobante electrónico 👇.
-
-[Ver tutorial en video](link-to-video-tutorial)
-
 ## ¿Qué tipos de comprobantes electrónicos puedo emitir con FacturacionApp?
 
 ¡En FacturacionApp de Asystec contamos con todos los comprobantes electrónicos existentes en Costa Rica! Los cuales son:
@@ -56,4 +52,4 @@ Aquí podrás ver el paso de cómo crear tu comprobante electrónico 👇.
 
 🚀 ¿Listo para despegar? ¡Con FacturacionApp de Asystec ya puedes emitir tus Notas de Débito a partir de hoy! Esta nueva funcionalidad te permitirá ganar tiempo y aumentar la productividad de tus emprendimientos. En nuestro Centro de Ayuda aprenderás a crear y revisar notas de crédito, así como también configurar tu cuenta para emitir tus Notas de Débito.
 
-Ahora que conoces el secreto mejor guardado para llegar al éxito, domina el mercado con la mejor herramienta de facturación, emite tus comprobantes electrónicos sin problemas y tenlos siempre a un
+Ahora que conoces el secreto mejor guardado para llegar al éxito, domina el mercado con la mejor herramienta de facturación, emite tus comprobantes electrónicos sin problemas y tenlos siempre a un click con FacturacionApp de Asystec!
