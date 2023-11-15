@@ -86,3 +86,9 @@ Existen distintos actores dentro del proceso de facturación electrónica según
 - Emisor/Receptor: es el contribuyente que emite los comprobantes electrónicos. Comprende casi la totalidad de entidades y personas ejerciendo actividades comerciales. Todos los emisores electrónicos son también receptores de dichos comprobantes, de acuerdo con la legislación actual. 
 - Receptor electrónico no emisor: comprende a las personas físicas o jurídicas que gozan de beneficios fiscales y a la Administración Pública.
 - Receptor manual: se trata de quién recibe una representación gráfica y tangible del comprobante electrónico en el mismo acto de la compraventa.
+
+🚀**#AsystecTip:** ten presente que debes entregar la factura impresa de ser solicitada por el cliente. Por ejemplo: para el cliente en punto de venta se deberá entregar una representación gráfica de la factura electrónica, denotando validez de la misma.
+
+¡Cumple con tu obligación de facturar electrónicamente con ayuda de Asystec!
+
+Se parte de los miles de contadores y emprendedores que ganan tiempo y tranquilidad con FacturacionApp facturando electrónicamente en Costa Rica.
