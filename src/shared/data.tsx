@@ -762,31 +762,31 @@ export const teamData: TeamProps = {
         },
       ],
     },
-    {
-        name: 'Steven Gonzalez',
-        occupation: 'Administrativo, Soporte',
-        image: {
-          src: '',
-          alt: 'Steven Gonzalez',
-        },
-        items: [
-          {
-            title: 'WhatsaApp',
-            icon: IconBrandWhatsapp,
-            href: 'https://wa.me/message/FSR5FX2SAKTDP1',
-          },
-          {
-            title: 'Know more on Linkedin',
-            icon: IconBrandLinkedin,
-            href: 'https://wa.me/message/FSR5FX2SAKTDP1',
-          },
-          {
-            title: 'Contact by email',
-            icon: IconMail,
-            href: 'https://wa.me/message/FSR5FX2SAKTDP1',
-          },
-        ],
-      },
+    // {
+    //     name: 'Steven Gonzalez',
+    //     occupation: 'Administrativo, Soporte',
+    //     image: {
+    //       src: '',
+    //       alt: 'Steven Gonzalez',
+    //     },
+    //     items: [
+    //       {
+    //         title: 'WhatsaApp',
+    //         icon: IconBrandWhatsapp,
+    //         href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+    //       },
+    //       {
+    //         title: 'Know more on Linkedin',
+    //         icon: IconBrandLinkedin,
+    //         href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+    //       },
+    //       {
+    //         title: 'Contact by email',
+    //         icon: IconMail,
+    //         href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+    //       },
+    //     ],
+    //   },
   ],
 };
 
