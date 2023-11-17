@@ -15,8 +15,6 @@ Un documento XML (Extensible Markup Language / Lenguaje de Marcas Extensibles) e
 
 Desde el 14 de febrero de 2017, la Dirección General de Tributación lanzó un proyecto piloto con la intención de introducir la facturación electrónica en Costa Rica. Ahora, las empresas están obligadas a inscribirse en el sistema del Ministerio de Hacienda a través del portal de la Administración Tributaria Virtual (ATV) y emitir sus comprobantes electrónicos.
 
-🚀 **#AsystecTip:** Si quieres saber más, puedes conocer todo sobre los comprobantes electrónicos en [esta nota](https://edicom.com.ar/blog/como-es-la-factura-electronica-en-costa-rica).
-
 ## ¿Cómo ayudan los comprobantes electrónicos a las PYMES con FacturacionApp?
 
 Sabemos que cuando iniciaste esta aventura todo era nuevo para ti. De seguro comenzaste emitiendo las facturas manualmente, lo cual derivó en perder un par de documentos y ni qué hablar del gasto de papel. ¡Ya podrás olvidarte de eso con FacturacionApp!
