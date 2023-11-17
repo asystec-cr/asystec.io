@@ -3,6 +3,7 @@ publishDate: '15 de Octubre 2023'
 title: 'Resolución MH-DGT-RES-0013-2023: Cambios en la Gestión del IVA con FacturacionApp'
 description: 'Entérate de cómo la Resolución MH-DGT-RES-0013-2023 afecta la gestión del IVA y cómo FacturacionApp de Asystec te ayuda a cumplir con estos cambios en Costa Rica.'
 excerpt: 'Conoce los cambios en la Resolución MH-DGT-RES-0013-2023 y cómo adaptarlos con FacturacionApp'
+image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 tags: [facturacionapp, iva, resolucion, costa rica]
 ---
 
