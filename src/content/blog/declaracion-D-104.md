@@ -38,7 +38,7 @@ Aquí, determina el monto del IVA cuando realizas compras relacionadas con tu ac
 - Monto correspondiente a IVA de las compras: CRC 130.
 - Monto a pagar de IVA (IVA ventas – IVA compras): CRC 1,130 – CRC 130 = CRC 1,000.
 
-💡#DatoAlegre: Si estás afiliado al sistema de pagos con tarjeta, descuenta las retenciones efectuadas por las procesadoras, pagos a cuenta de este impuesto. El monto restante es el impuesto por pagar.
+💡#DatoAsystec: Si estás afiliado al sistema de pagos con tarjeta, descuenta las retenciones efectuadas por las procesadoras, pagos a cuenta de este impuesto. El monto restante es el impuesto por pagar.
 
 ## ¿Cómo se hace la declaración de IVA?
 
@@ -88,7 +88,7 @@ En las descargas, obtendrás el total de la deuda a pagar al Ministerio de Hacie
 
 ## ¿Cómo pagar la declaración del IVA?
 
-Pagar el reporte D-140 es sencillo:
+Pagar el reporte D-104 es sencillo:
 - Si tienes acceso a la banca en línea, realiza el pago a través de la página web o la aplicación móvil.
 - Si prefieres, puedes ir al banco con tu cédula o, en el caso de empresas, como representante legal, y paga en taquilla.
 
