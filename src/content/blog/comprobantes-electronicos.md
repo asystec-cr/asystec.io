@@ -30,8 +30,6 @@ Algunos de los beneficios de usar FacturacionApp son:
 
 👉 Implementando la facturación electrónica con FacturacionApp, no solo evitarás problemas fiscales, sino que también darás un mejor servicio y cumplirás con las exigencias de clientes que te pedirán esta clase de documento.
 
-👀 ¿Te quedaron algunas dudas? En este video podrás resolverlas 👇.
-
 ## ¿Cómo creo mis facturas de venta con FacturacionApp?
 
 Si bien el Ministerio de Hacienda posee un portal que permite a los contribuyentes emitir este tipo de comprobantes de forma gratuita, tiene la limitante de borrar automáticamente todos los registros pasados los dos meses. 😎 Pero tranquilo, con FacturacionApp de Asystec, no perderás comprobantes electrónicos nunca más.
