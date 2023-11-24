@@ -3,6 +3,7 @@ publishDate: '28 de mayo 2023'
 title: 'Declaración D-104: Gestiona tu IVA fácilmente con FacturacionApp'
 description: 'Aprende cómo la declaración D-104 afecta tu gestión de IVA en Costa Rica y cómo FacturacionApp de Asystec facilita estos procesos.'
 excerpt: 'Descubre cómo hacer la declaración D-104 y simplifica tu gestión de IVA con FacturacionApp.'
+image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 tags: [facturacionapp, iva, d-104, costa rica]
 ---
 
@@ -54,7 +55,7 @@ Si deseas realizar la declaración de IVA, ve a la herramienta ATV del Ministeri
 
 Ingresa a la plataforma web del Ministerio de Hacienda, ve a la sección de ATV, introduce tus credenciales y la frase secreta registrada para verificar la información.
 
-👉 Recuerda tener tu número de identificación y tarjeta entusiasta a mano.
+👉 Recuerda tener tu número de identificación y tarjeta inteligente a mano.
 
 Cómo llenar la D-104 paso 1
 
