@@ -59,6 +59,7 @@ import asystecLogo from '~/assets/images/asystec-logo.png';
 import reactLogo from '~/assets/images/react-logo.png';
 import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
 import typescriptLogo from '~/assets/images/typescript-logo.png';
+import CallToAction from '~/components/widgets/CallToAction';
 
 // Announcement data
 export const announcementData: AnnouncementProps = {
@@ -81,14 +82,14 @@ export const headerData: HeaderProps = {
     //   label: 'Pages',
     //   icon: IconChevronDown,
     //   links: [
-    //     {
-    //       label: 'About us',
-    //       href: '/about',
-    //     },
-    //     {
-    //       label: 'Pricing',
-    //       href: '/pricing',
-    //     },
+         {
+           label: 'Servicios',
+           href: '/servicios',
+         },
+        {
+          label: 'Planes',
+          href: '/planes',
+        },
     //     {
     //       label: 'FAQs',
     //       href: '/faqs',
@@ -165,18 +166,18 @@ export const heroData: HeroProps = {
 
 // Hero2 data
 export const hero2Data: HeroProps = {
-  title: 'Great companies are made by great people',
+  title: 'Las grandes empresas las hacen las grandes personas',
   subtitle:
-    'Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui. Fusce pulvinar ante eget mattis semper. Suspendisse in diam massa.',
+    'Estamos comprometidos con tu éxito y respaldamos nuestras soluciones de software con un equipo de expertos altamente capacitados y un soporte excepcional. Confía en nosotros para impulsar la innovación y el crecimiento de tu negocio.',
   callToAction: {
-    text: 'View jobs',
+    text: 'Ver planes',
     href: 'https://www.linkedin.com/',
     targetBlank: true,
     btnType: 'primary',
   },
   callToAction2: {
-    text: 'Contact us',
-    href: '/contact',
+    text: 'Contacto',
+    href: '/contacto',
   },
   image: {
     src: hero2Img,
@@ -368,62 +369,62 @@ export const faqs4Data: FAQsProps = {
           },
       ],
     },
-    // {
-    //   link: {
-    //     label: 'Plans, prices and payments',
-    //     href: '/tab2',
-    //   },
-    //   items: [
-    //     {
-    //       title: 'Which plan is best for me?',
-    //       description: `Nunc mollis tempor quam, non fringilla elit sagittis in. Nullam vitae consectetur mi, a elementum arcu. Sed laoreet, ipsum et vehicula dignissim, leo orci pretium sem, ac condimentum tellus est quis ligula.`,
-    //     },
-    //     {
-    //       title: 'What are my payment options?',
-    //       description: `Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eleifend vestibulum nisl in iaculis. Mauris dictum ac purus vestibulum auctor. Praesent imperdiet lectus et massa faucibus, quis viverra massa rhoncus.`,
-    //     },
-    //     {
-    //       title: 'How do I change my plan to a different one?',
-    //       description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
-    //     },
-    //     {
-    //       title: 'What happen at the end of my free trial?',
-    //       description: `Nunc dapibus lacinia ipsum ut elementum. Integer in pretium sapien. Ut pretium nisl mauris, ut rutrum justo condimentum id. Etiam aliquet, arcu at iaculis laoreet, est arcu egestas sapien, eget sollicitudin odio orci et nunc.`,
-    //     },
-    //     {
-    //       title: 'Can I import data from other tools?',
-    //       description: `Duis in maximus mauris, id eleifend mauris. Nam a fringilla arcu. Curabitur convallis, tellus non aliquet rhoncus, lacus massa auctor eros, in interdum lectus augue sed augue. Fusce tempor ex id faucibus efficitur.`,
-    //     },
-    //     {
-    //       title: 'Can I cancel my plan at any time?',
-    //       description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
-    //     },
-    //   ],
-    // },
-    // {
-    //   link: {
-    //     label: 'Others',
-    //     href: '/tab3',
-    //   },
-    //   items: [
-    //     {
-    //       title: 'How do I download the template?',
-    //       description: `In ullamcorper pellentesque ante, nec commodo ex euismod viverra. Phasellus facilisis, justo a bibendum pellentesque, nibh est egestas lectus, volutpat ullamcorper arcu ante ac dolor.`,
-    //     },
-    //     {
-    //       title: 'How do I customize the template?',
-    //       description: `Pellentesque semper euismod malesuada. Curabitur quis lectus tortor. Aliquam efficitur pretium tellus, ut sagittis turpis dignissim eget. Etiam scelerisque nec risus eget iaculis. Nunc maximus metus id felis dapibus, sed ullamcorper sapien faucibus.`,
-    //     },
-    //     {
-    //       title: 'Does the template come with any tutorials or instructions?',
-    //       description: `Sed sagittis arcu suscipit auctor suscipit. Nam dapibus risus vitae tristique fermentum. In egestas turpis elit, id gravida diam dictum eu. Ut dictum libero ut rhoncus egestas. Ut sit amet tortor blandit, faucibus tellus vitae, consequat purus. Nullam id odio enim.`,
-    //     },
-    //     {
-    //       title: 'Are there any additional fees or charges for using the template?',
-    //       description: `Fusce efficitur, augue et vulputate pharetra, augue turpis viverra turpis, id tempor purus eros sed erat. Curabitur blandit eget sem vitae malesuada.`,
-    //     },
-    //   ],
-    // },
+    {
+      link: {
+        label: 'Plans, prices and payments',
+        href: '/tab2',
+      },
+      items: [
+        {
+          title: 'Which plan is best for me?',
+          description: `Nunc mollis tempor quam, non fringilla elit sagittis in. Nullam vitae consectetur mi, a elementum arcu. Sed laoreet, ipsum et vehicula dignissim, leo orci pretium sem, ac condimentum tellus est quis ligula.`,
+        },
+        {
+          title: 'What are my payment options?',
+          description: `Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer eleifend vestibulum nisl in iaculis. Mauris dictum ac purus vestibulum auctor. Praesent imperdiet lectus et massa faucibus, quis viverra massa rhoncus.`,
+        },
+        {
+          title: 'How do I change my plan to a different one?',
+          description: `Mauris vitae eros a dui varius luctus. Suspendisse rutrum, sapien nec blandit bibendum, justo sapien sollicitudin erat, id aliquam sapien purus quis leo. Aliquam vulputate vestibulum consectetur.`,
+        },
+        {
+          title: 'What happen at the end of my free trial?',
+          description: `Nunc dapibus lacinia ipsum ut elementum. Integer in pretium sapien. Ut pretium nisl mauris, ut rutrum justo condimentum id. Etiam aliquet, arcu at iaculis laoreet, est arcu egestas sapien, eget sollicitudin odio orci et nunc.`,
+        },
+        {
+          title: 'Can I import data from other tools?',
+          description: `Duis in maximus mauris, id eleifend mauris. Nam a fringilla arcu. Curabitur convallis, tellus non aliquet rhoncus, lacus massa auctor eros, in interdum lectus augue sed augue. Fusce tempor ex id faucibus efficitur.`,
+        },
+        {
+          title: 'Can I cancel my plan at any time?',
+          description: `Nullam imperdiet sapien tincidunt erat dapibus faucibus. Vestibulum a sem nec lorem imperdiet scelerisque non sed lacus. Ut pulvinar id diam vitae auctor. Nam tempus, neque et elementum consectetur, ex ipsum pulvinar risus, vel sodales ligula tortor eu eros.`,
+        },
+      ],
+    },
+    {
+      link: {
+        label: 'Others',
+        href: '/tab3',
+      },
+      items: [
+        {
+          title: 'How do I download the template?',
+          description: `In ullamcorper pellentesque ante, nec commodo ex euismod viverra. Phasellus facilisis, justo a bibendum pellentesque, nibh est egestas lectus, volutpat ullamcorper arcu ante ac dolor.`,
+        },
+        {
+          title: 'How do I customize the template?',
+          description: `Pellentesque semper euismod malesuada. Curabitur quis lectus tortor. Aliquam efficitur pretium tellus, ut sagittis turpis dignissim eget. Etiam scelerisque nec risus eget iaculis. Nunc maximus metus id felis dapibus, sed ullamcorper sapien faucibus.`,
+        },
+        {
+          title: 'Does the template come with any tutorials or instructions?',
+          description: `Sed sagittis arcu suscipit auctor suscipit. Nam dapibus risus vitae tristique fermentum. In egestas turpis elit, id gravida diam dictum eu. Ut dictum libero ut rhoncus egestas. Ut sit amet tortor blandit, faucibus tellus vitae, consequat purus. Nullam id odio enim.`,
+        },
+        {
+          title: 'Are there any additional fees or charges for using the template?',
+          description: `Fusce efficitur, augue et vulputate pharetra, augue turpis viverra turpis, id tempor purus eros sed erat. Curabitur blandit eget sem vitae malesuada.`,
+        },
+      ],
+    },
   ],
 };
 
@@ -632,9 +633,9 @@ export const featuresData3: FeaturesProps = {
 // Content data
 export const contentData: ContentProps = {
   header: {
-    title: 'Aliquip definiebas ad est',
-    subtitle: 'Quando cetero his ne, eum admodum sapientem ut',
-    highlight: 'Content',
+    title: 'CobrosApp',
+    subtitle: 'Simplifica tu gestión financiera con eficiencia y rapidez.',
+    highlight: 'Nuestros sistemas',
   },
   content:
     'Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.',
@@ -656,8 +657,8 @@ export const contentData: ContentProps = {
     },
   ],
   image: {
-    src: cameraFrontImg,
-    alt: 'Colorful Image',
+    src: 'https://images.unsplash.com/photo-1617228679684-890412dc57a5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'CobrosApp',
   },
   isReversed: false,
   isAfterContent: false,
@@ -665,6 +666,10 @@ export const contentData: ContentProps = {
 
 // Content2 data
 export const content2Data: ContentProps = {
+  header: {
+    title: 'FacturacionApp',
+    subtitle: 'Agiliza tus procesos de facturación con precisión y rapidez.',
+  },
   content:
     'Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nib dissentias, mei exerci tamquam euripidis cu.',
   items: [
@@ -688,8 +693,8 @@ export const content2Data: ContentProps = {
     },
   ],
   image: {
-    src: cameraBackImg,
-    alt: 'Colorful Image',
+    src: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'FacturacionApp',
   },
   isReversed: true,
   isAfterContent: true,
@@ -841,16 +846,16 @@ export const testimonialData: TestimonialProps = {
 // Pricing data
 export const pricingData: PricingProps = {
   header: {
-    title: 'Prices for each plan',
+    title: 'Precios para cada plan',
     subtitle:
       'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
     // highlight: 'Pricing',
   },
   prices: [
     {
-      title: 'basic',
-      value: 29,
-      period: 'per month',
+      title: 'Basico',
+      value: 20,
+      period: 'por mes',
       texts: [
         'Etiam in libero',
         'Aenean ac nunc',
@@ -864,9 +869,9 @@ export const pricingData: PricingProps = {
       hasRibbon: false,
     },
     {
-      title: 'standard',
-      value: 69,
-      period: 'per month',
+      title: 'Estandar',
+      value: 50,
+      period: 'por mes',
       texts: ['Proin vel laoreet', 'Ut efficitur egestas', 'Pellentesque ut nibh', 'Donec fringilla sem'],
       callToAction: {
         text: 'Free 15-day trial',
@@ -876,9 +881,25 @@ export const pricingData: PricingProps = {
       ribbonTitle: 'Popular',
     },
     {
-      title: 'premium',
-      value: 199,
-      period: 'per month',
+      title: 'Premium',
+      value: 75,
+      period: 'por mes',
+      texts: [
+        'Curabitur suscipit risus',
+        'Aliquam blandit malesuada',
+        'Suspendisse sit amet',
+        'Suspendisse auctor dui',
+      ],
+      callToAction: {
+        text: 'Free 30-day trial',
+        href: '/',
+      },
+      hasRibbon: false,
+    },
+    {
+      title: 'Empresarial',
+      value: 150,
+      period: 'por mes',
       texts: [
         'Curabitur suscipit risus',
         'Aliquam blandit malesuada',
@@ -1268,8 +1289,8 @@ export const footerData: FooterProps = {
       title: 'Company',
       links: [
         {
-          label: 'About',
-          href: '/',
+          label: 'Servicios',
+          href: '/servicios',
         },
         {
           label: 'Blog',

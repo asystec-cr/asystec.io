@@ -6,7 +6,6 @@ import { SITE } from '~/config.js';
 import Hero from '~/components/widgets/Hero';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Features from '~/components/widgets/Features';
-import Content from '~/components/widgets/Content';
 import Steps from '~/components/widgets/Steps';
 import Testimonial from '~/components/widgets/Testimonial';
 import FAQs2 from '~/components/widgets/FAQs2';
@@ -39,8 +38,6 @@ export default function Page() {
       <Hero data={heroData} />
       <SocialProof {...socialProofData} />
       <Features {...featuresData} />
-      {/* <Content {...contentData} /> */}
-      {/* <Content {...content2Data} /> */}
       {/* <Steps /> */}
       {/* <Testimonial /> */}
       {/* <FAQs2 {...faqsData2} /> */}
