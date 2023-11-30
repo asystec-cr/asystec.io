@@ -638,22 +638,22 @@ export const contentData: ContentProps = {
     highlight: 'Nuestros sistemas',
   },
   content:
-    'Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.',
+    'Transforma la gestión de cobros con la innovación de CobrosApp: eficiencia, control y resultados excepcionales en un solo sistema.',
   items: [
     {
-      title: 'Per ei quaeque sensibus',
+      title: 'Recordatorios Automáticos',
       description:
-        'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+        'Olvídate de perder seguimientos. CobrosApp te notifica automáticamente para mantener un flujo constante de cobros.',
     },
     {
-      title: 'Cu imperdiet posidonium sed',
+      title: 'Informe Detallado',
       description:
-        'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+        'Accede a análisis detallados de cuentas pendientes y estados de pago para tomar decisiones informadas y estratégicas.',
     },
     {
-      title: 'Nulla omittam sadipscing mel ne',
+      title: 'Centralización Eficiente',
       description:
-        'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+        'Gestiona todos tus cobros desde una plataforma centralizada, simplificando el proceso y mejorando la liquidez de tu negocio.',
     },
   ],
   image: {
@@ -671,25 +671,22 @@ export const content2Data: ContentProps = {
     subtitle: 'Agiliza tus procesos de facturación con precisión y rapidez.',
   },
   content:
-    'Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nib dissentias, mei exerci tamquam euripidis cu.',
+    'Facturación Simplificada: Descubre cómo FacturacionApp optimiza el proceso de emisión de facturas para tu negocio.',
   items: [
     {
-      title: 'Per ei quaeque sensibus',
+      title: 'Emisión Rápida y Precisa',
+      description:
+        'Genera facturas de manera eficiente, asegurando la precisión de los datos del proyecto.',
     },
     {
-      title: 'Cu imperdiet posidonium sed',
+      title: 'Integración Perfecta',
+      description:
+        'Conéctate sin esfuerzo con Asystec para una gestión fluida de datos y proyectos.',
     },
     {
-      title: 'Nulla omittam sadipscing mel ne',
-    },
-    {
-      title: 'Per ei quaeque sensibus',
-    },
-    {
-      title: 'Cu imperdiet posidonium sed',
-    },
-    {
-      title: 'Nulla omittam sadipscing mel ne',
+      title: 'Seguridad de Datos',
+      description:
+        'Garantiza la confidencialidad de tu información financiera con sólidas medidas de seguridad.',
     },
   ],
   image: {
@@ -848,23 +845,44 @@ export const pricingData: PricingProps = {
   header: {
     title: 'Precios para cada plan',
     subtitle:
-      'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
-    // highlight: 'Pricing',
+      'Descubre nuestros planes de CobrosApp: opciones flexibles, precios competitivos y soluciones adaptadas para todas las necesidades empresariales.',
+    highlight: 'CobrosApp',
   },
   prices: [
+    {
+      title: 'Free',
+      value: 0,
+      period: 'por mes',
+      texts: [
+        '1 Empresa',
+        '1 Usuario Administrador activo',
+        '20 clientes',
+        '20 creditos activos',
+        '20 facturas por mes',
+        '20 facturas recurrentes activas',
+      ],
+      callToAction: {
+        text: 'Obtener plan',
+        href: 'https://mi.cobrosapp.com/register',
+        targetBlank: true,
+      },
+      hasRibbon: false,
+    },
     {
       title: 'Basico',
       value: 20,
       period: 'por mes',
-      texts: [
-        'Etiam in libero',
-        'Aenean ac nunc',
-        'Cras scelerisque accumsan libero, et volutpat dolor tristique at',
-        'In hac habitasse',
-      ],
+      texts: [        
+      '2 Empresa',
+      '2 Usuarios activos',
+      '100 clientes',
+      '100 creditos activos',
+      '100 facturas por mes',
+      '100 facturas recurrentes activas',],
       callToAction: {
-        text: 'Free 7-day trial',
-        href: '/',
+        text: 'Obtener plan',
+        href: 'https://mi.cobrosapp.com/register',
+        targetBlank: true,
       },
       hasRibbon: false,
     },
@@ -872,69 +890,64 @@ export const pricingData: PricingProps = {
       title: 'Estandar',
       value: 50,
       period: 'por mes',
-      texts: ['Proin vel laoreet', 'Ut efficitur egestas', 'Pellentesque ut nibh', 'Donec fringilla sem'],
+      texts: [
+        '3 Empresa',
+        '5 Usuarios activos',
+        '500 clientes',
+        '500 creditos activos',
+        '100 facturas por mes',
+        '50 facturas recurrentes activas',
+      ],
       callToAction: {
-        text: 'Free 15-day trial',
-        href: '/',
+        text: 'Obtener plan',
+        href: 'https://mi.cobrosapp.com/register',
+        targetBlank: true,
       },
       hasRibbon: true,
       ribbonTitle: 'Popular',
     },
     {
       title: 'Premium',
-      value: 75,
-      period: 'por mes',
-      texts: [
-        'Curabitur suscipit risus',
-        'Aliquam blandit malesuada',
-        'Suspendisse sit amet',
-        'Suspendisse auctor dui',
-      ],
-      callToAction: {
-        text: 'Free 30-day trial',
-        href: '/',
-      },
-      hasRibbon: false,
-    },
-    {
-      title: 'Empresarial',
       value: 150,
       period: 'por mes',
       texts: [
-        'Curabitur suscipit risus',
-        'Aliquam blandit malesuada',
-        'Suspendisse sit amet',
-        'Suspendisse auctor dui',
+        '5 Empresa',
+        '10 Usuario Administrador activo',
+        '2000 clientes',
+        '2000 creditos activos',
+        '500 facturas por mes',
+        '100 facturas recurrentes activas',
       ],
       callToAction: {
-        text: 'Free 30-day trial',
-        href: '/',
+        text: 'Obtener plan',
+        href: 'https://mi.cobrosapp.com/register',
+        targetBlank: true,
       },
       hasRibbon: false,
     },
   ],
 };
 
-// Comparison data
+// Comparar planes
 export const comparisonData: ComparisonProps = {
   header: {
-    title: "What's available for each plan?",
+    title: "¿Qué ofrece cada plan?",
     subtitle:
-      'Morbi ut imperdiet ex. Nullam sed tincidunt purus. Donec finibus dui at odio dictum facilisis. Maecenas ut orci quis nisi congue maximus. Sed quis augue sapien.',
-    // highlight: 'Comparison',
+      'Explora las características distintivas de cada plan de CobrosApp: personaliza tu experiencia, optimiza la gestión y potencia tu negocio con facilidad',
+    highlight: 'Comparación',
   },
   columns: [
     {
-      title: 'compare plans',
+      title: 'compare los planes',
       items: [
         {
-          title: 'In vitae finibus',
+          title: 'Empresas',
         },
         {
-          title: 'Cras sollicitudin',
+          title: 'Usuarios activos',
         },
         {
-          title: 'Suspendisse',
+          title: 'Precio',
         },
         {
           title: 'Vestibulum ornare',
@@ -948,7 +961,7 @@ export const comparisonData: ComparisonProps = {
       ],
     },
     {
-      title: 'basic',
+      title: 'free',
       items: [
         {
           title: 'Free 7-day trial',
@@ -976,7 +989,7 @@ export const comparisonData: ComparisonProps = {
       },
     },
     {
-      title: 'standard',
+      title: 'basico',
       items: [
         {
           title: 'Free 15-day trial',
@@ -989,6 +1002,34 @@ export const comparisonData: ComparisonProps = {
         },
         {
           title: false,
+        },
+        {
+          title: true,
+        },
+        {
+          title: true,
+        },
+      ],
+      callToAction: {
+        text: 'Get started',
+        href: '/',
+        btnType: 'primary',
+      },
+    },
+    {
+      title: 'estandar',
+      items: [
+        {
+          title: 'Free 30-day trial',
+        },
+        {
+          title: 'Unlimited',
+        },
+        {
+          title: '$199',
+        },
+        {
+          title: true,
         },
         {
           title: true,
