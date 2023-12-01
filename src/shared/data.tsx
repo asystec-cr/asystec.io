@@ -5,19 +5,19 @@ import {
   IconBrandGithub,
   IconBrandInstagram,
   IconBrandLinkedin,
-  IconBrandTailwind,
+  IconUserCircle,
   IconBrandWhatsapp,
   IconBrandTwitter,
   IconBulb,
   IconRegistered,
   IconCheck,
-  IconChevronDown,
+  IconZoomMoney,
   IconClock,
   IconComponents,
   IconDownload,
   IconHeadset,
   IconHelp,
-  IconHeart,
+  IconFileInvoice,
   IconListCheck,
   IconMail,
   IconMapPin,
@@ -29,7 +29,8 @@ import {
   IconUserPlus,
   IconHelpCircle,
   IconClipboardData,
-  IconClockHour5
+  IconClockHour5,
+  IconBrandMiniprogram
 } from '@tabler/icons-react';
 import {
   AnnouncementProps,
@@ -171,8 +172,8 @@ export const hero2Data: HeroProps = {
     'Estamos comprometidos con tu éxito y respaldamos nuestras soluciones de software con un equipo de expertos altamente capacitados y un soporte excepcional. Confía en nosotros para impulsar la innovación y el crecimiento de tu negocio.',
   callToAction: {
     text: 'Ver planes',
-    href: 'https://www.linkedin.com/',
-    targetBlank: true,
+    href: '/planes',
+    targetBlank: false,
     btnType: 'primary',
   },
   callToAction2: {
@@ -181,7 +182,7 @@ export const hero2Data: HeroProps = {
   },
   image: {
     src: hero2Img,
-    alt: 'Hero TailNext',
+    alt: 'Hero Asystec',
   },
 };
 
@@ -593,39 +594,23 @@ export const features2Data: FeaturesProps = {
 // Feature data 3
 export const featuresData3: FeaturesProps = {
   header: {
-    title: 'Services',
+    title: 'Servicios',
   },
   items: [
     {
-      title: 'Next.Js + Tailwind CSS Integration',
-      description: 'Nullam non sodales massa. Ut justo neque, elementum et vehicula vel, pellentesque non orci.',
-      icon: IconBrandTailwind,
+      title: 'Soporte en Sistemas de Facturación',
+      description: 'Facturación eficiente con nuestro especializado soporte técnico.',
+      icon: IconUserCircle,
     },
     {
-      title: 'Ready-to-use Components',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      icon: IconComponents,
+      title: 'Servicio de creación de facturas',
+      description: 'Facturas profesionales y eficientes con nuestro servicio especializado.',
+      icon: IconFileInvoice,
     },
     {
-      title: 'Best Practices',
-      description: 'Morbi sit amet arcu vitae metus molestie auctor sit amet in risus. Sed vel lacinia purus.',
-      icon: IconListCheck,
-    },
-    {
-      title: 'Excellent Page Speed',
-      description: 'Phasellus id cursus urna. Nullam feugiat tellus sed euismod venenatis.',
-      icon: IconRocket,
-    },
-    {
-      title: 'Search Engine Optimization (SEO)',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-      icon: IconArrowsRightLeft,
-    },
-    {
-      title: 'Open to new ideas and contributions',
-      description: 'Maecenas urna augue, commodo vitae lectus euismod, tempor aliquam arcu.',
-      icon: IconBulb,
+      title: 'Servicio SASS',
+      description: 'Simplifica tu proceso contable con nuestro servicio SaaS de FacturaciónApp y CobrosApp.',
+      icon: IconZoomMoney,
     },
   ],
 };
@@ -873,7 +858,7 @@ export const pricingData: PricingProps = {
       value: 20,
       period: 'por mes',
       texts: [        
-      '2 Empresa',
+      '2 Empresas',
       '2 Usuarios activos',
       '100 clientes',
       '100 creditos activos',
@@ -891,7 +876,7 @@ export const pricingData: PricingProps = {
       value: 50,
       period: 'por mes',
       texts: [
-        '3 Empresa',
+        '3 Empresas',
         '5 Usuarios activos',
         '500 clientes',
         '500 creditos activos',
@@ -911,7 +896,7 @@ export const pricingData: PricingProps = {
       value: 150,
       period: 'por mes',
       texts: [
-        '5 Empresa',
+        '5 Empresas',
         '10 Usuario Administrador activo',
         '2000 clientes',
         '2000 creditos activos',
@@ -950,13 +935,16 @@ export const comparisonData: ComparisonProps = {
           title: 'Precio',
         },
         {
-          title: 'Vestibulum ornare',
+          title: 'Clientes',
         },
         {
-          title: 'In hendrerit',
+          title: 'Creditos activos',
         },
         {
-          title: 'Ut pharetra',
+          title: 'Facturas por mes',
+        },
+        {
+          title: 'Facturas recurrentes',
         },
       ],
     },
@@ -964,27 +952,30 @@ export const comparisonData: ComparisonProps = {
       title: 'free',
       items: [
         {
-          title: 'Free 7-day trial',
+          title: '1 Empresa',
         },
         {
-          title: 'Limited',
+          title: '1 Usuario Activo',
         },
         {
-          title: '$29',
+          title: '$0',
         },
         {
-          title: false,
+          title: 20,
         },
         {
-          title: false,
+          title: 20,
         },
         {
-          title: true,
+          title: 20,
+        },
+        {
+          title: 20,
         },
       ],
       callToAction: {
-        text: 'Get started',
-        href: '/',
+        text: 'Obtener Plan',
+        href: '/https://mi.cobrosapp.com/register',
         btnType: 'primary',
       },
     },
@@ -992,27 +983,30 @@ export const comparisonData: ComparisonProps = {
       title: 'basico',
       items: [
         {
-          title: 'Free 15-day trial',
+          title: '2 Empresas',
         },
         {
-          title: 'Unlimited',
+          title: '2 Usuarios Activos',
         },
         {
-          title: '$69',
+          title: '$20',
         },
         {
-          title: false,
+          title: 100,
         },
         {
-          title: true,
+          title: 100,
         },
         {
-          title: true,
+          title: 100,
+        },
+        {
+          title: 100,
         },
       ],
       callToAction: {
-        text: 'Get started',
-        href: '/',
+        text: 'Obtener Plan',
+        href: '/https://mi.cobrosapp.com/register',
         btnType: 'primary',
       },
     },
@@ -1020,27 +1014,30 @@ export const comparisonData: ComparisonProps = {
       title: 'estandar',
       items: [
         {
-          title: 'Free 30-day trial',
+          title: '3 Empresas',
         },
         {
-          title: 'Unlimited',
+          title: '5 UsuariosActivos',
         },
         {
-          title: '$199',
+          title: '$50',
         },
         {
-          title: true,
+          title: 500,
         },
         {
-          title: true,
+          title: 500,
         },
         {
-          title: true,
+          title: 100,
+        },
+        {
+          title: 50,
         },
       ],
       callToAction: {
-        text: 'Get started',
-        href: '/',
+        text: 'Obtener Plan',
+        href: '/https://mi.cobrosapp.com/register',
         btnType: 'primary',
       },
     },
@@ -1048,32 +1045,37 @@ export const comparisonData: ComparisonProps = {
       title: 'premium',
       items: [
         {
-          title: 'Free 30-day trial',
+          title: '5 Empresas',
         },
         {
-          title: 'Unlimited',
+          title: '10 Usuarios Activos',
         },
         {
-          title: '$199',
+          title: '$150',
         },
         {
-          title: true,
+          title: 2000,
         },
         {
-          title: true,
+          title: 2000,
         },
         {
-          title: true,
+          title: 500,
+        },
+        {
+          title: 100,
         },
       ],
       callToAction: {
-        text: 'Get started',
-        href: '/',
+        text: 'Obtener Plan',
+        href: '/https://mi.cobrosapp.com/register',
         btnType: 'primary',
       },
     },
   ],
 };
+
+
 
 // Stats
 export const statsData: StatsProps = {

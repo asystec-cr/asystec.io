@@ -14,7 +14,7 @@ const Page = () => {
     <>
       <Pricing {...pricingData} />
       <Comparison {...comparisonData} />
-      <FAQs3 {...faqs3Data} />
+      {/* <FAQs3 {...faqs3Data} /> */}
     </>
   );
 };

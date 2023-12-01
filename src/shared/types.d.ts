@@ -78,6 +78,7 @@ interface Image {
   link?: string;
   src: string | StaticImageData;
   alt: string;
+  width?: number;
 }
 
 interface Item {
@@ -159,6 +160,7 @@ interface HeroProps {
   callToAction?: CallToAction;
   callToAction2?: CallToAction;
   image?: Image;
+  width?: number;
 }
 
 interface FAQsProps {
