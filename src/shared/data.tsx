@@ -766,7 +766,7 @@ export const teamData: TeamProps = {
          name: 'Jherson Trigoso',
          occupation: 'Desarrollador, Soporte',
          image: {
-           src: '/images/team/jherson.jpg',
+           src: '/images/team/foto-perfil.jpg',
            alt: 'Jherson Trigoso',
          },
          items: [
