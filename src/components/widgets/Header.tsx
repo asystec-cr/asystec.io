@@ -78,7 +78,7 @@ const Header = () => {
         >
           <ul className="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base">
             {links &&
-              links.map(({ label, href, icon: Icon, links }, index) => (
+              links.map(({ label, href, icon: Icon, target: target, links }, index) => (
                 <li key={`item-link-${index}`} className={links?.length ? 'dropdown' : ''}>
                   {links && links.length ? (
                     <>
@@ -112,6 +112,7 @@ const Header = () => {
                     <Link
                       className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
                       href={href as string}
+                      target={target as string}
                       onClick={() => (isToggleMenuOpen ? handleToggleMenuOnClick() : handleDropdownOnClick(index))}
                     >
                       {label}
