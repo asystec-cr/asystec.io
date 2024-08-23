@@ -180,6 +180,7 @@ type Link = {
   href?: string;
   ariaLabel?: string;
   icon?: Icon;
+  target?: string
 };
 
 type Price = {

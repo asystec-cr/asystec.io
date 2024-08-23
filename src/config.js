@@ -1,8 +1,8 @@
 module.exports.SITE = {
-  name: 'TailNext',
-  origin: 'https://tailnext.vercel.app',
+  name: 'Asystec',
+  origin: 'https://asystec.io',
   basePathname: '/',
   trailingSlash: false,
-  title: 'TailNext — Your website with Next.js + Tailwind CSS',
-  description: 'TailNext is a free and ready to start template to make your website using Next.js and Tailwind CSS.',
+  title: 'Asystec - Soluciones Integrales para Potenciar tu Negocio',
+  description: 'Transforma y potencia tu negocio con nuestras asesorias y gestión empresarial. En Asystec, lideramos el mercado ofreciendo tecnología personalizada para cada sector, optimizando tus procesos y aumentando tu eficiencia.',
 };

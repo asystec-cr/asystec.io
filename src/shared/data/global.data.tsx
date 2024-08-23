@@ -97,6 +97,7 @@ export const headerData: HeaderProps = {
     {
       label: 'Blog',
       href: 'https://blog.asystec.io',
+      target: 'blank'
     },
     {
       label: 'Contact',
