@@ -27,70 +27,81 @@ export const announcementData: AnnouncementProps = {
 export const headerData: HeaderProps = {
   links: [
     {
-      label: 'Pages',
+      label: 'Soluciones de Software',
       icon: IconChevronDown,
       links: [
         {
-          label: 'Services',
-          href: '/services',
+          label: 'CobrosApp',
+          href: '/',
         },
         {
-          label: 'Pricing',
-          href: '/pricing',
+          label: 'FacturacionApp',
+          href: '/',
         },
         {
-          label: 'About us',
-          href: '/about',
-        },
-        {
-          label: 'Contact us',
-          href: '/contact',
-        },
-        {
-          label: 'FAQs',
-          href: '/faqs',
-        },
-        {
-          label: 'Terms & Conditions',
-          href: '/terms',
-        },
-        {
-          label: 'Privacy Policy',
-          href: '/privacy',
+          label: 'TallerApp',
+          href: '/',
         },
       ],
     },
     {
-      label: 'Pages',
+      label: 'Contabilidad',
       icon: IconChevronDown,
       links: [
         {
-          label: 'Services',
-          href: '/services',
+          label: 'CPA',
+          href: '/',
         },
         {
-          label: 'Pricing',
-          href: '/pricing',
+          label: 'CPI',
+          href: '/',
         },
         {
-          label: 'About us',
-          href: '/about',
+          label: 'Certificaciones de Ingresos',
+          href: '/',
+        },
+      ],
+    },
+    {
+      label: 'Fiscal',
+      icon: IconChevronDown,
+      links: [
+        {
+          label: 'Declaraciones de Impuestos',
+          href: '/',
         },
         {
-          label: 'Contact us',
-          href: '/contact',
+          label: 'Auditorias',
+          href: '/',
+        },
+      ],
+    },
+    {
+      label: 'Legal',
+      icon: IconChevronDown,
+      links: [
+        {
+          label: 'Traspasos',
+          href: '/',
         },
         {
-          label: 'FAQs',
-          href: '/faqs',
+          label: 'Representaciones',
+          href: '/',
         },
         {
-          label: 'Terms & Conditions',
-          href: '/terms',
+          label: 'Trámites',
+          href: '/',
         },
+      ],
+    },
+    {
+      label: 'Herramientas',
+      icon: IconChevronDown,
+      links: [
         {
-          label: 'Privacy Policy',
-          href: '/privacy',
+          label: 'Estado API Hacienda',
+          href: 'https://apis.gometa.org/status',
+          target: 'blank'
         },
       ],
     },
@@ -100,7 +111,7 @@ export const headerData: HeaderProps = {
       target: 'blank'
     },
     {
-      label: 'Contact',
+      label: 'Contacto',
       href: '/contact',
     },
   ],

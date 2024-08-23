@@ -14,8 +14,11 @@ import {
   IconMapPin,
   IconPhoneCall,
   IconRocket,
-  IconUserPlus
-
+  IconUserPlus,
+  IconBrandWhatsapp,
+  IconHelpCircle,
+  IconClockHour5,
+  IconClipboardData
 } from '@tabler/icons-react';
 import {
   CallToActionProps,
@@ -31,8 +34,8 @@ import {
   TestimonialsProps,
 } from '../../types';
 import heroImg from '~/assets/images/hero.jpg';
-import nextJsLogo from '~/assets/images/nextjs-logo.png';
-import reactLogo from '~/assets/images/react-logo.png';
+import asystecLogo from '~/assets/images/asystec-logo.png';
+import pymeLogo from '~/assets/images/pyme.png';
 import tailwindCssLogo from '~/assets/images/tailwind-css-logo.png';
 import typescriptLogo from '~/assets/images/typescript-logo.png';
 import cameraFrontImg from '~/assets/images/camera-front.jpg';
@@ -70,27 +73,17 @@ export const heroHome: HeroProps = {
 // SocialProof data on Home page *******************
 export const socialProofHome: SocialProofProps = {
   id: 'socialProof-on-home',
-  hasBackground: false,
+  hasBackground: true,
   images: [
     {
-      link: 'https://nextjs.org/',
-      src: nextJsLogo,
-      alt: 'NextJs Logo',
+      link: '/',
+      src: asystecLogo,
+      alt: 'Asystec Logo',
     },
     {
-      link: 'https://react.dev/',
-      src: reactLogo,
-      alt: 'React Logo',
-    },
-    {
-      link: 'https://tailwindcss.com/',
-      src: tailwindCssLogo,
-      alt: 'Tailwind CSS Logo',
-    },
-    {
-      link: 'https://www.typescriptlang.org/',
-      src: typescriptLogo,
-      alt: 'Typescript Logo',
+      link: '/',
+      src: pymeLogo,
+      alt: 'Pyme Logo',
     },
   ],
 };
@@ -103,73 +96,70 @@ export const featuresHome: FeaturesProps = {
   header: {
     title: (
       <>
-        What you get with <span className="whitespace-nowrap">TailNext</span>
+        Porque elegir <span className="whitespace-nowrap">Asystec?</span>
       </>
     ),
-    subtitle:
-      "Elevating Your Digital Presence: Discover the Synergies Unleashed in Our Platform's Core Strengths, from Seamless Integration to Open Collaboration.",
-    tagline: 'Features',
+    subtitle: 'Aqui tienes algunas razones por las que deberias adquirir nuestras soluciones de Software',
+    tagline: 'Beneficios',
   },
   items: [
     {
-      title: 'Next.Js + Tailwind CSS Integration',
-      description:
-        'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-      icon: IconBrandTailwind,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
+      title: 'Soporte y servicio al cliente excepcionales',
+      description: 'Estamos aquí para ti. Nuestro excepcional servicio al cliente brinda soporte confiable y soluciones efectivas a tus necesidades.',
+      icon: IconHelpCircle,
+      // callToAction: {
+      //   text: 'Discover now',
+      //   href: '/',
+      // },
     },
     {
-      title: 'Ready-to-use Components',
+      title: 'Eficiencia y ahorro de tiempo',
       description:
-        'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-      icon: IconComponents,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
+        'Gana tiempo para disfrutar con tu familia. Nuestra solución eficiente automatiza tareas, liberándote para compartir con los que mas amas.',
+      icon: IconClockHour5,
+      // callToAction: {
+      //   text: 'Discover now',
+      //   href: '/',
+      // },
     },
     {
-      title: 'Best Practices',
+      title: 'Acceso a información y análisis en tiempo real',
       description:
-        'By prioritizing maintainability and scalability through coding standards and design principles, your website stays robust and efficient.',
+        'Toma decisiones estratégicas con información actualizada al instante. Accede a datos y análisis en tiempo real para impulsar tu negocio.',
       icon: IconListCheck,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
+      // callToAction: {
+      //   text: 'Discover now',
+      //   href: '/',
+      // },
     },
     {
-      title: 'Excellent Page Speed',
-      description:
-        'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+      title: 'Innovacion y actualizaion constante',
+      description: 'Destaca en el mercado. Nuestra solución se actualiza constantemente con innovaciones que te mantienen por delante de la competencia.',
       icon: IconRocket,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
+      // callToAction: {
+      //   text: 'Discover now',
+      //   href: '/',
+      // },
     },
     {
-      title: 'Search Engine Optimization (SEO)',
+      title: 'Reducción de costos',
       description:
-        "Boost online visibility with our SEO-friendly website. Effective strategies and practices enhance your website's search engine ranking, making it easier for users to find your content.",
-      icon: IconArrowsRightLeft,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
-    },
-    {
-      title: 'Open to new ideas and contributions',
-      description:
-        'We welcome new ideas and contributions to our platform. Whether you have feature suggestions, want to contribute code, or share insights, our platform is open for collaboration.',
+        'Optimiza tus recursos y maximiza tu rentabilidad. Nuestra solución reduce costos al automatizar tareas y optimizar procesos.',
       icon: IconBulb,
-      callToAction: {
-        text: 'Discover now',
-        href: '/',
-      },
+      // callToAction: {
+      //   text: 'Discover now',
+      //   href: '/',
+      // },
+    },
+    {
+      title: 'Facilidad de uso e interfaz intuitiva',
+      description:
+        'Simplifica tu experiencia. Nuestra interfaz intuitiva y fácil de usar te permite aprovechar al máximo nuestra solución sin complicaciones.',
+      icon: IconClipboardData,
+      // callToAction: {
+      //   text: 'Discover now',
+      //   href: '/',
+      // },
     },
   ],
 };
@@ -488,29 +478,29 @@ export const teamHome: TeamProps = {
   id: 'team-on-home',
   hasBackground: false,
   header: {
-    title: 'Team Members',
+    title: 'Nuestro Equipo',
     subtitle:
-      'Suspendisse in dui nibh. Donec enim leo, sodales et egestas id, malesuada non diam. Sed dapibus velit et mauris condimentum, vel imperdiet erat egestas.',
-    // tagline: 'Team',
+    'Conoce a nuestro equipo altamente capacitado y comprometido en proporcionarte un servicio excepcional. Nuestros profesionales son expertos en sus respectivos campos y están dedicados a ofrecerte soluciones personalizadas y resultados de calidad.',
+    // tagline: 'Equipo',
   },
   teams: [
     {
-      name: 'Cindy Belcher',
-      occupation: 'SEO Consultant',
+      name: 'Bryan Valerin',
+      occupation: 'CEO, Desarrollador, Soporte',
       image: {
-        src: 'https://images.unsplash.com/photo-1637858868799-7f26a0640eb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80',
-        alt: 'Cindy Belcher',
+        src: '/images/team/bryan.png',
+        alt: 'Bryan Valerin',
       },
       items: [
         {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
+          title: 'WhatsaApp',
+          icon: IconBrandWhatsapp,
+          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
         },
         {
           title: 'Know more on Linkedin',
           icon: IconBrandLinkedin,
-          href: '#',
+          href: 'https://github.com/bvalerin',
         },
         {
           title: 'Contact by email',
@@ -520,77 +510,27 @@ export const teamHome: TeamProps = {
       ],
     },
     {
-      name: 'Toby Foster',
-      occupation: 'Marketing Tech',
+      name: 'Jherson Trigoso',
+      occupation: 'Desarrollador, Soporte',
       image: {
-        src: 'https://images.unsplash.com/photo-1614583224978-f05ce51ef5fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2172&q=80',
-        alt: 'Toby Foster',
+        src: '/images/team/foto-perfil.jpg',
+        alt: 'Jherson Trigoso',
       },
       items: [
         {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
+          title: 'WhatsaApp',
+          icon: IconBrandWhatsapp,
+          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
         },
         {
           title: 'Know more on Linkedin',
           icon: IconBrandLinkedin,
-          href: '#',
+          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
         },
         {
           title: 'Contact by email',
           icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Clark Bourne',
-      occupation: 'Content Manager',
-      image: {
-        src: 'https://images.unsplash.com/photo-1639628735078-ed2f038a193e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Clark Bourne',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
-        },
-      ],
-    },
-    {
-      name: 'Bella Chase',
-      occupation: 'UX Designer',
-      image: {
-        src: 'https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80',
-        alt: 'Bella Chase',
-      },
-      items: [
-        {
-          title: 'Know more on Twitter',
-          icon: IconBrandTwitter,
-          href: '#',
-        },
-        {
-          title: 'Know more on Linkedin',
-          icon: IconBrandLinkedin,
-          href: '#',
-        },
-        {
-          title: 'Contact by email',
-          icon: IconMail,
-          href: '#',
+          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
         },
       ],
     },
@@ -601,56 +541,54 @@ export const teamHome: TeamProps = {
 export const contactHome: ContactProps = {
   hasBackground: true,
   header: {
-    title: 'Get in Touch',
-    subtitle: 'In hac habitasse platea dictumst',
-    tagline: 'Contact',
+    title: 'Contáctanos',
+    subtitle: 'Nuestro equipo esta listo para ayudarte',
+    tagline: 'Contacto',
   },
   content:
-    'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut scelerisque sagittis ante, ac tincidunt sem venenatis ut.',
-  items: [
-    {
-      title: 'Our Address',
-      description: ['1230 Maecenas Street Donec Road', 'New York, EEUU'],
-      icon: IconMapPin,
-    },
-    {
-      title: 'Contact',
-      description: ['Mobile: +1 (123) 456-7890', 'Mail: tailnext@gmail.com'],
-      icon: IconPhoneCall,
-    },
-    {
-      title: 'Working hours',
-      description: ['Monday - Friday: 08:00 - 17:00', 'Saturday & Sunday: 08:00 - 12:00'],
-      icon: IconClock,
-    },
-  ],
-  form: {
-    title: 'Ready to Get Started?',
-    inputs: [
+    '¡Nos encantaría saber de ti! Si tienes alguna pregunta, comentario o solicitud, no dudes en ponerte en contacto con nosotros a través de los siguientes medios:',
+    items: [
       {
-        type: 'text',
-        name: 'name',
-        autocomplete: 'off',
-        placeholder: 'Your name',
+        title: 'Direccion',
+        description: ['Torres Paseo Colón', 'San José, Costa Rica'],
+        icon: IconMapPin,
       },
       {
-        type: 'email',
-        name: 'email',
-        autocomplete: 'on',
-        placeholder: 'Your email address',
+        title: 'Teléfono',
+        description: ['Teléfono: +506 8975-4741', 'Correo: info@asystec.io'],
+        icon: IconPhoneCall,
+      },
+      {
+        title: 'Horario',
+        description: ['Lunes - Viernes: 8:00 - 17:00', 'Sábado y Domingo: Cerrado'],
+        icon: IconClock,
       },
     ],
-    textarea: {
-      cols: 30,
-      rows: 5,
-      name: 'textarea',
-      placeholder: 'Write your message...',
+    form: {
+      title: 'Listo para empezar?',
+      inputs: [
+        {
+          type: 'text',
+          name: 'name',
+          placeholder: 'Nombre',
+        },
+        {
+          type: 'email',
+          name: 'email',
+          placeholder: 'Correo',
+        },
+      ],
+      textarea: {
+        cols: 30,
+        rows: 5,
+        name: 'textarea',
+        placeholder: 'Escribe aqui tu mensaje...',
+      },
+      btn: {
+        title: 'Enviar Mensaje',
+        type: 'submit',
+      },
     },
-    btn: {
-      title: 'Send Message',
-      type: 'submit',
-    },
-  },
 };
 
 // CallToAction data *******************

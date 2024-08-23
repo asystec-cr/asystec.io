@@ -116,7 +116,7 @@ const Header = () => {
                           isDropdownOpen[index] ? 'block' : 'md:hidden'
                         } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-slate-900/90 md:border md:border-gray-200 md:dark:border-slate-700`}
                       >
-                        {links.map(({ label: label2, href: href2 }, index2) => (
+                        {links.map(({ label: label2, target: target, href: href2 }, index2) => (
                           <li key={`item-link-${index2}`}>
                             <Link
                               className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"

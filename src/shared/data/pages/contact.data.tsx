@@ -1,17 +1,16 @@
-import { IconClock, IconHeadset, IconHelp, IconMapPin, IconMessages, IconPhoneCall } from '@tabler/icons-react';
+import { IconClock, IconHeadset, IconHelp, IconMapPin, IconMessages, IconPhoneCall, IconBrandBlogger } from '@tabler/icons-react';
 import { ContactProps, FeaturesProps } from '~/shared/types';
 import { HeroProps } from '~/shared/types';
 
 // Hero data on Contact page *******************
 export const heroContact: HeroProps = {
-  title: 'Get in touch with us',
+  title: 'Contáctanos',
   subtitle: (
     <>
-      <span className="hidden md:inline">{`Thank you for considering us for your project! We're excited to hear from you.`}</span>{' '}
-      {`Our team can assist you in building your dream website.`}
+      Nuestro equipo esta listo para ayudarte
     </>
   ),
-  tagline: 'Demo Contact Page',
+  tagline: 'Contacto',
 };
 
 // Contact data on Contact page *******************
@@ -114,35 +113,36 @@ export const contact2Contact: ContactProps = {
 export const features2Contact: FeaturesProps = {
   columns: 3,
   header: {
-    title: 'Support Center',
-    subtitle: 'Looking for something in particular?',
+    title: 'Centro de Soporte',
+    subtitle: 'Estas buscando algo en particular?',
   },
   items: [
     {
-      title: 'Have a question?',
-      description: 'See our frequently asked questions',
+      title: 'Tienes una pregunta?',
+      description: 'Mira nuestra seccion de preguntas frecuentes',
       icon: IconHelp,
       callToAction: {
-        text: 'Go to FAQ page',
+        text: 'Ir a preguntas frecuentes',
         href: '/faqs',
       },
     },
     {
-      title: 'Chat with us',
-      description: 'Live chat with our support team',
+      title: 'Chatea con nosotros',
+      description: 'Chatea ahora con el equipo de Soporte',
       icon: IconMessages,
       callToAction: {
-        text: 'Write to us',
-        href: '/',
+        text: 'Escríbenos',
+        href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+        targetBlank: true
       },
     },
     {
-      title: 'Get help',
-      description: 'Speak to our team today',
-      icon: IconHeadset,
+      title: 'Obtener ayuda',
+      description: 'Mira nuestro blog',
+      icon: IconBrandBlogger,
       callToAction: {
-        text: 'Call us',
-        href: '/',
+        text: 'Ir al blog',
+        href: 'https://blog.asystec.io',
       },
     },
   ],
