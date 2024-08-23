@@ -655,38 +655,33 @@ export const contactHome: ContactProps = {
 
 // CallToAction data *******************
 export const callToAction2Home: CallToActionProps = {
-  title: 'Next.js + Tailwind CSS',
+  title: 'Asystec + Innovación',
   subtitle:
-    'Aliquam sodales porttitor lacus ac tristique. Etiam posuere elit at leo feugiat sodales. Sed ac mauris quis sem tempor condimentum non at metus.',
+    'Descubre cómo nuestra experiencia, pasión y compromiso se traducen en una colaboración sólida y exitosa con nuestros clientes. Confía en nuestro equipo para superar tus expectativas y lograr tus objetivos comerciales.',
   callToAction: {
-    text: 'Get template',
-    href: 'https://github.com/onwidget/tailnext',
-    icon: IconDownload,
+    text: 'Registrarme',
+    href: 'https://cobros.asystec.io/register',
+    icon: IconUserPlus,
   },
   items: [
     {
-      title: 'Get template',
-      description: 'Aliquam sodales est lectus, quis.',
-      href: 'https://github.com/onwidget/tailnext',
+      title: 'Ver Blog',
+      description: 'Échale un vistazo a nuestro blog',
+      href: 'https://blog.asystec.io/',
     },
     {
-      title: 'Learn more',
-      description: 'Class aptent taciti sociosqu ad litora torquent per conubia.',
-      href: '/',
-    },
-    {
-      title: 'Subscribe',
-      description: 'Morbi orci nunc, euismod ac dui id, convallis.',
+      title: 'Suscribirme',
+      description: 'Suscribete para enterarte de las ultimas novedades',
       form: {
         icon: IconMail,
         input: {
           type: 'email',
           name: 'email',
+          placeholder: 'Digite a su correo',
           autocomplete: 'email',
-          placeholder: 'Enter your email address',
         },
         btn: {
-          title: 'Subscribe',
+          title: 'Suscribir',
           type: 'submit',
         },
       },

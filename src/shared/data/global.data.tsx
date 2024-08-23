@@ -123,11 +123,11 @@ export const footerData: FooterProps = {
   title: 'Asystec',
   links: [
     {
-      label: 'Terms & Conditions',
+      label: 'Términos y Condiciones',
       href: '/terms',
     },
     {
-      label: 'Privacy Policy',
+      label: 'Política de Privacidad',
       href: '/privacy',
     },
   ],
@@ -245,19 +245,13 @@ export const footerData: FooterProps = {
     { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
   ],
   footNote: (
-    <div className="mr-4 rtl:mr-0 rtl:ml-4 text-sm">
-      <span className="float-left rtl:float-right mr-1.5 rtl:mr-0 rtl:ml-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-      <span>
-        Made by{' '}
-        <a
-          className="font-semibold text-slate-900 dark:text-gray-200 hover:text-blue-600 hover:underline dark:hover:text-blue-600"
-          href="https://onwidget.com/"
-        >
-          {' '}
-          onWidget
-        </a>{' '}
-        · All rights reserved.
-      </span>
+    <div className="mr-4 text-sm dark:text-slate-400">
+    <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      Hecho con <span>&#10084; </span>
+     por <a target='_blank' className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
+           Asystec
+      </a> - Todos los derechos reservados.
+
     </div>
   ),
 };
@@ -266,49 +260,42 @@ export const footerData: FooterProps = {
 export const footerData2: FooterProps = {
   links: [
     {
-      label: 'Terms & Conditions',
+      label: 'Términos y Condiciones',
       href: '/terms',
     },
     {
-      label: 'Privacy Policy',
+      label: 'Política de Privacidad',
       href: '/privacy',
     },
   ],
   columns: [
     {
-      title: 'Address',
-      texts: ['51 Phasellus Avenue Maecenas', 'Aliquam, AQ 52098'],
+      title: 'Dirección',
+      texts: ['Torres Paseo Colón', 'San José, Costa Rica'],
     },
     {
-      title: 'Phone',
-      texts: ['Reception: +105 123 4567', 'Office: +107 235 7890'],
+      title: 'Teléfono',
+      texts: ['Teléfono: +506 8975-4741'],
     },
     {
-      title: 'Email',
-      texts: ['Office: info@example.com', 'Site: https://example.com'],
+      title: 'Correo',
+      texts: ['Info: info@asystec.io'],
     },
   ],
   socials: [
-    { label: 'Twitter', icon: IconBrandTwitter, href: '#' },
-    { label: 'Instagram', icon: IconBrandInstagram, href: '#' },
-    { label: 'Facebook', icon: IconBrandFacebook, href: '#' },
-    { label: 'RSS', icon: IconRss, href: '#' },
-    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/onwidget/tailnext' },
+    { label: 'Twitter', icon: IconBrandTwitter, href: 'https://twitter.com/asysteccr', target: "blank"},
+    { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/asystec/' },
+    { label: 'Facebook', icon: IconBrandFacebook, href: 'https://www.facebook.com/asysteccr' },
+    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/asystec-cr' },
   ],
   footNote: (
-    <div className="mr-4 rtl:mr-0 rtl:ml-4 text-sm">
-      <span className="float-left rtl:float-right mr-1.5 rtl:mr-0 rtl:ml-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-      <span>
-        Made by{' '}
-        <a
-          className="font-semibold text-slate-900 dark:text-gray-200 hover:text-blue-600 hover:underline dark:hover:text-blue-600"
-          href="https://onwidget.com/"
-        >
-          {' '}
-          onWidget
-        </a>{' '}
-        · All rights reserved.
-      </span>
+    <div className="mr-4 text-sm dark:text-slate-400">
+      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+        Hecho con <span>&#10084; </span>
+       por <a target='_blank' className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
+             Asystec
+        </a> - Todos los derechos reservados.
+
     </div>
   ),
 };

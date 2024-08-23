@@ -45,8 +45,8 @@ export default function Page() {
       <FAQs2 {...faqs2Home} />
       <Pricing {...pricingHome} />
       <Team {...teamHome} />
-      <Contact {...contactHome} />
-      <CallToAction2 {...callToAction2Home} /> */}
+      <Contact {...contactHome} /> */}
+      <CallToAction2 {...callToAction2Home} />
     </>
   );
 }
