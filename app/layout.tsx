@@ -10,8 +10,6 @@ import Footer2 from '~/components/widgets/Footer2';
 import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
 
-import { GTMnoscript, GTMscript } from '../src/components/GMT'
-
 const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
 
 export interface LayoutProps {
@@ -24,25 +22,16 @@ export const metadata: Metadata = {
     default: SITE.title,
   },
   description: SITE.description,
-  icons: {
-    icon: '/favicon/favicon.ico',
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang="es" className={`motion-safe:scroll-smooth 2xl:text-[24px] ${customFont.variable} font-sans`}>
+    <html lang="en" className={`motion-safe:scroll-smooth 2xl:text-[24px] ${customFont.variable} font-sans`}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="//code.jivosite.com/widget/ue3fHqbXOC" async></script>
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-        <link rel="manifest" href="favicon/site.webmanifest" />
       </head>
-      <body className="bg-white tracking-tight text-gray-900 antialiased dark:bg-slate-900 dark:text-slate-300">
-      <GTMnoscript />
+      <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300 dark:bg-slate-900">
         <Providers>
           <Announcement />
           <Header />
@@ -50,7 +39,6 @@ export default function RootLayout({ children }: LayoutProps) {
           <Footer2 />
         </Providers>
       </body>
-      <GTMscript />
     </html>
   );
 }

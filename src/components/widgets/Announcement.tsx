@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { announcementData } from '~/shared/data';
+import { announcementData } from '~/shared/data/global.data';
 
 const Announcement = () => {
-
   const { title, callToAction, callToAction2 } = announcementData;
 
   return (
@@ -23,12 +22,12 @@ const Announcement = () => {
           href={callToAction2.href}
           target="_blank"
           rel="noreferrer"
-          className="float-right"
+          className="float-right rtl:float-left"
           title={callToAction2.text}
         >
           <img
-            src="https://img.shields.io/twitter/url/https/twitter.com/onwidget.svg?style=social&amp;label=Síguenos%20%40asysteccr"
-            alt="Siguenos en Twitter"
+            src="https://img.shields.io/twitter/url/https/twitter.com/onwidget.svg?style=social&amp;label=Follow%20%40onWidget"
+            alt="Follow @onWidget"
             width="125"
             height="20"
           />

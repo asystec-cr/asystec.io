@@ -1,4 +1,4 @@
-import { footerData } from '~/shared/data';
+import { footerData } from '~/shared/data/global.data';
 
 const Footer = () => {
   const { title, links, columns, socials, footNote } = footerData;
@@ -15,7 +15,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="text-muted text-sm">
-              <ul className="mb-4 -ml-2 flex pl-2 md:order-1 md:mb-0">
+              <ul className="mb-4 flex pr-2 rtl:pr-0 rtl:pl-2 md:order-1 md:mb-0">
                 {links &&
                   links.map(({ label, href }, index) => (
                     <li key={`item-link-${index}`}>
@@ -26,7 +26,7 @@ const Footer = () => {
                       >
                         {label}
                       </a>
-                      {links.length - 1 !== index && <span className="mr-1"> · </span>}
+                      {links.length - 1 !== index && <span className="mr-1 rtl:mr-0 rtl:ml-1"> · </span>}
                     </li>
                   ))}
               </ul>
@@ -53,11 +53,10 @@ const Footer = () => {
           ))}
         </div>
         <div className="py-6 md:flex md:items-center md:justify-between md:py-8">
-          <ul className="mb-4 -ml-2 flex md:order-1 md:ml-4 md:mb-0">
+          <ul className="mb-4 flex md:order-1 md:ml-4 rtl:md:ml-0 rtl:md:mr-4 md:mb-0">
             {socials.map(({ label, icon: Icon, href }, index) => (
               <li key={`item-social-${index}`}>
                 <a
-                  target='_blank'
                   className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
                   aria-label={label}
                   href={href}

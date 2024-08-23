@@ -1,69 +1,96 @@
 import { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
+import type { TablerIcon } from "@tabler/icons-react"
 
-interface Header {
+type Widget = {
+  id?: string;
+  /** Does it have a background? */
+  hasBackground?: boolean;
+};
+
+type WrapperTagProps = Widget & {
+  children: React.ReactNode;
+  containerClass?: string;
+};
+
+type BackgroundProps = {
+  children?: React.ReactNode;
+  hasBackground?: boolean;
+};
+
+type Header = {
   title?: string | ReactElement;
-  subtitle?: string;
-  highlight?: string;
+  subtitle?: string | ReactElement;
+  tagline?: string;
   position?: 'center' | 'right' | 'left';
-}
+};
 
-interface HeaderWidgetProps {
+type HeadlineProps = {
   header: Header;
-  titleClassname?: string;
-}
+  containerClass?: string;
+  titleClass?: string;
+  subtitleClass?: string;
+};
 
-interface CallToAction {
-  text: string;
+type Icon = TablerIcon;
+
+type CallToActionType = {
+  text?: string;
   href: string;
-  icon?: Function;
+  icon?: Icon;
   targetBlank?: boolean;
-  btnText?: 'uppercase' | 'capitalize';
-  btnType?: 'primary' | 'secondary';
-}
+};
 
-interface Button {
+type LinkOrButton = {
+  callToAction?: CallToActionType;
+  containerClass?: string;
+  linkClass?: string;
+  iconClass?: string;
+};
+
+type Button = {
   title: string;
-  type: 'button' | 'submit' | 'reset' | undefined;
-}
+  type: 'button' | 'submit' | 'reset';
+};
 
-interface Input {
+type Input = {
   type: string;
   label?: string;
   value?: string;
-  name: string;
+  name?: string;
+  autocomplete?: string;
   placeholder?: string;
-}
+};
 
-interface Textarea {
+type Textarea = {
   cols?: number;
   rows?: number;
   label?: string;
   name: string;
   placeholder?: string;
-}
+};
 
-interface Checkbox {
+type Checkbox = {
   label: string;
   value: string;
-}
+};
 
-interface Radio {
+type Radio = {
   label: string;
-}
+};
 
-interface RadioBtn {
+type RadioBtn = {
   label?: string;
   radios: Array<Radio>;
-}
+};
 
-interface SmallForm {
-  icon?: Function;
+type SmallForm = {
+  icon?: Icon;
   input: Input;
   btn: Button;
-}
+};
 
-interface FormProps {
+type FormProps = {
   title?: string;
   description?: string;
   inputs: Array<Input>;
@@ -72,202 +99,264 @@ interface FormProps {
   checkboxes?: Array<Checkbox>;
   btn: Button;
   btnPosition?: 'center' | 'right' | 'left';
-}
+  containerClass?: string;
+};
 
-interface Image {
+type Image = {
   link?: string;
   src: string | StaticImageData;
   alt: string;
-}
+};
 
-interface Item {
-  title: string | boolean | number;
+type Item = {
+  title?: string | boolean | number;
   description?: string | Array<string>;
   href?: string;
   form?: SmallForm;
-  icon?: Function;
-  callToAction?: CallToAction;
-  link?: Link;
-}
+  icon?: Icon;
+  callToAction?: CallToActionType;
+};
 
-interface Team {
+type ItemGrid = {
+  id?: string;
+  items?: Array<Item>;
+  columns?: number;
+  defaultColumns?: number;
+  defaultIcon?: Icon;
+  containerClass?: string;
+  panelClass?: string;
+  iconClass?: string;
+  titleClass?: string;
+  descriptionClass?: string;
+  actionClass?: string;
+};
+
+type Timeline = {
+  id?: string;
+  items?: Array<Item>;
+  defaultIcon?: Icon;
+  containerClass?: string;
+  panelClass?: string;
+  iconClass?: string;
+  titleClass?: string;
+  descriptionClass?: string;
+};
+
+type Team = {
   name: string;
   occupation: string;
   image: Image;
   items?: Array<Item>;
-}
+  containerClass?: string;
+  imageClass?: string;
+  panelClass?: string;
+  nameClass?: string;
+  occupationClass?: string;
+  itemsClass?: string;
+};
 
-interface Testimonial {
-  name: string;
-  occupation: string;
-  comment: string;
+type Testimonial = {
+  testimonial?: string;
+  startSlice?: number;
+  endSlice?: number;
+  isTestimonialUp?: boolean;
+  hasDividerLine?: boolean;
+  name?: string;
+  job?: string;
   image?: Image;
-  icon?: Function;
   href?: string;
-}
+  containerClass?: string;
+  panelClass?: string;
+  imageClass?: string;
+  dataClass?: string;
+  nameJobClass?: string;
+  nameClass?: string;
+  jobClass?: string;
+  testimonialClass?: string;
+};
 
-interface Link {
+type Link = {
   label?: string;
   href?: string;
   ariaLabel?: string;
-  icon?: Function;
-  target?: string;
-}
+  icon?: Icon;
+};
 
-interface Price {
-  title: string;
-  value: number;
+type Price = {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  price?: number;
   period?: string;
-  texts?: Array<string>;
-  callToAction?: CallToAction;
+  items?: Array<Item>;
+  callToAction?: CallToActionType;
   hasRibbon?: boolean;
   ribbonTitle?: string;
-}
+};
 
-interface Column {
+type Column = {
   title: string;
   items: Array<Item>;
-  callToAction?: CallToAction;
-}
+  callToAction?: CallToActionType;
+};
 
-interface MenuLink extends Link {
+type MenuLink = Link & {
   links?: Array<Link>;
-}
+};
 
-interface Links {
+type Links = {
   title?: string;
   links?: Array<Link>;
   texts?: Array<string>;
-}
+};
 
-interface Tab {
+type Tab = {
   link?: Link;
   items: Array<Item>;
-}
+};
 
-interface Dropdown {
+type Dropdown = {
   options: Tab[];
   activeTab: number;
   onActiveTabSelected: Function;
   iconUp?: ReactElement;
   iconDown?: ReactElement;
-}
+};
 
-interface HeroProps {
+type ToggleMenuProps = {
+  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
+  isToggleMenuOpen: boolean;
+};
+
+type WindowSize = {
+  width: number;
+  height: number;
+};
+
+// WIDGETS
+type HeroProps = {
   title?: string | ReactElement;
   subtitle?: string | ReactElement;
-  callToAction?: CallToAction;
-  callToAction2?: CallToAction;
+  tagline?: string;
+  callToAction?: CallToActionType;
+  callToAction2?: CallToActionType;
   image?: Image;
-}
+};
 
-interface FAQsProps {
+type FAQsProps = Widget & {
   header?: Header;
   items?: Array<Item>;
+  columns?: number;
   tabs?: Array<Tab>;
-  callToAction?: CallToAction;
-}
+  callToAction?: CallToActionType;
+};
 
-interface CollapseProps {
+type CollapseProps = {
   items: Array<Item>;
   classCollapseItem?: string;
   iconUp?: ReactElement;
   iconDown?: ReactElement;
-}
+};
 
-interface CallToActionProps {
+type CallToActionProps = Widget & {
   title: string;
   subtitle: string;
-  callToAction?: CallToAction;
+  callToAction?: CallToActionType;
   items?: Array<Item>;
-}
+};
 
-interface FeaturesProps {
+type FeaturesProps = Widget & {
   header?: Header;
-  items: Array<Item>;
-}
+  items?: Array<Item>;
+  /** How many columns should it have? */
+  columns?: 1 | 2 | 3;
+  /** Do you want the image to be displayed? */
+  isImageDisplayed?: boolean;
+  image?: Image;
+  isBeforeContent?: boolean;
+  isAfterContent?: boolean;
+};
 
-interface ContentProps {
+type ContentProps = Widget & {
   header?: Header;
   content?: string;
   items?: Array<Item>;
   image?: Image;
   isReversed?: boolean;
   isAfterContent?: boolean;
-}
+};
 
-interface StepsProps {
-  title?: string;
+type StepsProps = Widget & {
+  header?: Header;
   items: Array<Item>;
+  /** Do you want the image to be displayed? */
+  isImageDisplayed?: boolean;
   image?: Image;
-}
+  /** Do you want to reverse the widget? */
+  isReversed?: boolean;
+};
 
-interface TeamProps {
+type TeamProps = Widget & {
   header?: Header;
   teams: Array<Team>;
-}
+};
 
-interface AnnouncementProps {
+type AnnouncementProps = {
   title: string;
-  callToAction?: CallToAction;
-  callToAction2?: CallToAction;
-}
+  callToAction?: CallToActionType;
+  callToAction2?: CallToActionType;
+};
 
-interface TestimonialProps {
+type TestimonialsProps = Widget & {
   header?: Header;
   testimonials: Array<Testimonial>;
-}
+  isTestimonialUp?: boolean;
+  hasDividerLine?: boolean;
+  startSlice?: number;
+  endSlice?: number;
+  callToAction?: CallToActionType;
+};
 
-interface PricingProps {
+type PricingProps = Widget & {
   header?: Header;
   prices: Array<Price>;
-}
+};
 
-interface ComparisonProps {
+type ComparisonProps = Widget & {
   header?: Header;
   columns: Array<Column>;
-}
+};
 
-interface StatsProps {
+type StatsProps = Widget & {
   items: Array<Item>;
-}
+};
 
-interface SocialProofProps {
+type SocialProofProps = Widget & {
   images: Array<Image>;
-}
+};
 
-interface ContactProps {
+type ContactProps = Widget & {
   header?: Header;
   content?: string;
-  items: Array<Item>;
+  items?: Array<Item>;
   form: FormProps;
-}
+};
 
-interface FooterProps {
+type FooterProps = {
   title?: string;
   links?: Array<Link>;
   columns: Array<Links>;
   socials: Array<Link>;
   footNote?: string | ReactElement;
   theme?: string;
-}
+};
 
-interface HeaderProps {
+type HeaderProps = {
   links?: Array<MenuLink>;
-  actions?: Array<CallToAction>;
+  actions?: Array<CallToActionType>;
   // actions?: Array<ActionLink>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: 'center' | 'right' | 'left';
-}
-
-interface ToggleMenuProps {
-  handleToggleMenuOnClick: MouseEventHandler<HTMLButtonElement>;
-  isToggleMenuOpen: boolean;
-}
-
-interface WindowSize {
-  width: number;
-  height: number;
-}
+};

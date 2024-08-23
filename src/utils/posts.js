@@ -30,12 +30,10 @@ export const fetchPosts = async () => {
 
 /** */
 export const findLatestPosts = async ({ count } = {}) => {
-  return await fetchPosts();
+  const _count = count || 4;
+  const posts = await fetchPosts();
 
-//   const _count = count || 4;
-//   const posts = await fetchPosts();
-
-//   return posts ? posts.slice(_count * -1) : [];
+  return posts ? posts.slice(_count * -1) : [];
 };
 
 /** */
