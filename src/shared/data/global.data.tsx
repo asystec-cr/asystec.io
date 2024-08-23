@@ -4,20 +4,22 @@ import {
   IconBrandInstagram,
   IconBrandTwitter,
   IconChevronDown,
+  IconKey,
   IconRss,
+  icons,
 } from '@tabler/icons-react';
 import { AnnouncementProps, FooterProps, HeaderProps } from '../types';
 
 // Announcement data
 export const announcementData: AnnouncementProps = {
-  title: 'NEW',
+  title: 'SOPORTE!',
   callToAction: {
-    text: 'This template is made with Next.js 14 using the new App Router »',
-    href: 'https://nextjs.org/blog/next-14',
+    text: 'Contactar al equipo de Soporte! »',
+    href: 'https://wa.me/message/FSR5FX2SAKTDP1',
   },
   callToAction2: {
-    text: 'Follow @onWidget on Twitter',
-    href: 'https://twitter.com/intent/user?screen_name=onwidget',
+    text: 'Síguenos en X',
+    href: 'https://x.com/asysteccr',
   },
 };
 
@@ -59,8 +61,42 @@ export const headerData: HeaderProps = {
       ],
     },
     {
+      label: 'Pages',
+      icon: IconChevronDown,
+      links: [
+        {
+          label: 'Services',
+          href: '/services',
+        },
+        {
+          label: 'Pricing',
+          href: '/pricing',
+        },
+        {
+          label: 'About us',
+          href: '/about',
+        },
+        {
+          label: 'Contact us',
+          href: '/contact',
+        },
+        {
+          label: 'FAQs',
+          href: '/faqs',
+        },
+        {
+          label: 'Terms & Conditions',
+          href: '/terms',
+        },
+        {
+          label: 'Privacy Policy',
+          href: '/privacy',
+        },
+      ],
+    },
+    {
       label: 'Blog',
-      href: '/blog',
+      href: 'https://blog.asystec.io',
     },
     {
       label: 'Contact',
@@ -69,8 +105,9 @@ export const headerData: HeaderProps = {
   ],
   actions: [
     {
-      text: 'Download',
-      href: 'https://github.com/onwidget/tailnext',
+      text: 'Iniciar Sesion',
+      href: 'https://cobros.asystec.io/login',
+      icon: IconKey,
       targetBlank: true,
     },
   ],
@@ -82,7 +119,7 @@ export const headerData: HeaderProps = {
 
 // Footer data
 export const footerData: FooterProps = {
-  title: 'TailNext',
+  title: 'Asystec',
   links: [
     {
       label: 'Terms & Conditions',
