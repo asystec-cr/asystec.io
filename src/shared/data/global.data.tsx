@@ -103,6 +103,16 @@ export const headerData: HeaderProps = {
           href: 'https://apis.gometa.org/status',
           target: 'blank'
         },
+        {
+          label: 'Plugin JVentas',
+          href: 'https://drive.google.com/open?id=1R-sAdkOceMYKw2zKyXWhp6VHwu4iN_2a&usp=drive_fs',
+          target: 'blank'
+        },
+        {
+          label: 'Plugin JRest',
+          href: 'https://drive.google.com/open?id=1DKoEH4aZJ8ZzITyEzV6oGHh0_A2XISpL&usp=drive_fs',
+          target: 'blank'
+        },
       ],
     },
     {
