@@ -30,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="//code.jivosite.com/widget/ue3fHqbXOC" async></script>
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/50161484.js"></script>
       </head>
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300 dark:bg-slate-900">
         <Providers>
