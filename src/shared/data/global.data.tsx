@@ -37,65 +37,44 @@ export const headerData: HeaderProps = {
         },
         {
           label: 'CobrosApp',
-          href: '/',
+          href: 'https://cobros.asystec.io/login',
+          target: 'blank'
         },
         {
           label: 'FacturacionApp',
-          href: '/',
+          href: 'https://app.asystec.io/login',
+          target: 'blank'
         },
         {
           label: 'TallerApp',
-          href: '/',
+          href: 'https://taller.asystec.io/login',
+          target: 'blank'
         },
       ],
     },
     {
-      label: 'Contabilidad',
+      label: 'Documentación',
       icon: IconChevronDown,
       links: [
         {
-          label: 'CPA',
-          href: '/',
+          label: 'FacturacionApp',
+          href: 'https://docs.facturacionapp.com',
+          target: 'blank'
         },
         {
-          label: 'CPI',
-          href: '/',
+          label: 'CobrosApp',
+          href: 'https://docs.cobrosapp.com',
+          target: 'blank'
         },
         {
-          label: 'Certificaciones de Ingresos',
-          href: '/',
-        },
-      ],
-    },
-    {
-      label: 'Fiscal',
-      icon: IconChevronDown,
-      links: [
-        {
-          label: 'Declaraciones de Impuestos',
-          href: '/',
+          label: 'JVentas',
+          href: 'https://docs.jventas.asystec.io/',
+          target: 'blank'
         },
         {
-          label: 'Auditorias',
-          href: '/',
-        },
-      ],
-    },
-    {
-      label: 'Legal',
-      icon: IconChevronDown,
-      links: [
-        {
-          label: 'Traspasos',
-          href: '/',
-        },
-        {
-          label: 'Representaciones',
-          href: '/',
-        },
-        {
-          label: 'Trámites',
-          href: '/',
+          label: 'JRestaurante',
+          href: 'https://docs.jrestaurante.asystec.io',
+          target: 'blank'
         },
       ],
     },
