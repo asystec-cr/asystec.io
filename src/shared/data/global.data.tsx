@@ -31,6 +31,11 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
+          label: 'JVentas',
+          href: 'https://drive.google.com/uc?export=download&id=1ZJX-hKTo436WDJxjG_b_5K7O72DSpFsq',
+          target: 'blank'
+        },
+        {
           label: 'CobrosApp',
           href: '/',
         },
