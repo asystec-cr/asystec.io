@@ -50,6 +50,11 @@ export const headerData: HeaderProps = {
           href: 'https://taller.asystec.io/login',
           target: 'blank'
         },
+        {
+          label: 'Instaladores',
+          href: 'https://drive.google.com/drive/u/0/folders/1x78WOg_WMsivxhi6UwAUC_vua-LHhIa-',
+          target: 'blank'
+        },
       ],
     },
     {
