@@ -88,6 +88,11 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
+          label: 'Estado Sistemas Asystec',
+          href: 'https://status.asysteccr.com',
+          target: 'blank'
+        },
+        {
           label: 'Estado API Hacienda',
           href: 'https://apis.gometa.org/status',
           target: 'blank'
