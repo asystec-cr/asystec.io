@@ -27,7 +27,7 @@ export const announcementData: AnnouncementProps = {
 export const headerData: HeaderProps = {
   links: [
     {
-      label: 'Soluciones de Software',
+      label: 'Software',
       icon: IconChevronDown,
       links: [
         {
@@ -115,6 +115,11 @@ export const headerData: HeaderProps = {
       target: 'blank'
     },
     {
+      label: 'Tienda',
+      href: 'https://tienda.asystec.io',
+      target: 'blank'
+    },
+    {
       label: 'Contacto',
       href: '/contact',
     },
@@ -137,6 +142,11 @@ export const headerData: HeaderProps = {
 export const footerData: FooterProps = {
   title: 'Asystec',
   links: [
+    {
+      label: 'Tienda',
+      href: 'https://tienda.asystec.io',
+      target: 'blank'
+    },
     {
       label: 'Términos y Condiciones',
       href: '/terms',
