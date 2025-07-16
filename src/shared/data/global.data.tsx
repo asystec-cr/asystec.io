@@ -55,6 +55,11 @@ export const headerData: HeaderProps = {
           href: 'https://drive.google.com/drive/u/0/folders/1x78WOg_WMsivxhi6UwAUC_vua-LHhIa-',
           target: 'blank'
         },
+        {
+          label: 'Recursos',
+          href: 'https://drive.google.com/drive/folders/17-r9wm4TyOd2Q9rWzOvQ2z0fSZszj3gJ?usp=drive_link',
+          target: 'blank'
+        },
       ],
     },
     {
