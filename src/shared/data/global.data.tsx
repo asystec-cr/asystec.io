@@ -98,6 +98,11 @@ export const headerData: HeaderProps = {
           target: 'blank'
         },
         {
+          label: 'Probar Credenciales',
+          href: 'https://app.asystec.io/hacienda/prueba-conexion',
+          target: 'blank'
+        },
+        {
           label: 'Estado API Hacienda',
           href: 'https://apis.gometa.org/status',
           target: 'blank'
