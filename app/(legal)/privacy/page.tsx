@@ -5,7 +5,7 @@ import path from 'path';
 import md from 'markdown-it';
 
 export const metadata: Metadata = {
-  title: 'Privacy',
+  title: 'Política de Privacidad',
 };
 
 const Page = () => {

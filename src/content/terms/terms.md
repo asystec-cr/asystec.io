@@ -1,117 +1,131 @@
-# Terms and Conditions
+# Términos y Condiciones
 
-_Last updated_: March 14, 2023
+_Última actualización_: 23 de diciembre de 2025
 
-Please read these terms and conditions carefully before using Our Service.
+Estos Términos y Condiciones (en adelante, los **“Términos”**) regulan el acceso y uso del sistema de **facturación electrónica** provisto por **ASYSTEC IT & TRADING COMPANY S.A.** (en adelante, **“Asystec”** o el **“Proveedor”**). Al acceder, registrarse o utilizar la plataforma, el Usuario declara haber leído, entendido y aceptado estos Términos. Si no está de acuerdo, debe abstenerse de utilizar el sistema.
 
-## Interpretation and Definitions
+## 1. Introducción
 
-### Interpretation
+1. El sistema está destinado a facilitar procesos relacionados con facturación electrónica y funciones asociadas de administración de cuentas, seguridad y soporte.
+2. Estos Términos constituyen un acuerdo vinculante entre Asystec y el Usuario. El Usuario confirma que cuenta con capacidad legal para obligarse.
 
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+## 2. Definiciones
 
-### Definitions
+Para efectos de estos Términos:
 
-For the purposes of these Terms and Conditions:
+1. **Usuario**: persona física o jurídica que accede o utiliza el sistema, ya sea en nombre propio o en representación de un tercero.
+2. **Cuenta**: acceso autenticado mediante credenciales asignadas o definidas por el Usuario.
+3. **Servicio**: el sistema de facturación electrónica y sus componentes funcionales disponibles para el Usuario.
+4. **Contenido del Usuario**: información, datos y registros ingresados o generados por el Usuario dentro del Servicio, incluyendo datos de facturación, transacciones y datos de terceros (clientes/proveedores) cuando aplique.
 
-- **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+## 3. Ámbito territorial y destinatarios
 
-- **Country** refers to: California, United States
+1. El Servicio está diseñado **exclusivamente para usuarios ubicados en Costa Rica** y para operar bajo las prácticas y requerimientos aplicables en el país.
+2. El Servicio está dirigido, entre otros, a:
+   - Empresas registradas.
+   - Personas físicas con actividad económica.
+   - Contadores profesionales.
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to TailNext LLC, 1 Cupertino, CA 95014.
+## 4. Registro, acceso y veracidad de la información
 
-- **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+1. Para utilizar el Servicio, el Usuario deberá crear una Cuenta y suministrar información **veraz, exacta, completa y actualizada**.
+2. Asystec podrá **negar, suspender o cancelar** el acceso al Servicio, sin previo aviso, cuando existan indicios razonables de:
+   - Uso indebido del sistema.
+   - Incumplimiento de estos Términos.
+   - Actividades que comprometan la seguridad, integridad o disponibilidad del Servicio.
 
-- **Service** refers to the Website.
+## 5. Responsabilidades del Usuario
 
-- **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement is a Demo.
+El Usuario se obliga a:
 
-- **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
+1. Mantener la **confidencialidad** de sus credenciales de acceso y de los mecanismos de autenticación asociados a su Cuenta.
+2. Utilizar el Servicio únicamente para fines **lícitos** y permitidos por el ordenamiento jurídico costarricense.
+3. Garantizar que los datos ingresados en el sistema sean **correctos, completos y oportunos**, incluyendo los datos requeridos para la emisión de comprobantes y registros.
+4. Responder por el uso del Servicio realizado por sus colaboradores, dependientes, autorizados o cualquier tercero que actúe bajo su control o con sus credenciales.
+5. Verificar la información antes de su envío o uso operativo, y conservar internamente respaldos o soportes que considere necesarios para su gestión empresarial.
 
-- **Website** refers to TailNext, accessible from [https://tailnext.vercel.app](https://tailnext.vercel.app)
+## 6. Facturación electrónica y cumplimiento normativo
 
-- **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+1. El Usuario reconoce que es el **responsable** del contenido de los comprobantes electrónicos que emita, reciba o gestione a través del Servicio, incluyendo su veracidad y consistencia.
+2. El Usuario se compromete a utilizar el Servicio de conformidad con la **normativa costarricense aplicable** a la facturación electrónica y a atender requerimientos de autoridades competentes cuando correspondan.
+3. Asystec provee una herramienta tecnológica; por tanto, salvo pacto expreso en contrario, Asystec no asume responsabilidad por:
+   - Errores derivados de datos incorrectos proporcionados por el Usuario.
+   - Consecuencias administrativas o tributarias asociadas a la información suministrada por el Usuario.
+   - La gestión interna del Usuario respecto de validaciones, revisiones o aprobaciones previas.
 
-## Acknowledgment
+## 7. Restricciones de uso y conductas prohibidas
 
-These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+El Usuario no podrá:
 
-Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.
+1. Acceder sin autorización a sistemas, cuentas o datos de terceros.
+2. Intentar vulnerar, desactivar, interferir o eludir medidas de seguridad del Servicio.
+3. Usar el Servicio para fines fraudulentos, ilícitos o que lesionen derechos de terceros.
+4. Introducir código malicioso, realizar pruebas de penetración no autorizadas o ejecutar acciones que afecten la disponibilidad del Servicio.
 
-By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.
+## 8. Soporte técnico
 
-You represent that you are over the age of 18\. The Company does not permit those under 18 to use the Service.
+Asystec brinda soporte técnico únicamente a través de:
 
-Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
+1. **WhatsApp**: 8975-4741
+2. **Correo electrónico**: [bryan@asystec.io](mailto:bryan@asystec.io)
 
-## Links to Other Websites
+## 9. Disponibilidad del Servicio y exclusión de garantías
 
-Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
+1. El Servicio se proporciona **“tal cual”** y **“según disponibilidad”**. Asystec no otorga garantías explícitas o implícitas sobre la disponibilidad ininterrumpida, ausencia total de errores o idoneidad para un fin específico del Usuario.
+2. El Usuario acepta que pueden existir interrupciones por mantenimiento, actualizaciones, contingencias técnicas o eventos fuera del control razonable de Asystec.
 
-The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.
+## 10. Seguridad y uso de credenciales (exclusión por mal uso)
 
-We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
+1. El Usuario es responsable de resguardar sus credenciales y de implementar controles internos razonables (por ejemplo, acceso por roles y cambio periódico de contraseñas).
+2. Asystec no será responsable por accesos no autorizados, emisiones o transacciones realizadas mediante el uso de credenciales válidas cuando ello derive de negligencia, divulgación, pérdida o uso indebido de credenciales por parte del Usuario o de terceros bajo su control.
+3. El Usuario deberá notificar a Asystec tan pronto tenga conocimiento de un acceso no autorizado o incidente de seguridad relacionado con su Cuenta.
 
-## Termination
+## 11. Tratamiento de datos personales
 
-We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
+1. El tratamiento de datos personales asociado al Servicio se rige por la **Política de Privacidad** publicada por Asystec y por la **Ley N.º 8968** de Costa Rica.
+2. Al utilizar el Servicio, el Usuario declara conocer y aceptar dicha Política de Privacidad.
 
-Upon termination, Your right to use the Service will cease immediately.
+## 12. Proveedores tecnológicos y terceros
 
-## Limitation of Liability
+1. Para la prestación del Servicio, Asystec podrá apoyarse en proveedores tecnológicos (por ejemplo, infraestructura de alojamiento), bajo controles de seguridad razonables y obligaciones de confidencialidad.
+2. Asystec no asume responsabilidad por servicios, contenidos o prácticas de terceros ajenos al control de Asystec, aun cuando se acceda a ellos por enlaces o integraciones.
 
-Not with standing any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+## 13. Propiedad intelectual
 
-To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+1. El Servicio, su software, diseño, marcas, logotipos y demás elementos asociados son propiedad de Asystec o de sus licenciantes y se encuentran protegidos por las normas aplicables.
+2. El Usuario no adquiere derechos de propiedad sobre el Servicio. Se concede únicamente un derecho de uso **limitado, no exclusivo, revocable e intransferible**, durante la vigencia de la relación y conforme a estos Términos.
 
-Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
+## 14. Limitación de responsabilidad
 
-## "AS IS" and "AS AVAILABLE" Disclaimer
+1. En la máxima medida permitida por la legislación costarricense, Asystec no será responsable por daños indirectos, incidentales, especiales, punitivos o consecuenciales, incluyendo pérdida de datos, pérdida de ganancias, interrupción de negocio o reclamaciones de terceros, que se deriven del uso o imposibilidad de uso del Servicio.
+2. Sin perjuicio de lo anterior, la responsabilidad total de Asystec frente al Usuario, por cualquier causa, se limitará al monto efectivamente pagado por el Usuario a Asystec por el Servicio en el período aplicable, **si existieran pagos**, o al mínimo permitido por ley cuando corresponda.
+3. Asystec no será responsable por:
+   - Errores en la información proporcionada por los usuarios.
+   - Pérdidas o daños derivados del uso del sistema, cuando medie culpa del Usuario, caso fortuito o fuerza mayor.
 
-The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+## 15. Suspensión y terminación
 
-Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+1. Asystec podrá suspender temporalmente o terminar el acceso del Usuario al Servicio en caso de incumplimiento de estos Términos, uso indebido, riesgos de seguridad o requerimientos de autoridad competente.
+2. La terminación implica la pérdida de acceso a la Cuenta y a las funcionalidades del Servicio, sin perjuicio de obligaciones pendientes o de disposiciones que por su naturaleza deban subsistir (por ejemplo, limitación de responsabilidad, propiedad intelectual y jurisdicción).
 
-Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
+## 16. Modificaciones a los Términos
 
-## Governing Law
+1. Asystec se reserva el derecho de modificar estos Términos en cualquier momento.
+2. Las modificaciones entrarán en vigor una vez publicadas en el sitio web o la plataforma. El uso continuado del Servicio tras la publicación implica aceptación de los Términos actualizados.
 
-The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+## 17. Legislación aplicable y jurisdicción
 
-## Disputes Resolution
+Estos Términos se rigen por las leyes de la **República de Costa Rica**. Cualquier controversia relacionada con su interpretación o ejecución será sometida a los **tribunales competentes de Costa Rica**.
 
-If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
+## 18. Disposiciones generales
 
-## For European Union (EU) Users
+1. **Separabilidad**: si alguna disposición fuese declarada inválida o inexigible, las demás permanecerán vigentes.
+2. **No renuncia**: la falta de ejercicio de un derecho por Asystec no constituye renuncia a dicho derecho.
+3. **Notificaciones**: el Usuario acepta recibir comunicaciones relacionadas con el Servicio a través de los medios de contacto que haya proporcionado.
 
-If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
+## 19. Contacto
 
-## United States Legal Compliance
+Para consultas relacionadas con estos Términos:
 
-You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
-
-## Severability and Waiver
-
-### Severability
-
-If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
-
-### Waiver
-
-Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
-
-## Translation Interpretation
-
-These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
-
-## Changes to These Terms and Conditions
-
-We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
-
-By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
-
-## Contact Us
-
-If you have any questions about these Terms and Conditions, You can contact us:
-
-- By email: [somecoolemail@domain.com](mailto:somecoolemail@domain.com)
+1. **WhatsApp**: 8975-4741
+2. **Correo electrónico**: [bryan@asystec.io](mailto:bryan@asystec.io)
