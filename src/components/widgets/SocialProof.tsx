@@ -3,8 +3,8 @@ import { SocialProofProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 
 const SocialProof = ({ images, id, hasBackground = false }: SocialProofProps) => (
-  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="">
-    <div className="flex items-center justify-center gap-6 md:gap-9">
+  <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="py-6 md:py-8 lg:py-10">
+    <div className="flex items-center justify-center gap-5 md:gap-7">
       {images &&
         images.map(({ src, alt, link }, index) => (
           <div key={`item-social-proof-${index}`}>

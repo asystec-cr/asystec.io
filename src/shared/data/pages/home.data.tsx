@@ -44,25 +44,26 @@ import gasImg from '~/assets/images/gas.jpg';
 
 // Hero data on Home page *******************
 export const heroHome: HeroProps = {
+  tagline: 'Nuevo',
   title: (
     <>
-      Tu éxito es nuestro compromiso
+      Asystec POS para pymes en Costa Rica
     </>
   ),
   subtitle: (
     <>
-      Estamos comprometidos con tu éxito y respaldamos nuestras soluciones de software con un equipo de expertos altamente capacitados y un soporte excepcional. Confía en nosotros para impulsar la innovación y el crecimiento de tu negocio.
+      Sistema POS de escritorio 100% offline con facturación electrónica TRIBU/Hacienda, app móvil, seguridad y autoupdate. Diseñado para negocios que necesitan estabilidad y rendimiento.
     </>
   ),
   callToAction: {
-    text: 'Crear Cuenta',
-    href: 'https://cobros.asystec.io/register',
-    icon: IconUserPlus,
-    targetBlank: true,
+    text: 'Conocer Asystec POS',
+    href: '/asystec-pos',
   },
   callToAction2: {
-    text: 'Learn more',
-    href: '/',
+    text: 'Descargar Asystec POS',
+    href: 'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/asystec-pos/latest/AsystecPOS-Setup.exe',
+    icon: IconDownload,
+    targetBlank: true,
   },
   image: {
     src: heroImg,

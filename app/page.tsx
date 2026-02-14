@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { SITE } from '~/config.js';
 
-import Hero from '~/components/widgets/Hero';
+import PosHero from '~/components/widgets/PosHero';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Features from '~/components/widgets/Features';
 import Content from '~/components/widgets/Content';
@@ -20,7 +20,6 @@ import {
   contentHomeTwo,
   faqs2Home,
   featuresHome,
-  heroHome,
   pricingHome,
   socialProofHome,
   stepsHome,
@@ -35,8 +34,10 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <Hero {...heroHome} />
-      <SocialProof {...socialProofHome} />
+      <PosHero />
+      <div className="mt-6 md:mt-8 lg:mt-10">
+        <SocialProof {...socialProofHome} />
+      </div>
       <Features {...featuresHome} />
       {/* <Content {...contentHomeOne} /> */}
       {/* <Content {...contentHomeTwo} /> */}

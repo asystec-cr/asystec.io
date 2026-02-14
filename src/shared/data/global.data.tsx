@@ -12,10 +12,10 @@ import { AnnouncementProps, FooterProps, HeaderProps } from '../types';
 
 // Announcement data
 export const announcementData: AnnouncementProps = {
-  title: 'SOPORTE!',
+  title: 'NUEVO',
   callToAction: {
-    text: 'Contactar al equipo de Soporte! »',
-    href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+    text: 'Asystec POS: conocelo y descargalo »',
+    href: '/asystec-pos',
   },
   callToAction2: {
     text: 'Síguenos en X',
@@ -30,6 +30,10 @@ export const headerData: HeaderProps = {
       label: 'Software',
       icon: IconChevronDown,
       links: [
+        {
+          label: 'Asystec POS',
+          href: '/asystec-pos',
+        },
         {
           label: 'CobrosApp',
           href: 'https://cobros.asystec.io/login',
