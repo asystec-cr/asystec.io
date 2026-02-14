@@ -132,7 +132,7 @@ export const features2Contact: FeaturesProps = {
       icon: IconMessages,
       callToAction: {
         text: 'Escríbenos',
-        href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+        href: 'https://wa.me/50689754741',
         targetBlank: true
       },
     },

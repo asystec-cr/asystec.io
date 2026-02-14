@@ -269,7 +269,7 @@ const Page = () => {
             <p className="mt-1 text-sm text-green-50">Escribinos y coordinamos una demo personalizada para tu negocio.</p>
           </div>
           <a
-            href="https://wa.me/50688888888"
+            href="https://wa.me/50689754741"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-green-800 transition hover:bg-green-50"

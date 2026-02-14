@@ -496,7 +496,7 @@ export const teamHome: TeamProps = {
         {
           title: 'WhatsaApp',
           icon: IconBrandWhatsapp,
-          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+          href: 'https://wa.me/50689754741',
         },
         {
           title: 'Know more on Linkedin',
@@ -521,17 +521,17 @@ export const teamHome: TeamProps = {
         {
           title: 'WhatsaApp',
           icon: IconBrandWhatsapp,
-          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+          href: 'https://wa.me/50689754741',
         },
         {
           title: 'Know more on Linkedin',
           icon: IconBrandLinkedin,
-          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+          href: 'https://wa.me/50689754741',
         },
         {
           title: 'Contact by email',
           icon: IconMail,
-          href: 'https://wa.me/message/FSR5FX2SAKTDP1',
+          href: 'https://wa.me/50689754741',
         },
       ],
     },
