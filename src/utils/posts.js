@@ -5,6 +5,8 @@ import { join } from 'path';
 const BLOG_DIR = join(process.cwd(), 'src/content/blog');
 
 const load = () => {
+  if (!fs.existsSync(BLOG_DIR)) return Promise.resolve([]);
+
   const files = fs.readdirSync(BLOG_DIR);
 
   const posts = Promise.all(
