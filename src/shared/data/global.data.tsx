@@ -113,7 +113,7 @@ export const headerData: HeaderProps = {
         },
         {
           label: 'Plugin JVentas',
-          href: 'https://drive.google.com/open?id=1R-sAdkOceMYKw2zKyXWhp6VHwu4iN_2a&usp=drive_fs',
+          href: 'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/plugin_jventas/latest/PluginJVentas-Setup.exe',
           target: 'blank'
         },
         {
