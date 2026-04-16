@@ -35,34 +35,42 @@ export const headerData: HeaderProps = {
           href: '/asystec-pos',
         },
         {
+          label: 'FitPro',
+          href: '/fitpro',
+        },
+        {
+          label: 'Diseño de plataformas',
+          href: '/plataformas',
+        },
+        {
           label: 'CobrosApp',
           href: 'https://cobros.asystec.io/login',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'FacturacionApp',
           href: 'https://app.asystec.io/login',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'TallerApp',
           href: 'https://taller.asystec.io/login',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'Jas Admin',
           href: 'https://jas.asystec.io',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'Instaladores',
           href: 'https://drive.google.com/drive/u/0/folders/1x78WOg_WMsivxhi6UwAUC_vua-LHhIa-',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'Recursos',
           href: 'https://drive.google.com/drive/folders/17-r9wm4TyOd2Q9rWzOvQ2z0fSZszj3gJ?usp=drive_link',
-          target: 'blank'
+          target: 'blank',
         },
       ],
     },
@@ -73,22 +81,22 @@ export const headerData: HeaderProps = {
         {
           label: 'FacturacionApp',
           href: 'https://docs.facturacionapp.com',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'CobrosApp',
           href: 'https://docs.cobrosapp.com',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'JVentas',
           href: 'https://docs.jventas.asystec.io/',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'JRestaurante',
           href: 'https://docs.jrestaurante.asystec.io',
-          target: 'blank'
+          target: 'blank',
         },
       ],
     },
@@ -99,39 +107,39 @@ export const headerData: HeaderProps = {
         {
           label: 'Estado Sistemas Asystec',
           href: 'https://status.asysteccr.com',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'Probar Credenciales',
           href: 'https://app.asystec.io/hacienda/prueba-conexion',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'Estado API Hacienda',
           href: 'https://apis.gometa.org/status',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'Plugin JVentas',
           href: 'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/plugin_jventas/latest/PluginJVentas-Setup.exe',
-          target: 'blank'
+          target: 'blank',
         },
         {
           label: 'Plugin JRest',
           href: 'https://drive.google.com/open?id=1DKoEH4aZJ8ZzITyEzV6oGHh0_A2XISpL&usp=drive_fs',
-          target: 'blank'
+          target: 'blank',
         },
       ],
     },
     {
       label: 'Blog',
       href: 'https://blog.asystec.io',
-      target: 'blank'
+      target: 'blank',
     },
     {
       label: 'Tienda',
       href: 'https://tienda.asystec.io',
-      target: 'blank'
+      target: 'blank',
     },
     {
       label: 'Contacto',
@@ -159,7 +167,7 @@ export const footerData: FooterProps = {
     {
       label: 'Tienda',
       href: 'https://tienda.asystec.io',
-      target: 'blank'
+      target: 'blank',
     },
     {
       label: 'Términos y Condiciones',
@@ -285,12 +293,13 @@ export const footerData: FooterProps = {
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
-    <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
       Hecho con <span>&#10084; </span>
-     por <a target='_blank' className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
-           Asystec
-      </a> - Todos los derechos reservados.
-
+      por{' '}
+      <a target="_blank" className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
+        Asystec
+      </a>{' '}
+      - Todos los derechos reservados.
     </div>
   ),
 };
@@ -322,7 +331,7 @@ export const footerData2: FooterProps = {
     },
   ],
   socials: [
-    { label: 'Twitter', icon: IconBrandTwitter, href: 'https://twitter.com/asysteccr', target: "blank"},
+    { label: 'Twitter', icon: IconBrandTwitter, href: 'https://twitter.com/asysteccr', target: 'blank' },
     { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/asystec/' },
     { label: 'Facebook', icon: IconBrandFacebook, href: 'https://www.facebook.com/asysteccr' },
     { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/asystec-cr' },
@@ -330,11 +339,12 @@ export const footerData2: FooterProps = {
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
       <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
-        Hecho con <span>&#10084; </span>
-       por <a target='_blank' className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
-             Asystec
-        </a> - Todos los derechos reservados.
-
+      Hecho con <span>&#10084; </span>
+      por{' '}
+      <a target="_blank" className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
+        Asystec
+      </a>{' '}
+      - Todos los derechos reservados.
     </div>
   ),
 };

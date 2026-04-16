@@ -5,6 +5,7 @@ import { SITE } from '~/config.js';
 import PosHero from '~/components/widgets/PosHero';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Features from '~/components/widgets/Features';
+import PlatformPortfolio from '~/components/widgets/PlatformPortfolio';
 import Content from '~/components/widgets/Content';
 import Steps from '~/components/widgets/Steps';
 import Testimonials from '~/components/widgets/Testimonials';
@@ -39,6 +40,7 @@ export default function Page() {
         <SocialProof {...socialProofHome} />
       </div>
       <Features {...featuresHome} />
+      <PlatformPortfolio portfolioHref="/plataformas#portfolio-cases" />
       {/* <Content {...contentHomeOne} /> */}
       {/* <Content {...contentHomeTwo} /> */}
       {/* <Steps {...stepsHome} /> */}
