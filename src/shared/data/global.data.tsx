@@ -120,6 +120,11 @@ export const headerData: HeaderProps = {
           target: 'blank',
         },
         {
+          label: 'Consultas',
+          href: 'https://consultas.asystec.io/',
+          target: 'blank',
+        },
+        {
           label: 'Plugin JVentas',
           href: 'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/plugin_jventas/latest/PluginJVentas-Setup.exe',
           target: 'blank',
