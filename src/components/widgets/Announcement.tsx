@@ -11,7 +11,7 @@ const Announcement = () => {
         <a
           href={callToAction.href}
           target="_blank"
-          rel="noreferrer noopened"
+          rel="noopener noreferrer"
           className="cursor-pointer text-gray-100 hover:underline"
         >
           {callToAction.icon && <callToAction.icon className="mr-1 -ml-1.5 h-5 w-5" />} {callToAction.text}
@@ -21,7 +21,7 @@ const Announcement = () => {
         <a
           href={callToAction2.href}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="float-right rtl:float-left"
           title={callToAction2.text}
         >
