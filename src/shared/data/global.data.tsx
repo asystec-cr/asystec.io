@@ -301,7 +301,12 @@ export const footerData: FooterProps = {
       <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
       Hecho con <span>&#10084; </span>
       por{' '}
-      <a target="_blank" className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:underline dark:text-gray-200"
+        href="https://asystec.io"
+      >
         Asystec
       </a>{' '}
       - Todos los derechos reservados.
@@ -346,7 +351,12 @@ export const footerData2: FooterProps = {
       <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
       Hecho con <span>&#10084; </span>
       por{' '}
-      <a target="_blank" className="text-blue-600 hover:underline dark:text-gray-200" href="https://asystec.io">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 hover:underline dark:text-gray-200"
+        href="https://asystec.io"
+      >
         Asystec
       </a>{' '}
       - Todos los derechos reservados.

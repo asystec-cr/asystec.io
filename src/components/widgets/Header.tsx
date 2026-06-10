@@ -11,6 +11,15 @@ import { headerData } from '~/shared/data/global.data';
 import CTA from '../common/CTA';
 import { CallToActionType } from '~/shared/types';
 
+const getLinkTargetProps = (target?: string) => {
+  const normalizedTarget = target === 'blank' ? '_blank' : target;
+
+  return {
+    target: normalizedTarget,
+    rel: normalizedTarget === '_blank' ? 'noopener noreferrer' : undefined,
+  };
+};
+
 const Header = () => {
   const { links, actions, isSticky, showToggleTheme, showRssFeed, position } = headerData;
 
@@ -121,7 +130,7 @@ const Header = () => {
                             <Link
                               className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 md:hover:bg-gray-200"
                               href={href2 as string}
-                              target={target as string}
+                              {...getLinkTargetProps(target)}
                               onClick={() =>
                                 isToggleMenuOpen ? handleToggleMenuOnClick() : handleCloseDropdownOnClick(index)
                               }
@@ -136,7 +145,7 @@ const Header = () => {
                     <Link
                       className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
                       href={href as string}
-                      target={target as string}
+                      {...getLinkTargetProps(target)}
                       onClick={() => (isToggleMenuOpen ? handleToggleMenuOnClick() : handleDropdownOnClick(index))}
                     >
                       {label}
