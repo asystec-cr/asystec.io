@@ -19,6 +19,10 @@ import {
 
 export const metadata: Metadata = {
   title: 'Services',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const Page = () => {
