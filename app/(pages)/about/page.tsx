@@ -26,6 +26,10 @@ import {
 
 export const metadata: Metadata = {
   title: `About us`,
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const Page = () => {

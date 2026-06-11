@@ -8,6 +8,10 @@ import { heroPricing, comparisonPricing, faqs3Pricing, pricingPricing } from '~/
 
 export const metadata: Metadata = {
   title: 'Pricing',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const Page = () => {
