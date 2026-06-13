@@ -18,7 +18,7 @@ import {
   IconBrandWhatsapp,
   IconHelpCircle,
   IconClockHour5,
-  IconClipboardData
+  IconClipboardData,
 } from '@tabler/icons-react';
 import {
   CallToActionProps,
@@ -45,14 +45,11 @@ import gasImg from '~/assets/images/gas.jpg';
 // Hero data on Home page *******************
 export const heroHome: HeroProps = {
   tagline: 'Nuevo',
-  title: (
-    <>
-      Asystec POS para pymes en Costa Rica
-    </>
-  ),
+  title: <>Asystec POS para pymes en Costa Rica</>,
   subtitle: (
     <>
-      Sistema POS de escritorio 100% offline con facturación electrónica TRIBU/Hacienda, app móvil, seguridad y autoupdate. Diseñado para negocios que necesitan estabilidad y rendimiento.
+      Sistema POS de escritorio 100% offline con facturación electrónica TRIBU/Hacienda, app móvil, seguridad y
+      autoupdate. Diseñado para negocios que necesitan estabilidad y rendimiento.
     </>
   ),
   callToAction: {
@@ -106,7 +103,8 @@ export const featuresHome: FeaturesProps = {
   items: [
     {
       title: 'Soporte y servicio al cliente excepcionales',
-      description: 'Estamos aquí para ti. Nuestro excepcional servicio al cliente brinda soporte confiable y soluciones efectivas a tus necesidades.',
+      description:
+        'Estamos aquí para ti. Nuestro excepcional servicio al cliente brinda soporte confiable y soluciones efectivas a tus necesidades.',
       icon: IconHelpCircle,
       // callToAction: {
       //   text: 'Discover now',
@@ -135,7 +133,8 @@ export const featuresHome: FeaturesProps = {
     },
     {
       title: 'Innovacion y actualizaion constante',
-      description: 'Destaca en el mercado. Nuestra solución se actualiza constantemente con innovaciones que te mantienen por delante de la competencia.',
+      description:
+        'Destaca en el mercado. Nuestra solución se actualiza constantemente con innovaciones que te mantienen por delante de la competencia.',
       icon: IconRocket,
       // callToAction: {
       //   text: 'Discover now',
@@ -481,7 +480,7 @@ export const teamHome: TeamProps = {
   header: {
     title: 'Nuestro Equipo',
     subtitle:
-    'Conoce a nuestro equipo altamente capacitado y comprometido en proporcionarte un servicio excepcional. Nuestros profesionales son expertos en sus respectivos campos y están dedicados a ofrecerte soluciones personalizadas y resultados de calidad.',
+      'Conoce a nuestro equipo altamente capacitado y comprometido en proporcionarte un servicio excepcional. Nuestros profesionales son expertos en sus respectivos campos y están dedicados a ofrecerte soluciones personalizadas y resultados de calidad.',
     // tagline: 'Equipo',
   },
   teams: [
@@ -548,48 +547,51 @@ export const contactHome: ContactProps = {
   },
   content:
     '¡Nos encantaría saber de ti! Si tienes alguna pregunta, comentario o solicitud, no dudes en ponerte en contacto con nosotros a través de los siguientes medios:',
-    items: [
+  items: [
+    {
+      title: 'Direccion',
+      description: ['Torres Paseo Colón', 'San José, Costa Rica'],
+      icon: IconMapPin,
+    },
+    {
+      title: 'Teléfono',
+      description: ['Teléfono: +506 8975-4741', 'Correo: info@asystec.io'],
+      icon: IconPhoneCall,
+    },
+    {
+      title: 'Horario',
+      description: ['Lunes - Viernes: 8:00 - 17:00', 'Sábado y Domingo: Cerrado'],
+      icon: IconClock,
+    },
+  ],
+  form: {
+    title: 'Listo para empezar?',
+    inputs: [
       {
-        title: 'Direccion',
-        description: ['Torres Paseo Colón', 'San José, Costa Rica'],
-        icon: IconMapPin,
+        type: 'text',
+        label: 'Nombre',
+        name: 'name',
+        placeholder: 'Nombre',
       },
       {
-        title: 'Teléfono',
-        description: ['Teléfono: +506 8975-4741', 'Correo: info@asystec.io'],
-        icon: IconPhoneCall,
-      },
-      {
-        title: 'Horario',
-        description: ['Lunes - Viernes: 8:00 - 17:00', 'Sábado y Domingo: Cerrado'],
-        icon: IconClock,
+        type: 'email',
+        label: 'Correo electrónico',
+        name: 'email',
+        placeholder: 'Correo',
       },
     ],
-    form: {
-      title: 'Listo para empezar?',
-      inputs: [
-        {
-          type: 'text',
-          name: 'name',
-          placeholder: 'Nombre',
-        },
-        {
-          type: 'email',
-          name: 'email',
-          placeholder: 'Correo',
-        },
-      ],
-      textarea: {
-        cols: 30,
-        rows: 5,
-        name: 'textarea',
-        placeholder: 'Escribe aqui tu mensaje...',
-      },
-      btn: {
-        title: 'Enviar Mensaje',
-        type: 'submit',
-      },
+    textarea: {
+      cols: 30,
+      rows: 5,
+      label: 'Mensaje',
+      name: 'textarea',
+      placeholder: 'Escribe aqui tu mensaje...',
     },
+    btn: {
+      title: 'Enviar Mensaje',
+      type: 'submit',
+    },
+  },
 };
 
 // CallToAction data *******************
