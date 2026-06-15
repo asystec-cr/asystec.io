@@ -11,17 +11,39 @@ import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
 
 const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
+const socialImage = {
+  url: '/images/pos/pos0.jpeg',
+  width: 1417,
+  height: 897,
+  alt: 'Asystec POS para pymes en Costa Rica',
+};
 
 export interface LayoutProps {
   children: React.ReactNode;
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.origin),
+  applicationName: SITE.name,
   title: {
     template: `%s — ${SITE.name}`,
     default: SITE.title,
   },
   description: SITE.description,
+  openGraph: {
+    type: 'website',
+    locale: 'es_CR',
+    siteName: SITE.name,
+    title: SITE.title,
+    description: SITE.description,
+    images: [socialImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE.title,
+    description: SITE.description,
+    images: [socialImage.url],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps) {
