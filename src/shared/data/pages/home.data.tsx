@@ -591,6 +591,11 @@ export const contactHome: ContactProps = {
       title: 'Enviar Mensaje',
       type: 'submit',
     },
+    submitAction: {
+      type: 'whatsapp',
+      phone: '50689754741',
+      messagePrefix: 'Hola Asystec, quiero coordinar una demo.',
+    },
   },
 };
 

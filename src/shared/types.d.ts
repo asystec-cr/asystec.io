@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { ReactElement } from 'react';
-import type { TablerIcon } from "@tabler/icons-react"
+import type { TablerIcon } from '@tabler/icons-react';
 
 type Widget = {
   id?: string;
@@ -53,6 +53,12 @@ type Button = {
   type: 'button' | 'submit' | 'reset';
 };
 
+type SubmitAction = {
+  type: 'whatsapp';
+  phone: string;
+  messagePrefix?: string;
+};
+
 type Input = {
   type: string;
   label?: string;
@@ -98,6 +104,7 @@ type FormProps = {
   textarea?: Textarea;
   checkboxes?: Array<Checkbox>;
   btn: Button;
+  submitAction?: SubmitAction;
   btnPosition?: 'center' | 'right' | 'left';
   containerClass?: string;
 };
@@ -180,7 +187,7 @@ type Link = {
   href?: string;
   ariaLabel?: string;
   icon?: Icon;
-  target?: string
+  target?: string;
 };
 
 type Price = {

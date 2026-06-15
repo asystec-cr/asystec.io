@@ -12,10 +12,11 @@ const Form = ({
   textarea,
   checkboxes,
   btn,
+  submitAction,
   btnPosition,
   containerClass,
 }: FormProps) => {
-  const [inputValues, setInputValues] = useState([]);
+  const [inputValues, setInputValues] = useState<Record<string, string>>({});
   const [radioBtnValue, setRadioBtnValue] = useState('');
   const [textareaValues, setTextareaValues] = useState('');
   const [checkedState, setCheckedState] = useState<boolean[]>(new Array(checkboxes && checkboxes.length).fill(false));
@@ -51,8 +52,36 @@ const Form = ({
     });
   };
 
+  const getSubmitUrl = () => {
+    if (submitAction?.type !== 'whatsapp') {
+      return undefined;
+    }
+
+    const lines = [
+      submitAction.messagePrefix ?? 'Hola Asystec, quiero informacion.',
+      inputValues.name ? `Nombre: ${inputValues.name}` : '',
+      inputValues.email ? `Correo: ${inputValues.email}` : '',
+      textareaValues ? `Mensaje: ${textareaValues}` : '',
+    ].filter(Boolean);
+
+    const message = encodeURIComponent(lines.join('\n'));
+
+    return `https://wa.me/${submitAction.phone}?text=${message}`;
+  };
+
+  const submitUrl = getSubmitUrl();
+
+  const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
+    if (!submitUrl) {
+      return;
+    }
+
+    event.preventDefault();
+    window.location.href = submitUrl;
+  };
+
   return (
-    <form id="contactForm" className={twMerge('', containerClass)}>
+    <form id="contactForm" className={twMerge('', containerClass)} onSubmit={submitHandler}>
       {title && <h2 className={`${description ? 'mb-2' : 'mb-4'} text-2xl font-bold`}>{title}</h2>}
       {description && <p className="mb-4">{description}</p>}
       <div className="mb-6">
@@ -69,7 +98,7 @@ const Form = ({
                   id={name}
                   name={name}
                   autoComplete={autocomplete}
-                  value={inputValues[index]}
+                  value={name ? inputValues[name] ?? '' : ''}
                   onChange={changeInputValueHandler}
                   placeholder={placeholder}
                   className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
@@ -144,9 +173,15 @@ const Form = ({
         <div
           className={`${btnPosition === 'left' ? 'text-left' : btnPosition === 'right' ? 'text-right' : 'text-center'}`}
         >
-          <button type={btn.type || 'button'} className="btn btn-primary sm:mb-0">
-            {btn.title}
-          </button>
+          {submitUrl ? (
+            <a href={submitUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary sm:mb-0">
+              {btn.title}
+            </a>
+          ) : (
+            <button type={btn.type || 'button'} className="btn btn-primary sm:mb-0">
+              {btn.title}
+            </button>
+          )}
         </div>
       )}
     </form>
