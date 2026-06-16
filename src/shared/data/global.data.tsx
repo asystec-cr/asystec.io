@@ -20,6 +20,7 @@ export const announcementData: AnnouncementProps = {
   callToAction2: {
     text: 'Síguenos en X',
     href: 'https://x.com/asysteccr',
+    targetBlank: true,
   },
 };
 
