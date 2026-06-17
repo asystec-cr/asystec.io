@@ -299,7 +299,10 @@ export const footerData: FooterProps = {
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
-      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      <span
+        aria-hidden="true"
+        className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(/favicon.ico)] bg-cover md:-mt-0.5 md:h-6 md:w-6"
+      ></span>
       Hecho con <span>&#10084; </span>
       por{' '}
       <a
@@ -349,7 +352,10 @@ export const footerData2: FooterProps = {
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
-      <span className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)] bg-cover md:-mt-0.5 md:h-6 md:w-6"></span>
+      <span
+        aria-hidden="true"
+        className="float-left mr-1.5 h-5 w-5 rounded-sm bg-[url(/favicon.ico)] bg-cover md:-mt-0.5 md:h-6 md:w-6"
+      ></span>
       Hecho con <span>&#10084; </span>
       por{' '}
       <a
