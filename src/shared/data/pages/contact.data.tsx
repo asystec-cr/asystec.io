@@ -7,7 +7,7 @@ export const heroContact: HeroProps = {
   title: 'Contáctanos',
   subtitle: (
     <>
-      Nuestro equipo esta listo para ayudarte
+      Nuestro equipo está listo para ayudarte
     </>
   ),
   tagline: 'Contacto',
@@ -114,12 +114,12 @@ export const features2Contact: FeaturesProps = {
   columns: 3,
   header: {
     title: 'Centro de Soporte',
-    subtitle: 'Estas buscando algo en particular?',
+    subtitle: '¿Estás buscando algo en particular?',
   },
   items: [
     {
-      title: 'Tienes una pregunta?',
-      description: 'Mira nuestra seccion de preguntas frecuentes',
+      title: '¿Tienes una pregunta?',
+      description: 'Mira nuestra sección de preguntas frecuentes',
       icon: IconHelp,
       callToAction: {
         text: 'Ir a preguntas frecuentes',
@@ -133,7 +133,7 @@ export const features2Contact: FeaturesProps = {
       callToAction: {
         text: 'Escríbenos',
         href: 'https://wa.me/50689754741',
-        targetBlank: true
+        targetBlank: true,
       },
     },
     {
