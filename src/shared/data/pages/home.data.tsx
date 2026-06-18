@@ -493,7 +493,7 @@ export const teamHome: TeamProps = {
       },
       items: [
         {
-          title: 'WhatsaApp',
+          title: 'WhatsApp',
           icon: IconBrandWhatsapp,
           href: 'https://wa.me/50689754741',
         },
@@ -518,7 +518,7 @@ export const teamHome: TeamProps = {
       },
       items: [
         {
-          title: 'WhatsaApp',
+          title: 'WhatsApp',
           icon: IconBrandWhatsapp,
           href: 'https://wa.me/50689754741',
         },
@@ -542,14 +542,14 @@ export const contactHome: ContactProps = {
   hasBackground: true,
   header: {
     title: 'Contáctanos',
-    subtitle: 'Nuestro equipo esta listo para ayudarte',
+    subtitle: 'Nuestro equipo está listo para ayudarte',
     tagline: 'Contacto',
   },
   content:
     '¡Nos encantaría saber de ti! Si tienes alguna pregunta, comentario o solicitud, no dudes en ponerte en contacto con nosotros a través de los siguientes medios:',
   items: [
     {
-      title: 'Direccion',
+      title: 'Dirección',
       description: ['Torres Paseo Colón', 'San José, Costa Rica'],
       icon: IconMapPin,
     },
@@ -565,7 +565,7 @@ export const contactHome: ContactProps = {
     },
   ],
   form: {
-    title: 'Listo para empezar?',
+    title: '¿Listo para empezar?',
     inputs: [
       {
         type: 'text',
@@ -585,7 +585,7 @@ export const contactHome: ContactProps = {
       rows: 5,
       label: 'Mensaje',
       name: 'textarea',
-      placeholder: 'Escribe aqui tu mensaje...',
+      placeholder: 'Escribe aquí tu mensaje...',
     },
     btn: {
       title: 'Enviar Mensaje',
@@ -617,7 +617,7 @@ export const callToAction2Home: CallToActionProps = {
     },
     {
       title: 'Suscribirme',
-      description: 'Suscribete para enterarte de las ultimas novedades',
+      description: 'Suscríbete para enterarte de las últimas novedades',
       form: {
         icon: IconMail,
         input: {

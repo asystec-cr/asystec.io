@@ -154,7 +154,7 @@ export const headerData: HeaderProps = {
   ],
   actions: [
     {
-      text: 'Iniciar Sesion',
+      text: 'Iniciar sesión',
       href: 'https://cobros.asystec.io/login',
       icon: IconKey,
       targetBlank: true,
