@@ -3,6 +3,7 @@ import {
   IconBrandGithub,
   IconBrandInstagram,
   IconBrandTwitter,
+  IconBrandX,
   IconChevronDown,
   IconKey,
   IconRss,
@@ -345,7 +346,7 @@ export const footerData2: FooterProps = {
     },
   ],
   socials: [
-    { label: 'Twitter', icon: IconBrandTwitter, href: 'https://twitter.com/asysteccr', target: 'blank' },
+    { label: 'X', icon: IconBrandX, href: 'https://x.com/asysteccr', target: 'blank' },
     { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/asystec/' },
     { label: 'Facebook', icon: IconBrandFacebook, href: 'https://www.facebook.com/asysteccr' },
     { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/asystec-cr' },
