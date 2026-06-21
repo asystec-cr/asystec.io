@@ -347,9 +347,9 @@ export const footerData2: FooterProps = {
   ],
   socials: [
     { label: 'X', icon: IconBrandX, href: 'https://x.com/asysteccr', target: 'blank' },
-    { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/asystec/' },
-    { label: 'Facebook', icon: IconBrandFacebook, href: 'https://www.facebook.com/asysteccr' },
-    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/asystec-cr' },
+    { label: 'Instagram', icon: IconBrandInstagram, href: 'https://www.instagram.com/asystec/', target: 'blank' },
+    { label: 'Facebook', icon: IconBrandFacebook, href: 'https://www.facebook.com/asysteccr', target: 'blank' },
+    { label: 'Github', icon: IconBrandGithub, href: 'https://github.com/asystec-cr', target: 'blank' },
   ],
   footNote: (
     <div className="mr-4 text-sm dark:text-slate-400">
