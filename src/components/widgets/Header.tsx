@@ -93,6 +93,7 @@ const Header = () => {
           </div>
         </div>
         <nav
+          id="primary-navigation"
           className={`${isToggleMenuOpen ? 'block px-3' : 'hidden'} h-screen md:w-full ${
             position === 'right' ? 'justify-end' : position === 'left' ? 'justify-start' : 'justify-center'
           } w-auto overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:items-center md:overflow-visible`}
@@ -108,7 +109,11 @@ const Header = () => {
                   {links && links.length ? (
                     <>
                       <button
+                        type="button"
                         className="flex items-center px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white"
+                        aria-haspopup="true"
+                        aria-expanded={isDropdownOpen[index]}
+                        aria-controls={`header-dropdown-${index}`}
                         onClick={() => handleDropdownOnClick(index)}
                       >
                         {label}{' '}
@@ -121,6 +126,7 @@ const Header = () => {
                         )}
                       </button>
                       <ul
+                        id={`header-dropdown-${index}`}
                         className={`${
                           isDropdownOpen[index] ? 'block' : 'md:hidden'
                         } rounded pl-4 font-medium drop-shadow-xl md:absolute md:min-w-[200px] md:bg-white/90 md:pl-0 md:backdrop-blur-md dark:md:bg-slate-900/90 md:border md:border-gray-200 md:dark:border-slate-700`}
