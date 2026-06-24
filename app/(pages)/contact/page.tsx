@@ -8,8 +8,24 @@ import Hero from '~/components/widgets/Hero';
 import { heroContact, contact2Contact, features2Contact } from '~/shared/data/pages/contact.data';
 import { contactHome } from '~/shared/data/pages/home.data';
 
+const contactDescription =
+  'Contacta al equipo de Asystec en Costa Rica para soporte, demostraciones y asesoría sobre software empresarial, facturación electrónica y soluciones POS.';
+
 export const metadata: Metadata = {
   title: 'Contacto',
+  description: contactDescription,
+  alternates: {
+    canonical: '/contact',
+  },
+  openGraph: {
+    title: 'Contacto',
+    description: contactDescription,
+    url: '/contact',
+  },
+  twitter: {
+    title: 'Contacto',
+    description: contactDescription,
+  },
 };
 
 const Page = () => {
