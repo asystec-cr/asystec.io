@@ -1,10 +1,33 @@
 import type { Metadata } from 'next';
 import PosImageCarousel from '~/components/widgets/PosImageCarousel';
 
+const asystecPosTitle = 'Asystec POS';
+const asystecPosDescription =
+  'Sistema POS de escritorio 100% offline para pymes en Costa Rica con facturación electrónica TRIBU/Hacienda, app móvil, seguridad y autoupdate.';
+const asystecPosSocialImage = {
+  url: '/images/pos/pos0.jpeg',
+  width: 1417,
+  height: 897,
+  alt: 'Asystec POS para pymes en Costa Rica',
+};
+
 export const metadata: Metadata = {
-  title: 'Asystec POS',
-  description:
-    'Sistema POS de escritorio 100% offline para pymes en Costa Rica con facturación electrónica TRIBU/Hacienda, app móvil, seguridad y autoupdate.',
+  title: asystecPosTitle,
+  description: asystecPosDescription,
+  alternates: {
+    canonical: '/asystec-pos',
+  },
+  openGraph: {
+    title: asystecPosTitle,
+    description: asystecPosDescription,
+    url: '/asystec-pos',
+    images: [asystecPosSocialImage],
+  },
+  twitter: {
+    title: asystecPosTitle,
+    description: asystecPosDescription,
+    images: [asystecPosSocialImage.url],
+  },
 };
 
 const benefits = [
@@ -151,7 +174,10 @@ const Page = () => {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Beneficios principales</h2>
         <div className="mt-5 grid gap-4 md:grid-cols-3">
           {benefits.map((item) => (
-            <article key={item.title} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+            <article
+              key={item.title}
+              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+            >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
               <p className="mt-2 text-sm text-gray-600 dark:text-slate-300">{item.description}</p>
             </article>
@@ -210,7 +236,9 @@ const Page = () => {
               </ul>
             </div>
             <div className="rounded-lg border-2 border-blue-600 p-4">
-              <p className="inline-flex rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-800">Más elegido</p>
+              <p className="inline-flex rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-800">
+                Más elegido
+              </p>
               <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">Pro</h3>
               <p className="mt-1 text-2xl font-bold text-gray-900 dark:text-white">
                 $79 <span className="text-sm font-medium text-gray-500 dark:text-slate-400">/mes</span>
@@ -233,13 +261,17 @@ const Page = () => {
             <p className="text-sm text-gray-700 dark:text-slate-300">
               &ldquo;Desde que usamos Asystec POS el cierre diario de caja es mucho más rápido y estable.&rdquo;
             </p>
-            <p className="mt-3 text-sm font-semibold text-gray-900 dark:text-white">Laura M. - Tienda retail, Heredia</p>
+            <p className="mt-3 text-sm font-semibold text-gray-900 dark:text-white">
+              Laura M. - Tienda retail, Heredia
+            </p>
           </article>
           <article className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800">
             <p className="text-sm text-gray-700 dark:text-slate-300">
               &ldquo;La facturación electrónica integrada nos ahorró tiempo y evitó errores operativos.&rdquo;
             </p>
-            <p className="mt-3 text-sm font-semibold text-gray-900 dark:text-white">Daniel R. - Taller automotriz, San José</p>
+            <p className="mt-3 text-sm font-semibold text-gray-900 dark:text-white">
+              Daniel R. - Taller automotriz, San José
+            </p>
           </article>
           <article className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-slate-700 dark:bg-slate-800">
             <p className="text-sm text-gray-700 dark:text-slate-300">
@@ -266,7 +298,9 @@ const Page = () => {
         <article className="flex flex-col items-start justify-between gap-4 rounded-xl bg-green-700 p-6 text-white md:flex-row md:items-center">
           <div>
             <h2 className="text-2xl font-bold">Contacto por WhatsApp</h2>
-            <p className="mt-1 text-sm text-green-50">Escribinos y coordinamos una demo personalizada para tu negocio.</p>
+            <p className="mt-1 text-sm text-green-50">
+              Escribinos y coordinamos una demo personalizada para tu negocio.
+            </p>
           </div>
           <a
             href="https://wa.me/50689754741"
