@@ -1,9 +1,24 @@
 import type { Metadata } from 'next';
 
+const fitproTitle = 'FitPro';
+const fitproDescription =
+  'Software para gimnasios y estudios fitness: membresías, cobros, clases, check-ins y reportes operativos en una sola plataforma.';
+
 export const metadata: Metadata = {
-  title: 'FitPro',
-  description:
-    'Software para gimnasios y estudios fitness: membresías, cobros, clases, check-ins y reportes operativos en una sola plataforma.',
+  title: fitproTitle,
+  description: fitproDescription,
+  alternates: {
+    canonical: '/fitpro',
+  },
+  openGraph: {
+    title: fitproTitle,
+    description: fitproDescription,
+    url: '/fitpro',
+  },
+  twitter: {
+    title: fitproTitle,
+    description: fitproDescription,
+  },
 };
 
 const benefits = [
