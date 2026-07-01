@@ -227,9 +227,10 @@ export const portfolioPages: LandingPageData[] = [
       },
     ],
     related: [
-      { label: 'Servicios profesionales', href: '/industrias/servicios-profesionales' },
+      { label: 'Gimnasios y fitness', href: '/industrias/gimnasios' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Servicios profesionales', href: '/industrias/servicios-profesionales' },
     ],
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
@@ -721,6 +722,86 @@ export const industryPages: LandingPageData[] = [
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
     ],
   ),
+  {
+    slug: 'gimnasios',
+    path: '/industrias/gimnasios',
+    kind: 'industry',
+    schemaType: 'Service',
+    title: 'Software para gimnasios',
+    seoTitle: 'Software para gimnasios en Costa Rica | Asystec',
+    description:
+      'Software para gimnasios y centros fitness en Costa Rica con membresias, pagos, clases, cupos, asistencia, reportes y seguimiento comercial.',
+    eyebrow: 'Industria',
+    heroTitle: 'Software para gimnasios, membresias y centros fitness',
+    answer:
+      'Un gimnasio en Costa Rica necesita controlar membresias, pagos, vencimientos, clases, cupos, asistencia y reportes sin depender de hojas de calculo o mensajes dispersos. FitPro y Asystec ayudan a ordenar esa operacion desde una plataforma enfocada en centros fitness.',
+    intro:
+      'Esta landing conecta la demanda de software para gimnasios con FitPro, cobros recurrentes, reportes y una ruta directa para coordinar una demo comercial.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Membresias y renovaciones',
+      'Cobros, saldos y vencimientos',
+      'Clases, cupos y asistencia',
+      'Reportes para recepcion y gerencia',
+    ],
+    modules: ['Clientes', 'Membresias', 'Pagos', 'Clases', 'Check-ins', 'Reportes'],
+    sections: [
+      {
+        title: 'Dolores frecuentes en gimnasios',
+        body: 'Cuando recepcion, ventas y entrenadores trabajan con listas separadas, el gimnasio pierde visibilidad sobre quien esta activo, quien debe, que clases tienen cupo y que ingresos se pueden revisar al cierre.',
+        items: [
+          'Renovaciones manuales y membresias vencidas',
+          'Pagos pendientes sin seguimiento claro',
+          'Cupos de clases controlados por mensajes',
+          'Reportes de asistencia e ingresos dificiles de consultar',
+        ],
+      },
+      {
+        title: 'Como lo conecta FitPro',
+        body: 'FitPro centraliza clientes, membresias, pagos, clases y asistencia para que la operacion diaria sea mas facil de revisar y el equipo pueda tomar decisiones con datos del negocio.',
+        items: [
+          'Clientes y membresias activas',
+          'Pagos, saldos y renovaciones',
+          'Agenda de clases con cupos',
+          'Indicadores de asistencia e ingresos',
+        ],
+      },
+      {
+        title: 'Que revisar antes de una demo',
+        body: 'Para cotizar o elegir el alcance conviene conocer cantidad de sedes, usuarios, tipos de membresia, clases, volumen de clientes y reportes que necesita gerencia.',
+        items: [
+          'Cantidad de sucursales o sedes',
+          'Tipos de membresia y cobro',
+          'Necesidad de control de acceso o check-ins',
+          'Reportes comerciales y operativos esperados',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Que software necesita un gimnasio en Costa Rica?',
+        answer:
+          'Necesita un sistema que controle clientes, membresias, pagos, vencimientos, clases, asistencia y reportes. Si tambien maneja varias sedes, conviene revisar permisos, usuarios e indicadores por sucursal.',
+      },
+      {
+        question: 'FitPro sirve para clases y cupos?',
+        answer:
+          'Si. FitPro esta orientado a centros fitness que necesitan ordenar horarios, cupos, asistencia y seguimiento de clientes con membresias o pagos recurrentes.',
+      },
+      {
+        question: 'Puedo coordinar una demo para mi gimnasio?',
+        answer:
+          'Si. Puedes escribir por WhatsApp o coordinar una demo para revisar el flujo actual, cantidad de clientes, membresias, clases y reportes que necesita el negocio.',
+      },
+    ],
+    related: [
+      { label: 'FitPro', href: '/fitpro' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Contacto', href: '/contact' },
+    ],
+  },
   industry(
     'talleres',
     'Software para talleres',
