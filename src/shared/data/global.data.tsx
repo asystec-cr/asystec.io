@@ -33,6 +33,10 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
+          label: 'Software para negocios',
+          href: '/software-para-negocios-costa-rica',
+        },
+        {
           label: 'Asystec POS',
           href: '/asystec-pos',
         },
@@ -46,18 +50,15 @@ export const headerData: HeaderProps = {
         },
         {
           label: 'CobrosApp',
-          href: 'https://cobros.asystec.io/login',
-          target: 'blank',
+          href: '/cobrosapp',
         },
         {
           label: 'FacturacionApp',
-          href: 'https://app.asystec.io/login',
-          target: 'blank',
+          href: '/facturacionapp',
         },
         {
           label: 'TallerApp',
-          href: 'https://taller.asystec.io/login',
-          target: 'blank',
+          href: '/tallerapp',
         },
         {
           label: 'Jas Admin',
@@ -73,6 +74,112 @@ export const headerData: HeaderProps = {
           label: 'Recursos',
           href: 'https://drive.google.com/drive/folders/17-r9wm4TyOd2Q9rWzOvQ2z0fSZszj3gJ?usp=drive_link',
           target: 'blank',
+        },
+      ],
+    },
+    {
+      label: 'Soluciones',
+      icon: IconChevronDown,
+      links: [
+        {
+          label: 'Sistema POS',
+          href: '/soluciones/pos',
+        },
+        {
+          label: 'Facturacion electronica',
+          href: '/soluciones/facturacion-electronica',
+        },
+        {
+          label: 'Inventario',
+          href: '/soluciones/inventario',
+        },
+        {
+          label: 'Reportes',
+          href: '/soluciones/reportes',
+        },
+        {
+          label: 'Cuentas por cobrar',
+          href: '/soluciones/cuentas-por-cobrar',
+        },
+        {
+          label: 'CRM',
+          href: '/soluciones/crm',
+        },
+        {
+          label: 'Multi-sucursal',
+          href: '/soluciones/multi-sucursal',
+        },
+        {
+          label: 'Integraciones',
+          href: '/soluciones/integraciones',
+        },
+      ],
+    },
+    {
+      label: 'Industrias',
+      icon: IconChevronDown,
+      links: [
+        {
+          label: 'Restaurantes',
+          href: '/industrias/restaurantes',
+        },
+        {
+          label: 'Minisuper',
+          href: '/industrias/minisuper',
+        },
+        {
+          label: 'Ferreterias',
+          href: '/industrias/ferreterias',
+        },
+        {
+          label: 'Retail',
+          href: '/industrias/retail',
+        },
+        {
+          label: 'Clinicas',
+          href: '/industrias/clinicas',
+        },
+        {
+          label: 'Salones de belleza',
+          href: '/industrias/salones-belleza',
+        },
+        {
+          label: 'Talleres',
+          href: '/industrias/talleres',
+        },
+        {
+          label: 'Servicios profesionales',
+          href: '/industrias/servicios-profesionales',
+        },
+      ],
+    },
+    {
+      label: 'Guias',
+      icon: IconChevronDown,
+      links: [
+        {
+          label: 'Elegir sistema POS',
+          href: '/guias/como-elegir-sistema-pos',
+        },
+        {
+          label: 'Alternativas a Excel',
+          href: '/guias/alternativas-excel-inventario',
+        },
+        {
+          label: 'Software local vs extranjero',
+          href: '/guias/software-local-vs-extranjero',
+        },
+        {
+          label: 'Costo de un POS',
+          href: '/guias/cuanto-cuesta-un-pos-costa-rica',
+        },
+        {
+          label: 'Preguntas frecuentes',
+          href: '/faqs',
+        },
+        {
+          label: 'Casos y portafolio',
+          href: '/casos',
         },
       ],
     },
@@ -139,26 +246,17 @@ export const headerData: HeaderProps = {
       ],
     },
     {
-      label: 'Blog',
-      href: 'https://blog.asystec.io',
-      target: 'blank',
-    },
-    {
-      label: 'Tienda',
-      href: 'https://tienda.asystec.io',
-      target: 'blank',
-    },
-    {
       label: 'Contacto',
       href: '/contact',
     },
   ],
   actions: [
     {
-      text: 'Iniciar sesión',
-      href: 'https://cobros.asystec.io/login',
+      text: 'Solicitar demo',
+      href: '/contact',
       icon: IconKey,
-      targetBlank: true,
+      trackingEvent: 'cta_demo',
+      trackingLabel: 'Header solicitar demo',
     },
   ],
   isSticky: true,
@@ -333,16 +431,35 @@ export const footerData2: FooterProps = {
   ],
   columns: [
     {
-      title: 'Dirección',
-      texts: ['Torres Paseo Colón', 'San José, Costa Rica'],
+      title: 'Software',
+      links: [
+        { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
+        { label: 'Asystec POS', href: '/asystec-pos' },
+        { label: 'CobrosApp', href: '/cobrosapp' },
+        { label: 'FacturacionApp', href: '/facturacionapp' },
+      ],
     },
     {
-      title: 'Teléfono',
-      texts: ['Teléfono: +506 8975-4741'],
+      title: 'Soluciones',
+      links: [
+        { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+        { label: 'Inventario', href: '/soluciones/inventario' },
+        { label: 'Reportes', href: '/soluciones/reportes' },
+        { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      ],
     },
     {
-      title: 'Correo',
-      texts: ['Info: info@asystec.io'],
+      title: 'Autoridad',
+      links: [
+        { label: 'Sobre Asystec', href: '/about' },
+        { label: 'Casos y portafolio', href: '/casos' },
+        { label: 'Preguntas frecuentes', href: '/faqs' },
+        { label: 'Contacto', href: '/contact' },
+      ],
+    },
+    {
+      title: 'Contacto',
+      texts: ['Torres Paseo Colon', 'San Jose, Costa Rica', 'Telefono: +506 8975-4741', 'Info: info@asystec.io'],
     },
   ],
   socials: [

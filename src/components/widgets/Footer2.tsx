@@ -15,7 +15,7 @@ const Footer2 = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       <div className="xs:gap-8 grid grid-cols-4 gap-4 gap-y-8 py-8 md:py-12">
-        {columns.map(({ title, texts }, index) => (
+        {columns.map(({ title, texts, links }, index) => (
           <div
             key={`item-column-${index}`}
             className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1"
@@ -27,6 +27,21 @@ const Footer2 = () => {
                   {text}
                 </p>
               ))}
+            {links && (
+              <ul className="space-y-2">
+                {links.map(({ label, href, target }, index2) => (
+                  <li key={`item-column-link-${index2}`}>
+                    <a
+                      className="text-gray-600 transition hover:text-emerald-700 hover:underline dark:text-slate-400 dark:hover:text-emerald-300"
+                      href={href}
+                      {...getLinkTargetProps(target)}
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
         <div className="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1 xl:col-span-1">
