@@ -94,10 +94,10 @@ export const featuresHome: FeaturesProps = {
   header: {
     title: (
       <>
-        Porque elegir <span className="whitespace-nowrap">Asystec?</span>
+        ¿Por qué elegir <span className="whitespace-nowrap">Asystec?</span>
       </>
     ),
-    subtitle: 'Aqui tienes algunas razones por las que deberias adquirir nuestras soluciones de Software',
+    subtitle: 'Aquí tienes algunas razones por las que deberías adquirir nuestras soluciones de software',
     tagline: 'Beneficios',
   },
   items: [
@@ -114,7 +114,7 @@ export const featuresHome: FeaturesProps = {
     {
       title: 'Eficiencia y ahorro de tiempo',
       description:
-        'Gana tiempo para disfrutar con tu familia. Nuestra solución eficiente automatiza tareas, liberándote para compartir con los que mas amas.',
+        'Gana tiempo para disfrutar con tu familia. Nuestra solución eficiente automatiza tareas, liberándote para compartir con los que más amas.',
       icon: IconClockHour5,
       // callToAction: {
       //   text: 'Discover now',
@@ -132,7 +132,7 @@ export const featuresHome: FeaturesProps = {
       // },
     },
     {
-      title: 'Innovacion y actualizaion constante',
+      title: 'Innovación y actualización constante',
       description:
         'Destaca en el mercado. Nuestra solución se actualiza constantemente con innovaciones que te mantienen por delante de la competencia.',
       icon: IconRocket,
