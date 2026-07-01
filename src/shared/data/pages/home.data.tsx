@@ -14,7 +14,6 @@ import {
   IconMapPin,
   IconPhoneCall,
   IconRocket,
-  IconUserPlus,
   IconBrandWhatsapp,
   IconHelpCircle,
   IconClockHour5,
@@ -596,36 +595,27 @@ export const contactHome: ContactProps = {
 
 // CallToAction data *******************
 export const callToAction2Home: CallToActionProps = {
-  title: 'Asystec + Innovación',
+  title: 'Agenda una demo',
   subtitle:
-    'Descubre cómo nuestra experiencia, pasión y compromiso se traducen en una colaboración sólida y exitosa con nuestros clientes. Confía en nuestro equipo para superar tus expectativas y lograr tus objetivos comerciales.',
-  callToAction: {
-    text: 'Registrarme',
-    href: 'https://cobros.asystec.io/register',
-    icon: IconUserPlus,
-  },
+    'Cuéntanos si necesitas POS, facturación electrónica, inventario, cobros, CRM o una plataforma a la medida para tu negocio en Costa Rica.',
   items: [
     {
-      title: 'Ver Blog',
-      description: 'Échale un vistazo a nuestro blog',
-      href: 'https://blog.asystec.io/',
+      title: 'Solicitar demo o diagnóstico',
+      description:
+        'Comparte tu operación actual y coordinamos una revisión comercial enfocada en el problema que quieres resolver.',
+      href: '/contact',
     },
     {
-      title: 'Suscribirme',
-      description: 'Suscríbete para enterarte de las últimas novedades',
-      form: {
-        icon: IconMail,
-        input: {
-          type: 'email',
-          name: 'email',
-          placeholder: 'Digite a su correo',
-          autocomplete: 'email',
-        },
-        btn: {
-          title: 'Suscribir',
-          type: 'submit',
-        },
-      },
+      title: 'Escribir por WhatsApp',
+      description:
+        'Contacto directo para demos, dudas de implementación o una cotización inicial sin pasar por formularios largos.',
+      href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20software%20para%20mi%20negocio.',
+    },
+    {
+      title: 'Ver soluciones por necesidad',
+      description:
+        'Explora POS, facturación, inventario, cobros, CRM, multi-sucursal e integraciones antes de la reunión.',
+      href: '/software-para-negocios-costa-rica',
     },
   ],
 };
