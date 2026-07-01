@@ -136,6 +136,10 @@ export const headerData: HeaderProps = {
           href: '/industrias/retail',
         },
         {
+          label: 'Distribuidores',
+          href: '/industrias/distribuidores',
+        },
+        {
           label: 'Clinicas',
           href: '/industrias/clinicas',
         },
