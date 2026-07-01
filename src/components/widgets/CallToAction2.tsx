@@ -1,6 +1,9 @@
 import { IconChevronRight } from '@tabler/icons-react';
 import { CallToActionProps, Item } from '~/shared/types';
 
+const isExternalHref = (href: string) =>
+  href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:');
+
 const Card = ({ title, description, href, form }: Item) => (
   <div className="card mb-6 px-5 py-4">
     <div className="flex items-center justify-between">
@@ -61,8 +64,7 @@ const CallToAction2 = ({ title, subtitle, items }: CallToActionProps) => (
                   <a
                     href={href}
                     className="w-full sm:mb-0"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(isExternalHref(href) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     key={`item-cta-${index}`}
                   >
                     <Card title={title} description={description} href={href} form={form} />
