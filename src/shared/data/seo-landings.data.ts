@@ -570,6 +570,7 @@ export const solutionPages: LandingPageData[] = [
     [
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Distribuidores', href: '/industrias/distribuidores' },
       { label: 'Retail', href: '/industrias/retail' },
     ],
   ),
@@ -698,6 +699,86 @@ export const industryPages: LandingPageData[] = [
       { label: 'Reportes', href: '/soluciones/reportes' },
     ],
   ),
+  {
+    slug: 'distribuidores',
+    path: '/industrias/distribuidores',
+    kind: 'industry',
+    schemaType: 'Service',
+    title: 'Software para distribuidores',
+    seoTitle: 'Software para distribuidores en Costa Rica',
+    description:
+      'Software para distribuidores en Costa Rica con ventas, inventario, cuentas por cobrar, facturacion, rutas, reportes y control multi-sucursal.',
+    eyebrow: 'Industria',
+    heroTitle: 'Software para distribuidores, inventario y cuentas por cobrar',
+    answer:
+      'Un distribuidor en Costa Rica necesita controlar inventario, ventas, facturacion, cuentas por cobrar, vendedores, rutas, bodegas y reportes sin depender de hojas separadas. Asystec conecta POS, cobros, reportes e integraciones para ordenar la operacion comercial.',
+    intro:
+      'Esta landing aterriza la demanda de software para distribuidores, mayoristas y negocios con ventas recurrentes hacia soluciones Asystec que conectan inventario, cobranza, reportes y control por sucursal.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Inventario y existencias por bodega',
+      'Cuentas por cobrar y saldos por cliente',
+      'Reportes de ventas, rutas y cartera',
+      'Permisos para vendedores, caja y gerencia',
+    ],
+    modules: ['Inventario', 'Ventas', 'Facturacion', 'Cuentas por cobrar', 'Reportes', 'Multi-sucursal'],
+    sections: [
+      {
+        title: 'Dolores frecuentes en distribucion',
+        body: 'Cuando ventas, bodega y cobros trabajan con datos separados, la empresa pierde visibilidad sobre existencias, saldos pendientes, pedidos, rutas y desempeno comercial.',
+        items: [
+          'Existencias desactualizadas entre bodega y ventas',
+          'Saldos por cliente controlados en hojas manuales',
+          'Pedidos, facturacion y cobros sin trazabilidad completa',
+          'Reportes de vendedores o rutas dificiles de comparar',
+        ],
+      },
+      {
+        title: 'Flujo que conviene evaluar',
+        body: 'Un sistema para distribuidores debe conectar catalogo, inventario, ventas, facturacion, pagos y reportes para que gerencia pueda revisar cartera, rotacion y cumplimiento comercial.',
+        items: [
+          'Catalogo de productos, precios y clientes',
+          'Ventas, pedidos o facturacion por usuario',
+          'Cartera, pagos, saldos y estados de cuenta',
+          'Indicadores por sucursal, bodega, ruta o vendedor',
+        ],
+      },
+      {
+        title: 'Que revisar antes de una demo',
+        body: 'Para definir alcance conviene mapear numero de vendedores, bodegas, sucursales, productos, condiciones de credito, reportes esperados e integraciones existentes.',
+        items: [
+          'Cantidad de clientes activos y vendedores',
+          'Manejo de credito, pagos parciales y saldos vencidos',
+          'Necesidad de inventario por bodega o sucursal',
+          'Integraciones con facturacion, POS o reportes actuales',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Que software necesita un distribuidor en Costa Rica?',
+        answer:
+          'Necesita un sistema que conecte clientes, productos, inventario, ventas, facturacion, cuentas por cobrar y reportes. Si maneja bodegas, rutas o sucursales, tambien debe revisar permisos e indicadores por punto operativo.',
+      },
+      {
+        question: 'Como se controla la cartera de clientes en una distribuidora?',
+        answer:
+          'Conviene registrar creditos, pagos, saldos, estados de cuenta y reportes por cliente para que ventas, cobros y gerencia trabajen con la misma informacion.',
+      },
+      {
+        question: 'Puedo coordinar una demo para una distribuidora?',
+        answer:
+          'Si. Puedes escribir por WhatsApp o coordinar una demo para revisar inventario, ventas, cartera, sucursales, usuarios e integraciones necesarias.',
+      },
+    ],
+    related: [
+      { label: 'Inventario', href: '/soluciones/inventario' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
+      { label: 'Asystec POS', href: '/asystec-pos' },
+    ],
+  },
   industry(
     'clinicas',
     'Software para clinicas',
