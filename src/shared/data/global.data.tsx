@@ -144,6 +144,10 @@ export const headerData: HeaderProps = {
           href: '/industrias/salones-belleza',
         },
         {
+          label: 'Gimnasios',
+          href: '/industrias/gimnasios',
+        },
+        {
           label: 'Talleres',
           href: '/industrias/talleres',
         },
