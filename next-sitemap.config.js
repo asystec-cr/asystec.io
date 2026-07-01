@@ -4,5 +4,29 @@ const SITE = require('./src/config.js').SITE;
 module.exports = {
   siteUrl: `${SITE.origin}${SITE.basePathname}`,
   generateRobotsTxt: true,
-  exclude: ['/about', '/blog', '/pricing', '/services'],
+  exclude: ['/blog', '/pricing', '/services'],
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+      },
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'ChatGPT-User',
+        allow: '/',
+      },
+    ],
+  },
 };

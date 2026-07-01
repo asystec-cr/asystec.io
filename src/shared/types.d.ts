@@ -39,6 +39,8 @@ type CallToActionType = {
   href: string;
   icon?: Icon;
   targetBlank?: boolean;
+  trackingEvent?: string;
+  trackingLabel?: string;
 };
 
 type LinkOrButton = {
@@ -57,6 +59,8 @@ type SubmitAction = {
   type: 'whatsapp';
   phone: string;
   messagePrefix?: string;
+  trackingEvent?: string;
+  trackingLabel?: string;
 };
 
 type Input = {

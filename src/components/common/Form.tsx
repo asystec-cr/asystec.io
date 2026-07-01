@@ -174,7 +174,14 @@ const Form = ({
           className={`${btnPosition === 'left' ? 'text-left' : btnPosition === 'right' ? 'text-right' : 'text-center'}`}
         >
           {submitUrl ? (
-            <a href={submitUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary sm:mb-0">
+            <a
+              href={submitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary sm:mb-0"
+              data-analytics-event={submitAction?.trackingEvent ?? 'contact_whatsapp_form_submit'}
+              data-analytics-label={submitAction?.trackingLabel ?? title ?? btn.title}
+            >
               {btn.title}
             </a>
           ) : (
