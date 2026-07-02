@@ -1,15 +1,58 @@
-import { CallToActionProps, FAQsProps } from '~/shared/types';
-import { HeroProps } from '~/shared/types';
+import { CallToActionProps, FAQsProps, HeroProps } from '~/shared/types';
+
+export const electronicBillingFaqItems = [
+  {
+    title: 'Que necesita una pyme para empezar con facturacion electronica en Costa Rica?',
+    description:
+      'Necesita tener claro su estado tributario, acceso a las credenciales o llave que correspondan, datos de clientes, productos o servicios, impuestos, consecutivos y el flujo para emitir, enviar y consultar comprobantes. En una demo se revisa si conviene FacturacionApp, Asystec POS o una plataforma integrada.',
+  },
+  {
+    title: 'Que es la llave criptografica y por que importa?',
+    description:
+      'La llave o credencial de emision permite autenticar el envio de comprobantes electronicos. Si esta vencida, mal configurada o no coincide con el emisor, la facturacion puede fallar. Por eso se revisa antes de migrar o configurar un sistema.',
+  },
+  {
+    title: 'Puedo emitir facturas electronicas desde un POS?',
+    description:
+      'Si el POS esta preparado para el flujo fiscal de Costa Rica, puede conectar ventas de caja con comprobantes, clientes, productos, impuestos, cierres y reportes. Asystec POS se evalua cuando el negocio tambien necesita caja, inventario y operacion local.',
+  },
+  {
+    title: 'Que documentos debe controlar un sistema de facturacion?',
+    description:
+      'Depende del tipo de contribuyente y del caso de uso, pero normalmente conviene controlar facturas, tiquetes, notas de credito, notas de debito, comprobantes recibidos y reportes. Los casos especiales deben validarse con Hacienda o con el contador del negocio.',
+  },
+  {
+    title: 'Excel reemplaza un sistema de facturacion electronica?',
+    description:
+      'No. Excel puede ayudar a ordenar datos, pero no resuelve por si solo la emision, validacion, trazabilidad, consecutivos, clientes, impuestos, reportes y soporte operativo que necesita un negocio al facturar todos los dias.',
+  },
+  {
+    title: 'Cuando elegir FacturacionApp, Asystec POS o una plataforma a medida?',
+    description:
+      'FacturacionApp conviene cuando el foco es emitir y administrar comprobantes, clientes, pagos y reportes. Asystec POS conviene cuando hay caja, ventas rapidas e inventario. Una plataforma a medida aplica cuando hay integraciones, roles o flujos propios.',
+  },
+  {
+    title: 'Que informacion debo preparar para una demo de facturacion electronica?',
+    description:
+      'Conviene preparar tipo de negocio, cantidad de usuarios, volumen de comprobantes, productos o servicios, sucursales, cajas, sistema actual, reportes necesarios y problemas que hoy generan atrasos o errores.',
+  },
+  {
+    title: 'Asystec ofrece soporte local para facturacion electronica?',
+    description:
+      'Si. Asystec atiende negocios en Costa Rica y puede acompanar la configuracion, salida a produccion, revision de errores operativos y seleccion entre POS, facturacion web o desarrollo integrado segun el flujo real.',
+  },
+];
 
 // Hero data on FAQs page *******************
 export const heroFaqs: HeroProps = {
-  title: 'Preguntas Frecuentes',
+  title: 'Preguntas frecuentes de facturacion electronica',
   subtitle: (
     <>
-      Aquí encontrarás respuestas a las preguntas más comunes que nuestros clientes suelen hacer. Esperamos que esta sección te ayude a aclarar cualquier duda o inquietud que puedas tener. Si no encuentras la respuesta que buscas, no dudes en contactarnos directamente y estaremos encantados de ayudarte.
+      Respuestas para pymes y negocios en Costa Rica que necesitan emitir comprobantes, ordenar clientes, conectar caja
+      o inventario y escoger entre un sistema de facturacion, POS o plataforma integrada.
     </>
   ),
-  tagline: '',
+  tagline: 'FAQ comercial',
 };
 
 // FAQS4 data on FAQs page *******************
@@ -17,59 +60,18 @@ export const faqs4Faqs: FAQsProps = {
   id: 'faqsFour-on-faqs',
   hasBackground: true,
   header: {
-    title: 'Encuentra lo que necesitas',
-    subtitle: '',
+    title: 'Dudas clave antes de cotizar',
+    subtitle:
+      'Estas respuestas ayudan a preparar una demo sin inventar precios ni prometer requisitos fiscales que deben validarse segun cada contribuyente.',
     position: 'center',
   },
   tabs: [
     {
       link: {
-        label: 'Factura Electrónica',
-        href: '/tab1',
+        label: 'Facturacion electronica',
+        href: '/faqs#facturacion-electronica',
       },
-      items: [
-        {
-          title: '¿Qué es una factura digital o electrónica?',
-          description: `La factura electrónica es un documento comercial con efectos tributarios generado y transmitido en formato electrónico. Debe cumplir con los requisitos legales que se exigen a las facturas tradicionales garantizando la autenticidad de su origen y la integridad de su contenido.
-          Para que la factura electrónica tenga validez debe estar firmado por una llave criptográfica.`,
-        },
-        {
-          title: '¿Qué es la llave criptográfica?',
-          description: `La llave criptográfica es un archivo que permite garantizar la autoría e integridad de los documentos digitales, posibilitando que éstos gocen de una característica que únicamente era propia de los documentos en papel. Esta llave criptografica es generada en el sistema ATV del Ministerio de Hacienda.`,
-        },
-        {
-          title: "¿Qué opciones existen para comenzar a facturar digitalmente?",
-          description: `La Dirección General de Tributación ha autorizado a los contribuyentes a desarrollar sus propias aplicaciones o a contratar a proveedores de soluciones para la facturación electrónica. Asystec es uno de los mejores proveedores de facturación electrónica en la que brindan soporte gratuito para que puedas realizar tus facturas y cobrar a tus clientes de una forma fácil y rápida.`,
-        },
-        {
-          title: "¿Qué exige Tributación dentro del sistema de factura electrónica?",
-          description: `El sistema de facturación electrónica debe contar con una opción de consulta para la utilización de la Administración Tributaria, que admita el acceso en línea a los datos, copia o descarga en un archivo electrónico de la información consultada.`,
-        },
-        {
-          title: '¿Se debe imprimir la factura digital o solo se envía por correo?',
-          description: `En el caso de los consumidores finales se debe imprimir la factura digital a menos que el receptor especifique que prefiere recibirla por correo electrónico. Cuando la trasacción se realiza entre personas físicas o jurídicas registradas en la Administración Tributaria, para emitir y recibir documentos electrónicos no es necesaria la impresión de la factura electrónica.`,
-        },
-        {
-          title: '¿Cuáles otros documentos se pueden emitir electrónicamente además de las facturas?',
-          description: `Los comprobantes electrónicos deberán conservarse por un plazo de cinco años conforme con lo establecido en el artículo 109 del Código de Normas y Procedimientos Tributarios y sus reformas, independientemente de que los contribuyentes se encuentren obligados a enviarlos al Ministerio de Hacienda para su respectiva validación.`,
-        },
-        {
-            title: '¿Cuánto tiempo deben conservarse los comprobantes electrónicos?',
-            description: `Los comprobantes electrónicos deberán conservarse por un plazo de cinco años conforme con lo establecido en el artículo 109 del Código de Normas y Procedimientos Tributarios y sus reformas, independientemente de que los contribuyentes se encuentren obligados a enviarlos al Ministerio de Hacienda para su respectiva validación.`,
-          },
-          {
-            title: '¿Qué validez tienen los comprobantes electrónicos para el Ministerio de Hacienda?',
-            description: `La validez que los comprobantes electrónicos establecidos en la Resolución DGT-R-48-2016, tienen para el Ministerio de Hacienda, para los efectos tributarios, consiste en la eficacia jurídica y fuerza probatoria en las mismas condiciones que los comprobantes físicos autorizados.`,
-          },
-          {
-            title: '¿Se puede modificar o anular la factura electrónica original?',
-            description: `La validez que los comprobantes electrónicos establecidos en la Resolución DGT-R-48-2016, tienen para el Ministerio de Hacienda, para los efectos tributarios, consiste en la eficacia jurídica y fuerza probatoria en las mismas condiciones que los comprobantes físicos autorizados.`,
-          },
-          {
-            title: '¿Hay sanciones por incumplimiento?',
-            description: `Sí. Debido a que la facturación electrónica es obligatoria en Costa Rica, las personas que incumplan con su uso se exponen a sanciones en forma de multas económicas, que dependerán del tipo de infracción y pueden ir desde dos salarios base hasta el 2% de los ingresos brutos del infractor.`,
-          },
-      ],
+      items: electronicBillingFaqItems,
     },
   ],
 };
@@ -78,11 +80,13 @@ export const faqs4Faqs: FAQsProps = {
 export const callToActionFaqs: CallToActionProps = {
   id: 'callToAction-on-faqs',
   hasBackground: true,
-  title: 'Aun tienes preguntas?',
+  title: 'Quieres revisar tu flujo de facturacion?',
   subtitle:
-    'Para nosotros es un gusto poder ayudarle, si tiene alguna duda o consulta por favor no dude en escribirnos.',
+    'Agenda una demo para comparar si tu negocio necesita FacturacionApp, Asystec POS o una plataforma conectada con inventario, cobros y reportes.',
   callToAction: {
-    text: 'Contáctanos',
+    text: 'Coordinar demo',
     href: '/contact',
+    trackingEvent: 'cta_demo',
+    trackingLabel: 'FAQ facturacion electronica coordinar demo',
   },
 };
