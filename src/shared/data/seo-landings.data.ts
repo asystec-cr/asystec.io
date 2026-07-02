@@ -987,18 +987,107 @@ export const guidePages: LandingPageData[] = [
       { label: 'Retail', href: '/industrias/retail' },
     ],
   ),
-  guide(
-    'alternativas-excel-inventario',
-    'Alternativas a Excel para controlar inventario',
-    'Guia para pasar de inventario en Excel a un sistema con productos, movimientos, ventas, reportes y control por usuarios.',
-    'Excel puede servir al inicio, pero cuando hay mas productos, usuarios o ventas, un sistema reduce errores y da trazabilidad de movimientos.',
-    ['Productos', 'Movimientos', 'Usuarios', 'Ventas', 'Alertas', 'Reportes'],
-    [
-      { label: 'Inventario', href: '/soluciones/inventario' },
-      { label: 'Asystec POS', href: '/asystec-pos' },
-      { label: 'Ferreterias', href: '/industrias/ferreterias' },
+  {
+    ...guide(
+      'alternativas-excel-inventario',
+      'Alternativas a Excel para controlar inventario',
+      'Guia para pasar de inventario en Excel a un sistema con productos, movimientos, ventas, reportes y control por usuarios.',
+      'Excel puede servir para empezar, pero cuando el inventario afecta ventas, compras, facturacion o reportes, conviene migrar a un sistema con productos, movimientos, usuarios, alertas e historial trazable.',
+      ['Productos', 'Movimientos', 'Usuarios', 'Ventas', 'Alertas', 'Reportes'],
+      [
+        { label: 'Inventario', href: '/soluciones/inventario' },
+        { label: 'Asystec POS', href: '/asystec-pos' },
+        { label: 'Ferreterias', href: '/industrias/ferreterias' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    highlights: [
+      'Identificar cuando Excel ya no alcanza para inventario.',
+      'Separar control de productos, ventas, compras y reportes.',
+      'Reducir errores por archivos duplicados o ediciones sin historial.',
+      'Preparar una demo con datos reales del negocio.',
     ],
-  ),
+    sections: [
+      {
+        title: 'Respuesta para negocios en crecimiento',
+        body: 'La mejor alternativa a Excel depende del flujo del negocio. Una tienda pequena puede necesitar productos, existencias y ventas; una ferreteria o distribuidora suele requerir catalogo amplio, movimientos, usuarios, permisos, reportes y control por sucursal o bodega.',
+        items: [
+          'Productos con codigos, categorias y precios',
+          'Entradas, salidas y ajustes con historial',
+          'Ventas conectadas al inventario',
+          'Reportes para compras, rotacion y faltantes',
+        ],
+      },
+      {
+        title: 'Errores comunes al seguir en Excel',
+        body: 'El problema no es la hoja de calculo en si, sino usarla como sistema central cuando varias personas venden, compran, ajustan existencias o necesitan reportes confiables para decidir.',
+        items: [
+          'Varias versiones del mismo archivo',
+          'Cambios sin usuario, fecha o motivo',
+          'Ventas que no rebajan inventario automaticamente',
+          'Reportes manuales que llegan tarde o con errores',
+        ],
+      },
+      {
+        title: 'Que preparar antes de una demo',
+        body: 'Para evaluar un sistema de inventario conviene mapear productos, categorias, usuarios, puntos de venta, bodegas, compras, facturacion, reportes y problemas actuales con Excel.',
+        items: [
+          'Cantidad aproximada de productos y categorias',
+          'Usuarios que venden, compran o ajustan inventario',
+          'Necesidad de caja, facturacion o varias sucursales',
+          'Reportes que gerencia necesita revisar cada semana',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Senales de que Excel ya no alcanza',
+      body: 'Esta tabla ayuda a decidir si el negocio puede seguir con una hoja o si ya necesita un sistema de inventario conectado a ventas, usuarios y reportes.',
+      rows: [
+        {
+          factor: 'Errores de existencias',
+          question: 'El equipo vende productos que luego no aparecen en bodega o quedan sin registrar?',
+          impact: 'Un sistema permite registrar movimientos y revisar historial antes de tomar decisiones de compra.',
+        },
+        {
+          factor: 'Varias personas editando',
+          question: 'Mas de una persona cambia precios, cantidades, compras o ajustes?',
+          impact: 'Los permisos y usuarios ayudan a saber quien hizo cada cambio y reducen versiones duplicadas.',
+        },
+        {
+          factor: 'Ventas desconectadas',
+          question: 'Las ventas se registran aparte y alguien debe rebajar inventario manualmente?',
+          impact: 'Conectar ventas e inventario evita doble digitacion y mejora la visibilidad diaria.',
+        },
+        {
+          factor: 'Reportes lentos',
+          question: 'Gerencia tarda en saber que se vendio, que falta o que producto rota mas?',
+          impact: 'Los reportes convierten movimientos diarios en informacion para compras, caja y operacion.',
+        },
+        {
+          factor: 'Crecimiento del negocio',
+          question: 'Hay mas productos, usuarios, cajas, sucursales o bodegas que antes?',
+          impact: 'El crecimiento exige controles, permisos y datos consolidados que una hoja suele complicar.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Cuando deberia dejar de usar Excel para inventario?',
+        answer:
+          'Cuando el negocio ya tiene errores frecuentes de existencias, varias personas editando, ventas desconectadas, reportes manuales o necesidad de controlar usuarios, cajas, bodegas o sucursales.',
+      },
+      {
+        question: 'Que debe tener una alternativa a Excel para inventario?',
+        answer:
+          'Debe permitir productos, movimientos, usuarios, permisos, ventas conectadas, reportes, historial de cambios y una forma clara de revisar faltantes, compras y rotacion.',
+      },
+      {
+        question: 'Asystec puede ayudar a migrar desde Excel?',
+        answer:
+          'Si. En una demo se puede revisar el archivo actual, el flujo de ventas, productos, usuarios y reportes para definir si conviene Asystec POS, una solucion de inventario o una plataforma a medida.',
+      },
+    ],
+  },
   guide(
     'software-local-vs-extranjero',
     'Software local vs software extranjero',
