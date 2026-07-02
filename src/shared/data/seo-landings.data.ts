@@ -14,6 +14,18 @@ export type LandingSection = {
   items?: string[];
 };
 
+export type LandingDecisionRow = {
+  factor: string;
+  question: string;
+  impact: string;
+};
+
+export type LandingDecisionTable = {
+  title: string;
+  body: string;
+  rows: LandingDecisionRow[];
+};
+
 export type LandingPageData = {
   slug: string;
   path: string;
@@ -31,6 +43,7 @@ export type LandingPageData = {
   highlights: string[];
   modules: string[];
   sections: LandingSection[];
+  decisionTable?: LandingDecisionTable;
   faqs: FaqItem[];
   related: LandingLink[];
   image?: string;
@@ -179,6 +192,7 @@ export const portfolioPages: LandingPageData[] = [
       { label: 'Inventario', href: '/soluciones/inventario' },
       { label: 'Restaurantes', href: '/industrias/restaurantes' },
       { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
     ],
     image: '/images/pos/pos0.jpeg',
     applicationCategory: 'BusinessApplication',
@@ -499,6 +513,7 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Restaurantes', href: '/industrias/restaurantes' },
       { label: 'Minisuper', href: '/industrias/minisuper' },
+      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
     ],
   ),
   solution(
@@ -996,18 +1011,107 @@ export const guidePages: LandingPageData[] = [
       { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
     ],
   ),
-  guide(
-    'cuanto-cuesta-un-pos-costa-rica',
-    'Cuanto cuesta un POS en Costa Rica',
-    'Guia de factores que influyen en el costo de un sistema POS en Costa Rica: usuarios, sucursales, modulos, soporte e integraciones.',
-    'El costo de un POS depende de usuarios, sucursales, modulos, facturacion electronica, soporte, implementacion, migracion e integraciones requeridas.',
-    ['Usuarios', 'Sucursales', 'Modulos', 'Soporte', 'Implementacion', 'Integraciones'],
-    [
-      { label: 'Asystec POS', href: '/asystec-pos' },
-      { label: 'Sistema POS', href: '/soluciones/pos' },
-      { label: 'Minisuper', href: '/industrias/minisuper' },
+  {
+    ...guide(
+      'cuanto-cuesta-un-pos-costa-rica',
+      'Cuanto cuesta un POS en Costa Rica',
+      'Guia de factores que influyen en el costo de un sistema POS en Costa Rica: usuarios, sucursales, modulos, soporte e integraciones.',
+      'El costo de un POS depende de usuarios, sucursales, modulos, facturacion electronica, soporte, implementacion, migracion e integraciones requeridas. Para comparar bien, una pyme debe pedir una demo con su flujo real de caja, inventario y facturacion.',
+      ['Usuarios', 'Sucursales', 'Modulos', 'Soporte', 'Implementacion', 'Integraciones'],
+      [
+        { label: 'Asystec POS', href: '/asystec-pos' },
+        { label: 'Sistema POS', href: '/soluciones/pos' },
+        { label: 'Minisuper', href: '/industrias/minisuper' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    highlights: [
+      'No cotizar solo por precio mensual.',
+      'Separar costo de licencia, implementacion y soporte.',
+      'Revisar facturacion electronica, inventario y reportes desde la demo.',
+      'Validar crecimiento: usuarios, cajas, sucursales e integraciones.',
     ],
-  ),
+    sections: [
+      {
+        title: 'Respuesta para comparar opciones',
+        body: 'Un POS no tiene un unico precio universal porque el alcance cambia segun el negocio. Una tienda pequena puede requerir caja, productos y facturacion; una operacion con varias cajas o sucursales necesita permisos, reportes, inventario, respaldos y soporte mas estructurado.',
+        items: [
+          'Caja y ventas diarias',
+          'Facturacion electronica para Costa Rica',
+          'Inventario, codigos y existencias',
+          'Usuarios, permisos y cierres',
+        ],
+      },
+      {
+        title: 'Errores comunes al cotizar',
+        body: 'El precio mas bajo puede salir caro si obliga a llevar inventario en hojas separadas, no resuelve soporte local, no permite crecer o no muestra reportes utiles para gerencia.',
+        items: [
+          'Comparar herramientas sin probar el flujo de caja',
+          'Ignorar migracion de productos, clientes o saldos',
+          'No preguntar por respaldos, soporte y actualizaciones',
+          'Dejar fuera integraciones o reportes que ventas si necesita',
+        ],
+      },
+      {
+        title: 'Que preparar antes de pedir demo',
+        body: 'La demo debe revisar el tipo de negocio, cantidad de cajas, usuarios, productos, sucursales, comprobantes, reportes y problemas actuales. Con esos datos se puede estimar mejor si conviene un POS listo, una configuracion especial o una plataforma integrada.',
+        items: [
+          'Cantidad de cajas, usuarios y sucursales',
+          'Volumen aproximado de productos y ventas',
+          'Necesidad de facturacion, inventario y reportes',
+          'Sistemas actuales que deben integrarse o reemplazarse',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Factores que mueven el costo de un POS',
+      body: 'Esta tabla ayuda a separar el precio visible del alcance operativo real. Sirve para preparar una demo o una solicitud de cotizacion sin inventar rangos que dependen de cada negocio.',
+      rows: [
+        {
+          factor: 'Cantidad de cajas y usuarios',
+          question: 'Cuantas personas venden, administran o revisan reportes?',
+          impact: 'Puede cambiar permisos, capacitacion, soporte y configuracion inicial.',
+        },
+        {
+          factor: 'Inventario y catalogo',
+          question: 'Cuantos productos, codigos, variantes o bodegas maneja el negocio?',
+          impact: 'Afecta migracion, control de existencias, alertas y reportes de rotacion.',
+        },
+        {
+          factor: 'Facturacion electronica',
+          question: 'El POS debe emitir comprobantes y conectarse con el flujo fiscal del negocio?',
+          impact: 'Define configuracion, pruebas, acompanamiento y reglas operativas.',
+        },
+        {
+          factor: 'Sucursales o bodegas',
+          question: 'Hay mas de un punto de venta o se necesita comparar sedes?',
+          impact: 'Requiere permisos, reportes consolidados y control por ubicacion.',
+        },
+        {
+          factor: 'Reportes e integraciones',
+          question: 'Que indicadores necesita gerencia y que sistemas ya existen?',
+          impact: 'Puede agregar reportes, conectores, automatizaciones o desarrollo a medida.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Se puede saber el costo exacto de un POS sin demo?',
+        answer:
+          'Normalmente no conviene fijarlo sin revisar cajas, usuarios, inventario, facturacion, sucursales, soporte e integraciones. La demo evita cotizar un sistema incompleto o demasiado grande para el negocio.',
+      },
+      {
+        question: 'Que deberia incluir una cotizacion de POS?',
+        answer:
+          'Deberia separar licencia o uso del sistema, implementacion, migracion de datos, capacitacion, soporte, facturacion electronica, reportes e integraciones necesarias.',
+      },
+      {
+        question: 'Cuando conviene pagar por soporte local?',
+        answer:
+          'Conviene cuando la caja, la facturacion o el inventario son criticos para operar. El soporte local ayuda a resolver configuracion, salida a produccion, dudas del equipo y continuidad del negocio.',
+      },
+    ],
+  },
 ];
 
 export const allLandingPages = [pillarPage, ...portfolioPages, ...solutionPages, ...industryPages, ...guidePages];

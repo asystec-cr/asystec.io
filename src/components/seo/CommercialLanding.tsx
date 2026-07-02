@@ -133,7 +133,55 @@ const CommercialLanding = ({ page }: CommercialLandingProps) => {
           </div>
         </section>
 
-        <section className="border-y border-neutral-200 bg-neutral-50 py-12 dark:border-slate-800 dark:bg-slate-900 md:py-16">
+        {page.decisionTable && (
+          <section className="border-y border-neutral-200 bg-neutral-50 py-12 dark:border-slate-800 dark:bg-slate-900 md:py-16">
+            <div className="mx-auto max-w-7xl px-4 md:px-6">
+              <div className="max-w-3xl">
+                <h2 className="text-2xl font-bold md:text-3xl">{page.decisionTable.title}</h2>
+                <p className="mt-3 text-base leading-8 text-neutral-700 dark:text-slate-300">
+                  {page.decisionTable.body}
+                </p>
+              </div>
+              <div className="mt-7 overflow-x-auto rounded-md border border-neutral-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+                <table className="min-w-full divide-y divide-neutral-200 text-left text-sm dark:divide-slate-800">
+                  <thead className="bg-neutral-100 text-xs uppercase tracking-wide text-neutral-600 dark:bg-slate-900 dark:text-slate-300">
+                    <tr>
+                      <th scope="col" className="px-5 py-4 font-semibold">
+                        Factor
+                      </th>
+                      <th scope="col" className="px-5 py-4 font-semibold">
+                        Pregunta para la demo
+                      </th>
+                      <th scope="col" className="px-5 py-4 font-semibold">
+                        Por que afecta el alcance
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-neutral-200 dark:divide-slate-800">
+                    {page.decisionTable.rows.map((row) => (
+                      <tr key={row.factor}>
+                        <th
+                          scope="row"
+                          className="w-56 px-5 py-4 align-top font-semibold text-neutral-950 dark:text-white"
+                        >
+                          {row.factor}
+                        </th>
+                        <td className="px-5 py-4 align-top leading-7 text-neutral-700 dark:text-slate-300">
+                          {row.question}
+                        </td>
+                        <td className="px-5 py-4 align-top leading-7 text-neutral-700 dark:text-slate-300">
+                          {row.impact}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section className="border-b border-neutral-200 bg-neutral-50 py-12 dark:border-slate-800 dark:bg-slate-900 md:py-16">
           <div className="mx-auto max-w-5xl px-4 md:px-6">
             <h2 className="text-2xl font-bold md:text-3xl">Preguntas frecuentes</h2>
             <div className="mt-6 divide-y divide-neutral-200 rounded-md border border-neutral-200 bg-white dark:divide-slate-800 dark:border-slate-800 dark:bg-slate-950">
