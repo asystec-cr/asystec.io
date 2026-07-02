@@ -1101,16 +1101,25 @@ export const guidePages: LandingPageData[] = [
       { label: 'Retail', href: '/industrias/retail' },
     ],
   ),
-  guide(
-    'alternativas-excel-inventario',
-    'Alternativas a Excel para controlar inventario',
-    'Guia para pasar de inventario en Excel a un sistema con productos, movimientos, ventas, reportes y control por usuarios.',
-    'Excel puede servir al inicio, pero cuando hay mas productos, usuarios o ventas, un sistema reduce errores y da trazabilidad de movimientos.',
-    ['Productos', 'Movimientos', 'Usuarios', 'Ventas', 'Alertas', 'Reportes'],
-    [
-      { label: 'Inventario', href: '/soluciones/inventario' },
-      { label: 'Asystec POS', href: '/asystec-pos' },
-      { label: 'Ferreterias', href: '/industrias/ferreterias' },
+  {
+    ...guide(
+      'alternativas-excel-inventario',
+      'Alternativas a Excel para controlar inventario',
+      'Guia para pasar de inventario en Excel a un sistema con productos, movimientos, ventas, reportes y control por usuarios.',
+      'Excel puede servir para empezar, pero cuando el inventario afecta ventas, compras, facturacion o reportes, conviene migrar a un sistema con productos, movimientos, usuarios, alertas e historial trazable.',
+      ['Productos', 'Movimientos', 'Usuarios', 'Ventas', 'Alertas', 'Reportes'],
+      [
+        { label: 'Inventario', href: '/soluciones/inventario' },
+        { label: 'Asystec POS', href: '/asystec-pos' },
+        { label: 'Ferreterias', href: '/industrias/ferreterias' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    highlights: [
+      'Identificar cuando Excel ya no alcanza para inventario.',
+      'Separar control de productos, ventas, compras y reportes.',
+      'Reducir errores por archivos duplicados o ediciones sin historial.',
+      'Preparar una demo con datos reales del negocio.',
     ],
   ),
   {
