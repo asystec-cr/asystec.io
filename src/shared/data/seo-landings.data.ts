@@ -999,18 +999,133 @@ export const guidePages: LandingPageData[] = [
       { label: 'Ferreterias', href: '/industrias/ferreterias' },
     ],
   ),
-  guide(
-    'software-local-vs-extranjero',
-    'Software local vs software extranjero',
-    'Comparativa para elegir entre software local y extranjero segun soporte, facturacion electronica, integraciones, costos y adaptacion al negocio.',
-    'El software local puede aportar soporte cercano y conocimiento del contexto fiscal; el extranjero puede ofrecer escala. La decision depende del proceso y los riesgos.',
-    ['Soporte', 'Contexto fiscal', 'Integraciones', 'Costos', 'Adaptacion', 'Continuidad'],
-    [
-      { label: 'Plataformas', href: '/plataformas' },
-      { label: 'Integraciones', href: '/soluciones/integraciones' },
-      { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
+  {
+    ...guide(
+      'software-local-vs-extranjero',
+      'Software local vs software extranjero',
+      'Comparativa para elegir entre software local y extranjero en Costa Rica segun soporte, facturacion electronica, integraciones, datos, costos y continuidad operativa.',
+      'Para una pyme en Costa Rica, la decision entre software local y extranjero depende de facturacion electronica, soporte, integraciones, continuidad, propiedad de datos y costo total. Lo correcto no es elegir por pais, sino por ajuste al proceso critico del negocio.',
+      ['Soporte', 'Facturacion electronica', 'Integraciones', 'Datos', 'Costo total', 'Continuidad'],
+      [
+        { label: 'Plataformas', href: '/plataformas' },
+        { label: 'Integraciones', href: '/soluciones/integraciones' },
+        { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    intro:
+      'Esta guia ayuda a gerentes y duenos de pymes a comparar una solucion local, una herramienta internacional o una plataforma a la medida antes de comprometer ventas, caja, inventario, facturacion o cobros.',
+    highlights: [
+      'Comparar soporte y salida a produccion, no solo funciones.',
+      'Validar facturacion electronica e integraciones para Costa Rica.',
+      'Revisar propiedad, exportacion y continuidad de los datos.',
+      'Pedir una demo con el flujo real del negocio antes de decidir.',
     ],
-  ),
+    sections: [
+      {
+        title: 'Cuando conviene software local',
+        body: 'Una opcion local suele convenir cuando el negocio necesita acompanamiento cercano, configuracion alineada al contexto fiscal de Costa Rica, soporte para salida a produccion o adaptaciones alrededor del proceso operativo.',
+        items: [
+          'Facturacion electronica y reglas locales son parte del flujo diario',
+          'Caja, inventario, cobros o reportes no pueden quedar sin soporte',
+          'Se requiere migracion, capacitacion o ajustes por industria',
+          'El equipo necesita contacto directo para resolver dudas operativas',
+        ],
+      },
+      {
+        title: 'Cuando conviene software extranjero',
+        body: 'Una herramienta extranjera puede tener sentido cuando el proceso es estandar, el equipo ya trabaja con esa categoria, no se requieren ajustes locales importantes y las integraciones cubren el flujo completo.',
+        items: [
+          'El proceso se adapta bien a plantillas globales',
+          'No hay dependencia fuerte de configuracion fiscal local',
+          'Las integraciones necesarias ya existen y estan probadas',
+          'El soporte remoto, idioma y horarios no afectan la operacion',
+        ],
+      },
+      {
+        title: 'Riesgos que se deben revisar',
+        body: 'El riesgo aparece cuando una decision barata o rapida deja procesos fuera del sistema. Antes de comprar, conviene probar ventas, facturacion, inventario, cobros, permisos, reportes y exportacion de datos.',
+        items: [
+          'Llevar controles criticos en hojas separadas despues de comprar',
+          'No poder emitir, consultar o conciliar informacion fiscal clave',
+          'Depender de soporte lejano cuando caja o cobros estan detenidos',
+          'No tener una ruta clara para migrar datos si el sistema no funciona',
+        ],
+      },
+      {
+        title: 'Como decidir sin sesgo',
+        body: 'La comparacion debe empezar con el flujo real: que vende la empresa, como factura, cuantos usuarios operan, que reportes necesita gerencia, que sistemas deben conectarse y que pasa si el sistema falla en horario laboral.',
+        items: [
+          'Documentar el flujo actual antes de ver demos',
+          'Pedir prueba con productos, clientes o escenarios reales',
+          'Comparar costo total: licencia, implementacion, soporte e integraciones',
+          'Elegir el proveedor que reduzca mas riesgo operativo verificable',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Comparativa para elegir software local o extranjero',
+      body: 'Esta tabla resume preguntas que una pyme en Costa Rica puede llevar a una demo o cotizacion para evitar una decision basada solo en precio, marca o lista de funciones.',
+      rows: [
+        {
+          factor: 'Facturacion electronica',
+          question: 'El sistema cubre el flujo fiscal que usa mi negocio en Costa Rica?',
+          impact: 'Si la facturacion queda fuera o requiere procesos manuales, aumenta el riesgo operativo y contable.',
+        },
+        {
+          factor: 'Soporte y salida a produccion',
+          question: 'Quien responde cuando caja, inventario, cobros o usuarios no pueden operar?',
+          impact:
+            'El soporte cercano puede reducir tiempo detenido durante implementacion, capacitacion y operacion diaria.',
+        },
+        {
+          factor: 'Integraciones',
+          question: 'Se conecta con POS, inventario, CRM, cobros, reportes o sistemas existentes?',
+          impact: 'Sin integraciones claras, el equipo termina duplicando datos o manteniendo hojas paralelas.',
+        },
+        {
+          factor: 'Datos y continuidad',
+          question: 'Puedo exportar datos, auditar cambios y migrar si el negocio crece o cambia?',
+          impact: 'La continuidad depende de no quedar encerrado en datos inaccesibles o procesos imposibles de mover.',
+        },
+        {
+          factor: 'Costo total',
+          question: 'La cotizacion separa licencia, implementacion, migracion, soporte y ajustes?',
+          impact:
+            'Un precio mensual bajo puede ocultar costos de configuracion, tiempo interno o trabajo manual permanente.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Es mejor usar software local o extranjero en Costa Rica?',
+        answer:
+          'Depende del proceso. Si el negocio necesita soporte cercano, facturacion electronica, integraciones locales o ajustes por industria, una opcion local puede reducir riesgo. Si el proceso es estandar y la herramienta extranjera cubre todo, tambien puede ser viable.',
+      },
+      {
+        question: 'Que debo preguntar antes de contratar software extranjero?',
+        answer:
+          'Pregunta por soporte en tu horario, idioma, facturacion electronica, integraciones, exportacion de datos, costos de implementacion, seguridad, usuarios, permisos y que pasa si necesitas adaptar el proceso.',
+      },
+      {
+        question: 'Cuando conviene una plataforma a la medida?',
+        answer:
+          'Conviene cuando el negocio tiene flujos propios, varios roles, integraciones especiales, reportes no estandar o procesos que una herramienta lista obliga a manejar fuera del sistema.',
+      },
+      {
+        question: 'Puedo comparar opciones con Asystec antes de decidir?',
+        answer:
+          'Si. Puedes coordinar una demo para revisar el flujo actual, riesgos, integraciones, facturacion, soporte y si conviene un producto existente o una plataforma a la medida.',
+      },
+    ],
+    related: [
+      { label: 'Plataformas a medida', href: '/plataformas' },
+      { label: 'Integraciones', href: '/soluciones/integraciones' },
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+  },
   {
     ...guide(
       'cuanto-cuesta-un-pos-costa-rica',
