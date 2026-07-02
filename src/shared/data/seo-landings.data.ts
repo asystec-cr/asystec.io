@@ -898,18 +898,132 @@ export const industryPages: LandingPageData[] = [
       { label: 'Contacto', href: '/contact' },
     ],
   },
-  industry(
-    'talleres',
-    'Software para talleres',
-    'Software para talleres con ordenes de trabajo, clientes, diagnosticos, aprobaciones, cobros y reportes.',
-    'Un taller necesita controlar ordenes, estados, clientes, diagnosticos, aprobaciones, saldos y entrega de trabajos.',
-    ['Ordenes', 'Clientes', 'Diagnosticos', 'Aprobaciones', 'Cobros', 'Reportes'],
-    [
+  {
+    slug: 'talleres',
+    path: '/industrias/talleres',
+    kind: 'industry',
+    schemaType: 'Service',
+    title: 'Software para talleres',
+    seoTitle: 'Software para talleres en Costa Rica | Asystec',
+    description:
+      'Software para talleres en Costa Rica con ordenes de trabajo, clientes, diagnosticos, aprobaciones, cobros, estados y reportes operativos.',
+    eyebrow: 'Industria',
+    heroTitle: 'Software para talleres con ordenes de trabajo y seguimiento',
+    answer:
+      'Un taller en Costa Rica necesita registrar clientes, vehiculos o equipos, ordenes de trabajo, diagnosticos, aprobaciones, repuestos, cobros, estados y entregas sin perder trazabilidad entre recepcion, tecnico, caja y gerencia.',
+    intro:
+      'Esta landing conecta la demanda de software para talleres con TallerApp y las soluciones Asystec para controlar ordenes, saldos, seguimiento de clientes y reportes de operacion.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Ordenes de trabajo por estado',
+      'Historial de clientes, equipos o vehiculos',
+      'Aprobaciones, cobros y saldos pendientes',
+      'Reportes para recepcion, caja y gerencia',
+    ],
+    modules: ['Ordenes de trabajo', 'Clientes', 'Diagnosticos', 'Aprobaciones', 'Cobros', 'Reportes'],
+    sections: [
+      {
+        title: 'Dolores frecuentes en talleres',
+        body: 'Cuando las ordenes se manejan en papeles, mensajes o hojas separadas, el taller pierde visibilidad sobre trabajos pendientes, aprobaciones, saldos, repuestos, prioridades y entregas prometidas.',
+        items: [
+          'Ordenes sin estado claro entre recepcion y tecnico',
+          'Diagnosticos o aprobaciones dispersas en mensajes',
+          'Saldos pendientes que caja no ve a tiempo',
+          'Historial de clientes dificil de consultar en nuevas visitas',
+        ],
+      },
+      {
+        title: 'Flujo operativo que conviene controlar',
+        body: 'Un sistema para talleres debe ordenar el recorrido completo: ingreso del cliente, registro de equipo o vehiculo, diagnostico, aprobacion, trabajo, cobro y entrega.',
+        items: [
+          'Recepcion con datos del cliente y descripcion del trabajo',
+          'Estados para diagnostico, aprobacion, proceso y entrega',
+          'Cobros, abonos o saldos vinculados a cada orden',
+          'Reportes de trabajos abiertos, cerrados y pendientes',
+        ],
+      },
+      {
+        title: 'Como encaja TallerApp',
+        body: 'TallerApp esta orientado a operaciones por orden de trabajo donde el equipo necesita trazabilidad, estados, clientes, diagnosticos, aprobaciones, cobros y seguimiento hasta la entrega.',
+        items: [
+          'Ordenes y estados para seguimiento diario',
+          'Historial por cliente, equipo o vehiculo',
+          'Control de cobros asociados a trabajos',
+          'Informacion visible para recepcion y gerencia',
+        ],
+      },
+      {
+        title: 'Que revisar antes de una demo',
+        body: 'Para definir alcance conviene revisar tipos de trabajo, cantidad de usuarios, roles, volumen de ordenes, necesidad de facturacion, reportes y si el taller requiere integrarse con otros sistemas.',
+        items: [
+          'Roles: recepcion, tecnico, caja, administracion y gerencia',
+          'Datos que debe guardar cada orden de trabajo',
+          'Estados, aprobaciones y entregas que usa el taller',
+          'Reportes, cobros o integraciones necesarias',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para elegir software para un taller',
+      body: 'Esta tabla ayuda a preparar una demo comercial sin reducir la decision solo al precio. El objetivo es revisar si el sistema cubre el flujo real del taller.',
+      rows: [
+        {
+          factor: 'Tipo de taller',
+          question: 'Trabaja con vehiculos, equipos, servicios tecnicos u ordenes de otro tipo?',
+          impact: 'Define los campos de la orden, el historial necesario y los reportes relevantes.',
+        },
+        {
+          factor: 'Estados de trabajo',
+          question: 'Que etapas necesita controlar desde ingreso hasta entrega?',
+          impact: 'Ayuda a evitar trabajos sin seguimiento, aprobaciones perdidas o entregas sin cierre.',
+        },
+        {
+          factor: 'Cobros y saldos',
+          question: 'El taller maneja abonos, pagos parciales o saldos pendientes por orden?',
+          impact: 'Conecta recepcion, caja y gerencia con la misma informacion financiera.',
+        },
+        {
+          factor: 'Usuarios y permisos',
+          question: 'Quienes pueden ver, editar, aprobar, cobrar o cerrar trabajos?',
+          impact: 'Reduce errores operativos y protege informacion sensible del negocio.',
+        },
+        {
+          factor: 'Reportes e integraciones',
+          question: 'Que indicadores necesita gerencia y que sistemas actuales deben conectarse?',
+          impact: 'Puede requerir reportes por estado, responsable, cliente, ingreso o integraciones externas.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que software necesita un taller en Costa Rica?',
+        answer:
+          'Necesita un sistema que controle clientes, ordenes de trabajo, estados, diagnosticos, aprobaciones, cobros, saldos, entregas y reportes. Si maneja facturacion o integraciones, esos puntos deben revisarse durante la demo.',
+      },
+      {
+        question: 'TallerApp sirve solo para talleres automotrices?',
+        answer:
+          'No necesariamente. TallerApp puede aplicar a operaciones que trabajan por ordenes, diagnosticos, aprobaciones y entregas, incluyendo talleres automotrices y otros servicios tecnicos.',
+      },
+      {
+        question: 'Como ayuda un sistema a controlar trabajos pendientes?',
+        answer:
+          'Ayuda al registrar cada orden con estado, cliente, responsable, cobros y seguimiento. Eso facilita revisar trabajos abiertos, pendientes de aprobacion, listos para entrega o cerrados.',
+      },
+      {
+        question: 'Puedo coordinar una demo para mi taller?',
+        answer:
+          'Si. Puedes coordinar una demo o escribir por WhatsApp para revisar el flujo actual del taller, roles, ordenes, cobros, reportes e integraciones necesarias.',
+      },
+    ],
+    related: [
       { label: 'TallerApp', href: '/tallerapp' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'CRM', href: '/soluciones/crm' },
       { label: 'Reportes', href: '/soluciones/reportes' },
     ],
-  ),
+  },
   industry(
     'servicios-profesionales',
     'Software para servicios profesionales',
@@ -1007,99 +1121,134 @@ export const guidePages: LandingPageData[] = [
       'Reducir errores por archivos duplicados o ediciones sin historial.',
       'Preparar una demo con datos reales del negocio.',
     ],
+  ),
+  {
+    ...guide(
+      'software-local-vs-extranjero',
+      'Software local vs software extranjero',
+      'Comparativa para elegir entre software local y extranjero en Costa Rica segun soporte, facturacion electronica, integraciones, datos, costos y continuidad operativa.',
+      'Para una pyme en Costa Rica, la decision entre software local y extranjero depende de facturacion electronica, soporte, integraciones, continuidad, propiedad de datos y costo total. Lo correcto no es elegir por pais, sino por ajuste al proceso critico del negocio.',
+      ['Soporte', 'Facturacion electronica', 'Integraciones', 'Datos', 'Costo total', 'Continuidad'],
+      [
+        { label: 'Plataformas', href: '/plataformas' },
+        { label: 'Integraciones', href: '/soluciones/integraciones' },
+        { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    intro:
+      'Esta guia ayuda a gerentes y duenos de pymes a comparar una solucion local, una herramienta internacional o una plataforma a la medida antes de comprometer ventas, caja, inventario, facturacion o cobros.',
+    highlights: [
+      'Comparar soporte y salida a produccion, no solo funciones.',
+      'Validar facturacion electronica e integraciones para Costa Rica.',
+      'Revisar propiedad, exportacion y continuidad de los datos.',
+      'Pedir una demo con el flujo real del negocio antes de decidir.',
+    ],
     sections: [
       {
-        title: 'Respuesta para negocios en crecimiento',
-        body: 'La mejor alternativa a Excel depende del flujo del negocio. Una tienda pequena puede necesitar productos, existencias y ventas; una ferreteria o distribuidora suele requerir catalogo amplio, movimientos, usuarios, permisos, reportes y control por sucursal o bodega.',
+        title: 'Cuando conviene software local',
+        body: 'Una opcion local suele convenir cuando el negocio necesita acompanamiento cercano, configuracion alineada al contexto fiscal de Costa Rica, soporte para salida a produccion o adaptaciones alrededor del proceso operativo.',
         items: [
-          'Productos con codigos, categorias y precios',
-          'Entradas, salidas y ajustes con historial',
-          'Ventas conectadas al inventario',
-          'Reportes para compras, rotacion y faltantes',
+          'Facturacion electronica y reglas locales son parte del flujo diario',
+          'Caja, inventario, cobros o reportes no pueden quedar sin soporte',
+          'Se requiere migracion, capacitacion o ajustes por industria',
+          'El equipo necesita contacto directo para resolver dudas operativas',
         ],
       },
       {
-        title: 'Errores comunes al seguir en Excel',
-        body: 'El problema no es la hoja de calculo en si, sino usarla como sistema central cuando varias personas venden, compran, ajustan existencias o necesitan reportes confiables para decidir.',
+        title: 'Cuando conviene software extranjero',
+        body: 'Una herramienta extranjera puede tener sentido cuando el proceso es estandar, el equipo ya trabaja con esa categoria, no se requieren ajustes locales importantes y las integraciones cubren el flujo completo.',
         items: [
-          'Varias versiones del mismo archivo',
-          'Cambios sin usuario, fecha o motivo',
-          'Ventas que no rebajan inventario automaticamente',
-          'Reportes manuales que llegan tarde o con errores',
+          'El proceso se adapta bien a plantillas globales',
+          'No hay dependencia fuerte de configuracion fiscal local',
+          'Las integraciones necesarias ya existen y estan probadas',
+          'El soporte remoto, idioma y horarios no afectan la operacion',
         ],
       },
       {
-        title: 'Que preparar antes de una demo',
-        body: 'Para evaluar un sistema de inventario conviene mapear productos, categorias, usuarios, puntos de venta, bodegas, compras, facturacion, reportes y problemas actuales con Excel.',
+        title: 'Riesgos que se deben revisar',
+        body: 'El riesgo aparece cuando una decision barata o rapida deja procesos fuera del sistema. Antes de comprar, conviene probar ventas, facturacion, inventario, cobros, permisos, reportes y exportacion de datos.',
         items: [
-          'Cantidad aproximada de productos y categorias',
-          'Usuarios que venden, compran o ajustan inventario',
-          'Necesidad de caja, facturacion o varias sucursales',
-          'Reportes que gerencia necesita revisar cada semana',
+          'Llevar controles criticos en hojas separadas despues de comprar',
+          'No poder emitir, consultar o conciliar informacion fiscal clave',
+          'Depender de soporte lejano cuando caja o cobros estan detenidos',
+          'No tener una ruta clara para migrar datos si el sistema no funciona',
+        ],
+      },
+      {
+        title: 'Como decidir sin sesgo',
+        body: 'La comparacion debe empezar con el flujo real: que vende la empresa, como factura, cuantos usuarios operan, que reportes necesita gerencia, que sistemas deben conectarse y que pasa si el sistema falla en horario laboral.',
+        items: [
+          'Documentar el flujo actual antes de ver demos',
+          'Pedir prueba con productos, clientes o escenarios reales',
+          'Comparar costo total: licencia, implementacion, soporte e integraciones',
+          'Elegir el proveedor que reduzca mas riesgo operativo verificable',
         ],
       },
     ],
     decisionTable: {
-      title: 'Senales de que Excel ya no alcanza',
-      body: 'Esta tabla ayuda a decidir si el negocio puede seguir con una hoja o si ya necesita un sistema de inventario conectado a ventas, usuarios y reportes.',
+      title: 'Comparativa para elegir software local o extranjero',
+      body: 'Esta tabla resume preguntas que una pyme en Costa Rica puede llevar a una demo o cotizacion para evitar una decision basada solo en precio, marca o lista de funciones.',
       rows: [
         {
-          factor: 'Errores de existencias',
-          question: 'El equipo vende productos que luego no aparecen en bodega o quedan sin registrar?',
-          impact: 'Un sistema permite registrar movimientos y revisar historial antes de tomar decisiones de compra.',
+          factor: 'Facturacion electronica',
+          question: 'El sistema cubre el flujo fiscal que usa mi negocio en Costa Rica?',
+          impact: 'Si la facturacion queda fuera o requiere procesos manuales, aumenta el riesgo operativo y contable.',
         },
         {
-          factor: 'Varias personas editando',
-          question: 'Mas de una persona cambia precios, cantidades, compras o ajustes?',
-          impact: 'Los permisos y usuarios ayudan a saber quien hizo cada cambio y reducen versiones duplicadas.',
+          factor: 'Soporte y salida a produccion',
+          question: 'Quien responde cuando caja, inventario, cobros o usuarios no pueden operar?',
+          impact:
+            'El soporte cercano puede reducir tiempo detenido durante implementacion, capacitacion y operacion diaria.',
         },
         {
-          factor: 'Ventas desconectadas',
-          question: 'Las ventas se registran aparte y alguien debe rebajar inventario manualmente?',
-          impact: 'Conectar ventas e inventario evita doble digitacion y mejora la visibilidad diaria.',
+          factor: 'Integraciones',
+          question: 'Se conecta con POS, inventario, CRM, cobros, reportes o sistemas existentes?',
+          impact: 'Sin integraciones claras, el equipo termina duplicando datos o manteniendo hojas paralelas.',
         },
         {
-          factor: 'Reportes lentos',
-          question: 'Gerencia tarda en saber que se vendio, que falta o que producto rota mas?',
-          impact: 'Los reportes convierten movimientos diarios en informacion para compras, caja y operacion.',
+          factor: 'Datos y continuidad',
+          question: 'Puedo exportar datos, auditar cambios y migrar si el negocio crece o cambia?',
+          impact: 'La continuidad depende de no quedar encerrado en datos inaccesibles o procesos imposibles de mover.',
         },
         {
-          factor: 'Crecimiento del negocio',
-          question: 'Hay mas productos, usuarios, cajas, sucursales o bodegas que antes?',
-          impact: 'El crecimiento exige controles, permisos y datos consolidados que una hoja suele complicar.',
+          factor: 'Costo total',
+          question: 'La cotizacion separa licencia, implementacion, migracion, soporte y ajustes?',
+          impact:
+            'Un precio mensual bajo puede ocultar costos de configuracion, tiempo interno o trabajo manual permanente.',
         },
       ],
     },
     faqs: [
       {
-        question: 'Cuando deberia dejar de usar Excel para inventario?',
+        question: 'Es mejor usar software local o extranjero en Costa Rica?',
         answer:
-          'Cuando el negocio ya tiene errores frecuentes de existencias, varias personas editando, ventas desconectadas, reportes manuales o necesidad de controlar usuarios, cajas, bodegas o sucursales.',
+          'Depende del proceso. Si el negocio necesita soporte cercano, facturacion electronica, integraciones locales o ajustes por industria, una opcion local puede reducir riesgo. Si el proceso es estandar y la herramienta extranjera cubre todo, tambien puede ser viable.',
       },
       {
-        question: 'Que debe tener una alternativa a Excel para inventario?',
+        question: 'Que debo preguntar antes de contratar software extranjero?',
         answer:
-          'Debe permitir productos, movimientos, usuarios, permisos, ventas conectadas, reportes, historial de cambios y una forma clara de revisar faltantes, compras y rotacion.',
+          'Pregunta por soporte en tu horario, idioma, facturacion electronica, integraciones, exportacion de datos, costos de implementacion, seguridad, usuarios, permisos y que pasa si necesitas adaptar el proceso.',
       },
       {
-        question: 'Asystec puede ayudar a migrar desde Excel?',
+        question: 'Cuando conviene una plataforma a la medida?',
         answer:
-          'Si. En una demo se puede revisar el archivo actual, el flujo de ventas, productos, usuarios y reportes para definir si conviene Asystec POS, una solucion de inventario o una plataforma a medida.',
+          'Conviene cuando el negocio tiene flujos propios, varios roles, integraciones especiales, reportes no estandar o procesos que una herramienta lista obliga a manejar fuera del sistema.',
       },
+      {
+        question: 'Puedo comparar opciones con Asystec antes de decidir?',
+        answer:
+          'Si. Puedes coordinar una demo para revisar el flujo actual, riesgos, integraciones, facturacion, soporte y si conviene un producto existente o una plataforma a la medida.',
+      },
+    ],
+    related: [
+      { label: 'Plataformas a medida', href: '/plataformas' },
+      { label: 'Integraciones', href: '/soluciones/integraciones' },
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Coordinar demo', href: '/contact' },
     ],
   },
-  guide(
-    'software-local-vs-extranjero',
-    'Software local vs software extranjero',
-    'Comparativa para elegir entre software local y extranjero segun soporte, facturacion electronica, integraciones, costos y adaptacion al negocio.',
-    'El software local puede aportar soporte cercano y conocimiento del contexto fiscal; el extranjero puede ofrecer escala. La decision depende del proceso y los riesgos.',
-    ['Soporte', 'Contexto fiscal', 'Integraciones', 'Costos', 'Adaptacion', 'Continuidad'],
-    [
-      { label: 'Plataformas', href: '/plataformas' },
-      { label: 'Integraciones', href: '/soluciones/integraciones' },
-      { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
-    ],
-  ),
   {
     ...guide(
       'cuanto-cuesta-un-pos-costa-rica',
