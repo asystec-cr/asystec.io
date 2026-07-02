@@ -898,18 +898,132 @@ export const industryPages: LandingPageData[] = [
       { label: 'Contacto', href: '/contact' },
     ],
   },
-  industry(
-    'talleres',
-    'Software para talleres',
-    'Software para talleres con ordenes de trabajo, clientes, diagnosticos, aprobaciones, cobros y reportes.',
-    'Un taller necesita controlar ordenes, estados, clientes, diagnosticos, aprobaciones, saldos y entrega de trabajos.',
-    ['Ordenes', 'Clientes', 'Diagnosticos', 'Aprobaciones', 'Cobros', 'Reportes'],
-    [
+  {
+    slug: 'talleres',
+    path: '/industrias/talleres',
+    kind: 'industry',
+    schemaType: 'Service',
+    title: 'Software para talleres',
+    seoTitle: 'Software para talleres en Costa Rica | Asystec',
+    description:
+      'Software para talleres en Costa Rica con ordenes de trabajo, clientes, diagnosticos, aprobaciones, cobros, estados y reportes operativos.',
+    eyebrow: 'Industria',
+    heroTitle: 'Software para talleres con ordenes de trabajo y seguimiento',
+    answer:
+      'Un taller en Costa Rica necesita registrar clientes, vehiculos o equipos, ordenes de trabajo, diagnosticos, aprobaciones, repuestos, cobros, estados y entregas sin perder trazabilidad entre recepcion, tecnico, caja y gerencia.',
+    intro:
+      'Esta landing conecta la demanda de software para talleres con TallerApp y las soluciones Asystec para controlar ordenes, saldos, seguimiento de clientes y reportes de operacion.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Ordenes de trabajo por estado',
+      'Historial de clientes, equipos o vehiculos',
+      'Aprobaciones, cobros y saldos pendientes',
+      'Reportes para recepcion, caja y gerencia',
+    ],
+    modules: ['Ordenes de trabajo', 'Clientes', 'Diagnosticos', 'Aprobaciones', 'Cobros', 'Reportes'],
+    sections: [
+      {
+        title: 'Dolores frecuentes en talleres',
+        body: 'Cuando las ordenes se manejan en papeles, mensajes o hojas separadas, el taller pierde visibilidad sobre trabajos pendientes, aprobaciones, saldos, repuestos, prioridades y entregas prometidas.',
+        items: [
+          'Ordenes sin estado claro entre recepcion y tecnico',
+          'Diagnosticos o aprobaciones dispersas en mensajes',
+          'Saldos pendientes que caja no ve a tiempo',
+          'Historial de clientes dificil de consultar en nuevas visitas',
+        ],
+      },
+      {
+        title: 'Flujo operativo que conviene controlar',
+        body: 'Un sistema para talleres debe ordenar el recorrido completo: ingreso del cliente, registro de equipo o vehiculo, diagnostico, aprobacion, trabajo, cobro y entrega.',
+        items: [
+          'Recepcion con datos del cliente y descripcion del trabajo',
+          'Estados para diagnostico, aprobacion, proceso y entrega',
+          'Cobros, abonos o saldos vinculados a cada orden',
+          'Reportes de trabajos abiertos, cerrados y pendientes',
+        ],
+      },
+      {
+        title: 'Como encaja TallerApp',
+        body: 'TallerApp esta orientado a operaciones por orden de trabajo donde el equipo necesita trazabilidad, estados, clientes, diagnosticos, aprobaciones, cobros y seguimiento hasta la entrega.',
+        items: [
+          'Ordenes y estados para seguimiento diario',
+          'Historial por cliente, equipo o vehiculo',
+          'Control de cobros asociados a trabajos',
+          'Informacion visible para recepcion y gerencia',
+        ],
+      },
+      {
+        title: 'Que revisar antes de una demo',
+        body: 'Para definir alcance conviene revisar tipos de trabajo, cantidad de usuarios, roles, volumen de ordenes, necesidad de facturacion, reportes y si el taller requiere integrarse con otros sistemas.',
+        items: [
+          'Roles: recepcion, tecnico, caja, administracion y gerencia',
+          'Datos que debe guardar cada orden de trabajo',
+          'Estados, aprobaciones y entregas que usa el taller',
+          'Reportes, cobros o integraciones necesarias',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para elegir software para un taller',
+      body: 'Esta tabla ayuda a preparar una demo comercial sin reducir la decision solo al precio. El objetivo es revisar si el sistema cubre el flujo real del taller.',
+      rows: [
+        {
+          factor: 'Tipo de taller',
+          question: 'Trabaja con vehiculos, equipos, servicios tecnicos u ordenes de otro tipo?',
+          impact: 'Define los campos de la orden, el historial necesario y los reportes relevantes.',
+        },
+        {
+          factor: 'Estados de trabajo',
+          question: 'Que etapas necesita controlar desde ingreso hasta entrega?',
+          impact: 'Ayuda a evitar trabajos sin seguimiento, aprobaciones perdidas o entregas sin cierre.',
+        },
+        {
+          factor: 'Cobros y saldos',
+          question: 'El taller maneja abonos, pagos parciales o saldos pendientes por orden?',
+          impact: 'Conecta recepcion, caja y gerencia con la misma informacion financiera.',
+        },
+        {
+          factor: 'Usuarios y permisos',
+          question: 'Quienes pueden ver, editar, aprobar, cobrar o cerrar trabajos?',
+          impact: 'Reduce errores operativos y protege informacion sensible del negocio.',
+        },
+        {
+          factor: 'Reportes e integraciones',
+          question: 'Que indicadores necesita gerencia y que sistemas actuales deben conectarse?',
+          impact: 'Puede requerir reportes por estado, responsable, cliente, ingreso o integraciones externas.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que software necesita un taller en Costa Rica?',
+        answer:
+          'Necesita un sistema que controle clientes, ordenes de trabajo, estados, diagnosticos, aprobaciones, cobros, saldos, entregas y reportes. Si maneja facturacion o integraciones, esos puntos deben revisarse durante la demo.',
+      },
+      {
+        question: 'TallerApp sirve solo para talleres automotrices?',
+        answer:
+          'No necesariamente. TallerApp puede aplicar a operaciones que trabajan por ordenes, diagnosticos, aprobaciones y entregas, incluyendo talleres automotrices y otros servicios tecnicos.',
+      },
+      {
+        question: 'Como ayuda un sistema a controlar trabajos pendientes?',
+        answer:
+          'Ayuda al registrar cada orden con estado, cliente, responsable, cobros y seguimiento. Eso facilita revisar trabajos abiertos, pendientes de aprobacion, listos para entrega o cerrados.',
+      },
+      {
+        question: 'Puedo coordinar una demo para mi taller?',
+        answer:
+          'Si. Puedes coordinar una demo o escribir por WhatsApp para revisar el flujo actual del taller, roles, ordenes, cobros, reportes e integraciones necesarias.',
+      },
+    ],
+    related: [
       { label: 'TallerApp', href: '/tallerapp' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'CRM', href: '/soluciones/crm' },
       { label: 'Reportes', href: '/soluciones/reportes' },
     ],
-  ),
+  },
   industry(
     'servicios-profesionales',
     'Software para servicios profesionales',
