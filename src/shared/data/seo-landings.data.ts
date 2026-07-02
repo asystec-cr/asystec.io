@@ -1121,7 +1121,7 @@ export const guidePages: LandingPageData[] = [
       'Reducir errores por archivos duplicados o ediciones sin historial.',
       'Preparar una demo con datos reales del negocio.',
     ],
-  ),
+  },
   {
     ...guide(
       'software-local-vs-extranjero',
