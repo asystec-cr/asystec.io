@@ -690,18 +690,124 @@ export const industryPages: LandingPageData[] = [
       { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
     ],
   ),
-  industry(
-    'ferreterias',
-    'Software para ferreterias',
-    'Software para ferreterias con inventario, ventas, facturacion, busqueda de productos, reportes y control operativo.',
-    'Una ferreteria necesita encontrar productos rapido, controlar inventario amplio y mantener ventas/facturacion sin perder trazabilidad.',
-    ['Catalogo amplio', 'Inventario', 'Ventas', 'Facturacion', 'Reportes', 'Usuarios'],
-    [
-      { label: 'Inventario', href: '/soluciones/inventario' },
-      { label: 'Asystec POS', href: '/asystec-pos' },
-      { label: 'Alternativas a Excel', href: '/guias/alternativas-excel-inventario' },
+  {
+    slug: 'ferreterias',
+    path: '/industrias/ferreterias',
+    kind: 'industry',
+    schemaType: 'Service',
+    title: 'Software para ferreterias',
+    seoTitle: 'Software para ferreterias en Costa Rica | Asystec',
+    description:
+      'Software para ferreterias en Costa Rica con POS, inventario, catalogo amplio, codigos, facturacion electronica, reportes y control operativo.',
+    eyebrow: 'Industria',
+    heroTitle: 'Software para ferreterias con POS, inventario y facturacion',
+    answer:
+      'Una ferreteria en Costa Rica necesita encontrar productos rapido, controlar un catalogo amplio, revisar existencias, vender en caja, emitir comprobantes y ver reportes sin depender de hojas separadas. Asystec conecta POS, inventario, facturacion y control operativo para reducir errores en ventas y bodega.',
+    intro:
+      'Esta landing aterriza la demanda de software para ferreterias hacia soluciones Asystec que ordenan caja, catalogo, inventario, facturacion electronica y reportes para comercios con muchos productos.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Catalogo amplio con busqueda rapida',
+      'Inventario, existencias y movimientos',
+      'Caja, ventas y facturacion electronica',
+      'Reportes para compras, rotacion y gerencia',
     ],
-  ),
+    modules: ['Catalogo', 'Codigos', 'Inventario', 'Ventas', 'Facturacion electronica', 'Reportes'],
+    sections: [
+      {
+        title: 'Dolores frecuentes en ferreterias',
+        body: 'Cuando el catalogo crece, una ferreteria puede perder ventas por busquedas lentas, existencias desactualizadas, precios inconsistentes o inventario manejado en archivos separados.',
+        items: [
+          'Productos similares dificiles de encontrar en caja',
+          'Existencias que no coinciden con bodega o estante',
+          'Facturacion y ventas separadas del control de inventario',
+          'Compras y reposicion decididas sin reportes claros',
+        ],
+      },
+      {
+        title: 'Flujo operativo que conviene controlar',
+        body: 'Un sistema para ferreterias debe conectar catalogo, caja, facturacion, inventario y reportes para que ventas, bodega y gerencia trabajen con la misma informacion.',
+        items: [
+          'Catalogo de productos, familias, codigos y precios',
+          'Ventas en caja conectadas con inventario',
+          'Comprobantes y clientes dentro del flujo comercial',
+          'Reportes para rotacion, faltantes, ventas y margen',
+        ],
+      },
+      {
+        title: 'Que revisar antes de una demo',
+        body: 'Para definir el alcance conviene revisar cantidad de productos, usuarios, cajas, bodegas, necesidad de codigos de barras, reportes esperados y si se debe migrar inventario desde Excel.',
+        items: [
+          'Volumen de productos, codigos y categorias',
+          'Cantidad de cajas, usuarios y permisos',
+          'Manejo de inventario por estante, bodega o sucursal',
+          'Reportes de ventas, compras, rotacion y faltantes',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para elegir software para una ferreteria',
+      body: 'Esta tabla ayuda a preparar una demo o cotizacion enfocada en el flujo real de una ferreteria, no solo en la lista general de funciones.',
+      rows: [
+        {
+          factor: 'Catalogo y busqueda',
+          question: 'Cuantos productos, codigos, familias o variantes maneja la ferreteria?',
+          impact:
+            'Define que tan importante es buscar rapido en caja, ordenar categorias y evitar ventas con productos incorrectos.',
+        },
+        {
+          factor: 'Inventario y bodegas',
+          question: 'Las existencias se controlan por tienda, bodega, estante o sucursal?',
+          impact: 'Afecta movimientos, conteos, reposicion, reportes y visibilidad para compras.',
+        },
+        {
+          factor: 'Caja y facturacion',
+          question: 'El punto de venta debe emitir comprobantes y rebajar inventario en el mismo flujo?',
+          impact: 'Reduce doble digitacion y ayuda a que ventas, facturacion e inventario no queden separados.',
+        },
+        {
+          factor: 'Precios y margenes',
+          question: 'El negocio necesita revisar costos, precios, descuentos o margenes por categoria?',
+          impact: 'Permite tomar mejores decisiones de compra, promocion y control comercial.',
+        },
+        {
+          factor: 'Reportes y permisos',
+          question: 'Que puede ver o editar cada usuario y que reportes necesita gerencia?',
+          impact: 'Ayuda a separar caja, administracion y gerencia con controles mas claros.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que software necesita una ferreteria en Costa Rica?',
+        answer:
+          'Necesita un sistema que conecte catalogo, busqueda de productos, ventas, inventario, facturacion electronica, usuarios y reportes. Si maneja bodegas o sucursales, tambien conviene revisar permisos y existencias por ubicacion.',
+      },
+      {
+        question: 'Asystec POS sirve para ferreterias?',
+        answer:
+          'Puede aplicar cuando la ferreteria necesita caja, ventas, inventario, facturacion electronica y reportes. La demo debe revisar catalogo, codigos, usuarios, bodegas y flujo de facturacion para definir el alcance correcto.',
+      },
+      {
+        question: 'Cuando conviene dejar Excel para controlar inventario?',
+        answer:
+          'Conviene migrar cuando las existencias afectan ventas, compras, faltantes, facturacion o reportes. Un sistema ayuda a tener historial, usuarios, movimientos y datos mas trazables que una hoja separada.',
+      },
+      {
+        question: 'Puedo coordinar una demo para mi ferreteria?',
+        answer:
+          'Si. Puedes coordinar una demo o escribir por WhatsApp para revisar catalogo, inventario, caja, facturacion, usuarios, reportes y migracion de datos actuales.',
+      },
+    ],
+    related: [
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Inventario', href: '/soluciones/inventario' },
+      { label: 'Alternativas a Excel', href: '/guias/alternativas-excel-inventario' },
+      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+  },
   industry(
     'retail',
     'Sistema para tiendas retail',
@@ -1121,7 +1227,7 @@ export const guidePages: LandingPageData[] = [
       'Reducir errores por archivos duplicados o ediciones sin historial.',
       'Preparar una demo con datos reales del negocio.',
     ],
-  ),
+  },
   {
     ...guide(
       'software-local-vs-extranjero',
