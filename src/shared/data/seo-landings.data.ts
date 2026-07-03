@@ -528,18 +528,138 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Preguntas frecuentes', href: '/faqs' },
     ],
   ),
-  solution(
-    'inventario',
-    'Sistema de inventario para tiendas',
-    'Software para controlar inventario, existencias, ventas, movimientos y reportes para negocios en Costa Rica.',
-    'Un sistema de inventario ayuda a saber que productos hay, que se vendio, que falta reponer y donde se esta perdiendo control.',
-    ['Productos', 'Existencias', 'Movimientos', 'Ventas', 'Alertas', 'Reportes'],
-    [
-      { label: 'Asystec POS', href: '/asystec-pos' },
-      { label: 'Alternativas a Excel', href: '/guias/alternativas-excel-inventario' },
-      { label: 'Retail', href: '/industrias/retail' },
+  {
+    slug: 'inventario',
+    path: '/soluciones/inventario',
+    kind: 'solution',
+    schemaType: 'Service',
+    title: 'Sistema de inventario para tiendas en Costa Rica',
+    seoTitle: 'Sistema de inventario para tiendas en Costa Rica | Asystec',
+    description:
+      'Sistema de inventario para tiendas en Costa Rica con productos, existencias, movimientos, ventas, reportes y conexion con POS.',
+    eyebrow: 'Solucion Asystec',
+    heroTitle: 'Sistema de inventario para controlar productos, ventas y existencias',
+    answer:
+      'Un sistema de inventario para tiendas en Costa Rica debe conectar productos, existencias, ventas, movimientos, ajustes y reportes. El objetivo es saber que hay disponible, que se vendio, que falta reponer y donde se pierde control antes de que afecte caja, compras o clientes.',
+    intro:
+      'Asystec ayuda a comercios, minisuper, ferreterias y tiendas retail a evaluar inventario junto con POS, facturacion electronica, reportes y procesos de bodega, segun el flujo real del negocio.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Responder a busquedas de sistema de inventario para tiendas en Costa Rica.',
+      'Conectar inventario con ventas, POS, facturacion y reportes.',
+      'Ayudar a preparar una demo con productos, bodegas y movimientos reales.',
+      'Dar una ruta clara hacia Asystec POS, contacto y WhatsApp.',
     ],
-  ),
+    modules: [
+      'Productos y categorias',
+      'Existencias y movimientos',
+      'Ventas conectadas con inventario',
+      'Ajustes y conteos',
+      'Bodegas o sucursales',
+      'Reportes para compras y reposicion',
+    ],
+    sections: [
+      {
+        title: 'Cuando Excel deja de alcanzar',
+        body: 'El inventario se vuelve dificil de controlar cuando compras, ventas, ajustes y conteos viven en archivos separados. En ese punto el negocio necesita historial, usuarios, movimientos y reportes que reduzcan conciliaciones manuales.',
+        items: [
+          'Existencias que no coinciden con caja o bodega',
+          'Productos duplicados o con codigos inconsistentes',
+          'Reposicion decidida sin historial confiable',
+          'Reportes armados tarde para compras o gerencia',
+        ],
+      },
+      {
+        title: 'Que debe conectar el sistema',
+        body: 'La evaluacion debe empezar por el flujo diario: como se crean productos, quien vende, como se rebajan existencias, como se hacen ajustes y que reportes necesita administracion para decidir compras.',
+        items: [
+          'Catalogo de productos, categorias y codigos',
+          'Ventas que rebajan inventario desde el POS',
+          'Movimientos, ajustes, conteos y trazabilidad',
+          'Reportes de existencias, rotacion y faltantes',
+        ],
+      },
+      {
+        title: 'Inventario para mas de una ubicacion',
+        body: 'Si el negocio maneja bodega, sucursales o varias cajas, conviene revisar permisos, existencias por ubicacion, reportes centralizados y el nivel de detalle que necesita cada usuario.',
+        items: [
+          'Existencias por punto operativo',
+          'Usuarios y permisos por rol',
+          'Consulta centralizada para gerencia',
+          'Escalamiento hacia multi-sucursal si aplica',
+        ],
+      },
+      {
+        title: 'Como llevar la demo a tierra',
+        body: 'Una demo util debe usar ejemplos del negocio: productos de alta rotacion, ajustes frecuentes, compras, faltantes, reportes esperados y el punto donde el control manual ya genera perdida de tiempo o errores.',
+        items: [
+          'Preparar categorias y productos representativos',
+          'Llevar dudas sobre ventas, ajustes y cierres',
+          'Separar necesidades obligatorias de mejoras futuras',
+          'Confirmar soporte, migracion e integraciones necesarias',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para elegir un sistema de inventario',
+      body: 'Estas preguntas ayudan a comparar opciones antes de comprar software por lista de funciones y sirven para enfocar una demo en el control real del negocio.',
+      rows: [
+        {
+          factor: 'Catalogo de productos',
+          question: 'El negocio necesita codigos, categorias, variaciones, precios o datos especiales por producto?',
+          impact: 'Define como se cargan productos, como se busca en caja y que tan facil sera mantener datos limpios.',
+        },
+        {
+          factor: 'Movimientos y ajustes',
+          question: 'Quien puede ajustar inventario y que historial debe quedar para revisar diferencias?',
+          impact: 'Afecta trazabilidad, permisos, auditoria interna y confianza en las existencias.',
+        },
+        {
+          factor: 'Conexion con ventas',
+          question: 'Las ventas del POS rebajan inventario y quedan conectadas con facturacion y cierres?',
+          impact: 'Evita duplicar trabajo entre caja, bodega y administracion.',
+        },
+        {
+          factor: 'Bodegas o sucursales',
+          question: 'El inventario se maneja en una sola tienda, varias ubicaciones o una bodega central?',
+          impact: 'Determina permisos, reportes, visibilidad por ubicacion y crecimiento futuro.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que debe tener un sistema de inventario para tiendas?',
+        answer:
+          'Debe cubrir productos, categorias, existencias, movimientos, ajustes, ventas conectadas, usuarios y reportes. Si hay bodegas o sucursales, tambien conviene revisar permisos y existencias por ubicacion.',
+      },
+      {
+        question: 'Cuando conviene dejar Excel para controlar inventario?',
+        answer:
+          'Conviene cuando las existencias afectan ventas, compras, facturacion o reportes, o cuando el equipo pierde tiempo conciliando archivos, conteos y movimientos manuales.',
+      },
+      {
+        question: 'El inventario puede conectarse con Asystec POS?',
+        answer:
+          'Si. La evaluacion puede conectar inventario con ventas, caja, facturacion electronica y reportes dentro de Asystec POS o con una solucion ajustada al flujo del negocio.',
+      },
+      {
+        question: 'Puedo pedir una demo enfocada en mi inventario actual?',
+        answer:
+          'Si. Puedes coordinar una demo o escribir por WhatsApp para revisar productos, categorias, ventas, ajustes, bodegas, sucursales, reportes e integraciones necesarias.',
+      },
+    ],
+    related: [
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Sistema POS', href: '/soluciones/pos' },
+      { label: 'Alternativas a Excel', href: '/guias/alternativas-excel-inventario' },
+      { label: 'Ferreterias', href: '/industrias/ferreterias' },
+      { label: 'Minisuper', href: '/industrias/minisuper' },
+      { label: 'Restaurantes', href: '/industrias/restaurantes' },
+      { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+  },
   solution(
     'reportes',
     'Reportes para gerencia y operacion',
