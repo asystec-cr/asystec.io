@@ -1310,18 +1310,142 @@ const guide = (
 });
 
 export const guidePages: LandingPageData[] = [
-  guide(
-    'como-elegir-sistema-pos',
-    'Como elegir un sistema POS para una tienda',
-    'Guia para elegir un sistema POS en Costa Rica considerando caja, inventario, facturacion, soporte, reportes e integraciones.',
-    'Para elegir un POS conviene evaluar velocidad de caja, estabilidad, inventario, facturacion electronica, reportes, soporte local, seguridad y crecimiento.',
-    ['Caja y ventas', 'Inventario', 'Facturacion electronica', 'Reportes', 'Soporte', 'Seguridad'],
-    [
+  {
+    ...guide(
+      'como-elegir-sistema-pos',
+      'Como elegir un sistema POS para una tienda',
+      'Guia para elegir un sistema POS en Costa Rica considerando caja, inventario, facturacion electronica, soporte, reportes, usuarios e integraciones.',
+      'Para elegir un POS en Costa Rica conviene probar el flujo real de venta: caja, productos, facturacion electronica, inventario, usuarios, cierres, reportes y soporte. La mejor opcion no es la que tiene mas funciones, sino la que reduce errores diarios y puede crecer con el negocio.',
+      ['Caja y ventas', 'Inventario', 'Facturacion electronica', 'Reportes', 'Soporte', 'Seguridad'],
+      [
+        { label: 'Asystec POS', href: '/asystec-pos' },
+        { label: 'Sistema POS', href: '/soluciones/pos' },
+        { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    intro:
+      'Esta guia ayuda a duenos y administradores de tiendas, minisuper, restaurantes y comercios a preparar una comparacion practica antes de contratar un sistema POS.',
+    highlights: [
+      'Separar funciones obligatorias de mejoras deseables.',
+      'Probar caja, inventario y facturacion con escenarios reales.',
+      'Comparar soporte, implementacion, migracion y crecimiento.',
+      'Llegar a la demo con preguntas concretas para cotizar mejor.',
+    ],
+    modules: [
+      'Caja rapida y cierres',
+      'Catalogo, codigos e inventario',
+      'Facturacion electronica',
+      'Usuarios y permisos',
+      'Reportes para gerencia',
+      'Soporte, migracion e integraciones',
+    ],
+    sections: [
+      {
+        title: 'Empieza por el flujo de venta',
+        body: 'Antes de comparar pantallas o precios, conviene describir como vende el negocio: quien atiende, como busca productos, que comprobante emite, como cobra y que ocurre al cierre. Esa prueba revela si el POS calza con la operacion diaria.',
+        items: [
+          'Cantidad de cajas, usuarios y turnos',
+          'Busqueda por codigo, categoria o descripcion',
+          'Medios de pago y control de cierres',
+          'Datos que deben quedar listos para administracion',
+        ],
+      },
+      {
+        title: 'Revisa inventario y productos',
+        body: 'Un POS debil en inventario puede obligar a mantener hojas externas. La demo debe probar catalogo, existencias, codigos, movimientos, reportes y cualquier control por bodega o sucursal que el negocio necesite.',
+        items: [
+          'Productos, variantes, codigos y categorias',
+          'Existencias, movimientos y ajustes',
+          'Productos de alta rotacion o bajo margen',
+          'Necesidad de bodegas, sucursales o alertas',
+        ],
+      },
+      {
+        title: 'Confirma facturacion y soporte',
+        body: 'En Costa Rica la facturacion electronica, la salida a produccion y el soporte local pueden pesar tanto como las funciones. Un POS debe reducir friccion operativa cuando caja, facturacion o inventario se detienen.',
+        items: [
+          'Flujo para emitir comprobantes desde la venta',
+          'Capacitacion para usuarios de caja y administracion',
+          'Soporte durante implementacion y operacion diaria',
+          'Ruta para resolver errores o cambios de configuracion',
+        ],
+      },
+      {
+        title: 'Evalua crecimiento antes de comprar',
+        body: 'Aunque el negocio empiece pequeno, conviene saber si el sistema puede crecer a mas usuarios, cajas, reportes, bodegas, sucursales o integraciones sin rehacer el proceso desde cero.',
+        items: [
+          'Permisos por rol y trazabilidad de acciones',
+          'Reportes para ventas, caja, inventario y gerencia',
+          'Integraciones con otros sistemas si aplican',
+          'Exportacion de datos y continuidad operativa',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para comparar sistemas POS',
+      body: 'Usa estas preguntas para evaluar opciones en una demo. La meta es comprobar si el sistema resuelve el proceso real del negocio, no solo si cumple una lista generica de funciones.',
+      rows: [
+        {
+          factor: 'Caja y velocidad',
+          question: 'El equipo puede vender, cobrar, anular y cerrar caja sin pasos manuales innecesarios?',
+          impact: 'Afecta filas, errores de cobro, diferencias de caja y tiempo de capacitacion.',
+        },
+        {
+          factor: 'Inventario',
+          question: 'El POS rebaja existencias, permite buscar productos y muestra informacion util para reponer?',
+          impact: 'Evita controles paralelos en Excel y mejora compras, disponibilidad y margen.',
+        },
+        {
+          factor: 'Facturacion electronica',
+          question: 'La venta y el comprobante quedan conectados en el mismo flujo operativo?',
+          impact: 'Reduce doble digitacion, inconsistencias y problemas al revisar ventas o reportes.',
+        },
+        {
+          factor: 'Reportes',
+          question: 'Que puede revisar gerencia al cierre: ventas, productos, usuarios, caja o sucursales?',
+          impact: 'Convierte el POS en una herramienta de decision, no solo en una caja registradora.',
+        },
+        {
+          factor: 'Soporte y crecimiento',
+          question: 'Quien acompana implementacion, migracion, capacitacion y cambios cuando el negocio crece?',
+          impact: 'Define continuidad operativa y evita que el sistema quede corto al agregar usuarios o sucursales.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que debe tener un buen sistema POS para una tienda en Costa Rica?',
+        answer:
+          'Debe cubrir caja, ventas, productos, inventario, facturacion electronica, usuarios, cierres, reportes y soporte. Si el negocio maneja varias cajas, bodegas o sucursales, tambien debe revisar permisos e indicadores por ubicacion.',
+      },
+      {
+        question: 'Como comparo dos sistemas POS sin decidir solo por precio?',
+        answer:
+          'Prueba el flujo real: venta, busqueda de productos, comprobantes, inventario, cierres, reportes, usuarios, soporte e integraciones. Luego compara costo total, implementacion y tiempo que el equipo ahorra o pierde.',
+      },
+      {
+        question: 'Cuando conviene cambiar de caja manual o Excel a un POS?',
+        answer:
+          'Conviene cuando hay errores de inventario, cierres lentos, facturacion separada, reportes incompletos, productos dificiles de controlar o crecimiento hacia mas usuarios, cajas o sucursales.',
+      },
+      {
+        question: 'Puedo pedir una demo de POS con mi caso real?',
+        answer:
+          'Si. Puedes coordinar una demo con Asystec para revisar tipo de negocio, cajas, productos, inventario, facturacion, usuarios, reportes, soporte e integraciones antes de elegir.',
+      },
+    ],
+    related: [
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
+      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
+      { label: 'Minisuper', href: '/industrias/minisuper' },
+      { label: 'Restaurantes', href: '/industrias/restaurantes' },
+      { label: 'Ferreterias', href: '/industrias/ferreterias' },
       { label: 'Retail', href: '/industrias/retail' },
+      { label: 'Coordinar demo', href: '/contact' },
     ],
-  ),
+  },
   {
     ...guide(
       'alternativas-excel-inventario',
