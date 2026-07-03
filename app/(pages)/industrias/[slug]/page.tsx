@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import CommercialLanding from '~/components/seo/CommercialLanding';
+import { restaurantesIndustryPage } from '~/shared/data/industries/restaurantes.data';
 import { getIndustryPage, industryPages } from '~/shared/data/seo-landings.data';
 import { buildPageMetadata } from '~/utils/seo';
 
@@ -9,10 +10,13 @@ type PageProps = {
   };
 };
 
+const getPage = (slug: string) =>
+  slug === restaurantesIndustryPage.slug ? restaurantesIndustryPage : getIndustryPage(slug);
+
 export const generateStaticParams = () => industryPages.map(({ slug }) => ({ slug }));
 
 export const generateMetadata = ({ params }: PageProps) => {
-  const page = getIndustryPage(params.slug);
+  const page = getPage(params.slug);
 
   if (!page) {
     return {};
@@ -22,7 +26,7 @@ export const generateMetadata = ({ params }: PageProps) => {
 };
 
 const Page = ({ params }: PageProps) => {
-  const page = getIndustryPage(params.slug);
+  const page = getPage(params.slug);
 
   if (!page) {
     notFound();
