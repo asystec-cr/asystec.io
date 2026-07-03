@@ -678,18 +678,133 @@ export const industryPages: LandingPageData[] = [
       { label: 'Reportes', href: '/soluciones/reportes' },
     ],
   ),
-  industry(
-    'minisuper',
-    'Sistema POS para minisuper',
-    'Software POS para minisuper y abastecedores con ventas rapidas, inventario, facturacion electronica y reportes.',
-    'Un minisuper necesita vender rapido, controlar existencias, revisar margenes y mantener la facturacion sin interrumpir la atencion.',
-    ['Caja rapida', 'Codigos y productos', 'Inventario', 'Cierres', 'Facturacion', 'Reportes'],
-    [
-      { label: 'Asystec POS', href: '/asystec-pos' },
-      { label: 'Inventario', href: '/soluciones/inventario' },
-      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
+  {
+    slug: 'minisuper',
+    path: '/industrias/minisuper',
+    kind: 'industry',
+    schemaType: 'Service',
+    title: 'Sistema POS para minisuper',
+    seoTitle: 'Sistema POS para minisuper en Costa Rica | Asystec',
+    description:
+      'Sistema POS para minisuper en Costa Rica con caja rapida, codigos, inventario, facturacion electronica, cierres y reportes.',
+    eyebrow: 'Industria',
+    heroTitle: 'Sistema POS para minisuper con caja rapida, inventario y facturacion',
+    answer:
+      'Un minisuper en Costa Rica necesita vender rapido en caja, encontrar productos por codigo, controlar existencias, emitir comprobantes y revisar cierres sin frenar la atencion. Asystec POS conecta ventas, inventario, facturacion electronica y reportes para operar con menos controles separados.',
+    intro:
+      'Esta landing ayuda a duenos y administradores de minisuper, abastecedores y tiendas de conveniencia a evaluar que debe cubrir un POS antes de coordinar una demo.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Caja rapida para ventas de alto movimiento',
+      'Productos, codigos y existencias conectados',
+      'Facturacion electronica dentro del flujo de venta',
+      'Cierres y reportes para administrar mejor compras y caja',
     ],
-  ),
+    modules: [
+      'Punto de venta',
+      'Codigos de productos',
+      'Inventario',
+      'Facturacion electronica',
+      'Cierres de caja',
+      'Reportes',
+    ],
+    sections: [
+      {
+        title: 'Dolores frecuentes en minisuper',
+        body: 'Cuando las ventas son rapidas y el inventario cambia todos los dias, el negocio puede perder control si caja, productos, existencias y facturacion viven en herramientas separadas.',
+        items: [
+          'Filas lentas porque el equipo no encuentra productos o precios',
+          'Existencias que no coinciden con compras, bodega o estante',
+          'Cierres de caja revisados tarde o con datos incompletos',
+          'Reportes insuficientes para decidir reposicion y margen',
+        ],
+      },
+      {
+        title: 'Flujo que conviene controlar',
+        body: 'Un POS para minisuper debe cubrir el ciclo diario: vender, facturar, rebajar inventario, cerrar caja y consultar reportes para que administracion no dependa de recuentos manuales.',
+        items: [
+          'Busqueda por codigo, nombre o categoria',
+          'Ventas conectadas con inventario y comprobantes',
+          'Usuarios y permisos para caja y administracion',
+          'Reportes de ventas, productos, cierres y movimientos',
+        ],
+      },
+      {
+        title: 'Que preparar antes de una demo',
+        body: 'Para definir el alcance conviene revisar cantidad de productos, cajas, usuarios, categorias, necesidad de codigos de barras, facturacion y reportes que se usan para compras o gerencia.',
+        items: [
+          'Cantidad aproximada de productos y categorias',
+          'Numero de cajas, usuarios y turnos',
+          'Uso actual de inventario, codigos y facturacion',
+          'Reportes necesarios para compras, ventas y cierre diario',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para elegir POS para un minisuper',
+      body: 'Estas preguntas ayudan a comparar opciones antes de comprar por precio o lista de funciones, y sirven para llevar una demo enfocada en el flujo real del negocio.',
+      rows: [
+        {
+          factor: 'Caja rapida',
+          question: 'El equipo puede vender por codigo, buscar productos y corregir errores sin detener la fila?',
+          impact: 'La velocidad de caja afecta atencion, cierres y adopcion del sistema por parte del personal.',
+        },
+        {
+          factor: 'Inventario',
+          question: 'Las ventas rebajan existencias y dejan historial para revisar compras, faltantes o ajustes?',
+          impact: 'Si inventario y caja no estan conectados, el negocio termina conciliando datos manualmente.',
+        },
+        {
+          factor: 'Facturacion',
+          question: 'La facturacion electronica queda dentro del flujo de venta diario?',
+          impact: 'Separar facturacion del POS agrega pasos, retrabajo y riesgo de errores operativos.',
+        },
+        {
+          factor: 'Reportes',
+          question: 'El sistema muestra ventas, cierres, productos y movimientos utiles para administrar?',
+          impact: 'Sin reportes accionables, compras y supervision dependen de percepcion o archivos separados.',
+        },
+        {
+          factor: 'Crecimiento',
+          question: 'Puede crecer a mas cajas, usuarios, bodegas o sucursales si el negocio lo necesita?',
+          impact: 'Elegir solo para el problema de hoy puede obligar a migrar cuando el negocio crece.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que debe tener un POS para minisuper?',
+        answer:
+          'Debe cubrir caja rapida, busqueda de productos, codigos, inventario, facturacion electronica, cierres, usuarios y reportes para revisar ventas, movimientos y productos.',
+      },
+      {
+        question: 'Sirve si el negocio maneja muchos productos y codigos?',
+        answer:
+          'Si. Lo importante es preparar el catalogo, categorias, codigos y reglas de venta para que caja e inventario usen la misma informacion desde el inicio.',
+      },
+      {
+        question: 'Puedo empezar con caja e inventario y agregar mas despues?',
+        answer:
+          'Si. Una implementacion puede iniciar con ventas, productos, inventario y facturacion, y luego ampliar usuarios, reportes, permisos o sucursales segun el crecimiento.',
+      },
+      {
+        question: 'Que informacion conviene llevar a la demo?',
+        answer:
+          'Conviene llevar cantidad de productos, cajas, usuarios, categorias, forma actual de facturar, reportes necesarios y problemas concretos de inventario o cierres.',
+      },
+    ],
+    related: [
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Sistema POS', href: '/soluciones/pos' },
+      { label: 'Inventario', href: '/soluciones/inventario' },
+      { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
+      { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+  },
   {
     slug: 'ferreterias',
     path: '/industrias/ferreterias',
