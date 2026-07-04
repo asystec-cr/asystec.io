@@ -56,6 +56,24 @@ const securityItems = [
   'Buenas practicas de seguridad en cada release.',
 ];
 
+const decisionGuides = [
+  {
+    title: 'POS local/offline vs POS en la nube',
+    description: 'Compara continuidad en caja, internet, inventario, facturacion, usuarios y soporte antes de decidir.',
+    href: '/guias/pos-local-vs-pos-en-la-nube',
+  },
+  {
+    title: 'Como elegir un sistema POS',
+    description: 'Checklist para evaluar caja, productos, reportes, soporte e implementacion en una pyme.',
+    href: '/guias/como-elegir-sistema-pos',
+  },
+  {
+    title: 'Cuanto cuesta un POS',
+    description: 'Factores que mueven el alcance de una cotizacion sin inventar rangos genericos.',
+    href: '/guias/cuanto-cuesta-un-pos-costa-rica',
+  },
+];
+
 const faqs = [
   {
     q: 'Funciona 100% offline?',
@@ -252,6 +270,26 @@ const Page = () => {
             Esta pagina muestra capturas y capacidades del producto. Las resenas, nombres de clientes y resultados
             cuantitativos se publicaran solo cuando exista permiso verificable.
           </p>
+        </div>
+
+        <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Guias para comparar antes de elegir POS</h2>
+          <p className="mt-3 text-sm leading-7 text-gray-600 dark:text-slate-300">
+            Si estas comparando proveedores, lleva estas preguntas a la demo para revisar continuidad, facturacion,
+            inventario, soporte y crecimiento antes de decidir.
+          </p>
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            {decisionGuides.map((guide) => (
+              <a
+                key={guide.href}
+                href={guide.href}
+                className="rounded-xl border border-gray-200 p-4 transition hover:border-blue-300 hover:bg-blue-50 dark:border-slate-700 dark:hover:bg-blue-950/30"
+              >
+                <h3 className="text-base font-semibold text-blue-800 dark:text-blue-300">{guide.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600 dark:text-slate-300">{guide.description}</p>
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
