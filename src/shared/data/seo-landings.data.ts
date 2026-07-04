@@ -516,18 +516,143 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
     ],
   ),
-  solution(
-    'facturacion-electronica',
-    'Facturacion electronica para pymes',
-    'Software y acompanamiento para facturacion electronica en Costa Rica, comprobantes, clientes, pagos y reportes.',
-    'La facturacion electronica ayuda a emitir comprobantes en regla y mantener informacion comercial organizada para clientes, ventas y reportes.',
-    ['Comprobantes electronicos', 'Clientes', 'Productos o servicios', 'Pagos', 'Reportes', 'Soporte'],
-    [
+  {
+    slug: 'facturacion-electronica',
+    path: '/soluciones/facturacion-electronica',
+    kind: 'solution',
+    schemaType: 'Service',
+    title: 'Software de facturacion electronica para pymes en Costa Rica',
+    seoTitle: 'Software de facturacion electronica para pymes en Costa Rica | Asystec',
+    description:
+      'Software de facturacion electronica para pymes en Costa Rica con comprobantes, clientes, productos, pagos, reportes, POS y soporte local.',
+    eyebrow: 'Solucion Asystec',
+    heroTitle: 'Facturacion electronica para vender y administrar mejor',
+    answer:
+      'Un software de facturacion electronica para pymes en Costa Rica debe ayudar a emitir comprobantes, mantener clientes y productos ordenados, conectar ventas y pagos, y dar soporte cuando el flujo comercial se detiene. La evaluacion conviene hacerla junto con POS, inventario, reportes y la forma real en que opera el negocio.',
+    intro:
+      'Asystec ayuda a negocios que necesitan ordenar facturacion electronica, ventas, clientes, pagos y reportes desde FacturacionApp, Asystec POS o una plataforma ajustada al flujo del negocio.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Responder a busquedas de facturacion electronica para pymes en Costa Rica.',
+      'Conectar comprobantes con clientes, ventas, pagos, inventario y reportes.',
+      'Ayudar a comparar si conviene FacturacionApp, Asystec POS o una plataforma a medida.',
+      'Dar una ruta clara hacia demo, WhatsApp y contacto comercial.',
+    ],
+    modules: [
+      'Comprobantes electronicos',
+      'Clientes y productos',
+      'Cotizaciones, pagos y saldos',
+      'Reportes comerciales',
+      'Conexion con POS e inventario',
+      'Soporte y salida a produccion',
+    ],
+    sections: [
+      {
+        title: 'Cuando facturar se vuelve un cuello de botella',
+        body: 'La facturacion deja de ser solo un tramite cuando ventas, clientes, pagos y reportes quedan separados. En ese punto el negocio pierde tiempo conciliando informacion, buscando comprobantes o armando datos para gerencia.',
+        items: [
+          'Comprobantes emitidos fuera del flujo de venta',
+          'Clientes, productos o servicios repetidos en varias herramientas',
+          'Pagos y saldos revisados manualmente',
+          'Reportes comerciales armados tarde o con datos incompletos',
+        ],
+      },
+      {
+        title: 'Que debe resolver la herramienta',
+        body: 'La evaluacion debe empezar por el proceso diario: como se vende, quien factura, como se registran clientes, que se cobra, que reportes se revisan y que informacion no puede quedar dispersa.',
+        items: [
+          'Emision y consulta de comprobantes desde un flujo claro',
+          'Catalogo de clientes, productos o servicios ordenado',
+          'Registro de pagos, cotizaciones o saldos cuando aplique',
+          'Reportes para ventas, administracion y seguimiento comercial',
+        ],
+      },
+      {
+        title: 'Facturacion conectada con la operacion',
+        body: 'Para muchos negocios, facturacion electronica no vive sola. Puede necesitar conectarse con punto de venta, inventario, cuentas por cobrar, CRM, plataformas internas o reportes gerenciales.',
+        items: [
+          'Asystec POS cuando la venta ocurre en caja',
+          'Inventario si los productos deben rebajarse al vender',
+          'Cuentas por cobrar cuando hay creditos o saldos',
+          'Integraciones si ya existen sistemas internos',
+        ],
+      },
+      {
+        title: 'Como preparar una demo util',
+        body: 'Una demo comercial debe probar el flujo real del negocio, no solo pantallas aisladas. Conviene llegar con ejemplos de comprobantes, clientes, productos, usuarios, pagos y reportes esperados.',
+        items: [
+          'Tipo de negocio y forma actual de vender',
+          'Cantidad de usuarios que facturan o revisan reportes',
+          'Necesidad de POS, inventario, cobros o integraciones',
+          'Dolores actuales: doble digitacion, errores, soporte o lentitud',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para elegir software de facturacion electronica',
+      body: 'Estas preguntas ayudan a llevar la conversacion a una demo o cotizacion concreta. La meta es validar si el sistema resuelve el flujo comercial completo del negocio.',
+      rows: [
+        {
+          factor: 'Flujo de venta',
+          question: 'La factura nace desde caja, una cotizacion, una venta web o un proceso administrativo?',
+          impact: 'Define si conviene FacturacionApp, Asystec POS o una plataforma con integraciones.',
+        },
+        {
+          factor: 'Clientes y catalogo',
+          question: 'Los clientes, productos o servicios se mantienen en un solo lugar y con datos limpios?',
+          impact: 'Reduce doble digitacion, errores al facturar y trabajo manual al revisar historiales.',
+        },
+        {
+          factor: 'Pagos y cobros',
+          question: 'El negocio necesita registrar pagos, saldos, creditos o seguimiento posterior al comprobante?',
+          impact: 'Puede conectar facturacion con cuentas por cobrar, CobrosApp o reportes financieros.',
+        },
+        {
+          factor: 'POS e inventario',
+          question: 'La venta debe rebajar inventario, cerrar caja o alimentar reportes operativos?',
+          impact: 'Evita que facturacion quede aislada de caja, productos, existencias y cierres.',
+        },
+        {
+          factor: 'Soporte e integraciones',
+          question: 'Quien acompana salida a produccion, cambios de configuracion e integraciones necesarias?',
+          impact: 'Afecta continuidad operativa cuando el equipo depende del sistema para vender o administrar.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que debe tener un software de facturacion electronica para una pyme?',
+        answer:
+          'Debe permitir administrar comprobantes, clientes, productos o servicios, pagos y reportes. Si el negocio vende en caja o maneja inventario, tambien conviene revisar conexion con POS, existencias y cierres.',
+      },
+      {
+        question: 'Cuando conviene FacturacionApp y cuando Asystec POS?',
+        answer:
+          'FacturacionApp puede convenir cuando el foco es emitir comprobantes, clientes, cotizaciones, pagos y reportes desde una plataforma web. Asystec POS conviene cuando la facturacion debe estar conectada con caja, ventas e inventario.',
+      },
+      {
+        question: 'La facturacion electronica puede conectarse con inventario o cuentas por cobrar?',
+        answer:
+          'Si. La evaluacion puede conectar facturacion con inventario, POS, cuentas por cobrar, CRM, reportes o integraciones, segun el flujo real del negocio y el alcance requerido.',
+      },
+      {
+        question: 'Puedo pedir una demo con mi flujo actual de facturacion?',
+        answer:
+          'Si. Puedes coordinar una demo o escribir por WhatsApp para revisar como vendes, facturas, cobras, administras clientes, controlas productos y que reportes necesita tu negocio.',
+      },
+    ],
+    related: [
       { label: 'FacturacionApp', href: '/facturacionapp' },
       { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Sistema POS', href: '/soluciones/pos' },
+      { label: 'Inventario', href: '/soluciones/inventario' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
       { label: 'Preguntas frecuentes', href: '/faqs' },
+      { label: 'Coordinar demo', href: '/contact' },
     ],
-  ),
+  },
   {
     slug: 'inventario',
     path: '/soluciones/inventario',
