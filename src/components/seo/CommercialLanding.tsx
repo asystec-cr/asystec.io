@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { LandingPageData } from '~/shared/data/seo-landings.data';
 import { buildLandingSchemas } from '~/utils/seo';
 import JsonLd from './JsonLd';
+import TrustpilotProof from '../widgets/TrustpilotProof';
 
 type CommercialLandingProps = {
   page: LandingPageData;
@@ -180,6 +181,8 @@ const CommercialLanding = ({ page }: CommercialLandingProps) => {
             </div>
           </section>
         )}
+
+        <TrustpilotProof variant="landing" id={`trustpilot-proof-${page.slug}`} />
 
         <section className="border-b border-neutral-200 bg-neutral-50 py-12 dark:border-slate-800 dark:bg-slate-900 md:py-16">
           <div className="mx-auto max-w-5xl px-4 md:px-6">

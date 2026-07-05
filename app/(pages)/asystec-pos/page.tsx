@@ -1,5 +1,6 @@
 import JsonLd from '~/components/seo/JsonLd';
 import PosImageCarousel from '~/components/widgets/PosImageCarousel';
+import TrustpilotProof from '~/components/widgets/TrustpilotProof';
 import { getPortfolioPage } from '~/shared/data/seo-landings.data';
 import { buildLandingSchemas, buildPageMetadata } from '~/utils/seo';
 
@@ -264,12 +265,13 @@ const Page = () => {
           </article>
         </div>
 
-        <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Evidencia de producto</h2>
-          <p className="mt-3 text-sm leading-7 text-gray-600 dark:text-slate-300">
-            Esta pagina muestra capturas y capacidades del producto. Las resenas, nombres de clientes y resultados
-            cuantitativos se publicaran solo cuando exista permiso verificable.
-          </p>
+        <div className="mt-12">
+          <TrustpilotProof
+            id="trustpilot-proof-asystec-pos"
+            variant="compact"
+            hasBackground={false}
+            containerClass="px-0 py-0 md:py-0 lg:py-0"
+          />
         </div>
 
         <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
