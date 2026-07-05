@@ -174,6 +174,10 @@ export const headerData: HeaderProps = {
           href: '/guias/alternativas-excel-inventario',
         },
         {
+          label: 'POS local vs nube',
+          href: '/guias/pos-local-vs-pos-en-la-nube',
+        },
+        {
           label: 'Software local vs extranjero',
           href: '/guias/software-local-vs-extranjero',
         },
