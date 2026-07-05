@@ -935,30 +935,280 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Coordinar demo', href: '/contact' },
     ],
   },
-  solution(
-    'reportes',
-    'Reportes para gerencia y operacion',
-    'Reportes de ventas, cobros, inventario, ingresos, saldos y desempeno para pymes y equipos operativos.',
-    'Los reportes convierten datos diarios en informacion accionable para decidir compras, cobros, inventario, personal y prioridades comerciales.',
-    ['Ventas', 'Ingresos', 'Inventario', 'Cobros', 'Saldos', 'Indicadores'],
-    [
+  {
+    slug: 'reportes',
+    path: '/soluciones/reportes',
+    kind: 'solution',
+    schemaType: 'Service',
+    title: 'Reportes para gerencia y operacion',
+    seoTitle: 'Reportes para pymes y gerencia en Costa Rica | Asystec',
+    description:
+      'Software de reportes para pymes en Costa Rica con ventas, caja, inventario, cobros, saldos, sucursales e indicadores para gerencia.',
+    eyebrow: 'Solucion Asystec',
+    heroTitle: 'Reportes para decidir con datos de ventas, cobros e inventario',
+    answer:
+      'Una pyme en Costa Rica necesita reportes que conecten ventas, caja, inventario, cobros, facturacion y sucursales en una sola lectura. El objetivo no es tener mas graficos, sino saber que paso, donde hay atrasos y que decision debe tomar gerencia sin armar hojas manuales cada semana.',
+    intro:
+      'Asystec ayuda a negocios que necesitan convertir datos operativos en reportes utiles para gerencia, administracion y equipos de venta, ya sea desde POS, CobrosApp, FacturacionApp o una plataforma a la medida.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Responder a busquedas sobre reportes para pymes y gerencia en Costa Rica.',
+      'Conectar ventas, caja, inventario, cobros y facturacion con decisiones reales.',
+      'Ayudar a preparar una demo con indicadores y fuentes de datos actuales.',
+      'Dirigir a contacto, WhatsApp y productos Asystec segun el flujo del negocio.',
+    ],
+    modules: [
+      'Ventas y caja',
+      'Inventario y productos',
+      'Cobros y saldos',
+      'Facturacion',
+      'Sucursales y usuarios',
+      'Indicadores para gerencia',
+    ],
+    sections: [
+      {
+        title: 'Cuando los reportes llegan tarde',
+        body: 'El problema aparece cuando administracion necesita decidir compras, cobros, personal o prioridades comerciales, pero los datos viven en el POS, hojas de Excel, facturacion, bancos o mensajes separados.',
+        items: [
+          'Cierres de caja revisados tarde o sin detalle por usuario',
+          'Inventario y ventas comparados manualmente',
+          'Saldos por cobrar sin seguimiento claro',
+          'Indicadores de gerencia armados con informacion incompleta',
+        ],
+      },
+      {
+        title: 'Que debe conectar un buen reporte',
+        body: 'Antes de construir o elegir reportes conviene definir que decision debe tomar cada persona: compras, ventas, cobranza, servicio, finanzas, sucursales o direccion general.',
+        items: [
+          'Ventas por fecha, producto, caja, usuario o sucursal',
+          'Inventario disponible, rotacion, faltantes y movimientos',
+          'Clientes, creditos, pagos, saldos y vencimientos',
+          'Facturacion, comprobantes, ingresos y tendencias comerciales',
+        ],
+      },
+      {
+        title: 'Reportes por rol, no solo pantallas',
+        body: 'Gerencia, caja, bodega, ventas y cobros no necesitan ver lo mismo. El valor esta en permisos claros, datos confiables y vistas que reduzcan trabajo manual sin exponer informacion innecesaria.',
+        items: [
+          'Indicadores resumidos para duenos o gerencia',
+          'Detalle operativo para caja, bodega o cobranza',
+          'Permisos por usuario y necesidad de consulta',
+          'Exportaciones o integraciones cuando el proceso lo requiere',
+        ],
+      },
+      {
+        title: 'Como preparar una demo de reportes',
+        body: 'Una demo util debe partir de los reportes que hoy se arman a mano y de las preguntas que el negocio no puede contestar rapido. Con eso se define si conviene un producto existente, una configuracion o una plataforma a medida.',
+        items: [
+          'Llevar ejemplos de reportes actuales o archivos manuales',
+          'Separar indicadores diarios, semanales y mensuales',
+          'Identificar sistemas fuente: POS, facturacion, cobros o inventario',
+          'Confirmar usuarios, permisos, exportaciones e integraciones necesarias',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para definir reportes de negocio',
+      body: 'Estas preguntas ayudan a convertir una necesidad general de reportes en una demo concreta, con fuentes de datos, responsables y decisiones esperadas.',
+      rows: [
+        {
+          factor: 'Decision de negocio',
+          question: 'Que decision debe tomar gerencia con este reporte y con que frecuencia?',
+          impact: 'Evita construir graficos que no cambian compras, cobros, ventas, caja o prioridades operativas.',
+        },
+        {
+          factor: 'Fuentes de datos',
+          question: 'Los datos vienen de POS, facturacion, inventario, cobros, Excel u otro sistema?',
+          impact: 'Define integraciones, limpieza de datos y si el reporte puede actualizarse sin trabajo manual.',
+        },
+        {
+          factor: 'Nivel de detalle',
+          question: 'Se necesita ver informacion por producto, cliente, usuario, caja, sucursal o periodo?',
+          impact: 'Afecta estructura, permisos y utilidad del reporte para equipos operativos y gerencia.',
+        },
+        {
+          factor: 'Cobros y saldos',
+          question: 'El negocio necesita alertas de clientes pendientes, pagos parciales o cartera vencida?',
+          impact: 'Conecta reportes con cuentas por cobrar, seguimiento comercial y flujo de caja.',
+        },
+        {
+          factor: 'Acceso y permisos',
+          question: 'Quien puede ver indicadores sensibles y quien solo necesita informacion operativa?',
+          impact: 'Reduce riesgo de exponer datos financieros o de clientes a usuarios que no los necesitan.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que reportes necesita una pyme en Costa Rica?',
+        answer:
+          'Normalmente necesita reportes de ventas, caja, inventario, facturacion, cobros, saldos, usuarios y sucursales. La prioridad depende de las decisiones que gerencia toma cada dia, semana o mes.',
+      },
+      {
+        question: 'Cuando conviene implementar software de reportes?',
+        answer:
+          'Conviene cuando el negocio ya pierde tiempo armando hojas manuales, no puede confiar en los datos o necesita comparar ventas, inventario, cobros y sucursales sin esperar cierres largos.',
+      },
+      {
+        question: 'Los reportes pueden conectarse con POS, inventario y cobros?',
+        answer:
+          'Si. La evaluacion puede conectar reportes con Asystec POS, inventario, FacturacionApp, CobrosApp o una plataforma a medida, segun los sistemas que ya usa el negocio.',
+      },
+      {
+        question: 'Puedo pedir una demo basada en mis reportes actuales?',
+        answer:
+          'Si. Puedes coordinar una demo o escribir por WhatsApp para revisar archivos actuales, sistemas fuente, usuarios, permisos e indicadores que necesitas ver con mas claridad.',
+      },
+    ],
+    related: [
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Inventario', href: '/soluciones/inventario' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
       { label: 'CobrosApp', href: '/cobrosapp' },
       { label: 'FacturacionApp', href: '/facturacionapp' },
-      { label: 'Plataformas', href: '/plataformas' },
+      { label: 'Plataformas a medida', href: '/plataformas' },
+      { label: 'Coordinar demo', href: '/contact' },
     ],
-  ),
-  solution(
-    'cuentas-por-cobrar',
-    'Cuentas por cobrar y seguimiento de pagos',
-    'Software para controlar creditos, pagos, saldos, clientes y estados de cuenta en operaciones de cobranza.',
-    'Una solucion de cuentas por cobrar ayuda a ver quien debe, cuanto debe, que se pago y que acciones siguen para recuperar cartera.',
-    ['Clientes', 'Creditos', 'Pagos', 'Estados de cuenta', 'Recordatorios', 'Reportes'],
-    [
+  },
+  {
+    slug: 'cuentas-por-cobrar',
+    path: '/soluciones/cuentas-por-cobrar',
+    kind: 'solution',
+    schemaType: 'Service',
+    title: 'Cuentas por cobrar y seguimiento de pagos',
+    seoTitle: 'Software de cuentas por cobrar en Costa Rica | Asystec',
+    description:
+      'Software de cuentas por cobrar para pymes en Costa Rica con clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza.',
+    eyebrow: 'Solucion Asystec',
+    heroTitle: 'Cuentas por cobrar con saldos, pagos y seguimiento claro',
+    answer:
+      'Una pyme en Costa Rica necesita controlar cuentas por cobrar cuando vende a credito, acepta pagos parciales o debe dar seguimiento a clientes con saldos pendientes. El objetivo es saber quien debe, cuanto debe, que se pago, que esta vencido y que accion comercial sigue.',
+    intro:
+      'Asystec ayuda a negocios que necesitan ordenar clientes, creditos, pagos, estados de cuenta y reportes de cobranza desde CobrosApp, una integracion con POS/facturacion o una plataforma ajustada al flujo real.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Aterrizar busquedas sobre software de cuentas por cobrar en Costa Rica.',
+      'Conectar cobranza con clientes, pagos, saldos, reportes y gerencia.',
+      'Preparar una demo con cartera actual, reglas de pago y estados de cuenta.',
+      'Dirigir a CobrosApp, contacto y WhatsApp sin inventar promesas financieras.',
+    ],
+    modules: [
+      'Clientes y creditos',
+      'Pagos y abonos',
+      'Saldos pendientes',
+      'Estados de cuenta',
+      'Seguimiento de cobranza',
+      'Reportes de cartera',
+    ],
+    sections: [
+      {
+        title: 'Cuando la cartera se vuelve dificil de controlar',
+        body: 'El problema aparece cuando ventas, pagos, saldos y conversaciones con clientes quedan separados entre facturacion, hojas de calculo, mensajes o reportes manuales.',
+        items: [
+          'Clientes con saldos pendientes sin responsable claro',
+          'Pagos parciales que se revisan manualmente',
+          'Estados de cuenta armados a mano para cada cliente',
+          'Gerencia sin visibilidad rapida de cartera vencida o recuperada',
+        ],
+      },
+      {
+        title: 'Que debe ordenar una solucion de cobros',
+        body: 'La evaluacion debe empezar por el flujo real: como se otorga credito, como se registran pagos, quien da seguimiento y que reportes necesita administracion para tomar decisiones.',
+        items: [
+          'Cliente, credito, saldo, abonos y vencimientos',
+          'Historial de pagos y movimientos por cuenta',
+          'Estados de cuenta consultables o exportables',
+          'Indicadores de cartera para ventas, cobros y gerencia',
+        ],
+      },
+      {
+        title: 'Cobranza conectada con otros procesos',
+        body: 'Las cuentas por cobrar no viven solas. Pueden necesitar conexion con facturacion electronica, POS, CRM, reportes gerenciales o plataformas internas para evitar doble digitacion.',
+        items: [
+          'Facturacion y pagos conectados cuando el flujo lo requiere',
+          'Reportes de saldos por cliente, vendedor o periodo',
+          'Seguimiento comercial con contexto de cada cuenta',
+          'Permisos por rol para proteger informacion financiera',
+        ],
+      },
+      {
+        title: 'Como preparar una demo de cuentas por cobrar',
+        body: 'Una demo util debe revisar ejemplos reales de clientes, saldos y pagos. Asi se define si conviene CobrosApp, una integracion o una plataforma a medida para el proceso de cobranza.',
+        items: [
+          'Cantidad de clientes con credito o saldos activos',
+          'Formas de pago y reglas de abonos parciales',
+          'Estados de cuenta que el negocio necesita entregar',
+          'Reportes actuales que se arman en Excel o manualmente',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para elegir software de cuentas por cobrar',
+      body: 'Estas preguntas convierten una necesidad general de cobro en una conversacion concreta para demo, alcance e integraciones.',
+      rows: [
+        {
+          factor: 'Cartera actual',
+          question: 'Cuantos clientes tienen credito, pagos parciales o saldos pendientes?',
+          impact: 'Define estructura de cuentas, carga inicial, reportes y nivel de seguimiento requerido.',
+        },
+        {
+          factor: 'Registro de pagos',
+          question: 'Como se registran abonos, cancelaciones, ajustes o pagos por cliente?',
+          impact: 'Afecta trazabilidad, conciliacion y confianza en los saldos que ve administracion.',
+        },
+        {
+          factor: 'Estados de cuenta',
+          question: 'El cliente necesita recibir o consultar movimientos, saldos y pagos realizados?',
+          impact: 'Puede requerir formatos, filtros, exportaciones o portales segun el proceso comercial.',
+        },
+        {
+          factor: 'Seguimiento comercial',
+          question: 'Quien da seguimiento a saldos vencidos y que contexto necesita ver?',
+          impact: 'Conecta cobranza con CRM, responsables, historial del cliente y prioridades de recuperacion.',
+        },
+        {
+          factor: 'Reportes de gerencia',
+          question: 'Que indicadores necesita direccion: saldos, recuperacion, vencimientos o clientes criticos?',
+          impact: 'Permite convertir cobranza en decisiones sobre credito, ventas y flujo de caja.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que debe tener un software de cuentas por cobrar?',
+        answer:
+          'Debe permitir registrar clientes, creditos, pagos, abonos, saldos, estados de cuenta, historial y reportes. Si el negocio ya factura o vende con POS, tambien conviene revisar integraciones para no duplicar datos.',
+      },
+      {
+        question: 'Cuando conviene dejar Excel para controlar cobros?',
+        answer:
+          'Conviene cuando hay pagos parciales, varios responsables, saldos vencidos, estados de cuenta frecuentes o reportes que se arman manualmente y atrasan decisiones de ventas, cobros o gerencia.',
+      },
+      {
+        question: 'CobrosApp sirve para cuentas por cobrar?',
+        answer:
+          'CobrosApp puede aplicar cuando el negocio necesita administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores de cobranza desde una plataforma web.',
+      },
+      {
+        question: 'Puedo conectar cuentas por cobrar con facturacion o reportes?',
+        answer:
+          'Si. La evaluacion puede revisar conexion con facturacion electronica, POS, CRM, reportes o una plataforma a medida, segun los sistemas actuales y el alcance que necesite el negocio.',
+      },
+    ],
+    related: [
       { label: 'CobrosApp', href: '/cobrosapp' },
       { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
       { label: 'CRM', href: '/soluciones/crm' },
+      { label: 'Distribuidores', href: '/industrias/distribuidores' },
+      { label: 'Gimnasios y fitness', href: '/industrias/gimnasios' },
+      { label: 'Plataformas a medida', href: '/plataformas' },
+      { label: 'Coordinar demo', href: '/contact' },
     ],
-  ),
+  },
   solution(
     'crm',
     'CRM y gestion de clientes',
