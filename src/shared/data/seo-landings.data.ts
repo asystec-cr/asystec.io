@@ -503,19 +503,170 @@ const solution = (
 });
 
 export const solutionPages: LandingPageData[] = [
-  solution(
-    'pos',
-    'Sistema POS para negocios',
-    'Sistema POS para comercios en Costa Rica con caja, ventas, inventario, facturacion electronica, usuarios y reportes.',
-    'Un sistema POS permite vender, cobrar, controlar productos, emitir comprobantes y revisar reportes desde una operacion mas ordenada.',
-    ['Caja', 'Ventas', 'Inventario', 'Facturacion electronica', 'Cierres', 'Usuarios'],
-    [
-      { label: 'Asystec POS', href: '/asystec-pos' },
-      { label: 'Restaurantes', href: '/industrias/restaurantes' },
-      { label: 'Minisuper', href: '/industrias/minisuper' },
-      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
+  {
+    slug: 'pos',
+    path: '/soluciones/pos',
+    kind: 'solution',
+    schemaType: 'Service',
+    title: 'Sistema POS para comercios en Costa Rica',
+    seoTitle: 'Sistema POS para comercios en Costa Rica | Asystec',
+    description:
+      'Sistema POS para vender, facturar, controlar inventario, cerrar caja, administrar usuarios y revisar reportes en comercios de Costa Rica.',
+    eyebrow: 'Solucion Asystec POS',
+    heroTitle: 'Sistema POS para vender, facturar y controlar inventario sin depender de hojas separadas',
+    answer:
+      'Un sistema POS para comercios en Costa Rica debe conectar caja, ventas, inventario, facturacion electronica, cierres, usuarios y reportes en un mismo flujo para que el negocio opere con menos controles manuales.',
+    intro:
+      'Asystec ayuda a pymes, tiendas, minisuper, restaurantes, ferreterias y servicios a evaluar Asystec POS con su flujo real de caja, productos, comprobantes, inventario, usuarios y reportes antes de cotizar o implementar.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Caja, ventas e inventario conectados en la operacion diaria.',
+      'Facturacion electronica para Costa Rica dentro del flujo de venta.',
+      'Usuarios, roles, cierres y reportes para administrar con mas control.',
+      'Demo orientada al caso real del negocio, no a una lista generica de pantallas.',
     ],
-  ),
+    modules: [
+      'Caja y ventas',
+      'Productos, codigos e inventario',
+      'Facturacion electronica',
+      'Cierres de caja',
+      'Clientes, creditos y apartados',
+      'Compras y proveedores',
+      'Reportes operativos',
+      'Usuarios, roles y permisos',
+    ],
+    sections: [
+      {
+        title: 'Beneficios para la operacion',
+        body: 'La meta no es tener otra pantalla, sino reducir controles paralelos entre caja, inventario, facturacion y administracion. La demo debe probar como el equipo vende, cobra, emite comprobantes y revisa la informacion al cierre.',
+        items: [
+          'Menos doble digitacion entre ventas, comprobantes e inventario',
+          'Mas trazabilidad sobre usuarios, pagos, cierres y ajustes',
+          'Informacion de productos y ventas disponible para revisar la operacion',
+          'Acompanamiento local para configurar el flujo antes de salir a produccion',
+        ],
+      },
+      {
+        title: 'Problemas que resuelve',
+        body: 'Un negocio empieza a necesitar POS cuando caja, hojas de Excel, comprobantes, productos y reportes dejan de contar la misma historia. Esa desalineacion afecta cierres, compras, atencion y decisiones de gerencia.',
+        items: [
+          'Inventario que no coincide con lo vendido',
+          'Cierres de caja lentos o dificiles de revisar',
+          'Facturacion separada del punto de venta',
+          'Usuarios sin permisos claros o poca trazabilidad',
+        ],
+      },
+      {
+        title: 'Caracteristicas reales del sistema',
+        body: 'Asystec POS es una aplicacion de escritorio con base local y modulos para venta, productos, caja, clientes, compras, reportes, configuracion fiscal, usuarios, roles y respaldos. Las funciones externas, como envio fiscal, respaldos remotos o integraciones, se validan segun la configuracion del negocio.',
+        items: [
+          'Venta con productos, cliente, medios de pago, descuentos y notas',
+          'Catalogo con codigos, departamentos, costo, stock y datos fiscales',
+          'Cajas, sesiones, ingresos, retiros, cierres y movimientos',
+          'Reportes de ventas, facturas, inventario, cierres y utilidad',
+        ],
+      },
+      {
+        title: 'Industrias objetivo',
+        body: 'La misma categoria POS cambia segun el giro. Por eso la evaluacion debe revisar productos, rotacion, comprobantes, usuarios, cajas, bodegas, horarios y reportes esperados por industria.',
+        items: [
+          'Minisuper, pulperias y tiendas de conveniencia',
+          'Ferreterias y negocios con catalogo amplio',
+          'Restaurantes, sodas y comercios con caja rapida',
+          'Boutiques, retail, talleres y servicios con inventario o cobros',
+        ],
+      },
+      {
+        title: 'Objeciones que conviene resolver',
+        body: 'Antes de decidir, conviene aclarar alcance, migracion, soporte, continuidad, facturacion electronica, reportes y crecimiento. Si falta un dato, debe quedar como pendiente de demo o aprobacion, no como promesa publica.',
+        items: [
+          'Que datos se pueden migrar desde Excel o sistema anterior',
+          'Que requiere la facturacion electronica del negocio',
+          'Cuantos usuarios, cajas o sucursales entran en el alcance',
+          'Que reportes, permisos y continuidad necesita el equipo para operar sin hojas paralelas',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Comparativa contra Excel, caja manual, POS generico y software extranjero',
+      body: 'Esta tabla resume criterios cualitativos para decidir con menos riesgo. No reemplaza la demo: ayuda a preparar preguntas concretas sin inventar precios, rankings ni resultados garantizados.',
+      rows: [
+        {
+          factor: 'Excel',
+          question:
+            'Las ventas, productos, existencias y ajustes quedan en archivos separados o sin historial confiable?',
+          impact:
+            'Cuando inventario y caja viven fuera del flujo de venta, aumentan las diferencias y el retrabajo administrativo.',
+        },
+        {
+          factor: 'Caja manual',
+          question:
+            'Como se registran pagos, cierres, anulaciones, cliente, comprobante y responsable de cada operacion?',
+          impact:
+            'La caja manual puede funcionar al inicio, pero limita trazabilidad, reportes y revision de errores cuando crece el movimiento.',
+        },
+        {
+          factor: 'POS generico',
+          question:
+            'El sistema cubre facturacion electronica, inventario, permisos, reportes y soporte segun el contexto de Costa Rica?',
+          impact:
+            'Una herramienta generica puede dejar pasos criticos fuera del sistema y obligar a operar con procesos paralelos.',
+        },
+        {
+          factor: 'Software extranjero',
+          question:
+            'Que pasa con soporte, horarios, configuracion fiscal, integraciones, datos y continuidad si aparece un problema operativo?',
+          impact:
+            'La decision debe considerar ajuste al proceso local, acompanamiento y costo total, no solo marca o precio visible.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que debe tener un sistema POS para un comercio en Costa Rica?',
+        answer:
+          'Debe conectar ventas, caja, productos, inventario, facturacion electronica, usuarios, cierres y reportes. Si el negocio crece, tambien conviene revisar permisos, sucursales, respaldos, migracion y soporte local.',
+      },
+      {
+        question: 'Asystec POS funciona si se cae internet?',
+        answer:
+          'El producto esta planteado como aplicacion de escritorio con base local para la operacion de caja. Las funciones que dependen de servicios externos, como envio fiscal, respaldos o integraciones, se revisan segun la configuracion del negocio.',
+      },
+      {
+        question: 'Incluye facturacion electronica?',
+        answer:
+          'Asystec POS tiene modulos orientados a facturacion electronica para Costa Rica. En la demo conviene validar datos fiscales, ambiente, comprobantes, clientes, productos y reglas que aplican al negocio.',
+      },
+      {
+        question: 'Que negocios deberian pedir una demo de POS?',
+        answer:
+          'Conviene para comercios, minisuper, ferreterias, restaurantes, tiendas retail, talleres y servicios que necesitan ordenar caja, productos, inventario, facturacion, usuarios y reportes.',
+      },
+      {
+        question: 'Puedo migrar desde Excel, caja manual u otro POS?',
+        answer:
+          'La migracion debe evaluarse con datos reales: productos, codigos, clientes, saldos, inventario, usuarios y reportes esperados. Si falta evidencia, se documenta como pendiente antes de prometer alcance.',
+      },
+      {
+        question: 'Como preparo una demo de POS para mi negocio?',
+        answer:
+          'Conviene llevar ejemplos de productos, codigos, cierres, comprobantes, usuarios, reportes esperados y problemas actuales. Asi la demo puede validar el flujo real de venta, inventario, facturacion y administracion.',
+      },
+    ],
+    related: [
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
+      { label: 'POS local vs POS en la nube', href: '/guias/pos-local-vs-pos-en-la-nube' },
+      { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
+      { label: 'Minisuper', href: '/industrias/minisuper' },
+      { label: 'Ferreterias', href: '/industrias/ferreterias' },
+      { label: 'Restaurantes', href: '/industrias/restaurantes' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+    image: '/images/pos/pos0.jpeg',
+  },
   {
     slug: 'facturacion-electronica',
     path: '/soluciones/facturacion-electronica',
