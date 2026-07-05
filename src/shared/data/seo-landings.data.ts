@@ -1209,18 +1209,145 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Coordinar demo', href: '/contact' },
     ],
   },
-  solution(
-    'crm',
-    'CRM y gestion de clientes',
-    'Software para ordenar clientes, contactos, historial, oportunidades, soporte y seguimiento comercial.',
-    'Un CRM ayuda a centralizar informacion de clientes y contactos para vender mejor, dar seguimiento y mantener contexto del historial.',
-    ['Clientes', 'Contactos', 'Historial', 'Seguimiento', 'Oportunidades', 'Soporte'],
-    [
-      { label: 'CobrosApp', href: '/cobrosapp' },
-      { label: 'Plataformas', href: '/plataformas' },
-      { label: 'Servicios profesionales', href: '/industrias/servicios-profesionales' },
+  {
+    slug: 'crm',
+    path: '/soluciones/crm',
+    kind: 'solution',
+    schemaType: 'Service',
+    title: 'CRM para ventas, clientes y seguimiento en Costa Rica',
+    seoTitle: 'CRM para ventas y clientes en Costa Rica | Asystec',
+    description:
+      'Software CRM para pymes en Costa Rica con clientes, contactos, historial, oportunidades, tareas, soporte, cobros y reportes comerciales.',
+    eyebrow: 'Solucion CRM',
+    heroTitle: 'CRM para ordenar clientes, seguimiento comercial y soporte sin perder contexto',
+    answer:
+      'Un CRM para pymes en Costa Rica debe centralizar clientes, contactos, conversaciones, oportunidades, tareas, soporte y reportes para que ventas y administracion den seguimiento sin depender de chats, hojas sueltas o memoria del equipo.',
+    intro:
+      'Asystec ayuda a negocios que necesitan ordenar su relacion con clientes, conectar seguimiento comercial con cobros, reportes o plataformas internas, y preparar una demo con el flujo real de ventas, soporte y administracion.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Responder a busquedas de CRM para pymes y negocios en Costa Rica.',
+      'Conectar clientes, oportunidades, tareas, soporte, cobros y reportes.',
+      'Ayudar a decidir entre CobrosApp, una plataforma CRM o una integracion a medida.',
+      'Dar una ruta clara hacia demo, WhatsApp y contacto comercial.',
     ],
-  ),
+    modules: [
+      'Clientes y contactos',
+      'Historial de conversaciones',
+      'Oportunidades y seguimiento',
+      'Tareas y responsables',
+      'Soporte y casos',
+      'Cobros y saldos cuando aplica',
+      'Reportes comerciales',
+      'Integraciones con sistemas actuales',
+    ],
+    sections: [
+      {
+        title: 'Cuando el seguimiento deja de caber en WhatsApp o Excel',
+        body: 'El problema aparece cuando ventas, soporte y administracion manejan datos de clientes en lugares distintos. Sin historial comun, se pierden acuerdos, se repiten preguntas y cuesta saber quien debe dar el siguiente paso.',
+        items: [
+          'Clientes duplicados o sin responsable claro',
+          'Seguimiento comercial disperso entre chats, correos y hojas',
+          'Promesas, cotizaciones o casos sin historial visible',
+          'Reportes de ventas o soporte armados tarde y con datos incompletos',
+        ],
+      },
+      {
+        title: 'Que debe centralizar el CRM',
+        body: 'La evaluacion debe empezar por el ciclo real: de donde llega el contacto, quien lo atiende, que datos se guardan, que tareas se crean, como se da seguimiento y que informacion necesita gerencia para decidir.',
+        items: [
+          'Ficha de cliente con contactos, notas, estado y responsable',
+          'Historial de llamadas, mensajes, tareas, cotizaciones o casos',
+          'Oportunidades por etapa, prioridad, origen y proximo paso',
+          'Reportes de seguimiento, actividad, ventas, soporte o cartera',
+        ],
+      },
+      {
+        title: 'CRM conectado con ventas, cobros y reportes',
+        body: 'Para muchas pymes, CRM no debe quedar aislado. Puede necesitar relacionarse con facturacion, cuentas por cobrar, CobrosApp, POS, formularios, portales de clientes o reportes gerenciales.',
+        items: [
+          'Cuentas por cobrar cuando el seguimiento depende de saldos y pagos',
+          'Reportes cuando gerencia necesita actividad, cartera o conversion',
+          'Facturacion o POS cuando el historial debe conectar con compras',
+          'Plataformas a medida si hay flujos, roles o integraciones propias',
+        ],
+      },
+      {
+        title: 'Como preparar una demo util',
+        body: 'Una demo comercial debe usar ejemplos reales de clientes, etapas, responsables, seguimientos, reportes e integraciones esperadas. Asi se valida si el CRM reduce trabajo manual o solo agrega otra herramienta.',
+        items: [
+          'Fuentes de leads o contactos actuales',
+          'Tipos de clientes y responsables de seguimiento',
+          'Etapas comerciales, tareas y reportes esperados',
+          'Sistemas que ya guardan datos de clientes o pagos',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Criterios para elegir o implementar un CRM',
+      body: 'Estas preguntas ayudan a convertir una necesidad general de CRM en un alcance concreto para demo, configuracion, integraciones y reportes.',
+      rows: [
+        {
+          factor: 'Datos de clientes',
+          question: 'Donde viven hoy los contactos, notas, historial, cotizaciones, casos o saldos?',
+          impact: 'Define migracion, limpieza de datos y si el equipo puede confiar en una ficha unica de cliente.',
+        },
+        {
+          factor: 'Seguimiento comercial',
+          question: 'Que etapas, tareas, responsables y recordatorios necesita el equipo para no perder oportunidades?',
+          impact: 'Convierte el CRM en una herramienta de accion diaria, no solo en una libreta de contactos.',
+        },
+        {
+          factor: 'Soporte y postventa',
+          question: 'El negocio necesita registrar casos, solicitudes, compromisos o historial posterior a la venta?',
+          impact: 'Alinea ventas, soporte y administracion alrededor del mismo contexto del cliente.',
+        },
+        {
+          factor: 'Cobros y reportes',
+          question: 'El seguimiento depende de saldos, pagos, cartera, reportes o datos de otros sistemas?',
+          impact: 'Puede requerir conexion con CobrosApp, cuentas por cobrar, facturacion, POS o reportes gerenciales.',
+        },
+        {
+          factor: 'Integraciones',
+          question: 'Que formularios, portales, sistemas internos o procesos actuales deben alimentar el CRM?',
+          impact: 'Sin integraciones claras, el equipo termina duplicando datos y mantiene procesos paralelos.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que debe tener un CRM para una pyme en Costa Rica?',
+        answer:
+          'Debe ordenar clientes, contactos, historial, tareas, oportunidades, responsables y reportes. Si el negocio tambien maneja cobros, soporte o sistemas internos, conviene revisar integraciones desde la demo.',
+      },
+      {
+        question: 'Cuando conviene implementar un CRM?',
+        answer:
+          'Conviene cuando el seguimiento depende de WhatsApp, Excel, correos o memoria del equipo, y eso provoca clientes duplicados, oportunidades perdidas, reportes incompletos o poca visibilidad para gerencia.',
+      },
+      {
+        question: 'El CRM puede conectarse con cobros o facturacion?',
+        answer:
+          'Si. La evaluacion puede revisar conexion con CobrosApp, cuentas por cobrar, facturacion electronica, POS, reportes o plataformas internas, segun el flujo real y los datos disponibles.',
+      },
+      {
+        question: 'Puedo pedir una demo con mi proceso actual de ventas?',
+        answer:
+          'Si. Puedes coordinar una demo o escribir por WhatsApp para revisar fuentes de clientes, etapas, responsables, tareas, reportes, cobros e integraciones necesarias antes de definir el alcance.',
+      },
+    ],
+    related: [
+      { label: 'CobrosApp', href: '/cobrosapp' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Integraciones', href: '/soluciones/integraciones' },
+      { label: 'Plataformas a medida', href: '/plataformas' },
+      { label: 'Servicios profesionales', href: '/industrias/servicios-profesionales' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+  },
   solution(
     'multi-sucursal',
     'Software para negocios con varias sucursales',
