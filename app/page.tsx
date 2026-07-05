@@ -9,6 +9,7 @@ import PlatformPortfolio from '~/components/widgets/PlatformPortfolio';
 import Content from '~/components/widgets/Content';
 import Steps from '~/components/widgets/Steps';
 import Testimonials from '~/components/widgets/Testimonials';
+import TrustpilotProof from '~/components/widgets/TrustpilotProof';
 import FAQs2 from '~/components/widgets/FAQs2';
 import Pricing from '~/components/widgets/Pricing';
 import Team from '~/components/widgets/Team';
@@ -39,6 +40,7 @@ export default function Page() {
       <div className="mt-6 md:mt-8 lg:mt-10">
         <SocialProof {...socialProofHome} />
       </div>
+      <TrustpilotProof variant="home" />
       <Features {...featuresHome} />
       <PlatformPortfolio portfolioHref="/plataformas#portfolio-cases" />
       {/* <Content {...contentHomeOne} /> */}
