@@ -1361,18 +1361,141 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Retail', href: '/industrias/retail' },
     ],
   ),
-  solution(
-    'integraciones',
-    'Integraciones de software',
-    'Integraciones entre plataformas, portales, facturacion, pagos, reportes, APIs y procesos internos.',
-    'Las integraciones conectan sistemas que ya usa la empresa para reducir doble digitacion, mejorar reportes y automatizar pasos repetitivos.',
-    ['APIs', 'Portales', 'Facturacion', 'Pagos', 'Reportes', 'Automatizacion'],
-    [
-      { label: 'Plataformas', href: '/plataformas' },
-      { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
-      { label: 'Contacto', href: '/contact' },
+  {
+    slug: 'integraciones',
+    path: '/soluciones/integraciones',
+    kind: 'solution',
+    schemaType: 'Service',
+    title: 'Integraciones de software para empresas',
+    seoTitle: 'Integraciones de software en Costa Rica | Asystec',
+    description:
+      'Integraciones de software para empresas en Costa Rica: APIs, facturacion, POS, pagos, cobros, reportes, portales y procesos internos.',
+    eyebrow: 'Solucion Asystec',
+    heroTitle: 'Integraciones de software para conectar sistemas, datos y procesos',
+    answer:
+      'Una integracion de software conecta sistemas que ya usa la empresa para reducir doble digitacion, consolidar datos, automatizar pasos repetitivos y mejorar reportes. Antes de desarrollarla conviene mapear que datos entran, que sistema manda, que errores pueden ocurrir y que necesita ver gerencia.',
+    intro:
+      'Asystec ayuda a pymes y empresas en Costa Rica a evaluar integraciones entre POS, facturacion electronica, cobros, CRM, reportes, portales, APIs y plataformas internas cuando el proceso comercial ya no puede depender de archivos separados o digitacion manual.',
+    primaryCta: contactCta,
+    secondaryCta: whatsappCta,
+    highlights: [
+      'Responder a busquedas de integraciones de software en Costa Rica.',
+      'Conectar la necesidad con plataformas, POS, cobros, CRM y reportes.',
+      'Preparar una demo tecnica-comercial con datos, sistemas y responsables.',
+      'Evitar promesas genericas: cada integracion depende del proceso real.',
     ],
-  ),
+    modules: [
+      'APIs y conectores entre sistemas',
+      'Facturacion electronica y POS',
+      'Pagos, cobros y cuentas por cobrar',
+      'CRM, clientes y seguimiento comercial',
+      'Reportes gerenciales y consolidacion de datos',
+      'Portales internos o de clientes',
+      'Automatizacion de tareas repetitivas',
+      'Validacion, errores y trazabilidad',
+    ],
+    sections: [
+      {
+        title: 'Cuando una integracion empieza a tener sentido',
+        body: 'La senal mas clara aparece cuando el equipo digita la misma informacion en varios sistemas, exporta archivos para cruzar datos, mantiene reportes manuales o depende de una persona para mover informacion entre ventas, facturacion, cobros y gerencia.',
+        items: [
+          'Duplicacion de clientes, facturas, pagos o productos',
+          'Reportes que se preparan a mano cada semana',
+          'Sistemas externos que no conversan con el flujo local',
+          'Errores por copiar y pegar datos entre plataformas',
+        ],
+      },
+      {
+        title: 'Que debe revisarse antes de cotizar',
+        body: 'Una buena integracion no empieza por programar. Primero se define que sistema es fuente de verdad, que datos viajan, con que frecuencia, que reglas deben validarse y como se manejan errores cuando un servicio externo no responde.',
+        items: [
+          'Sistema origen y sistema destino',
+          'Campos, reglas y permisos involucrados',
+          'Frecuencia: tiempo real, por lote o bajo demanda',
+          'Manejo de errores, bitacora y soporte',
+        ],
+      },
+      {
+        title: 'Integraciones frecuentes para pymes',
+        body: 'El alcance puede ir desde conectar facturacion con ventas y cobros hasta crear portales, APIs o reportes consolidados. La prioridad debe ser reducir friccion en el proceso que mas afecta caja, atencion al cliente o decisiones gerenciales.',
+        items: [
+          'POS con facturacion electronica e inventario',
+          'Cobros, pagos, saldos y estados de cuenta',
+          'CRM con seguimiento comercial o soporte',
+          'Reportes que consolidan varias fuentes de datos',
+        ],
+      },
+      {
+        title: 'Como llevar el caso a una demo',
+        body: 'Para que la conversacion sea util, conviene llegar con ejemplos reales: pantallas actuales, archivos que se exportan, campos obligatorios, reportes esperados, responsables y errores que hoy consumen tiempo. Asi se define si basta configurar, integrar o desarrollar una plataforma a medida.',
+        items: [
+          'Mostrar el flujo actual de inicio a fin',
+          'Separar datos obligatorios de datos deseables',
+          'Confirmar restricciones de cada proveedor o API',
+          'Definir quien valida el resultado en produccion',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Preguntas para evaluar una integracion',
+      body: 'Esta tabla ayuda a convertir una solicitud general de integracion en una conversacion concreta sobre alcance, riesgo, datos y valor comercial.',
+      rows: [
+        {
+          factor: 'Fuente de verdad',
+          question: 'Que sistema debe mandar para clientes, productos, facturas, pagos o saldos?',
+          impact: 'Evita conflictos de datos y define que pasa cuando dos sistemas tienen informacion distinta.',
+        },
+        {
+          factor: 'Frecuencia y volumen',
+          question:
+            'La informacion debe viajar en tiempo real, por lote diario o solo cuando alguien ejecuta una accion?',
+          impact: 'Afecta arquitectura, monitoreo, costos de operacion y tolerancia a fallos.',
+        },
+        {
+          factor: 'Reglas y errores',
+          question: 'Que validaciones, permisos, campos obligatorios y mensajes de error debe respetar el flujo?',
+          impact: 'Define trazabilidad, soporte y como se corrige una transaccion cuando algo falla.',
+        },
+        {
+          factor: 'Valor para gerencia',
+          question: 'Que decision o proceso mejora cuando la integracion funciona correctamente?',
+          impact: 'Prioriza integraciones que reducen trabajo manual, aceleran cobro o mejoran reportes utiles.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que es una integracion de software para una empresa?',
+        answer:
+          'Es una conexion entre sistemas para que datos como clientes, productos, ventas, facturas, pagos, saldos o reportes fluyan sin digitacion duplicada. Puede usar APIs, archivos, procesos programados o una plataforma intermedia segun el caso.',
+      },
+      {
+        question: 'Asystec puede integrar POS, facturacion, cobros o CRM?',
+        answer:
+          'Si. La evaluacion puede revisar Asystec POS, FacturacionApp, CobrosApp, CRM, reportes, plataformas internas o sistemas externos, siempre segun datos disponibles, reglas de negocio y restricciones de cada proveedor.',
+      },
+      {
+        question: 'Cuanto tarda una integracion de software?',
+        answer:
+          'Depende del numero de sistemas, calidad de datos, APIs disponibles, reglas, pruebas y manejo de errores. Por eso conviene iniciar con una demo o diagnostico para separar una integracion sencilla de un desarrollo mas amplio.',
+      },
+      {
+        question: 'Cuando conviene una plataforma a medida en vez de una integracion puntual?',
+        answer:
+          'Conviene cuando hay varios roles, aprobaciones, portales, reportes, permisos o reglas que no se resuelven conectando dos sistemas. En esos casos se puede evaluar una plataforma a medida con integraciones como parte del alcance.',
+      },
+    ],
+    related: [
+      { label: 'Plataformas a medida', href: '/plataformas' },
+      { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
+      { label: 'CRM', href: '/soluciones/crm' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+  },
 ];
 
 const industry = (
