@@ -52,7 +52,7 @@ const Page = () => (
         <div className="mx-auto grid max-w-7xl gap-8 px-4 md:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">
-              Prueba social verificable
+              Fuente publica de opiniones
             </p>
             <h1 className="mt-4 text-4xl font-bold leading-tight tracking-normal text-neutral-950 dark:text-white md:text-5xl">
               Clientes que confian en Asystec y recomiendan nuestro trabajo

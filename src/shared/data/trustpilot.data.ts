@@ -22,10 +22,10 @@ export const trustpilotProfile = {
   reviewCount: 15,
   fiveStarShare: '100%',
   category: 'Compania de software',
-  lastChecked: '5 de julio de 2026',
+  lastChecked: '6 de julio de 2026',
   profileClaimed: 'Perfil reclamado en noviembre de 2023',
   disclosure:
-    'Resenas publicas de clientes, usadas con autorizacion expresa para mostrarlas en asystec.io. El perfil original se puede verificar en Trustpilot.',
+    'Resenas publicas de clientes en Trustpilot. El perfil original se puede consultar para revisar el TrustScore, la distribucion de estrellas y las opiniones completas.',
 };
 
 export const trustpilotThemes: TrustpilotTheme[] = [
