@@ -141,7 +141,7 @@ const TrustpilotProof = ({
         <div>
           <div className="inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-white px-3 py-1.5 text-sm font-semibold text-emerald-800 dark:border-emerald-700 dark:bg-slate-950 dark:text-emerald-300">
             <IconUserCheck className="h-4 w-4" aria-hidden="true" />
-            Resenas verificables en Trustpilot
+            Resenas publicas en Trustpilot
           </div>
           <h2 className="mt-4 text-3xl font-bold leading-tight tracking-normal text-neutral-950 dark:text-white md:text-4xl">
             {title ?? defaults.title}
