@@ -393,6 +393,7 @@ export const portfolioPages: LandingPageData[] = [
     ],
     related: [
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Guia de factura electronica', href: '/guias/factura-electronica-costa-rica-requisitos' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Software para pymes', href: '/software-para-negocios-costa-rica' },
     ],
@@ -794,6 +795,7 @@ export const solutionPages: LandingPageData[] = [
     ],
     related: [
       { label: 'FacturacionApp', href: '/facturacionapp' },
+      { label: 'Guia de factura electronica', href: '/guias/factura-electronica-costa-rica-requisitos' },
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
       { label: 'Inventario', href: '/soluciones/inventario' },
@@ -2205,6 +2207,177 @@ const guide = (
 });
 
 export const guidePages: LandingPageData[] = [
+  {
+    ...guide(
+      'factura-electronica-costa-rica-requisitos',
+      'Factura electronica en Costa Rica 2026: requisitos para pymes',
+      'Guia de factura electronica en Costa Rica para pymes: requisitos, comprobantes, version 4.4, CAByS, Hacienda, software y demo.',
+      'En Costa Rica la factura electronica es un comprobante digital en XML que respalda ventas o servicios y debe emitirse con datos tributarios correctos, mecanismo de seguridad, codigos CAByS, version vigente y un sistema capaz de enviar y recibir validacion de Hacienda.',
+      [
+        'Comprobantes electronicos',
+        'Version 4.4',
+        'Llave o firma',
+        'CAByS',
+        'Validacion Hacienda',
+        'Software y soporte',
+      ],
+      [
+        { label: 'FacturacionApp', href: '/facturacionapp' },
+        { label: 'Software de facturacion electronica', href: '/soluciones/facturacion-electronica' },
+        { label: 'Asystec POS', href: '/asystec-pos' },
+        { label: 'Preguntas frecuentes', href: '/faqs' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    seoTitle: 'Factura electronica Costa Rica 2026: requisitos y guia para pymes | Asystec',
+    intro:
+      'Esta guia explica, en lenguaje practico, que debe revisar una pyme antes de emitir comprobantes electronicos, cambiar de proveedor o conectar facturacion con POS, inventario, cobros y reportes.',
+    highlights: [
+      'Entender que es el XML validado por Hacienda y que papel cumple el PDF.',
+      'Revisar version 4.4, nuevos ajustes de Anexos y Estructuras y datos obligatorios.',
+      'Preparar contribuyente, mecanismo de seguridad, actividad, clientes, CAByS e impuestos.',
+      'Comparar si conviene FacturacionApp, Asystec POS o una integracion a medida.',
+    ],
+    modules: [
+      'XML y PDF',
+      'Factura y tiquete electronico',
+      'Notas de credito y debito',
+      'Recibo electronico de pago',
+      'CAByS e impuestos',
+      'Contingencia y soporte',
+    ],
+    sections: [
+      {
+        title: 'Que es la factura electronica',
+        body: 'La factura electronica es el comprobante digital que respalda la venta de bienes o servicios. Para efectos operativos, el documento valido nace como XML, se firma o protege con el mecanismo requerido, se envia a Hacienda y normalmente se entrega al cliente con una representacion legible en PDF.',
+        items: [
+          'El XML contiene la estructura fiscal que valida Hacienda',
+          'El PDF facilita lectura, envio y archivo para el cliente',
+          'La respuesta de Hacienda confirma aceptacion o rechazo',
+          'El sistema debe conservar trazabilidad de cada comprobante',
+        ],
+      },
+      {
+        title: 'Requisitos antes de emitir',
+        body: 'Antes de empezar o migrar, la pyme debe revisar que los datos tributarios y comerciales esten completos. Muchos errores de facturacion no vienen de la venta, sino de informacion incompleta en contribuyente, cliente, producto, impuesto o configuracion.',
+        items: [
+          'Estar inscrito y con datos tributarios actualizados',
+          'Tener mecanismo de seguridad vigente para firmar comprobantes',
+          'Definir actividades economicas, impuestos, moneda y medios de pago',
+          'Ordenar clientes, productos, servicios y correos de envio',
+        ],
+      },
+      {
+        title: 'Version 4.4 y cambios 2026',
+        body: 'La version 4.4 es la estructura vigente para comprobantes electronicos y trajo mas detalle en campos, referencias, medios de pago, impuestos y comprobantes como el Recibo Electronico de Pago. En 2026 Hacienda tambien comunico ajustes a Anexos y Estructuras que los sistemas deben revisar antes de su implementacion obligatoria.',
+        items: [
+          'Uso de version vigente en factura, tiquete, notas y recibos electronicos',
+          'Revision de nuevos codigos y documentos de referencia',
+          'Compatibilidad con cedulas juridicas alfanumericas cuando aplique',
+          'Pruebas en ambiente de calidad antes de afectar produccion',
+        ],
+      },
+      {
+        title: 'CAByS, catalogo e impuestos',
+        body: 'CAByS clasifica bienes y servicios para uso tributario. El sistema de facturacion debe ayudar a escoger codigos correctos, mantenerlos actualizados y evitar que productos o servicios queden con tarifas, categorias o descripciones que generen rechazos o revisiones posteriores.',
+        items: [
+          'Relacionar cada producto o servicio con su codigo CAByS',
+          'Revisar tarifas reducidas, exenciones o tratamientos especiales',
+          'Actualizar catalogos internos cuando BCCR y Hacienda publiquen cambios',
+          'Validar productos sensibles como medicamentos, vehiculos o surtidos',
+        ],
+      },
+      {
+        title: 'Como funciona el flujo',
+        body: 'El flujo ideal debe ser simple para el usuario: vender, cobrar, emitir, enviar, consultar y reportar. Por debajo, el sistema debe construir el XML, enviarlo a Hacienda, registrar la respuesta, notificar al cliente y dejar datos listos para reportes o conciliacion.',
+        items: [
+          'Generar comprobante desde venta, cotizacion, caja o proceso administrativo',
+          'Enviar XML a Hacienda y guardar mensaje de aceptacion o rechazo',
+          'Entregar XML, PDF y respuesta de Hacienda cuando corresponda',
+          'Conectar ventas, pagos, inventario y reportes si el negocio lo requiere',
+        ],
+      },
+      {
+        title: 'Que software conviene elegir',
+        body: 'No todos los negocios necesitan lo mismo. Una oficina de servicios puede resolver con una plataforma web de facturacion. Una tienda con caja e inventario necesita que el comprobante salga desde el punto de venta. Una empresa con sistemas propios puede necesitar integraciones.',
+        items: [
+          'FacturacionApp si el foco es emitir, consultar, cobrar y reportar',
+          'Asystec POS si la factura debe nacer desde caja e inventario',
+          'Integraciones cuando ya existen ERP, ecommerce, CRM o sistemas internos',
+          'Soporte local cuando facturacion, ventas o caja no pueden detenerse',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Checklist para escoger sistema de facturacion electronica',
+      body: 'Usa estas preguntas para comparar proveedores, preparar una demo y evitar una implementacion que cumpla en papel pero no resuelva la operacion diaria.',
+      rows: [
+        {
+          factor: 'Cumplimiento',
+          question:
+            'El sistema esta alineado con version 4.4, Anexos y Estructuras, tipos de comprobante y validacion de Hacienda?',
+          impact: 'Reduce riesgo de rechazos, reprocesos y facturas que no sirvan como respaldo fiscal.',
+        },
+        {
+          factor: 'Catalogo',
+          question: 'Permite mantener clientes, productos, servicios, CAByS, impuestos y correos sin doble digitacion?',
+          impact: 'Evita errores repetitivos y facilita mantener datos consistentes cuando cambia el catalogo.',
+        },
+        {
+          factor: 'Operacion',
+          question: 'La factura nace desde el flujo real: POS, venta web, cotizacion, servicio o administracion?',
+          impact: 'Define si basta una plataforma web o si se necesita POS, inventario o integraciones.',
+        },
+        {
+          factor: 'Soporte',
+          question: 'Quien acompana salida a produccion, llave o firma, pruebas, rechazos y cambios normativos?',
+          impact: 'Afecta continuidad cuando el negocio depende de facturar para vender o cobrar.',
+        },
+        {
+          factor: 'Reportes',
+          question: 'Que puede revisar gerencia: ventas, clientes, pagos, saldos, impuestos, usuarios o sucursales?',
+          impact: 'Convierte la facturacion en una fuente de control comercial, no solo en un tramite.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que necesito para emitir factura electronica en Costa Rica?',
+        answer:
+          'Necesitas datos tributarios al dia, mecanismo de seguridad para firmar, actividad economica, clientes, productos o servicios con CAByS, impuestos correctos y un sistema que genere XML, envie a Hacienda y registre la respuesta.',
+      },
+      {
+        question: 'La factura electronica es el PDF o el XML?',
+        answer:
+          'El comprobante fiscal se estructura como XML y se valida ante Hacienda. El PDF funciona como representacion legible para revisar, enviar o archivar, pero el sistema debe conservar el XML y la respuesta asociada.',
+      },
+      {
+        question: 'Que cambio con la version 4.4?',
+        answer:
+          'La version 4.4 actualizo la estructura de comprobantes, incorporo mas detalle en campos, referencias, medios de pago, impuestos y comprobantes como el Recibo Electronico de Pago. Tambien exige que los sistemas se mantengan atentos a ajustes de Anexos y Estructuras.',
+      },
+      {
+        question: 'Cuando conviene un POS con facturacion en vez de solo facturacion web?',
+        answer:
+          'Conviene un POS cuando la venta ocurre en caja, debe rebajar inventario, cerrar turnos, controlar usuarios o generar reportes operativos. Si el foco es emitir comprobantes y administrar clientes o pagos, una plataforma web puede ser suficiente.',
+      },
+      {
+        question: 'Asystec puede revisar mi caso antes de cambiar de sistema?',
+        answer:
+          'Si. Puedes coordinar una demo para revisar tipo de negocio, flujo actual, datos tributarios, productos, CAByS, POS, inventario, pagos, reportes e integraciones necesarias antes de migrar.',
+      },
+    ],
+    related: [
+      { label: 'FacturacionApp', href: '/facturacionapp' },
+      { label: 'Software de facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Sistema POS', href: '/soluciones/pos' },
+      { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Preguntas frecuentes', href: '/faqs' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+  },
   {
     ...guide(
       'como-elegir-sistema-pos',
