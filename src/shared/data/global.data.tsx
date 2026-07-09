@@ -204,6 +204,11 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
+          label: 'Asystec POS',
+          href: 'https://asystec.gitbook.io/pos',
+          target: 'blank',
+        },
+        {
           label: 'FacturacionApp',
           href: 'https://docs.facturacionapp.com',
           target: 'blank',
@@ -211,11 +216,6 @@ export const headerData: HeaderProps = {
         {
           label: 'CobrosApp',
           href: 'https://docs.cobrosapp.com',
-          target: 'blank',
-        },
-        {
-          label: 'JVentas',
-          href: 'https://docs.jventas.asystec.io/',
           target: 'blank',
         },
         {
@@ -247,11 +247,6 @@ export const headerData: HeaderProps = {
         {
           label: 'Consultas',
           href: 'https://consultas.asystec.io/',
-          target: 'blank',
-        },
-        {
-          label: 'Plugin JVentas',
-          href: 'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/plugin_jventas/latest/PluginJVentas-Setup.exe',
           target: 'blank',
         },
         {

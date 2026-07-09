@@ -115,13 +115,13 @@ const portfolioItems: PortfolioItem[] = [
     image: '/images/portfolio/jas-asystec-login.png',
     alt: 'JAS Admin',
     summary:
-      'Portal web de administración para JVentas y JRestaurante, con acceso para usuarios registrados y registro de cuenta.',
+      'Portal web de administración para JRestaurante, con acceso para usuarios registrados y registro de cuenta.',
     highlights: [
       'Inicio de sesión por correo y contraseña para continuar al sistema.',
       'Flujo visible de recuperación de contraseña desde la pantalla de acceso.',
       'Registro público para nuevas cuentas desde el portal JAdmin.',
     ],
-    tags: ['JAdmin', 'JVentas', 'JRestaurante', 'Login'],
+    tags: ['JAdmin', 'JRestaurante', 'Login'],
   },
   {
     name: 'Portal FacturacionApp',
