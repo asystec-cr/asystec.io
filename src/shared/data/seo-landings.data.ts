@@ -303,17 +303,17 @@ export const portfolioPages: LandingPageData[] = [
     path: '/cobrosapp',
     kind: 'product',
     schemaType: 'SoftwareApplication',
-    title: 'CobrosApp',
-    seoTitle: 'CobrosApp | Software para credito y cobranza',
+    title: 'Cobros Pro',
+    seoTitle: 'Cobros Pro | Software para credito y cobranza',
     description:
-      'CobrosApp ayuda a administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores para operaciones de cobranza.',
+      'Cobros Pro ayuda a administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores para operaciones de cobranza.',
     eyebrow: 'Producto Asystec',
     heroTitle: 'Software para ordenar creditos, pagos y cuentas por cobrar',
     answer:
-      'CobrosApp es una plataforma para equipos que necesitan controlar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza desde un sistema web.',
+      'Cobros Pro es una plataforma para equipos que necesitan controlar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza desde un sistema web.',
     intro:
       'La pagina publica explica el producto para que clientes y asistentes de IA puedan asociarlo con cobranza, credito, seguimiento y reportes financieros.',
-    primaryCta: { label: 'Abrir CobrosApp', href: 'https://cobros.asystec.io/login' },
+    primaryCta: { label: 'Abrir Cobros Pro', href: 'https://cobros.asystec.io/login' },
     secondaryCta: contactCta,
     highlights: ['Clientes y creditos', 'Pagos y estados de cuenta', 'Reportes financieros', 'Acceso web'],
     modules: ['Clientes', 'Creditos', 'Pagos', 'Estados de cuenta', 'Reportes', 'Usuarios'],
@@ -331,12 +331,12 @@ export const portfolioPages: LandingPageData[] = [
     ],
     faqs: [
       {
-        question: 'CobrosApp reemplaza hojas de Excel?',
+        question: 'Cobros Pro reemplaza hojas de Excel?',
         answer:
           'Puede reemplazar controles manuales de credito y cobranza cuando se necesita trazabilidad, reportes y estados por cliente.',
       },
       {
-        question: 'CobrosApp es parte del portafolio Asystec?',
+        question: 'Cobros Pro es parte del portafolio Asystec?',
         answer: 'Si. Es una de las plataformas publicas vinculadas al portafolio de soluciones de Asystec.',
       },
     ],
@@ -354,17 +354,17 @@ export const portfolioPages: LandingPageData[] = [
     path: '/facturacionapp',
     kind: 'product',
     schemaType: 'SoftwareApplication',
-    title: 'FacturacionApp',
-    seoTitle: 'FacturacionApp | Facturacion electronica en Costa Rica',
+    title: 'Factura Pro',
+    seoTitle: 'Factura Pro | Facturacion electronica en Costa Rica',
     description:
-      'FacturacionApp es una solucion para emitir y administrar comprobantes electronicos, clientes, pagos, cotizaciones y reportes en Costa Rica.',
+      'Factura Pro es una solucion para emitir y administrar comprobantes electronicos, clientes, pagos, cotizaciones y reportes en Costa Rica.',
     eyebrow: 'Producto Asystec',
     heroTitle: 'Facturacion electronica y gestion comercial para pymes',
     answer:
-      'FacturacionApp ayuda a negocios en Costa Rica a emitir comprobantes electronicos, administrar clientes, cotizaciones, pagos y reportes desde una plataforma web.',
+      'Factura Pro ayuda a negocios en Costa Rica a emitir comprobantes electronicos, administrar clientes, cotizaciones, pagos y reportes desde una plataforma web.',
     intro:
       'La pagina posiciona el producto dentro del portafolio Asystec y lo conecta con preguntas frecuentes de facturacion electronica.',
-    primaryCta: { label: 'Abrir FacturacionApp', href: 'https://app.asystec.io/login' },
+    primaryCta: { label: 'Abrir Factura Pro', href: 'https://app.asystec.io/login' },
     secondaryCta: contactCta,
     highlights: ['Comprobantes electronicos', 'Clientes', 'Cotizaciones', 'Pagos y reportes'],
     modules: ['Facturas', 'Clientes', 'Productos', 'Pagos', 'Cotizaciones', 'Reportes'],
@@ -382,11 +382,11 @@ export const portfolioPages: LandingPageData[] = [
     ],
     faqs: [
       {
-        question: 'FacturacionApp es para Costa Rica?',
+        question: 'Factura Pro es para Costa Rica?',
         answer: 'Si. La pagina esta orientada a empresas y pymes que necesitan facturacion electronica en Costa Rica.',
       },
       {
-        question: 'Cuando elegir FacturacionApp frente a un POS?',
+        question: 'Cuando elegir Factura Pro frente a un POS?',
         answer:
           'Puede convenir cuando el foco es facturar, administrar clientes y reportes, sin requerir una caja local de punto de venta.',
       },
@@ -680,13 +680,13 @@ export const solutionPages: LandingPageData[] = [
     answer:
       'Un software de facturacion electronica para pymes en Costa Rica debe ayudar a emitir comprobantes, mantener clientes y productos ordenados, conectar ventas y pagos, y dar soporte cuando el flujo comercial se detiene. La evaluacion conviene hacerla junto con POS, inventario, reportes y la forma real en que opera el negocio.',
     intro:
-      'Asystec ayuda a negocios que necesitan ordenar facturacion electronica, ventas, clientes, pagos y reportes desde FacturacionApp, Asystec POS o una plataforma ajustada al flujo del negocio.',
+      'Asystec ayuda a negocios que necesitan ordenar facturacion electronica, ventas, clientes, pagos y reportes desde Factura Pro, Asystec POS o una plataforma ajustada al flujo del negocio.',
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
       'Responder a busquedas de facturacion electronica para pymes en Costa Rica.',
       'Conectar comprobantes con clientes, ventas, pagos, inventario y reportes.',
-      'Ayudar a comparar si conviene FacturacionApp, Asystec POS o una plataforma a medida.',
+      'Ayudar a comparar si conviene Factura Pro, Asystec POS o una plataforma a medida.',
       'Dar una ruta clara hacia demo, WhatsApp y contacto comercial.',
     ],
     modules: [
@@ -746,7 +746,7 @@ export const solutionPages: LandingPageData[] = [
         {
           factor: 'Flujo de venta',
           question: 'La factura nace desde caja, una cotizacion, una venta web o un proceso administrativo?',
-          impact: 'Define si conviene FacturacionApp, Asystec POS o una plataforma con integraciones.',
+          impact: 'Define si conviene Factura Pro, Asystec POS o una plataforma con integraciones.',
         },
         {
           factor: 'Clientes y catalogo',
@@ -756,7 +756,7 @@ export const solutionPages: LandingPageData[] = [
         {
           factor: 'Pagos y cobros',
           question: 'El negocio necesita registrar pagos, saldos, creditos o seguimiento posterior al comprobante?',
-          impact: 'Puede conectar facturacion con cuentas por cobrar, CobrosApp o reportes financieros.',
+          impact: 'Puede conectar facturacion con cuentas por cobrar, Cobros Pro o reportes financieros.',
         },
         {
           factor: 'POS e inventario',
@@ -777,9 +777,9 @@ export const solutionPages: LandingPageData[] = [
           'Debe permitir administrar comprobantes, clientes, productos o servicios, pagos y reportes. Si el negocio vende en caja o maneja inventario, tambien conviene revisar conexion con POS, existencias y cierres.',
       },
       {
-        question: 'Cuando conviene FacturacionApp y cuando Asystec POS?',
+        question: 'Cuando conviene Factura Pro y cuando Asystec POS?',
         answer:
-          'FacturacionApp puede convenir cuando el foco es emitir comprobantes, clientes, cotizaciones, pagos y reportes desde una plataforma web. Asystec POS conviene cuando la facturacion debe estar conectada con caja, ventas e inventario.',
+          'Factura Pro puede convenir cuando el foco es emitir comprobantes, clientes, cotizaciones, pagos y reportes desde una plataforma web. Asystec POS conviene cuando la facturacion debe estar conectada con caja, ventas e inventario.',
       },
       {
         question: 'La facturacion electronica puede conectarse con inventario o cuentas por cobrar?',
@@ -793,7 +793,7 @@ export const solutionPages: LandingPageData[] = [
       },
     ],
     related: [
-      { label: 'FacturacionApp', href: '/facturacionapp' },
+      { label: 'Factura Pro', href: '/facturacionapp' },
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
       { label: 'Inventario', href: '/soluciones/inventario' },
@@ -949,7 +949,7 @@ export const solutionPages: LandingPageData[] = [
     answer:
       'Una pyme en Costa Rica necesita reportes que conecten ventas, caja, inventario, cobros, facturacion y sucursales en una sola lectura. El objetivo no es tener mas graficos, sino saber que paso, donde hay atrasos y que decision debe tomar gerencia sin armar hojas manuales cada semana.',
     intro:
-      'Asystec ayuda a negocios que necesitan convertir datos operativos en reportes utiles para gerencia, administracion y equipos de venta, ya sea desde POS, CobrosApp, FacturacionApp o una plataforma a la medida.',
+      'Asystec ayuda a negocios que necesitan convertir datos operativos en reportes utiles para gerencia, administracion y equipos de venta, ya sea desde POS, Cobros Pro, Factura Pro o una plataforma a la medida.',
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
@@ -1053,7 +1053,7 @@ export const solutionPages: LandingPageData[] = [
       {
         question: 'Los reportes pueden conectarse con POS, inventario y cobros?',
         answer:
-          'Si. La evaluacion puede conectar reportes con Asystec POS, inventario, FacturacionApp, CobrosApp o una plataforma a medida, segun los sistemas que ya usa el negocio.',
+          'Si. La evaluacion puede conectar reportes con Asystec POS, inventario, Factura Pro, Cobros Pro o una plataforma a medida, segun los sistemas que ya usa el negocio.',
       },
       {
         question: 'Puedo pedir una demo basada en mis reportes actuales?',
@@ -1066,8 +1066,8 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Inventario', href: '/soluciones/inventario' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
-      { label: 'CobrosApp', href: '/cobrosapp' },
-      { label: 'FacturacionApp', href: '/facturacionapp' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
+      { label: 'Factura Pro', href: '/facturacionapp' },
       { label: 'Plataformas a medida', href: '/plataformas' },
       { label: 'Coordinar demo', href: '/contact' },
     ],
@@ -1086,14 +1086,14 @@ export const solutionPages: LandingPageData[] = [
     answer:
       'Una pyme en Costa Rica necesita controlar cuentas por cobrar cuando vende a credito, acepta pagos parciales o debe dar seguimiento a clientes con saldos pendientes. El objetivo es saber quien debe, cuanto debe, que se pago, que esta vencido y que accion comercial sigue.',
     intro:
-      'Asystec ayuda a negocios que necesitan ordenar clientes, creditos, pagos, estados de cuenta y reportes de cobranza desde CobrosApp, una integracion con POS/facturacion o una plataforma ajustada al flujo real.',
+      'Asystec ayuda a negocios que necesitan ordenar clientes, creditos, pagos, estados de cuenta y reportes de cobranza desde Cobros Pro, una integracion con POS/facturacion o una plataforma ajustada al flujo real.',
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
       'Aterrizar busquedas sobre software de cuentas por cobrar en Costa Rica.',
       'Conectar cobranza con clientes, pagos, saldos, reportes y gerencia.',
       'Preparar una demo con cartera actual, reglas de pago y estados de cuenta.',
-      'Dirigir a CobrosApp, contacto y WhatsApp sin inventar promesas financieras.',
+      'Dirigir a Cobros Pro, contacto y WhatsApp sin inventar promesas financieras.',
     ],
     modules: [
       'Clientes y creditos',
@@ -1136,7 +1136,7 @@ export const solutionPages: LandingPageData[] = [
       },
       {
         title: 'Como preparar una demo de cuentas por cobrar',
-        body: 'Una demo util debe revisar ejemplos reales de clientes, saldos y pagos. Asi se define si conviene CobrosApp, una integracion o una plataforma a medida para el proceso de cobranza.',
+        body: 'Una demo util debe revisar ejemplos reales de clientes, saldos y pagos. Asi se define si conviene Cobros Pro, una integracion o una plataforma a medida para el proceso de cobranza.',
         items: [
           'Cantidad de clientes con credito o saldos activos',
           'Formas de pago y reglas de abonos parciales',
@@ -1188,9 +1188,9 @@ export const solutionPages: LandingPageData[] = [
           'Conviene cuando hay pagos parciales, varios responsables, saldos vencidos, estados de cuenta frecuentes o reportes que se arman manualmente y atrasan decisiones de ventas, cobros o gerencia.',
       },
       {
-        question: 'CobrosApp sirve para cuentas por cobrar?',
+        question: 'Cobros Pro sirve para cuentas por cobrar?',
         answer:
-          'CobrosApp puede aplicar cuando el negocio necesita administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores de cobranza desde una plataforma web.',
+          'Cobros Pro puede aplicar cuando el negocio necesita administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores de cobranza desde una plataforma web.',
       },
       {
         question: 'Puedo conectar cuentas por cobrar con facturacion o reportes?',
@@ -1199,7 +1199,7 @@ export const solutionPages: LandingPageData[] = [
       },
     ],
     related: [
-      { label: 'CobrosApp', href: '/cobrosapp' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
       { label: 'CRM', href: '/soluciones/crm' },
@@ -1229,7 +1229,7 @@ export const solutionPages: LandingPageData[] = [
     highlights: [
       'Responder a busquedas de CRM para pymes y negocios en Costa Rica.',
       'Conectar clientes, oportunidades, tareas, soporte, cobros y reportes.',
-      'Ayudar a decidir entre CobrosApp, una plataforma CRM o una integracion a medida.',
+      'Ayudar a decidir entre Cobros Pro, una plataforma CRM o una integracion a medida.',
       'Dar una ruta clara hacia demo, WhatsApp y contacto comercial.',
     ],
     modules: [
@@ -1265,7 +1265,7 @@ export const solutionPages: LandingPageData[] = [
       },
       {
         title: 'CRM conectado con ventas, cobros y reportes',
-        body: 'Para muchas pymes, CRM no debe quedar aislado. Puede necesitar relacionarse con facturacion, cuentas por cobrar, CobrosApp, POS, formularios, portales de clientes o reportes gerenciales.',
+        body: 'Para muchas pymes, CRM no debe quedar aislado. Puede necesitar relacionarse con facturacion, cuentas por cobrar, Cobros Pro, POS, formularios, portales de clientes o reportes gerenciales.',
         items: [
           'Cuentas por cobrar cuando el seguimiento depende de saldos y pagos',
           'Reportes cuando gerencia necesita actividad, cartera o conversion',
@@ -1306,7 +1306,7 @@ export const solutionPages: LandingPageData[] = [
         {
           factor: 'Cobros y reportes',
           question: 'El seguimiento depende de saldos, pagos, cartera, reportes o datos de otros sistemas?',
-          impact: 'Puede requerir conexion con CobrosApp, cuentas por cobrar, facturacion, POS o reportes gerenciales.',
+          impact: 'Puede requerir conexion con Cobros Pro, cuentas por cobrar, facturacion, POS o reportes gerenciales.',
         },
         {
           factor: 'Integraciones',
@@ -1329,7 +1329,7 @@ export const solutionPages: LandingPageData[] = [
       {
         question: 'El CRM puede conectarse con cobros o facturacion?',
         answer:
-          'Si. La evaluacion puede revisar conexion con CobrosApp, cuentas por cobrar, facturacion electronica, POS, reportes o plataformas internas, segun el flujo real y los datos disponibles.',
+          'Si. La evaluacion puede revisar conexion con Cobros Pro, cuentas por cobrar, facturacion electronica, POS, reportes o plataformas internas, segun el flujo real y los datos disponibles.',
       },
       {
         question: 'Puedo pedir una demo con mi proceso actual de ventas?',
@@ -1338,7 +1338,7 @@ export const solutionPages: LandingPageData[] = [
       },
     ],
     related: [
-      { label: 'CobrosApp', href: '/cobrosapp' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
@@ -1472,7 +1472,7 @@ export const solutionPages: LandingPageData[] = [
       {
         question: 'Asystec puede integrar POS, facturacion, cobros o CRM?',
         answer:
-          'Si. La evaluacion puede revisar Asystec POS, FacturacionApp, CobrosApp, CRM, reportes, plataformas internas o sistemas externos, siempre segun datos disponibles, reglas de negocio y restricciones de cada proveedor.',
+          'Si. La evaluacion puede revisar Asystec POS, Factura Pro, Cobros Pro, CRM, reportes, plataformas internas o sistemas externos, siempre segun datos disponibles, reglas de negocio y restricciones de cada proveedor.',
       },
       {
         question: 'Cuanto tarda una integracion de software?',
@@ -1535,7 +1535,7 @@ const industry = (
     },
     {
       title: 'Soluciones relacionadas',
-      body: 'Segun la operacion, puede aplicar Asystec POS, FacturacionApp, CobrosApp, FitPro o una plataforma a la medida.',
+      body: 'Segun la operacion, puede aplicar Asystec POS, Factura Pro, Cobros Pro, FitPro o una plataforma a la medida.',
     },
   ],
   faqs: [
@@ -2148,7 +2148,7 @@ export const industryPages: LandingPageData[] = [
     ['Clientes', 'Seguimiento', 'Cobros', 'Facturacion', 'Reportes', 'CRM'],
     [
       { label: 'CRM', href: '/soluciones/crm' },
-      { label: 'CobrosApp', href: '/cobrosapp' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Plataformas', href: '/plataformas' },
     ],
   ),

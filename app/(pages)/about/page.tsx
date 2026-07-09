@@ -65,12 +65,12 @@ const products = [
     body: 'Sistema POS para negocios que necesitan vender, facturar, controlar inventario y operar caja.',
   },
   {
-    label: 'FacturacionApp',
+    label: 'Factura Pro',
     href: '/facturacionapp',
     body: 'Producto para facturacion electronica, clientes, comprobantes, pagos, cotizaciones y reportes.',
   },
   {
-    label: 'CobrosApp',
+    label: 'Cobros Pro',
     href: '/cobrosapp',
     body: 'Plataforma para administrar clientes, creditos, pagos, saldos, estados de cuenta y cobranza.',
   },
@@ -118,7 +118,7 @@ const faqs = [
   {
     question: 'Que productos publicos tiene Asystec?',
     answer:
-      'El portafolio publico incluye Asystec POS, FacturacionApp, CobrosApp, TallerApp, FitPro y desarrollo de plataformas a medida.',
+      'El portafolio publico incluye Asystec POS, Factura Pro, Cobros Pro, TallerApp, FitPro y desarrollo de plataformas a medida.',
   },
   {
     question: 'Para que negocios trabaja Asystec?',
