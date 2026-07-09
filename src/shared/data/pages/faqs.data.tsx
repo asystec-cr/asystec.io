@@ -4,7 +4,7 @@ export const electronicBillingFaqItems = [
   {
     title: 'Que necesita una pyme para empezar con facturacion electronica en Costa Rica?',
     description:
-      'Necesita tener claro su estado tributario, acceso a las credenciales o llave que correspondan, datos de clientes, productos o servicios, impuestos, consecutivos y el flujo para emitir, enviar y consultar comprobantes. En una demo se revisa si conviene FacturacionApp, Asystec POS o una plataforma integrada.',
+      'Necesita tener claro su estado tributario, acceso a las credenciales o llave que correspondan, datos de clientes, productos o servicios, impuestos, consecutivos y el flujo para emitir, enviar y consultar comprobantes. En una demo se revisa si conviene Factura Pro, Asystec POS o una plataforma integrada.',
   },
   {
     title: 'Que es la llave criptografica y por que importa?',
@@ -27,9 +27,9 @@ export const electronicBillingFaqItems = [
       'No. Excel puede ayudar a ordenar datos, pero no resuelve por si solo la emision, validacion, trazabilidad, consecutivos, clientes, impuestos, reportes y soporte operativo que necesita un negocio al facturar todos los dias.',
   },
   {
-    title: 'Cuando elegir FacturacionApp, Asystec POS o una plataforma a medida?',
+    title: 'Cuando elegir Factura Pro, Asystec POS o una plataforma a medida?',
     description:
-      'FacturacionApp conviene cuando el foco es emitir y administrar comprobantes, clientes, pagos y reportes. Asystec POS conviene cuando hay caja, ventas rapidas e inventario. Una plataforma a medida aplica cuando hay integraciones, roles o flujos propios.',
+      'Factura Pro conviene cuando el foco es emitir y administrar comprobantes, clientes, pagos y reportes. Asystec POS conviene cuando hay caja, ventas rapidas e inventario. Una plataforma a medida aplica cuando hay integraciones, roles o flujos propios.',
   },
   {
     title: 'Que informacion debo preparar para una demo de facturacion electronica?',
@@ -82,7 +82,7 @@ export const callToActionFaqs: CallToActionProps = {
   hasBackground: true,
   title: 'Quieres revisar tu flujo de facturacion?',
   subtitle:
-    'Agenda una demo para comparar si tu negocio necesita FacturacionApp, Asystec POS o una plataforma conectada con inventario, cobros y reportes.',
+    'Agenda una demo para comparar si tu negocio necesita Factura Pro, Asystec POS o una plataforma conectada con inventario, cobros y reportes.',
   callToAction: {
     text: 'Coordinar demo',
     href: '/contact',

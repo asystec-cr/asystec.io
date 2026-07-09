@@ -49,11 +49,11 @@ export const headerData: HeaderProps = {
           href: '/plataformas',
         },
         {
-          label: 'CobrosApp',
+          label: 'Cobros Pro',
           href: '/cobrosapp',
         },
         {
-          label: 'FacturacionApp',
+          label: 'Factura Pro',
           href: '/facturacionapp',
         },
         {
@@ -209,12 +209,12 @@ export const headerData: HeaderProps = {
           target: 'blank',
         },
         {
-          label: 'FacturacionApp',
+          label: 'Factura Pro',
           href: 'https://docs.facturacionapp.com',
           target: 'blank',
         },
         {
-          label: 'CobrosApp',
+          label: 'Cobros Pro',
           href: 'https://docs.cobrosapp.com',
           target: 'blank',
         },
@@ -446,8 +446,8 @@ export const footerData2: FooterProps = {
       links: [
         { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
         { label: 'Asystec POS', href: '/asystec-pos' },
-        { label: 'CobrosApp', href: '/cobrosapp' },
-        { label: 'FacturacionApp', href: '/facturacionapp' },
+        { label: 'Cobros Pro', href: '/cobrosapp' },
+        { label: 'Factura Pro', href: '/facturacionapp' },
       ],
     },
     {
