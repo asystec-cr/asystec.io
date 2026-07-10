@@ -7,12 +7,16 @@ import Header from '~/components/widgets/Header';
 import Announcement from '~/components/widgets/Announcement';
 import Footer2 from '~/components/widgets/Footer2';
 import JsonLd from '~/components/seo/JsonLd';
+import MarketingTracking from '~/components/analytics/MarketingTracking';
+import { normalizeGtmId, normalizeMetaPixelId } from '~/components/analytics/tracking.mjs';
 import { buildLocalBusinessSchema, buildOrganizationSchema } from '~/utils/seo';
 
 import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
 
 const customFont = CustomFont({ subsets: ['latin'], variable: '--font-custom' });
+const gtmId = normalizeGtmId(process.env.NEXT_PUBLIC_GTM_ID);
+const metaPixelId = normalizeMetaPixelId(process.env.NEXT_PUBLIC_META_PIXEL_ID);
 const verification: Metadata['verification'] = {};
 const otherVerification: Record<string, string> = {};
 
@@ -85,6 +89,7 @@ export default function RootLayout({ children }: LayoutProps) {
           <Header />
           <main>{children}</main>
           <Footer2 />
+          {(gtmId || metaPixelId) && <MarketingTracking gtmId={gtmId} metaPixelId={metaPixelId} />}
         </Providers>
       </body>
     </html>
