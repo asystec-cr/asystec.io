@@ -27,41 +27,41 @@ const variantDefaults: Record<
   }
 > = {
   home: {
-    title: 'Clientes que confian en Asystec y nos recomiendan',
+    title: 'Clientes que confían en Asystec y nos recomiendan',
     subtitle:
-      'La confianza no se declara: se demuestra con experiencias reales de clientes que han usado nuestro soporte, facturacion electronica y acompanamiento operativo.',
+      'La confianza no se declara: se demuestra con experiencias reales de clientes que han usado nuestro soporte, facturación electrónica y acompañamiento operativo.',
     reviewLimit: 3,
     showThemes: true,
   },
   landing: {
     title: 'Confianza visible antes de coordinar una demo',
-    subtitle: 'Clientes en Trustpilot destacan soporte, respuesta rapida, facturacion electronica y atencion cercana.',
+    subtitle: 'Clientes en Trustpilot destacan soporte, respuesta rápida, facturación electrónica y atención cercana.',
     reviewLimit: 3,
     showThemes: false,
   },
   compact: {
     title: 'Clientes que recomiendan Asystec',
-    subtitle: 'Prueba social externa para validar soporte, confianza y acompanamiento antes de elegir software.',
+    subtitle: 'Prueba social externa para validar soporte, confianza y acompañamiento antes de elegir software.',
     reviewLimit: 3,
     showThemes: false,
   },
   page: {
     title: 'Opiniones de clientes sobre Asystec',
     subtitle:
-      'Estas resenas publicas ayudan a nuevos visitantes a entender por que otros negocios confian en Asystec para soporte, facturacion y software empresarial.',
+      'Estas reseñas públicas ayudan a nuevos visitantes a entender por qué otros negocios confían en Asystec para soporte, facturación y software empresarial.',
     reviewLimit: trustpilotReviews.length,
     showThemes: true,
   },
 };
 
 const profileStats = [
-  { value: trustpilotProfile.score, label: 'valoracion publica' },
+  { value: trustpilotProfile.score, label: 'valoración pública' },
   { value: `${trustpilotProfile.reviewCount}`, label: 'opiniones en Trustpilot' },
   { value: trustpilotProfile.fiveStarShare, label: 'de opiniones visibles son 5 estrellas' },
 ];
 
 const RatingStars = ({ label }: { label: string }) => (
-  <div className="flex items-center gap-1 text-emerald-500" aria-label={label}>
+  <div className="flex items-center gap-1 text-emerald-500" role="img" aria-label={label}>
     {Array.from({ length: 5 }).map((_, index) => (
       <IconStarFilled key={`trustpilot-star-${index}`} className="h-4 w-4 shrink-0" aria-hidden="true" />
     ))}
@@ -79,6 +79,8 @@ const TrustpilotSource = ({ className }: { className?: string }) => (
     )}
     data-analytics-event="cta_trustpilot"
     data-analytics-label="Ver perfil de Asystec en Trustpilot"
+    data-analytics-location="trustpilot_proof"
+    data-analytics-type="external"
   >
     Ver perfil en Trustpilot
     <IconExternalLink className="h-4 w-4" aria-hidden="true" />
@@ -141,7 +143,7 @@ const TrustpilotProof = ({
         <div>
           <div className="inline-flex items-center gap-2 rounded-md border border-emerald-200 bg-white px-3 py-1.5 text-sm font-semibold text-emerald-800 dark:border-emerald-700 dark:bg-slate-950 dark:text-emerald-300">
             <IconUserCheck className="h-4 w-4" aria-hidden="true" />
-            Resenas publicas en Trustpilot
+            Reseñas públicas en Trustpilot
           </div>
           <h2 className="mt-4 text-3xl font-bold leading-tight tracking-normal text-neutral-950 dark:text-white md:text-4xl">
             {title ?? defaults.title}
@@ -178,6 +180,8 @@ const TrustpilotProof = ({
               className="inline-flex items-center justify-center rounded-md bg-neutral-950 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-800 dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-200"
               data-analytics-event="cta_reviews"
               data-analytics-label="Ver opiniones de clientes"
+              data-analytics-location="trustpilot_proof"
+              data-analytics-type="internal"
             >
               Ver opiniones de clientes
             </Link>

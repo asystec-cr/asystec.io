@@ -9,7 +9,9 @@ const localBusinessId = `${SITE.origin}/#local-business`;
 export const absoluteUrl = (path = '/') => new URL(path, SITE.origin).toString();
 
 export const buildPageMetadata = (page: LandingPageData): Metadata => ({
-  title: page.seoTitle,
+  title: {
+    absolute: page.seoTitle,
+  },
   description: page.description,
   alternates: {
     canonical: page.path,

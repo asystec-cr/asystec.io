@@ -25,16 +25,37 @@ test('accepts only known stored consent values', () => {
 });
 
 test('creates a minimal analytics payload from explicit data attributes', () => {
-  assert.deepEqual(createAnalyticsPayload(' cta_demo ', ' Asystec POS hero demo '), {
-    event: 'cta_demo',
-    event_label: 'Asystec POS hero demo',
-  });
+  assert.deepEqual(
+    createAnalyticsPayload(' cta_demo ', ' Asystec POS hero demo ', {
+      location: ' Hero ',
+      type: 'Primary_CTA',
+    }),
+    {
+      event: 'cta_demo',
+      cta_location: 'hero',
+      cta_type: 'primary_cta',
+      event_label: 'Asystec POS hero demo',
+    },
+  );
   assert.equal(createAnalyticsPayload('cta-demo', 'Invalid event'), null);
 });
 
 test('does not forward email or phone-like labels', () => {
   assert.deepEqual(createAnalyticsPayload('cta_contact', 'persona@example.com'), { event: 'cta_contact' });
   assert.deepEqual(createAnalyticsPayload('cta_contact', '+506 8888-7777'), { event: 'cta_contact' });
+});
+
+test('drops unsafe CTA dimensions instead of forwarding arbitrary or personal data', () => {
+  assert.deepEqual(
+    createAnalyticsPayload('cta_contact', 'Abrir WhatsApp', {
+      location: 'persona@example.com',
+      type: 'primary button',
+    }),
+    {
+      event: 'cta_contact',
+      event_label: 'Abrir WhatsApp',
+    },
+  );
 });
 
 test('privacy policy discloses the actual hosting and optional measurement providers', () => {

@@ -141,6 +141,8 @@ const Page = () => {
                   href="#contacto-pos"
                   data-analytics-event="cta_demo"
                   data-analytics-label="Asystec POS hero demo"
+                  data-analytics-location="product_hero"
+                  data-analytics-type="primary"
                   className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
                 >
                   Solicitar demo
@@ -151,6 +153,8 @@ const Page = () => {
                   rel="noopener noreferrer"
                   data-analytics-event="cta_download"
                   data-analytics-label="Descargar Asystec POS"
+                  data-analytics-location="product_hero"
+                  data-analytics-type="secondary"
                   className="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-5 py-3 text-sm font-semibold text-blue-800 transition hover:bg-blue-50 dark:border-blue-700 dark:bg-transparent dark:text-blue-300 dark:hover:bg-blue-900/20"
                 >
                   Descargar Asystec POS
@@ -231,7 +235,10 @@ const Page = () => {
               ))}
             </ul>
           </article>
-          <article className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+          <article
+            id="planes-pos"
+            className="scroll-mt-28 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+          >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Planes y precios</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <div className="rounded-lg border border-gray-200 p-4 dark:border-slate-700">
@@ -320,6 +327,8 @@ const Page = () => {
               rel="noopener noreferrer"
               data-analytics-event="cta_whatsapp"
               data-analytics-label="Asystec POS contacto WhatsApp"
+              data-analytics-location="product_contact"
+              data-analytics-type="primary"
               className="inline-flex items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-green-800 transition hover:bg-green-50"
             >
               Abrir WhatsApp
@@ -336,6 +345,8 @@ const Page = () => {
                 href="#contacto-pos"
                 data-analytics-event="cta_demo"
                 data-analytics-label="Asystec POS solicitar demo"
+                data-analytics-location="product_final_cta"
+                data-analytics-type="primary"
                 className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
               >
                 Solicitar demo
@@ -344,6 +355,8 @@ const Page = () => {
                 href="/contact"
                 data-analytics-event="cta_contact"
                 data-analytics-label="Asystec POS contacto"
+                data-analytics-location="product_final_cta"
+                data-analytics-type="secondary"
                 className="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-white px-5 py-3 text-sm font-semibold text-blue-800 transition hover:bg-blue-50 dark:border-blue-700 dark:bg-transparent dark:text-blue-300 dark:hover:bg-blue-900/20"
               >
                 Contactanos

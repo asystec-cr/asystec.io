@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Script from 'next/script';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import {
   createAnalyticsPayload,
@@ -45,9 +45,15 @@ fbq('track','PageView');
 `;
 
 const MarketingTracking = ({ gtmId, metaPixelId }: MarketingTrackingProps) => {
+  const measurementProviders = [gtmId ? 'Google Tag Manager' : null, metaPixelId ? 'Meta Pixel' : null].filter(Boolean);
+  const measurementProviderLabel = measurementProviders.join(' y ') || 'La medición opcional';
+  const measurementProviderVerb = measurementProviders.length === 1 ? 'solo se carga' : 'solo se cargan';
   const [consent, setConsent] = useState<MarketingConsent | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [arePreferencesOpen, setArePreferencesOpen] = useState(false);
+  const preferencesTitleRef = useRef<HTMLHeadingElement>(null);
+  const privacyTriggerRef = useRef<HTMLButtonElement>(null);
+  const shouldRestoreFocusRef = useRef(false);
 
   useEffect(() => {
     let storedConsent: MarketingConsent | null = null;
@@ -75,6 +81,10 @@ const MarketingTracking = ({ gtmId, metaPixelId }: MarketingTrackingProps) => {
       const payload = createAnalyticsPayload(
         trackedElement.dataset.analyticsEvent,
         trackedElement.dataset.analyticsLabel,
+        {
+          location: trackedElement.dataset.analyticsLocation,
+          type: trackedElement.dataset.analyticsType,
+        },
       );
 
       if (!payload) return;
@@ -94,6 +104,18 @@ const MarketingTracking = ({ gtmId, metaPixelId }: MarketingTrackingProps) => {
     return () => document.removeEventListener('click', handleTrackedClick);
   }, [consent, gtmId, metaPixelId]);
 
+  useEffect(() => {
+    if (arePreferencesOpen) {
+      preferencesTitleRef.current?.focus();
+      return;
+    }
+
+    if (shouldRestoreFocusRef.current) {
+      shouldRestoreFocusRef.current = false;
+      privacyTriggerRef.current?.focus();
+    }
+  }, [arePreferencesOpen]);
+
   const persistConsent = (nextConsent: MarketingConsent) => {
     try {
       window.localStorage.setItem(MARKETING_CONSENT_STORAGE_KEY, nextConsent);
@@ -104,6 +126,7 @@ const MarketingTracking = ({ gtmId, metaPixelId }: MarketingTrackingProps) => {
 
   const acceptMeasurement = () => {
     persistConsent(MARKETING_CONSENT_ACCEPTED);
+    shouldRestoreFocusRef.current = true;
     setConsent(MARKETING_CONSENT_ACCEPTED);
     setArePreferencesOpen(false);
   };
@@ -112,6 +135,7 @@ const MarketingTracking = ({ gtmId, metaPixelId }: MarketingTrackingProps) => {
     const shouldReload = consent === MARKETING_CONSENT_ACCEPTED;
 
     persistConsent(MARKETING_CONSENT_REJECTED);
+    shouldRestoreFocusRef.current = !shouldReload;
     setConsent(MARKETING_CONSENT_REJECTED);
     setArePreferencesOpen(false);
 
@@ -143,23 +167,48 @@ const MarketingTracking = ({ gtmId, metaPixelId }: MarketingTrackingProps) => {
 
       {arePreferencesOpen ? (
         <section
-          className="fixed inset-x-4 bottom-4 z-[100] mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 shadow-2xl dark:border-slate-700 dark:bg-slate-900 sm:p-6"
+          className="fixed inset-x-3 bottom-3 z-[100] mx-auto max-w-4xl rounded-xl border border-gray-200 bg-white p-3 shadow-2xl [@media(max-height:720px)]:bottom-auto [@media(max-height:720px)]:top-3 dark:border-slate-700 dark:bg-slate-900 sm:bottom-4 sm:p-4"
           role="dialog"
           aria-labelledby="marketing-consent-title"
           aria-describedby="marketing-consent-description"
+          onKeyDown={(event) => {
+            if (event.key !== 'Escape' || !consent) return;
+
+            shouldRestoreFocusRef.current = true;
+            setArePreferencesOpen(false);
+          }}
         >
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <h2 id="marketing-consent-title" className="text-base font-semibold text-gray-900 dark:text-white">
-                Preferencias de privacidad
-              </h2>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+            <div className="min-w-0 flex-1">
+              <div className="flex items-start justify-between gap-3">
+                <h2
+                  id="marketing-consent-title"
+                  ref={preferencesTitleRef}
+                  tabIndex={-1}
+                  className="text-sm font-semibold text-gray-900 outline-none dark:text-white sm:text-base"
+                >
+                  Preferencias de privacidad
+                </h2>
+                {consent && (
+                  <button
+                    type="button"
+                    className="shrink-0 rounded-md px-2 py-1 text-xs text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:text-slate-400 dark:hover:text-white"
+                    onClick={() => {
+                      shouldRestoreFocusRef.current = true;
+                      setArePreferencesOpen(false);
+                    }}
+                    aria-label="Cerrar preferencias de privacidad"
+                  >
+                    Cerrar
+                  </button>
+                )}
+              </div>
               <p
                 id="marketing-consent-description"
-                className="mt-2 text-sm leading-6 text-gray-600 dark:text-slate-300"
+                className="mt-1 text-xs leading-5 text-gray-600 dark:text-slate-300 sm:text-sm sm:leading-6"
               >
-                Google Tag Manager y Meta Pixel son opcionales y solo se cargan si aceptás. Los eventos de este sitio no
-                incluyen lo que escribís en formularios. Podés cambiar esta decisión en cualquier momento desde el botón
-                Privacidad. Consultá la{' '}
+                {measurementProviderLabel} {measurementProviderVerb} si aceptás. No enviamos lo que escribís en
+                formularios y podés cambiar tu decisión desde Privacidad. Consultá la{' '}
                 <Link className="font-medium text-blue-700 underline dark:text-blue-300" href="/privacy">
                   Política de Privacidad
                 </Link>
@@ -171,36 +220,28 @@ const MarketingTracking = ({ gtmId, metaPixelId }: MarketingTrackingProps) => {
                 </p>
               )}
             </div>
-            {consent && (
+            <div className="grid shrink-0 grid-cols-2 gap-2 sm:flex sm:items-center">
               <button
                 type="button"
-                className="rounded-md px-2 py-1 text-sm text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:text-slate-400 dark:hover:text-white"
-                onClick={() => setArePreferencesOpen(false)}
-                aria-label="Cerrar preferencias de privacidad"
+                className="min-h-11 rounded-lg border border-gray-300 px-3 py-2 text-sm font-semibold text-gray-800 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:border-slate-600 dark:text-white dark:hover:bg-slate-800 dark:focus:ring-offset-slate-900 sm:px-4"
+                onClick={rejectMeasurement}
+                aria-label={consent === MARKETING_CONSENT_ACCEPTED ? 'Rechazar y detener la medición' : undefined}
               >
-                Cerrar
+                {consent === MARKETING_CONSENT_ACCEPTED ? 'Detener' : 'Rechazar'}
               </button>
-            )}
-          </div>
-          <div className="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-            <button
-              type="button"
-              className="rounded-lg border border-gray-300 px-4 py-2.5 text-sm font-semibold text-gray-800 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:border-slate-600 dark:text-white dark:hover:bg-slate-800 dark:focus:ring-offset-slate-900"
-              onClick={rejectMeasurement}
-            >
-              {consent === MARKETING_CONSENT_ACCEPTED ? 'Rechazar y detener' : 'Rechazar'}
-            </button>
-            <button
-              type="button"
-              className="rounded-lg bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
-              onClick={acceptMeasurement}
-            >
-              Aceptar medición
-            </button>
+              <button
+                type="button"
+                className="min-h-11 rounded-lg bg-blue-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 dark:focus:ring-offset-slate-900 sm:px-4"
+                onClick={acceptMeasurement}
+              >
+                Aceptar
+              </button>
+            </div>
           </div>
         </section>
       ) : (
         <button
+          ref={privacyTriggerRef}
           type="button"
           className="fixed bottom-3 left-3 z-[90] rounded-full border border-gray-200 bg-white px-3 py-2 text-xs font-medium text-gray-700 shadow-lg transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
           onClick={() => setArePreferencesOpen(true)}

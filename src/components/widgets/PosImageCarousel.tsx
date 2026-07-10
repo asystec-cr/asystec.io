@@ -52,7 +52,9 @@ const PosImageCarousel = ({
   return (
     <>
       <div className="space-y-3" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        <div className={`relative overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-xl dark:border-slate-700 dark:bg-slate-900 ${heightClassName}`}>
+        <div
+          className={`relative overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-xl dark:border-slate-700 dark:bg-slate-900 ${heightClassName}`}
+        >
           <button
             type="button"
             onClick={() => setIsModalOpen(true)}
@@ -67,7 +69,7 @@ const PosImageCarousel = ({
               }`}
               width={1400}
               height={900}
-              priority={activeIndex === 0}
+              priority
             />
             <span className="absolute bottom-3 right-3 rounded-md bg-black/55 px-2 py-1 text-xs font-medium text-white">
               Click para ampliar
