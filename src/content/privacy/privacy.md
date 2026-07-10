@@ -46,7 +46,7 @@ Asystec trata los datos personales para las siguientes finalidades:
 2. **Administración de cuentas de usuario**, autenticación y gestión operativa del Servicio.
 3. **Seguridad y funcionamiento del sistema**, incluyendo prevención de fraude, control de accesos y continuidad operativa.
 4. **Soporte técnico**, atención de consultas y resolución de incidentes.
-5. **Responder solicitudes comerciales**, evaluar el encaje de una necesidad, coordinar demostraciones, preparar propuestas y dar seguimiento precontractual.
+5. **Responder solicitudes comerciales**, evaluar el encaje de una necesidad, coordinar demostraciones, preparar propuestas y dar seguimiento precontractual por los canales autorizados por el Titular, incluidos teléfono, correo o WhatsApp.
 6. **Medir el funcionamiento de campañas y contenidos**, únicamente cuando el Titular haya aceptado las herramientas opcionales de medición.
 7. **Mejorar la experiencia y la comunicación comercial**, usando información agregada o limitada a la finalidad informada y sin reutilizar los datos para fines incompatibles.
 
@@ -68,7 +68,7 @@ El tratamiento de datos personales se realiza con fundamento en la Ley N.º 8968
 1. El sitio web y sus archivos pueden alojarse y distribuirse mediante **Vercel**. Según el producto o servicio utilizado, los datos operativos también pueden almacenarse o procesarse en infraestructura de **Amazon Web Services (AWS)**.
 2. Vercel y AWS actúan como **encargados de tratamiento** en la medida en que prestan servicios de alojamiento, distribución o infraestructura, bajo instrucciones y controles contractuales de Asystec y de conformidad con esta Política.
 3. Asystec podrá utilizar **subencargados** vinculados a la infraestructura tecnológica cuando sea necesario para la operación del Servicio, procurando que mantengan medidas de seguridad adecuadas y obligaciones de confidencialidad.
-4. Cuando el Titular lo consienta, **Google** y **Meta Platforms** podrán actuar como proveedores tecnológicos de medición, publicidad o formularios de captación. También podrá utilizarse un CRM autorizado para registrar la solicitud y su seguimiento.
+4. Cuando el Titular lo consienta, **Google** y **Meta Platforms**, incluidos sus servicios de WhatsApp, podrán actuar como proveedores tecnológicos de medición, publicidad, mensajería o formularios de captación. También podrá utilizarse un CRM autorizado para registrar la solicitud y su seguimiento.
 5. Asystec no autoriza a estos proveedores a recibir desde los eventos del sitio el contenido escrito en formularios ni otros datos de contacto. Los formularios propios de una plataforma, como los formularios instantáneos de Meta, se rigen además por los avisos y controles visibles en esa plataforma.
 
 ## 8. Transferencias internacionales de datos

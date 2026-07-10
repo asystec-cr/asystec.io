@@ -43,4 +43,5 @@ test('privacy policy discloses the actual hosting and optional measurement provi
   assert.match(policy, /Amazon Web Services \(AWS\)/);
   assert.match(policy, /Google/);
   assert.match(policy, /Meta Platforms/);
+  assert.match(policy, /WhatsApp/);
 });
