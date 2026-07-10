@@ -319,10 +319,6 @@ export const footerData: FooterProps = {
           href: '/',
         },
         {
-          label: 'Pricing',
-          href: '/pricing',
-        },
-        {
           label: 'Resources',
           href: '/',
         },

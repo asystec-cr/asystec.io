@@ -69,8 +69,8 @@ const decisionGuides = [
     href: '/guias/como-elegir-sistema-pos',
   },
   {
-    title: 'Cuanto cuesta un POS',
-    description: 'Factores que mueven el alcance de una cotizacion sin inventar rangos genericos.',
+    title: 'Como estimar el alcance de un POS',
+    description: 'Factores que conviene revisar antes de solicitar una cotizacion formal.',
     href: '/guias/cuanto-cuesta-un-pos-costa-rica',
   },
 ];
@@ -239,12 +239,13 @@ const Page = () => {
             id="planes-pos"
             className="scroll-mt-28 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800"
           >
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Planes y precios</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Opciones de implementacion</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <div className="rounded-lg border border-gray-200 p-4 dark:border-slate-700">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Basico</h3>
-                <p className="mt-1 text-2xl font-bold text-gray-900 dark:text-white">
-                  $39 <span className="text-sm font-medium text-gray-500 dark:text-slate-400">/mes</span>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Operacion inicial</h3>
+                <p className="mt-1 text-sm font-medium text-gray-600 dark:text-slate-300">
+                  Para negocios que necesitan ordenar caja, inventario y facturacion electronica desde un punto de
+                  venta.
                 </p>
                 <ul className="mt-3 space-y-1 text-sm text-gray-600 dark:text-slate-300">
                   <li>1 punto de venta</li>
@@ -257,9 +258,9 @@ const Page = () => {
                 <p className="inline-flex rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-800">
                   Mas elegido
                 </p>
-                <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">Pro</h3>
-                <p className="mt-1 text-2xl font-bold text-gray-900 dark:text-white">
-                  $79 <span className="text-sm font-medium text-gray-500 dark:text-slate-400">/mes</span>
+                <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">Operacion en crecimiento</h3>
+                <p className="mt-1 text-sm font-medium text-gray-600 dark:text-slate-300">
+                  Para equipos que necesitan mas control, aplicacion movil, modulos avanzados y soporte prioritario.
                 </p>
                 <ul className="mt-3 space-y-1 text-sm text-gray-600 dark:text-slate-300">
                   <li>Multiples puntos de venta</li>

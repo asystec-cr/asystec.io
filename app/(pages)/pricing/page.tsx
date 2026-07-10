@@ -7,7 +7,7 @@ import FAQs3 from '~/components/widgets/FAQs3';
 import { heroPricing, comparisonPricing, faqs3Pricing, pricingPricing } from '~/shared/data/pages/pricing.data';
 
 export const metadata: Metadata = {
-  title: 'Pricing',
+  title: 'Service options',
   robots: {
     index: false,
     follow: false,

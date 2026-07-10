@@ -548,8 +548,8 @@ export const solutionPages: LandingPageData[] = [
       label: 'Agendar demo por WhatsApp',
       href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20Asystec%20POS%20para%20mi%20negocio.',
     },
-    secondaryCta: { label: 'Ver planes y funciones', href: '/asystec-pos' },
-    heroNote: 'Planes publicados desde $39 al mes. Revisa qué incluye cada opción antes de elegir.',
+    secondaryCta: { label: 'Ver funciones', href: '/asystec-pos' },
+    heroNote: 'Agenda una demo para revisar alcance, implementación y acompañamiento según tu operación.',
     showTrustpilotStrip: true,
     heroImages: [
       { src: '/images/pos/pos0.jpeg', alt: 'Vista general de Asystec POS para comercios' },
@@ -599,11 +599,11 @@ export const solutionPages: LandingPageData[] = [
       },
       {
         title: 'Una demo basada en tu operación',
-        body: 'La demostración parte de cómo vendes hoy para comprobar el flujo que realmente usaría tu equipo y aclarar pendientes antes de elegir un plan.',
+        body: 'La demostración parte de cómo vendes hoy para comprobar el flujo que realmente usaría tu equipo y aclarar pendientes antes de elegir.',
         items: [
           'Revisamos cajas, productos, comprobantes y usuarios',
           'Mostramos una venta, el movimiento de inventario y el cierre',
-          'Aclaramos plan, configuración y datos por migrar',
+          'Aclaramos alcance, configuración y datos por migrar',
           'Documentamos lo que requiere validación adicional',
         ],
       },
@@ -619,7 +619,7 @@ export const solutionPages: LandingPageData[] = [
       },
     ],
     decisionTable: {
-      title: 'Lo que revisamos antes de recomendar un plan',
+      title: 'Lo que revisamos antes de recomendar el alcance',
       body: 'Estas preguntas permiten confirmar el alcance real, identificar pendientes y evitar que el negocio contrate funciones que no necesita.',
       headers: {
         factor: 'Tu operación',
@@ -650,15 +650,15 @@ export const solutionPages: LandingPageData[] = [
         {
           factor: 'Crecimiento',
           question: 'Si necesitas más puntos de venta, usuarios, bodegas o una aplicación móvil.',
-          impact: 'Ayuda a comparar el plan inicial con las necesidades previstas del negocio.',
+          impact: 'Ayuda a comparar el alcance inicial con las necesidades previstas del negocio.',
         },
       ],
     },
     faqs: [
       {
-        question: '¿Cuánto cuesta Asystec POS?',
+        question: '¿Cómo se cotiza Asystec POS?',
         answer:
-          'Los planes publicados empiezan en $39 al mes. El plan adecuado depende de los puntos de venta, la aplicación móvil, los módulos y el nivel de soporte; revisa el alcance de cada opción antes de contratar.',
+          'La cotización depende de los puntos de venta, la aplicación móvil, los módulos, la implementación y el nivel de soporte. En la demo se revisa el alcance real antes de contratar.',
       },
       {
         question: '¿Asystec POS funciona si se cae internet?',
@@ -688,15 +688,15 @@ export const solutionPages: LandingPageData[] = [
       {
         question: '¿Puedo agregar más puntos de venta o usuarios?',
         answer:
-          'Sí. La página de producto publica opciones para uno o varios puntos de venta. La demo permite confirmar cuántos usuarios, cajas y módulos necesita tu operación actual y cómo podría crecer.',
+          'Sí. La demo permite confirmar cuántos usuarios, cajas y módulos necesita tu operación actual y cómo podría crecer.',
       },
     ],
     relatedTitle: 'Sigue evaluando con información concreta',
     relatedIntro:
-      'Revisa el producto, los planes y las guías de decisión; si el alcance encaja, agenda una demostración con el contexto de tu negocio.',
+      'Revisa el producto y las guías de decisión; si el alcance encaja, agenda una demostración con el contexto de tu negocio.',
     related: [
       { label: 'Producto Asystec POS', href: '/asystec-pos' },
-      { label: 'Planes y precios', href: '/asystec-pos#planes-pos' },
+      { label: 'Opciones de implementación', href: '/asystec-pos#planes-pos' },
       { label: 'Cómo elegir un POS', href: '/guias/como-elegir-sistema-pos' },
       { label: 'POS local vs POS en la nube', href: '/guias/pos-local-vs-pos-en-la-nube' },
       { label: 'POS para minisúper', href: '/industrias/minisuper' },
@@ -710,7 +710,7 @@ export const solutionPages: LandingPageData[] = [
         label: 'Agendar demo por WhatsApp',
         href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20Asystec%20POS%20para%20mi%20negocio.',
       },
-      secondary: { label: 'Ver planes y funciones', href: '/asystec-pos' },
+      secondary: { label: 'Ver funciones', href: '/asystec-pos' },
     },
     image: '/images/pos/pos0.jpeg',
   },
