@@ -135,6 +135,7 @@ export const multiSucursalSolutionPage: LandingPageData = {
     { label: 'Integraciones', href: '/soluciones/integraciones' },
     { label: 'Distribuidores', href: '/industrias/distribuidores' },
     { label: 'Retail', href: '/industrias/retail' },
+    { label: 'Guia para abrir una segunda sucursal', href: '/guias/como-preparar-segunda-sucursal' },
     { label: 'Coordinar demo', href: '/contact' },
   ],
 };
