@@ -218,6 +218,7 @@ export const portfolioPages: LandingPageData[] = [
       { label: 'Inventario', href: '/soluciones/inventario' },
       { label: 'Restaurantes', href: '/industrias/restaurantes' },
       { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'Migrar desde otro POS', href: '/guias/como-migrar-sistema-pos' },
       { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
     ],
     image: '/images/pos/pos0.jpeg',
@@ -700,6 +701,7 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Producto Asystec POS', href: '/asystec-pos' },
       { label: 'Opciones de implementación', href: '/asystec-pos#planes-pos' },
       { label: 'Cómo elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'Cómo migrar desde otro POS', href: '/guias/como-migrar-sistema-pos' },
       { label: 'POS local vs POS en la nube', href: '/guias/pos-local-vs-pos-en-la-nube' },
       { label: 'POS para minisúper', href: '/industrias/minisuper' },
       { label: 'POS para ferreterías', href: '/industrias/ferreterias' },
@@ -2578,6 +2580,166 @@ export const guidePages: LandingPageData[] = [
     finalCta: {
       title: '¿Quieres ordenar tu cartera con datos reales?',
       body: 'Trae una muestra de clientes, saldos, vencimientos, pagos y el reporte que hoy manejas. Asystec puede ayudarte a evaluar si conviene Cobros Pro, una integración o una plataforma ajustada al proceso.',
+      primary: contactCta,
+      secondary: whatsappCta,
+    },
+  },
+  {
+    ...guide(
+      'como-migrar-sistema-pos',
+      'Cómo migrar de sistema POS sin frenar el negocio',
+      'Guía para cambiar de sistema POS en Costa Rica: productos, clientes, inventario, saldos, facturación electrónica, pruebas y salida a producción.',
+      'Para migrar de sistema POS sin frenar el negocio, primero hay que identificar qué datos existen y cuáles realmente se necesitan; después se limpia una muestra, se valida el mapeo en el sistema nuevo, se comparan saldos e inventario y se coordina una fecha de corte con responsables, respaldo y plan de contingencia.',
+      [
+        'Inventario de datos actuales',
+        'Productos y códigos',
+        'Clientes y saldos',
+        'Existencias iniciales',
+        'Configuración fiscal',
+        'Pruebas y salida a producción',
+      ],
+      [
+        { label: 'Asystec POS', href: '/asystec-pos' },
+        { label: 'Sistema POS para comercios', href: '/soluciones/pos' },
+        { label: 'Inventario', href: '/soluciones/inventario' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    seoTitle: 'Cómo migrar de sistema POS en Costa Rica | Asystec',
+    intro:
+      'Esta guía ayuda a dueños y administradores de comercios en Costa Rica a preparar el cambio desde Excel, un POS anterior o controles separados hacia un sistema nuevo, con una ruta verificable para datos, operación, capacitación y continuidad de caja.',
+    highlights: [
+      'Definir qué se migra antes de prometer una importación completa.',
+      'Probar con una muestra real de productos, clientes, saldos e inventario.',
+      'Comparar resultados y documentar pendientes antes de la fecha de corte.',
+      'Preparar usuarios, respaldo y contingencia para la salida a producción.',
+    ],
+    modules: [
+      'Fuentes y formatos disponibles',
+      'Productos, códigos y precios',
+      'Clientes, créditos y saldos',
+      'Inventario y existencias iniciales',
+      'Datos fiscales y comprobantes',
+      'Usuarios, pruebas y fecha de corte',
+    ],
+    sections: [
+      {
+        title: 'Haz un inventario de datos y procesos',
+        body: 'Antes de exportar archivos conviene identificar qué información usa realmente caja, inventario, facturación y gerencia. El objetivo no es copiar todo por inercia, sino separar los datos operativos que deben quedar listos de los historiales que pueden conservarse como consulta o respaldo.',
+        items: [
+          'Productos, códigos, categorías, precios e impuestos',
+          'Clientes, contactos, créditos y saldos pendientes',
+          'Existencias por bodega o ubicación y fecha del conteo',
+          'Usuarios, permisos, comprobantes y reportes indispensables',
+        ],
+      },
+      {
+        title: 'Limpia y mapea una muestra real',
+        body: 'Cada sistema organiza columnas, identificadores y reglas de forma distinta. Una muestra pequeña permite detectar códigos duplicados, campos vacíos, impuestos inconsistentes o saldos sin origen antes de preparar el lote completo.',
+        items: [
+          'Elegir registros representativos, no solo los casos sencillos',
+          'Acordar qué campo del origen corresponde a cada campo del destino',
+          'Separar errores de datos de diferencias funcionales entre sistemas',
+          'Documentar transformaciones y decisiones para repetir el proceso',
+        ],
+      },
+      {
+        title: 'Prueba el flujo completo antes del cambio',
+        body: 'La validación no termina cuando el archivo carga. Hay que probar una venta, el movimiento de inventario, la facturación electrónica, el cierre y los reportes que usará el negocio, y comparar resultados con la fuente acordada.',
+        items: [
+          'Buscar y vender productos con los códigos que usará caja',
+          'Confirmar existencias, clientes, saldos y permisos de usuario',
+          'Probar comprobantes y configuración fiscal antes de operar',
+          'Revisar reportes y diferencias con responsables del negocio',
+        ],
+      },
+      {
+        title: 'Coordina la fecha de corte y la contingencia',
+        body: 'La salida a producción necesita una hora límite para dejar de actualizar el sistema anterior, cargar los datos finales y comenzar a registrar movimientos en el nuevo. El acceso anterior debe conservarse como respaldo hasta confirmar que la operación y los totales acordados son consistentes.',
+        items: [
+          'Definir responsables, horario de corte y movimientos pendientes',
+          'Respaldar archivos y dejar evidencia de los totales de referencia',
+          'Capacitar a caja y administración con escenarios cotidianos',
+          'Acordar soporte inicial y qué hacer si una validación falla',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Checklist para planificar la migración del POS',
+      body: 'Estas preguntas ayudan a convertir el cambio de sistema en un alcance verificable antes de cotizar, importar o fijar la fecha de salida a producción.',
+      headers: {
+        factor: 'Etapa',
+        question: 'Qué confirmar',
+        impact: 'Resultado esperado',
+      },
+      rows: [
+        {
+          factor: 'Alcance',
+          question: '¿Qué datos deben operar desde el primer día y qué historial solo necesita conservarse?',
+          impact: 'Evita inflar la migración y concentra las pruebas en la continuidad del negocio.',
+        },
+        {
+          factor: 'Calidad',
+          question: '¿Hay códigos duplicados, campos vacíos, saldos sin detalle o inventario sin fecha de corte?',
+          impact: 'Permite corregir la fuente antes de trasladar errores al sistema nuevo.',
+        },
+        {
+          factor: 'Prueba',
+          question: '¿Una muestra representativa completa ventas, inventario, facturación, cierres y reportes?',
+          impact: 'Confirma que datos y flujo funcionan juntos, no solo que el archivo fue aceptado.',
+        },
+        {
+          factor: 'Conciliación',
+          question: '¿Qué totales, saldos y existencias se compararán antes de aprobar el cambio?',
+          impact: 'Deja evidencia objetiva para aceptar la carga o corregir diferencias.',
+        },
+        {
+          factor: 'Salida',
+          question: '¿Quién ejecuta el corte, capacita usuarios, atiende incidentes y autoriza operar en el nuevo POS?',
+          impact: 'Reduce ambigüedad durante el momento más sensible de la implementación.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: '¿Qué datos conviene migrar a un sistema POS nuevo?',
+        answer:
+          'Depende de la operación, pero normalmente se revisan productos, códigos, categorías, precios, impuestos, clientes, saldos, existencias y usuarios. El historial completo debe evaluarse por separado según su utilidad, formato y costo de preparación.',
+      },
+      {
+        question: '¿Es necesario migrar todas las ventas y facturas históricas?',
+        answer:
+          'No siempre. Puede ser suficiente iniciar con catálogos, saldos y existencias, mientras el sistema anterior o un respaldo conserva el historial para consulta. La decisión debe considerar obligaciones de archivo, reportes necesarios y capacidad real de exportación e importación.',
+      },
+      {
+        question: '¿Cómo evitar diferencias de inventario al cambiar de POS?',
+        answer:
+          'Conviene acordar una fecha y hora de corte, detener o registrar por separado los movimientos durante la carga, comparar existencias con un conteo o reporte de referencia y corregir diferencias antes de comenzar a vender en el sistema nuevo.',
+      },
+      {
+        question: '¿Cuándo se puede dejar de usar el sistema anterior?',
+        answer:
+          'Después de validar datos, flujo de venta, facturación, inventario, cierres y reportes, y de confirmar que el equipo puede operar. El acceso anterior conviene conservarlo como respaldo durante el periodo acordado, sin duplicar movimientos entre ambos sistemas.',
+      },
+      {
+        question: '¿Asystec puede revisar la migración antes de contratar?',
+        answer:
+          'Sí. En una demo se puede revisar una muestra real de productos, clientes, saldos e inventario, además del flujo de caja y facturación. Con esa evidencia se define qué puede importarse, qué necesita preparación y qué queda fuera del alcance inicial.',
+      },
+    ],
+    related: [
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Sistema POS para comercios', href: '/soluciones/pos' },
+      { label: 'Cómo elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'Alternativas a Excel para inventario', href: '/guias/alternativas-excel-inventario' },
+      { label: 'Facturación electrónica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Inventario', href: '/soluciones/inventario' },
+      { label: 'Integraciones de software', href: '/soluciones/integraciones' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+    finalCta: {
+      title: '¿Estás evaluando cambiar de POS?',
+      body: 'Trae una muestra de productos, clientes, saldos e inventario y explica cómo vende y factura hoy tu negocio. Asystec puede ayudarte a convertir esa información en un alcance de migración y una demo verificable.',
       primary: contactCta,
       secondary: whatsappCta,
     },
