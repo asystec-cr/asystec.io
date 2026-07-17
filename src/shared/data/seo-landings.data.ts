@@ -368,6 +368,7 @@ export const portfolioPages: LandingPageData[] = [
     ],
     related: [
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Guía para organizar cobros', href: '/guias/como-organizar-cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'CRM', href: '/soluciones/crm' },
     ],
@@ -1250,6 +1251,7 @@ export const solutionPages: LandingPageData[] = [
     ],
     related: [
       { label: 'Cobros Pro', href: '/cobrosapp' },
+      { label: 'Cómo organizar cuentas por cobrar', href: '/guias/como-organizar-cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
       { label: 'CRM', href: '/soluciones/crm' },
@@ -2426,6 +2428,159 @@ export const guidePages: LandingPageData[] = [
       { label: 'Preguntas frecuentes', href: '/faqs' },
       { label: 'Coordinar demo', href: '/contact' },
     ],
+  },
+  {
+    ...guide(
+      'como-organizar-cuentas-por-cobrar',
+      'Cómo organizar las cuentas por cobrar de una pyme',
+      'Guía para organizar cuentas por cobrar en una pyme de Costa Rica: clientes, créditos, vencimientos, pagos, responsables, seguimiento y reportes.',
+      'Para organizar las cuentas por cobrar, una pyme debe registrar cada crédito con cliente, saldo, fecha de vencimiento, pagos, responsable y próxima acción. Después conviene separar cuentas al día y vencidas, documentar cada gestión y revisar un reporte periódico para decidir a quién contactar y qué saldo requiere atención.',
+      ['Clientes y créditos', 'Saldos y vencimientos', 'Pagos y abonos', 'Responsables', 'Seguimiento', 'Reportes'],
+      [
+        { label: 'Software de cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+        { label: 'Cobros Pro', href: '/cobrosapp' },
+        { label: 'Reportes para pymes', href: '/soluciones/reportes' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    seoTitle: 'Cómo organizar cuentas por cobrar en una pyme | Asystec',
+    intro:
+      'Esta guía ayuda a dueños, administradores y equipos de cobro en Costa Rica a pasar de hojas, mensajes y recordatorios dispersos a un proceso trazable que conecte clientes, saldos, pagos, seguimiento y decisiones de gerencia.',
+    highlights: [
+      'Definir qué información debe tener cada cuenta antes de iniciar el seguimiento.',
+      'Separar saldos al día, próximos a vencer y vencidos sin perder el historial.',
+      'Asignar responsables y próximas acciones para evitar gestiones duplicadas.',
+      'Preparar una demo con una muestra real de clientes, créditos, pagos y reportes.',
+    ],
+    modules: [
+      'Clientes y condiciones de crédito',
+      'Saldos y fechas de vencimiento',
+      'Pagos, abonos y movimientos',
+      'Responsables y próximas acciones',
+      'Estados de cuenta',
+      'Reportes de cartera',
+    ],
+    sections: [
+      {
+        title: 'Empieza con un registro único por cuenta',
+        body: 'Cada crédito debe poder leerse sin reconstruir la historia desde facturas, chats y hojas distintas. El punto de partida es una ficha que conecte al cliente con el saldo, los vencimientos, los pagos y el responsable del seguimiento.',
+        items: [
+          'Cliente, contacto y documento que origina el saldo',
+          'Monto original, saldo pendiente y moneda cuando aplique',
+          'Fecha de emisión, condición de crédito y vencimiento',
+          'Pagos, abonos, ajustes y notas con fecha',
+        ],
+      },
+      {
+        title: 'Ordena la cartera por estado y prioridad',
+        body: 'Una lista total de clientes pendientes no indica qué debe atenderse primero. Conviene separar cuentas al día, próximas a vencer y vencidas, y añadir contexto comercial antes de decidir la siguiente gestión.',
+        items: [
+          'Cuentas al día que solo requieren monitoreo',
+          'Saldos próximos a vencer que necesitan recordatorio',
+          'Cuentas vencidas que requieren seguimiento y responsable',
+          'Casos con diferencias, promesas de pago o revisión interna',
+        ],
+      },
+      {
+        title: 'Documenta cada gestión de cobro',
+        body: 'El seguimiento pierde continuidad cuando depende de la memoria de una persona. Cada contacto debe dejar fecha, canal, resultado, compromiso y próxima acción para que ventas, administración y cobros trabajen con el mismo contexto.',
+        items: [
+          'Responsable y fecha de la gestión',
+          'Canal utilizado y respuesta del cliente',
+          'Compromiso o fecha acordada cuando exista',
+          'Próxima acción y persona que debe ejecutarla',
+        ],
+      },
+      {
+        title: 'Convierte el control en decisiones',
+        body: 'El reporte útil no es solo una suma de saldos. Debe permitir revisar qué está vencido, qué pagos se registraron, qué cuentas no tienen seguimiento y dónde necesita actuar el equipo antes del próximo corte.',
+        items: [
+          'Saldos por estado, cliente, responsable o periodo',
+          'Pagos y abonos registrados durante el corte',
+          'Cuentas vencidas sin próxima acción definida',
+          'Estados de cuenta e historial para responder al cliente',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Checklist para ordenar el proceso de cuentas por cobrar',
+      body: 'Estas preguntas ayudan a detectar qué información falta y qué debe probarse antes de elegir una hoja mejorada, Cobros Pro, una integración o una plataforma a medida.',
+      headers: {
+        factor: 'Etapa',
+        question: 'Qué revisar',
+        impact: 'Qué debe quedar claro',
+      },
+      rows: [
+        {
+          factor: 'Origen del saldo',
+          question: '¿Qué factura, crédito, venta o documento creó la cuenta por cobrar?',
+          impact: 'El equipo puede explicar el saldo y rastrear su origen sin buscar en varios sistemas.',
+        },
+        {
+          factor: 'Vencimiento',
+          question: '¿Cuál es la condición de crédito y qué fecha determina que la cuenta está vencida?',
+          impact: 'Permite ordenar la cartera por estado y preparar el seguimiento correcto.',
+        },
+        {
+          factor: 'Pagos y abonos',
+          question: '¿Cómo se registran pagos parciales, cancelaciones, ajustes o diferencias?',
+          impact: 'Mantiene un saldo comprensible para el negocio y para el cliente.',
+        },
+        {
+          factor: 'Seguimiento',
+          question: '¿Quién contactó al cliente, qué respondió y cuál es la próxima acción?',
+          impact: 'Evita contactos duplicados, cuentas olvidadas y dependencia de la memoria individual.',
+        },
+        {
+          factor: 'Reporte',
+          question: '¿Qué necesita revisar gerencia cada semana o mes para decidir prioridades?',
+          impact: 'Conecta saldos, vencimientos, pagos y responsables con una decisión operativa.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: '¿Cuál es la diferencia entre cuentas por cobrar y cobranza?',
+        answer:
+          'Las cuentas por cobrar son los saldos que los clientes mantienen pendientes. La cobranza es el proceso de revisar esos saldos, contactar, registrar respuestas, aplicar pagos y definir la siguiente acción hasta cerrar la cuenta.',
+      },
+      {
+        question: '¿Qué datos debe tener un control de cuentas por cobrar?',
+        answer:
+          'Como mínimo debe conectar cliente, documento de origen, monto, saldo, fecha de vencimiento, pagos, responsable, historial de gestiones y próxima acción. Los campos adicionales dependen del tipo de crédito y del proceso del negocio.',
+      },
+      {
+        question: '¿Cuándo deja de ser suficiente Excel para controlar cobros?',
+        answer:
+          'Cuando varias personas actualizan la cartera, existen pagos parciales, se pierden gestiones, los estados de cuenta se arman a mano o gerencia no puede confiar rápidamente en saldos y vencimientos.',
+      },
+      {
+        question: '¿Qué debe mostrar un reporte de cuentas por cobrar?',
+        answer:
+          'Debe permitir revisar saldos, vencimientos, pagos, cuentas sin seguimiento y responsables. También conviene poder consultar el detalle por cliente y el historial que explica cada saldo.',
+      },
+      {
+        question: '¿Cómo puede ayudar Cobros Pro?',
+        answer:
+          'Cobros Pro puede evaluarse cuando la pyme necesita administrar clientes, créditos, pagos, saldos, estados de cuenta y reportes desde una plataforma web. La demo debe confirmar datos, usuarios, integraciones y flujo de seguimiento requeridos.',
+      },
+    ],
+    related: [
+      { label: 'Software de cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
+      { label: 'Reportes para pymes', href: '/soluciones/reportes' },
+      { label: 'CRM y seguimiento de clientes', href: '/soluciones/crm' },
+      { label: 'Facturación electrónica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Integraciones de software', href: '/soluciones/integraciones' },
+      { label: 'Software para distribuidores', href: '/industrias/distribuidores' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+    finalCta: {
+      title: '¿Quieres ordenar tu cartera con datos reales?',
+      body: 'Trae una muestra de clientes, saldos, vencimientos, pagos y el reporte que hoy manejas. Asystec puede ayudarte a evaluar si conviene Cobros Pro, una integración o una plataforma ajustada al proceso.',
+      primary: contactCta,
+      secondary: whatsappCta,
+    },
   },
   {
     ...guide(
