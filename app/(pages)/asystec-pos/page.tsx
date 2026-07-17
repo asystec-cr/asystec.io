@@ -73,6 +73,11 @@ const decisionGuides = [
     description: 'Factores que conviene revisar antes de solicitar una cotizacion formal.',
     href: '/guias/cuanto-cuesta-un-pos-costa-rica',
   },
+  {
+    title: 'Que sistema necesita un negocio nuevo',
+    description: 'Prepara ventas, facturacion, inventario, caja, usuarios y reportes antes de abrir un local.',
+    href: '/guias/que-sistema-necesita-negocio',
+  },
 ];
 
 const faqs = [
@@ -288,7 +293,7 @@ const Page = () => {
             Si estas comparando proveedores, lleva estas preguntas a la demo para revisar continuidad, facturacion,
             inventario, soporte y crecimiento antes de decidir.
           </p>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
+          <div className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {decisionGuides.map((guide) => (
               <a
                 key={guide.href}
