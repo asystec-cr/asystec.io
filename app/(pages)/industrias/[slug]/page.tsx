@@ -3,6 +3,7 @@ import CommercialLanding from '~/components/seo/CommercialLanding';
 import { restaurantesIndustryPage } from '~/shared/data/industries/restaurantes.data';
 import { retailIndustryPage } from '~/shared/data/industries/retail.data';
 import { salonesBellezaIndustryPage } from '~/shared/data/industries/salones-belleza.data';
+import { serviciosProfesionalesIndustryPage } from '~/shared/data/industries/servicios-profesionales.data';
 import { getIndustryPage, industryPages } from '~/shared/data/seo-landings.data';
 import { buildPageMetadata } from '~/utils/seo';
 
@@ -12,7 +13,12 @@ type PageProps = {
   };
 };
 
-const dedicatedIndustryPages = [restaurantesIndustryPage, retailIndustryPage, salonesBellezaIndustryPage];
+const dedicatedIndustryPages = [
+  restaurantesIndustryPage,
+  retailIndustryPage,
+  salonesBellezaIndustryPage,
+  serviciosProfesionalesIndustryPage,
+];
 
 const getPage = (slug: string) => dedicatedIndustryPages.find((page) => page.slug === slug) ?? getIndustryPage(slug);
 
