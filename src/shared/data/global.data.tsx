@@ -174,6 +174,10 @@ export const headerData: HeaderProps = {
           href: '/guias/alternativas-excel-inventario',
         },
         {
+          label: 'Organizar cuentas por cobrar',
+          href: '/guias/como-organizar-cuentas-por-cobrar',
+        },
+        {
           label: 'POS local vs nube',
           href: '/guias/pos-local-vs-pos-en-la-nube',
         },
