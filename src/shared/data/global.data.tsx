@@ -174,6 +174,10 @@ export const headerData: HeaderProps = {
           href: '/guias/como-migrar-sistema-pos',
         },
         {
+          label: 'Cambiar sistema de facturacion',
+          href: '/guias/como-cambiar-sistema-facturacion-electronica',
+        },
+        {
           label: 'Alternativas a Excel',
           href: '/guias/alternativas-excel-inventario',
         },
