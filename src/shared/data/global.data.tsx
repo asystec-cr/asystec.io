@@ -170,6 +170,10 @@ export const headerData: HeaderProps = {
           href: '/guias/como-elegir-sistema-pos',
         },
         {
+          label: 'Migrar de sistema POS',
+          href: '/guias/como-migrar-sistema-pos',
+        },
+        {
           label: 'Alternativas a Excel',
           href: '/guias/alternativas-excel-inventario',
         },
