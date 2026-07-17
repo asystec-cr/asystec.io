@@ -1,30 +1,30 @@
 import { ComparisonProps, FAQsProps, PricingProps } from '~/shared/types';
 import { HeroProps } from '~/shared/types';
 
-// Hero data on Pricing page *******************
+// Hero data on Service Options page *******************
 export const heroPricing: HeroProps = {
-  title: 'Plans and Prices',
+  title: 'Plans and Scope',
   subtitle: (
     <>
       <span className="hidden md:inline">
-        {`Here, you'll find a clear breakdown of our service plans and their respective features. Whether you're a small
+        {`Here, you'll find a clear breakdown of our service options and their respective features. Whether you're a small
         business or a large enterprise, we have options tailored to your needs.`}
       </span>{' '}
       You can choose the plan that best suits your goals!
     </>
   ),
-  tagline: 'Demo Pricing Page',
+  tagline: 'Demo Service Options Page',
 };
 
-// Pricing data on Pricing page *******************
+// Service options data on Service Options page *******************
 export const pricingPricing: PricingProps = {
   id: 'pricing-on-pricing',
   hasBackground: true,
   header: {
-    title: 'Our plans',
+    title: 'Our service options',
     subtitle: (
       <>
-        Discover our flexible pricing options designed to fit your needs perfectly.{' '}
+        Discover flexible service options designed to fit your needs perfectly.{' '}
         <span className="hidden md:inline">{`No matter the size of your project, we have the right plan for you.`}</span>
       </>
     ),
@@ -33,8 +33,6 @@ export const pricingPricing: PricingProps = {
     {
       title: 'basic',
       subtitle: 'Optimal choice for personal use',
-      price: 29,
-      period: 'per month',
       items: [
         {
           description: 'Access to a selection of professionally designed website templates.',
@@ -59,8 +57,6 @@ export const pricingPricing: PricingProps = {
     {
       title: 'standard',
       subtitle: 'Optimal choice for small teams',
-      price: 69,
-      period: 'per month',
       items: [
         {
           description: 'A larger variety of premium website templates to choose from.',
@@ -86,8 +82,6 @@ export const pricingPricing: PricingProps = {
     {
       title: 'premium',
       subtitle: 'Optimal choice for companies',
-      price: 199,
-      period: 'per month',
       items: [
         {
           description: 'Access to exclusive and customizable premium website templates.',
@@ -112,19 +106,19 @@ export const pricingPricing: PricingProps = {
   ],
 };
 
-// Comparison pricing data on Pricing page *******************
+// Comparison data on Service Options page *******************
 export const comparisonPricing: ComparisonProps = {
   id: 'comparison-on-pricing',
   hasBackground: false,
   header: {
-    title: "What's available for each plan?",
+    title: "What's available for each option?",
     subtitle:
       'Morbi ut imperdiet ex. Nullam sed tincidunt purus. Donec finibus dui at odio dictum facilisis. Maecenas ut orci quis nisi congue maximus. Sed quis augue sapien.',
     // tagline: 'Comparison',
   },
   columns: [
     {
-      title: 'compare plans',
+      title: 'compare options',
       items: [
         {
           title: 'In vitae finibus',
@@ -156,7 +150,7 @@ export const comparisonPricing: ComparisonProps = {
           title: 'Limited',
         },
         {
-          title: '$29',
+          title: 'Consultative scope',
         },
         {
           title: false,
@@ -183,7 +177,7 @@ export const comparisonPricing: ComparisonProps = {
           title: 'Unlimited',
         },
         {
-          title: '$69',
+          title: 'Consultative scope',
         },
         {
           title: false,
@@ -210,7 +204,7 @@ export const comparisonPricing: ComparisonProps = {
           title: 'Unlimited',
         },
         {
-          title: '$199',
+          title: 'Consultative scope',
         },
         {
           title: true,
@@ -230,12 +224,12 @@ export const comparisonPricing: ComparisonProps = {
   ],
 };
 
-// FAQS3 data on Pricing page *******************
+// FAQS3 data on Service Options page *******************
 export const faqs3Pricing: FAQsProps = {
   id: 'faqsThree-on-pricing',
   hasBackground: true,
   header: {
-    title: 'Pricing FAQs',
+    title: 'Service FAQs',
     subtitle: 'Do you have other questions?',
     // tagline: 'FAQS',
   },

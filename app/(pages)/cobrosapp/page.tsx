@@ -5,7 +5,7 @@ import { buildPageMetadata } from '~/utils/seo';
 const page = getPortfolioPage('cobrosapp');
 
 if (!page) {
-  throw new Error('CobrosApp landing data is missing.');
+  throw new Error('Cobros Pro landing data is missing.');
 }
 
 export const metadata = buildPageMetadata(page);

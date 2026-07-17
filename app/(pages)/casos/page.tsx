@@ -39,11 +39,11 @@ const cases: PublicCase[] = [
     ctaLabel: 'Ver Asystec POS',
   },
   {
-    name: 'FacturacionApp',
+    name: 'Factura Pro',
     category: 'Facturacion electronica',
     href: '/facturacionapp',
     image: '/images/portfolio/facturacionapp.png',
-    alt: 'Pantalla publica de FacturacionApp',
+    alt: 'Pantalla publica de Factura Pro',
     summary:
       'Producto Asystec para emitir y administrar comprobantes electronicos, clientes, pagos, cotizaciones y reportes en Costa Rica.',
     proofPoints: [
@@ -52,14 +52,14 @@ const cases: PublicCase[] = [
       'Ruta de evaluacion para negocios que no necesitan caja POS completa.',
     ],
     services: ['Facturacion', 'Clientes', 'Reportes'],
-    ctaLabel: 'Ver FacturacionApp',
+    ctaLabel: 'Ver Factura Pro',
   },
   {
-    name: 'CobrosApp',
+    name: 'Cobros Pro',
     category: 'Creditos y cobranza',
     href: '/cobrosapp',
     image: '/images/portfolio/cobrosapp.png',
-    alt: 'Pantalla publica de CobrosApp',
+    alt: 'Pantalla publica de Cobros Pro',
     summary:
       'Plataforma para administrar clientes, creditos, pagos, estados de cuenta y reportes de cobranza desde un sistema web.',
     proofPoints: [
@@ -68,7 +68,7 @@ const cases: PublicCase[] = [
       'Conecta con necesidades de cuentas por cobrar, seguimiento y control financiero.',
     ],
     services: ['Cobros', 'Creditos', 'Estados de cuenta'],
-    ctaLabel: 'Ver CobrosApp',
+    ctaLabel: 'Ver Cobros Pro',
   },
   {
     name: 'TallerApp',
@@ -153,7 +153,7 @@ const faqs: Faq[] = [
   {
     question: 'Asystec desarrolla software a medida o solo productos propios?',
     answer:
-      'Asystec combina productos propios, como Asystec POS, FacturacionApp, CobrosApp y TallerApp, con desarrollo de plataformas web y portales operativos a la medida.',
+      'Asystec combina productos propios, como Asystec POS, Factura Pro, Cobros Pro y TallerApp, con desarrollo de plataformas web y portales operativos a la medida.',
   },
 ];
 
@@ -448,12 +448,12 @@ const Page = () => (
                   },
                   {
                     need: 'Comprobantes, clientes, pagos y cotizaciones',
-                    reference: 'FacturacionApp',
+                    reference: 'Factura Pro',
                     question: 'El foco es facturar y reportar, o tambien se necesita una caja POS completa?',
                   },
                   {
                     need: 'Credito, pagos, saldos y estados de cuenta',
-                    reference: 'CobrosApp',
+                    reference: 'Cobros Pro',
                     question: 'Como se registran pagos, saldos, comprobantes y seguimiento por cliente hoy?',
                   },
                   {

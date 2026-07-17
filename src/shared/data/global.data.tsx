@@ -49,11 +49,11 @@ export const headerData: HeaderProps = {
           href: '/plataformas',
         },
         {
-          label: 'CobrosApp',
+          label: 'Cobros Pro',
           href: '/cobrosapp',
         },
         {
-          label: 'FacturacionApp',
+          label: 'Factura Pro',
           href: '/facturacionapp',
         },
         {
@@ -204,18 +204,18 @@ export const headerData: HeaderProps = {
       icon: IconChevronDown,
       links: [
         {
-          label: 'FacturacionApp',
+          label: 'Asystec POS',
+          href: 'https://asystec.gitbook.io/pos',
+          target: 'blank',
+        },
+        {
+          label: 'Factura Pro',
           href: 'https://docs.facturacionapp.com',
           target: 'blank',
         },
         {
-          label: 'CobrosApp',
+          label: 'Cobros Pro',
           href: 'https://docs.cobrosapp.com',
-          target: 'blank',
-        },
-        {
-          label: 'JVentas',
-          href: 'https://docs.jventas.asystec.io/',
           target: 'blank',
         },
         {
@@ -247,11 +247,6 @@ export const headerData: HeaderProps = {
         {
           label: 'Consultas',
           href: 'https://consultas.asystec.io/',
-          target: 'blank',
-        },
-        {
-          label: 'Plugin JVentas',
-          href: 'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/plugin_jventas/latest/PluginJVentas-Setup.exe',
           target: 'blank',
         },
         {
@@ -322,10 +317,6 @@ export const footerData: FooterProps = {
         {
           label: 'Customer stories',
           href: '/',
-        },
-        {
-          label: 'Pricing',
-          href: '/pricing',
         },
         {
           label: 'Resources',
@@ -451,8 +442,8 @@ export const footerData2: FooterProps = {
       links: [
         { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
         { label: 'Asystec POS', href: '/asystec-pos' },
-        { label: 'CobrosApp', href: '/cobrosapp' },
-        { label: 'FacturacionApp', href: '/facturacionapp' },
+        { label: 'Cobros Pro', href: '/cobrosapp' },
+        { label: 'Factura Pro', href: '/facturacionapp' },
       ],
     },
     {

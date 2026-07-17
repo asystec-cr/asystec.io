@@ -80,11 +80,11 @@ const portfolioItems: PortfolioItem[] = [
     tags: ['SaaS', 'Talleres', 'Órdenes', 'Laravel'],
   },
   {
-    name: 'FacturacionApp',
+    name: 'Factura Pro',
     category: 'Facturación electrónica',
     href: 'https://facturacionapp.com/',
     image: '/images/portfolio/facturacionapp.png',
-    alt: 'FacturacionApp',
+    alt: 'Factura Pro',
     summary: 'Sitio y producto en línea para emitir comprobantes electrónicos de forma rápida y segura en Costa Rica.',
     highlights: [
       'Beneficios orientados a reducción de costos, seguridad, calidad de servicio y ahorro de tiempo.',
@@ -94,11 +94,11 @@ const portfolioItems: PortfolioItem[] = [
     tags: ['Facturación', 'Hacienda', 'Reportes', 'SaaS'],
   },
   {
-    name: 'CobrosApp',
+    name: 'Cobros Pro',
     category: 'Créditos y cobros',
     href: 'https://cobrosapp.com/',
     image: '/images/portfolio/cobrosapp.png',
-    alt: 'CobrosApp',
+    alt: 'Cobros Pro',
     summary:
       'Plataforma para administrar clientes, créditos, pagos, reportes de ingresos, gastos, utilidad neta y capital invertido.',
     highlights: [
@@ -115,22 +115,22 @@ const portfolioItems: PortfolioItem[] = [
     image: '/images/portfolio/jas-asystec-login.png',
     alt: 'JAS Admin',
     summary:
-      'Portal web de administración para JVentas y JRestaurante, con acceso para usuarios registrados y registro de cuenta.',
+      'Portal web de administración para JRestaurante, con acceso para usuarios registrados y registro de cuenta.',
     highlights: [
       'Inicio de sesión por correo y contraseña para continuar al sistema.',
       'Flujo visible de recuperación de contraseña desde la pantalla de acceso.',
       'Registro público para nuevas cuentas desde el portal JAdmin.',
     ],
-    tags: ['JAdmin', 'JVentas', 'JRestaurante', 'Login'],
+    tags: ['JAdmin', 'JRestaurante', 'Login'],
   },
   {
-    name: 'Portal FacturacionApp',
+    name: 'Portal Factura Pro',
     category: 'Acceso de usuarios',
     href: 'https://app.asystec.io/login',
     image: '/images/portfolio/app-asystec-login.png',
-    alt: 'Portal FacturacionApp',
+    alt: 'Portal Factura Pro',
     summary:
-      'Pantalla de acceso para usuarios registrados de FacturacionApp, con registro de cuenta, recuperación de contraseña y enlaces legales.',
+      'Pantalla de acceso para usuarios registrados de Factura Pro, con registro de cuenta, recuperación de contraseña y enlaces legales.',
     highlights: [
       'Autenticación por usuario y contraseña para continuar al sistema.',
       'Registro público para nuevas cuentas desde el mismo portal.',
@@ -139,13 +139,13 @@ const portfolioItems: PortfolioItem[] = [
     tags: ['Login', 'Usuarios', 'Legal', 'SaaS'],
   },
   {
-    name: 'Portal CobrosApp',
+    name: 'Portal Cobros Pro',
     category: 'Acceso de usuarios',
     href: 'https://cobros.asystec.io/login',
     image: '/images/portfolio/cobros-asystec-login.png',
-    alt: 'Portal CobrosApp',
+    alt: 'Portal Cobros Pro',
     summary:
-      'Acceso a CobrosApp para equipos que gestionan crédito y cobranza, con registro, recuperación de contraseña e ingreso con Google.',
+      'Acceso a Cobros Pro para equipos que gestionan crédito y cobranza, con registro, recuperación de contraseña e ingreso con Google.',
     highlights: [
       'Ingreso con correo y contraseña para cuentas registradas.',
       'Opción de crear cuenta desde el portal de acceso.',

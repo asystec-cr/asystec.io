@@ -382,12 +382,12 @@ export const faqs2Home: FAQsProps = {
   ],
 };
 
-// Pricing data on Home page *******************
+// Service options data on Home page *******************
 export const pricingHome: PricingProps = {
   id: 'pricing-on-home',
   hasBackground: true,
   header: {
-    title: 'Prices for each plan',
+    title: 'Service options for each need',
     subtitle:
       'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
     // tagline: 'Pricing',
@@ -395,8 +395,6 @@ export const pricingHome: PricingProps = {
   prices: [
     {
       title: 'basic',
-      price: 29,
-      period: 'per month',
       items: [
         {
           description: 'Etiam in libero, et volutpat',
@@ -420,8 +418,6 @@ export const pricingHome: PricingProps = {
     },
     {
       title: 'standard',
-      price: 69,
-      period: 'per month',
       items: [
         {
           description: 'Proin vel laoreet',
@@ -446,8 +442,6 @@ export const pricingHome: PricingProps = {
     },
     {
       title: 'premium',
-      price: 199,
-      period: 'per month',
       items: [
         {
           description: 'Curabitur suscipit risus',

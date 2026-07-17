@@ -23,7 +23,24 @@ export type LandingDecisionRow = {
 export type LandingDecisionTable = {
   title: string;
   body: string;
+  headers?: {
+    factor: string;
+    question: string;
+    impact: string;
+  };
   rows: LandingDecisionRow[];
+};
+
+export type LandingHeroImage = {
+  src: string;
+  alt: string;
+};
+
+export type LandingFinalCta = {
+  title: string;
+  body: string;
+  primary: LandingLink;
+  secondary?: LandingLink;
 };
 
 export type LandingPageData = {
@@ -47,6 +64,15 @@ export type LandingPageData = {
   faqs: FaqItem[];
   related: LandingLink[];
   image?: string;
+  heroImages?: LandingHeroImage[];
+  heroNote?: string;
+  showTrustpilotStrip?: boolean;
+  modulesTitle?: string;
+  modulesIntro?: string;
+  highlightsTitle?: string;
+  relatedTitle?: string;
+  relatedIntro?: string;
+  finalCta?: LandingFinalCta;
   externalUrl?: string;
   applicationCategory?: string;
   operatingSystem?: string;
@@ -303,17 +329,17 @@ export const portfolioPages: LandingPageData[] = [
     path: '/cobrosapp',
     kind: 'product',
     schemaType: 'SoftwareApplication',
-    title: 'CobrosApp',
-    seoTitle: 'CobrosApp | Software para credito y cobranza',
+    title: 'Cobros Pro',
+    seoTitle: 'Cobros Pro | Software para credito y cobranza',
     description:
-      'CobrosApp ayuda a administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores para operaciones de cobranza.',
+      'Cobros Pro ayuda a administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores para operaciones de cobranza.',
     eyebrow: 'Producto Asystec',
     heroTitle: 'Software para ordenar creditos, pagos y cuentas por cobrar',
     answer:
-      'CobrosApp es una plataforma para equipos que necesitan controlar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza desde un sistema web.',
+      'Cobros Pro es una plataforma para equipos que necesitan controlar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza desde un sistema web.',
     intro:
       'La pagina publica explica el producto para que clientes y asistentes de IA puedan asociarlo con cobranza, credito, seguimiento y reportes financieros.',
-    primaryCta: { label: 'Abrir CobrosApp', href: 'https://cobros.asystec.io/login' },
+    primaryCta: { label: 'Abrir Cobros Pro', href: 'https://cobros.asystec.io/login' },
     secondaryCta: contactCta,
     highlights: ['Clientes y creditos', 'Pagos y estados de cuenta', 'Reportes financieros', 'Acceso web'],
     modules: ['Clientes', 'Creditos', 'Pagos', 'Estados de cuenta', 'Reportes', 'Usuarios'],
@@ -331,12 +357,12 @@ export const portfolioPages: LandingPageData[] = [
     ],
     faqs: [
       {
-        question: 'CobrosApp reemplaza hojas de Excel?',
+        question: 'Cobros Pro reemplaza hojas de Excel?',
         answer:
           'Puede reemplazar controles manuales de credito y cobranza cuando se necesita trazabilidad, reportes y estados por cliente.',
       },
       {
-        question: 'CobrosApp es parte del portafolio Asystec?',
+        question: 'Cobros Pro es parte del portafolio Asystec?',
         answer: 'Si. Es una de las plataformas publicas vinculadas al portafolio de soluciones de Asystec.',
       },
     ],
@@ -354,17 +380,17 @@ export const portfolioPages: LandingPageData[] = [
     path: '/facturacionapp',
     kind: 'product',
     schemaType: 'SoftwareApplication',
-    title: 'FacturacionApp',
-    seoTitle: 'FacturacionApp | Facturacion electronica en Costa Rica',
+    title: 'Factura Pro',
+    seoTitle: 'Factura Pro | Facturacion electronica en Costa Rica',
     description:
-      'FacturacionApp es una solucion para emitir y administrar comprobantes electronicos, clientes, pagos, cotizaciones y reportes en Costa Rica.',
+      'Factura Pro es una solucion para emitir y administrar comprobantes electronicos, clientes, pagos, cotizaciones y reportes en Costa Rica.',
     eyebrow: 'Producto Asystec',
     heroTitle: 'Facturacion electronica y gestion comercial para pymes',
     answer:
-      'FacturacionApp ayuda a negocios en Costa Rica a emitir comprobantes electronicos, administrar clientes, cotizaciones, pagos y reportes desde una plataforma web.',
+      'Factura Pro ayuda a negocios en Costa Rica a emitir comprobantes electronicos, administrar clientes, cotizaciones, pagos y reportes desde una plataforma web.',
     intro:
       'La pagina posiciona el producto dentro del portafolio Asystec y lo conecta con preguntas frecuentes de facturacion electronica.',
-    primaryCta: { label: 'Abrir FacturacionApp', href: 'https://app.asystec.io/login' },
+    primaryCta: { label: 'Abrir Factura Pro', href: 'https://app.asystec.io/login' },
     secondaryCta: contactCta,
     highlights: ['Comprobantes electronicos', 'Clientes', 'Cotizaciones', 'Pagos y reportes'],
     modules: ['Facturas', 'Clientes', 'Productos', 'Pagos', 'Cotizaciones', 'Reportes'],
@@ -382,11 +408,11 @@ export const portfolioPages: LandingPageData[] = [
     ],
     faqs: [
       {
-        question: 'FacturacionApp es para Costa Rica?',
+        question: 'Factura Pro es para Costa Rica?',
         answer: 'Si. La pagina esta orientada a empresas y pymes que necesitan facturacion electronica en Costa Rica.',
       },
       {
-        question: 'Cuando elegir FacturacionApp frente a un POS?',
+        question: 'Cuando elegir Factura Pro frente a un POS?',
         answer:
           'Puede convenir cuando el foco es facturar, administrar clientes y reportes, sin requerir una caja local de punto de venta.',
       },
@@ -512,159 +538,181 @@ export const solutionPages: LandingPageData[] = [
     title: 'Sistema POS para comercios en Costa Rica',
     seoTitle: 'Sistema POS para comercios en Costa Rica | Asystec',
     description:
-      'Sistema POS para vender, facturar, controlar inventario, cerrar caja, administrar usuarios y revisar reportes en comercios de Costa Rica.',
-    eyebrow: 'Solucion Asystec POS',
-    heroTitle: 'Sistema POS para vender, facturar y controlar inventario sin depender de hojas separadas',
+      'Asystec POS conecta ventas, facturación electrónica, inventario, cierres y reportes para comercios y pymes en Costa Rica.',
+    eyebrow: 'Asystec POS para comercios en Costa Rica',
+    heroTitle: 'Vende sin detener la caja, factura en regla y controla tu inventario',
     answer:
-      'Un sistema POS para comercios en Costa Rica debe conectar caja, ventas, inventario, facturacion electronica, cierres, usuarios y reportes en un mismo flujo para que el negocio opere con menos controles manuales.',
+      'Asystec POS es un sistema de punto de venta de escritorio que conecta caja, ventas, inventario, facturación electrónica, cierres y reportes para mantener la operación diaria bajo control.',
     intro:
-      'Asystec ayuda a pymes, tiendas, minisuper, restaurantes, ferreterias y servicios a evaluar Asystec POS con su flujo real de caja, productos, comprobantes, inventario, usuarios y reportes antes de cotizar o implementar.',
-    primaryCta: contactCta,
-    secondaryCta: whatsappCta,
+      'Conecta ventas, facturación electrónica, inventario, cierres y reportes en una aplicación de escritorio con operación local y acompañamiento en Costa Rica.',
+    primaryCta: {
+      label: 'Agendar demo por WhatsApp',
+      href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20Asystec%20POS%20para%20mi%20negocio.',
+    },
+    secondaryCta: { label: 'Ver funciones', href: '/asystec-pos' },
+    heroNote: 'Agenda una demo para revisar alcance, implementación y acompañamiento según tu operación.',
+    showTrustpilotStrip: true,
+    heroImages: [
+      { src: '/images/pos/pos0.jpeg', alt: 'Vista general de Asystec POS para comercios' },
+      { src: '/images/pos/pos1.jpeg', alt: 'Pantalla operativa de Asystec POS' },
+      { src: '/images/pos/pos2.jpeg', alt: 'Módulo de ventas de Asystec POS' },
+    ],
+    modulesTitle: 'Todo lo esencial, conectado',
+    modulesIntro:
+      'La venta actualiza la información que necesitas para revisar caja, productos, inventario y reportes sin depender de archivos separados.',
+    highlightsTitle: 'Lo que Asystec POS aporta a tu operación',
     highlights: [
-      'Caja, ventas e inventario conectados en la operacion diaria.',
-      'Facturacion electronica para Costa Rica dentro del flujo de venta.',
-      'Usuarios, roles, cierres y reportes para administrar con mas control.',
-      'Demo orientada al caso real del negocio, no a una lista generica de pantallas.',
+      'Operación local para mantener la caja trabajando aunque falle internet.',
+      'Facturación electrónica para Costa Rica dentro del flujo de venta.',
+      'Inventario, cierres, usuarios y reportes conectados a la operación diaria.',
+      'Acompañamiento local para revisar el alcance antes de implementar.',
     ],
     modules: [
       'Caja y ventas',
-      'Productos, codigos e inventario',
-      'Facturacion electronica',
+      'Productos, códigos e inventario',
+      'Facturación electrónica',
       'Cierres de caja',
-      'Clientes, creditos y apartados',
+      'Clientes, créditos y apartados',
       'Compras y proveedores',
       'Reportes operativos',
       'Usuarios, roles y permisos',
     ],
     sections: [
       {
-        title: 'Beneficios para la operacion',
-        body: 'La meta no es tener otra pantalla, sino reducir controles paralelos entre caja, inventario, facturacion y administracion. La demo debe probar como el equipo vende, cobra, emite comprobantes y revisa la informacion al cierre.',
+        title: 'Vende y cierra caja con menos pasos',
+        body: 'Registra productos, clientes, pagos y comprobantes en un mismo flujo. Al cierre, la información queda disponible para revisar movimientos, responsables y resultados de la jornada.',
         items: [
-          'Menos doble digitacion entre ventas, comprobantes e inventario',
-          'Mas trazabilidad sobre usuarios, pagos, cierres y ajustes',
-          'Informacion de productos y ventas disponible para revisar la operacion',
-          'Acompanamiento local para configurar el flujo antes de salir a produccion',
+          'Ventas, pagos y comprobantes en una sola operación',
+          'Sesiones, ingresos, retiros y cierres de caja',
+          'Usuarios, roles y trazabilidad de movimientos',
+          'Reportes para revisar la operación diaria',
         ],
       },
       {
-        title: 'Problemas que resuelve',
-        body: 'Un negocio empieza a necesitar POS cuando caja, hojas de Excel, comprobantes, productos y reportes dejan de contar la misma historia. Esa desalineacion afecta cierres, compras, atencion y decisiones de gerencia.',
+        title: 'Adáptalo al giro de tu negocio',
+        body: 'La evaluación cambia según la cantidad de productos, la rotación, los comprobantes, las cajas y los reportes que necesita cada comercio.',
         items: [
-          'Inventario que no coincide con lo vendido',
-          'Cierres de caja lentos o dificiles de revisar',
-          'Facturacion separada del punto de venta',
-          'Usuarios sin permisos claros o poca trazabilidad',
+          'Minisúper, pulperías y tiendas de conveniencia',
+          'Ferreterías y comercios con catálogos amplios',
+          'Restaurantes, sodas y negocios con caja rápida',
+          'Retail, talleres y servicios con inventario o cobros',
         ],
       },
       {
-        title: 'Caracteristicas reales del sistema',
-        body: 'Asystec POS es una aplicacion de escritorio con base local y modulos para venta, productos, caja, clientes, compras, reportes, configuracion fiscal, usuarios, roles y respaldos. Las funciones externas, como envio fiscal o tracking comercial, se validan segun la configuracion del negocio.',
+        title: 'Una demo basada en tu operación',
+        body: 'La demostración parte de cómo vendes hoy para comprobar el flujo que realmente usaría tu equipo y aclarar pendientes antes de elegir.',
         items: [
-          'Venta con productos, cliente, medios de pago, descuentos y notas',
-          'Catalogo con codigos, departamentos, costo, stock y datos fiscales',
-          'Cajas, sesiones, ingresos, retiros, cierres y movimientos',
-          'Reportes de ventas, facturas, inventario, cierres y utilidad',
+          'Revisamos cajas, productos, comprobantes y usuarios',
+          'Mostramos una venta, el movimiento de inventario y el cierre',
+          'Aclaramos alcance, configuración y datos por migrar',
+          'Documentamos lo que requiere validación adicional',
         ],
       },
       {
-        title: 'Industrias objetivo',
-        body: 'La misma categoria POS cambia segun el giro. Por eso la evaluacion debe revisar productos, rotacion, comprobantes, usuarios, cajas, bodegas, horarios y reportes esperados por industria.',
+        title: 'Implementación acompañada',
+        body: 'El cambio de sistema se organiza por etapas para reducir sorpresas y preparar al equipo antes de trabajar con el POS en el día a día.',
         items: [
-          'Minisuper, pulperias y tiendas de conveniencia',
-          'Ferreterias y negocios con catalogo amplio',
-          'Restaurantes, sodas y comercios con caja rapida',
-          'Boutiques, retail, talleres y servicios con inventario o cobros',
-        ],
-      },
-      {
-        title: 'Objeciones que conviene resolver',
-        body: 'Antes de decidir, conviene aclarar alcance, migracion, soporte, continuidad, facturacion electronica, reportes y crecimiento. Si falta un dato, debe quedar como pendiente de demo o aprobacion, no como promesa publica.',
-        items: [
-          'Que datos se pueden migrar desde Excel o sistema anterior',
-          'Que requiere la facturacion electronica del negocio',
-          'Cuantos usuarios, cajas o sucursales entran en el alcance',
-          'Que eventos de lead, demo y venta se mediran despues de publicar campanas',
+          'Revisión del proceso y de una muestra de datos',
+          'Configuración, importación y pruebas según el alcance acordado',
+          'Capacitación para los usuarios que operarán el sistema',
+          'Salida a producción y acompañamiento posterior',
         ],
       },
     ],
     decisionTable: {
-      title: 'Comparativa contra Excel, caja manual, POS generico y software extranjero',
-      body: 'Esta tabla resume criterios cualitativos para decidir con menos riesgo. No reemplaza la demo: ayuda a preparar preguntas concretas sin inventar precios, rankings ni resultados garantizados.',
+      title: 'Lo que revisamos antes de recomendar el alcance',
+      body: 'Estas preguntas permiten confirmar el alcance real, identificar pendientes y evitar que el negocio contrate funciones que no necesita.',
+      headers: {
+        factor: 'Tu operación',
+        question: 'Qué revisamos en la demo',
+        impact: 'Por qué importa',
+      },
       rows: [
         {
-          factor: 'Excel',
-          question:
-            'Las ventas, productos, existencias y ajustes quedan en archivos separados o sin historial confiable?',
-          impact:
-            'Cuando inventario y caja viven fuera del flujo de venta, aumentan las diferencias y el retrabajo administrativo.',
+          factor: 'Cajas y usuarios',
+          question: 'Cuántas personas venden, qué permisos requieren y cómo realizan aperturas y cierres.',
+          impact: 'Define la configuración de accesos, sesiones y puntos de venta.',
         },
         {
-          factor: 'Caja manual',
-          question:
-            'Como se registran pagos, cierres, anulaciones, cliente, comprobante y responsable de cada operacion?',
-          impact:
-            'La caja manual puede funcionar al inicio, pero limita trazabilidad, reportes y revision de errores cuando crece el movimiento.',
+          factor: 'Productos e inventario',
+          question: 'Cantidad de productos, códigos, unidades, existencias, compras y ajustes que manejas.',
+          impact: 'Permite preparar el catálogo y validar cómo se actualizará el inventario.',
         },
         {
-          factor: 'POS generico',
-          question:
-            'El sistema cubre facturacion electronica, inventario, permisos, reportes y soporte segun el contexto de Costa Rica?',
-          impact:
-            'Una herramienta generica puede dejar pasos criticos fuera del sistema y obligar a operar con procesos paralelos.',
+          factor: 'Facturación electrónica',
+          question: 'Comprobantes, datos fiscales, clientes y reglas que aplican a tus ventas en Costa Rica.',
+          impact: 'Aclara la configuración necesaria antes de emitir comprobantes desde caja.',
         },
         {
-          factor: 'Software extranjero',
-          question:
-            'Que pasa con soporte, horarios, configuracion fiscal, integraciones, datos y continuidad si aparece un problema operativo?',
-          impact:
-            'La decision debe considerar ajuste al proceso local, acompanamiento y costo total, no solo marca o precio visible.',
+          factor: 'Migración de datos',
+          question: 'Qué productos, clientes, saldos o inventario existen en Excel o en el sistema anterior.',
+          impact: 'Una muestra real permite confirmar qué puede importarse y qué necesita preparación.',
+        },
+        {
+          factor: 'Crecimiento',
+          question: 'Si necesitas más puntos de venta, usuarios, bodegas o una aplicación móvil.',
+          impact: 'Ayuda a comparar el alcance inicial con las necesidades previstas del negocio.',
         },
       ],
     },
     faqs: [
       {
-        question: 'Que incluye una landing de sistema POS para Asystec?',
+        question: '¿Cómo se cotiza Asystec POS?',
         answer:
-          'Debe explicar el problema, beneficios, modulos reales, industrias objetivo, comparativas, objeciones, FAQs, CTA a demo y schema. Esta pagina usa la ruta existente de soluciones y enlaza a Asystec POS, guias e industrias.',
+          'La cotización depende de los puntos de venta, la aplicación móvil, los módulos, la implementación y el nivel de soporte. En la demo se revisa el alcance real antes de contratar.',
       },
       {
-        question: 'Asystec POS funciona si se cae internet?',
+        question: '¿Asystec POS funciona si se cae internet?',
         answer:
-          'El producto esta planteado como aplicacion de escritorio con base local para la operacion de caja. Las funciones que dependen de servicios externos, como envio fiscal, respaldos o integraciones, se revisan segun la configuracion del negocio.',
+          'La operación principal del POS trabaja localmente para que la caja no dependa siempre de la conexión. El envío fiscal, los respaldos y las integraciones que usan servicios externos sí requieren conectividad y se revisan según la configuración.',
       },
       {
-        question: 'Incluye facturacion electronica?',
+        question: '¿Incluye facturación electrónica para Costa Rica?',
         answer:
-          'Asystec POS tiene modulos orientados a facturacion electronica para Costa Rica. En la demo conviene validar datos fiscales, ambiente, comprobantes, clientes, productos y reglas que aplican al negocio.',
+          'Sí. Asystec POS incluye capacidades de facturación electrónica para Costa Rica. En la demo se validan los datos fiscales, comprobantes, clientes, productos y reglas que aplican a tu negocio.',
       },
       {
-        question: 'Que negocios deberian pedir una demo de POS?',
+        question: '¿Puedo migrar desde Excel u otro sistema?',
         answer:
-          'Conviene para comercios, minisuper, ferreterias, restaurantes, tiendas retail, talleres y servicios que necesitan ordenar caja, productos, inventario, facturacion, usuarios y reportes.',
+          'Sí, después de revisar una muestra real de productos, códigos, clientes, saldos e inventario. Con esa evidencia se confirma qué puede importarse y qué información necesita preparación.',
       },
       {
-        question: 'Puedo migrar desde Excel, caja manual u otro POS?',
+        question: '¿Qué equipo necesito para usar el POS?',
         answer:
-          'La migracion debe evaluarse con datos reales: productos, codigos, clientes, saldos, inventario, usuarios y reportes esperados. Si falta evidencia, se documenta como pendiente antes de prometer alcance.',
+          'Depende del flujo de caja y de los periféricos que ya utiliza el negocio. En la demo se revisan la computadora, impresora, lector, gaveta, red y cualquier equipo adicional antes de confirmar compatibilidad.',
       },
       {
-        question: 'Como se mide si la landing genera leads calificados?',
+        question: '¿Cómo es el proceso de implementación?',
         answer:
-          'El sistema web ya marca CTAs con eventos de analitica. Antes de pauta pagada faltan pruebas de GA4/GTM, formulario o chat, CRM, UTMs y eventos como lead, schedule_demo, qualified_lead y demo_completed.',
+          'Primero se revisan el proceso y los datos; después se acuerdan configuración, importación y pruebas; finalmente se capacita a los usuarios y se coordina la salida a producción con acompañamiento.',
+      },
+      {
+        question: '¿Puedo agregar más puntos de venta o usuarios?',
+        answer:
+          'Sí. La demo permite confirmar cuántos usuarios, cajas y módulos necesita tu operación actual y cómo podría crecer.',
       },
     ],
+    relatedTitle: 'Sigue evaluando con información concreta',
+    relatedIntro:
+      'Revisa el producto y las guías de decisión; si el alcance encaja, agenda una demostración con el contexto de tu negocio.',
     related: [
-      { label: 'Asystec POS', href: '/asystec-pos' },
-      { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
-      { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
-      { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
-      { label: 'Minisuper', href: '/industrias/minisuper' },
-      { label: 'Ferreterias', href: '/industrias/ferreterias' },
-      { label: 'Restaurantes', href: '/industrias/restaurantes' },
-      { label: 'Coordinar demo', href: '/contact' },
+      { label: 'Producto Asystec POS', href: '/asystec-pos' },
+      { label: 'Opciones de implementación', href: '/asystec-pos#planes-pos' },
+      { label: 'Cómo elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'POS local vs POS en la nube', href: '/guias/pos-local-vs-pos-en-la-nube' },
+      { label: 'POS para minisúper', href: '/industrias/minisuper' },
+      { label: 'POS para ferreterías', href: '/industrias/ferreterias' },
+      { label: 'POS para restaurantes', href: '/industrias/restaurantes' },
     ],
+    finalCta: {
+      title: '¿Quieres ver cómo encaja en tu negocio?',
+      body: 'Cuéntanos tu giro, cuántas cajas utilizas y qué quieres mejorar. Prepararemos la demo alrededor de esa operación.',
+      primary: {
+        label: 'Agendar demo por WhatsApp',
+        href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20Asystec%20POS%20para%20mi%20negocio.',
+      },
+      secondary: { label: 'Ver funciones', href: '/asystec-pos' },
+    },
     image: '/images/pos/pos0.jpeg',
   },
   {
@@ -681,13 +729,13 @@ export const solutionPages: LandingPageData[] = [
     answer:
       'Un software de facturacion electronica para pymes en Costa Rica debe ayudar a emitir comprobantes, mantener clientes y productos ordenados, conectar ventas y pagos, y dar soporte cuando el flujo comercial se detiene. La evaluacion conviene hacerla junto con POS, inventario, reportes y la forma real en que opera el negocio.',
     intro:
-      'Asystec ayuda a negocios que necesitan ordenar facturacion electronica, ventas, clientes, pagos y reportes desde FacturacionApp, Asystec POS o una plataforma ajustada al flujo del negocio.',
+      'Asystec ayuda a negocios que necesitan ordenar facturacion electronica, ventas, clientes, pagos y reportes desde Factura Pro, Asystec POS o una plataforma ajustada al flujo del negocio.',
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
       'Responder a busquedas de facturacion electronica para pymes en Costa Rica.',
       'Conectar comprobantes con clientes, ventas, pagos, inventario y reportes.',
-      'Ayudar a comparar si conviene FacturacionApp, Asystec POS o una plataforma a medida.',
+      'Ayudar a comparar si conviene Factura Pro, Asystec POS o una plataforma a medida.',
       'Dar una ruta clara hacia demo, WhatsApp y contacto comercial.',
     ],
     modules: [
@@ -747,7 +795,7 @@ export const solutionPages: LandingPageData[] = [
         {
           factor: 'Flujo de venta',
           question: 'La factura nace desde caja, una cotizacion, una venta web o un proceso administrativo?',
-          impact: 'Define si conviene FacturacionApp, Asystec POS o una plataforma con integraciones.',
+          impact: 'Define si conviene Factura Pro, Asystec POS o una plataforma con integraciones.',
         },
         {
           factor: 'Clientes y catalogo',
@@ -757,7 +805,7 @@ export const solutionPages: LandingPageData[] = [
         {
           factor: 'Pagos y cobros',
           question: 'El negocio necesita registrar pagos, saldos, creditos o seguimiento posterior al comprobante?',
-          impact: 'Puede conectar facturacion con cuentas por cobrar, CobrosApp o reportes financieros.',
+          impact: 'Puede conectar facturacion con cuentas por cobrar, Cobros Pro o reportes financieros.',
         },
         {
           factor: 'POS e inventario',
@@ -778,9 +826,9 @@ export const solutionPages: LandingPageData[] = [
           'Debe permitir administrar comprobantes, clientes, productos o servicios, pagos y reportes. Si el negocio vende en caja o maneja inventario, tambien conviene revisar conexion con POS, existencias y cierres.',
       },
       {
-        question: 'Cuando conviene FacturacionApp y cuando Asystec POS?',
+        question: 'Cuando conviene Factura Pro y cuando Asystec POS?',
         answer:
-          'FacturacionApp puede convenir cuando el foco es emitir comprobantes, clientes, cotizaciones, pagos y reportes desde una plataforma web. Asystec POS conviene cuando la facturacion debe estar conectada con caja, ventas e inventario.',
+          'Factura Pro puede convenir cuando el foco es emitir comprobantes, clientes, cotizaciones, pagos y reportes desde una plataforma web. Asystec POS conviene cuando la facturacion debe estar conectada con caja, ventas e inventario.',
       },
       {
         question: 'La facturacion electronica puede conectarse con inventario o cuentas por cobrar?',
@@ -794,7 +842,7 @@ export const solutionPages: LandingPageData[] = [
       },
     ],
     related: [
-      { label: 'FacturacionApp', href: '/facturacionapp' },
+      { label: 'Factura Pro', href: '/facturacionapp' },
       { label: 'Guia de factura electronica', href: '/guias/factura-electronica-costa-rica-requisitos' },
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
@@ -951,7 +999,7 @@ export const solutionPages: LandingPageData[] = [
     answer:
       'Una pyme en Costa Rica necesita reportes que conecten ventas, caja, inventario, cobros, facturacion y sucursales en una sola lectura. El objetivo no es tener mas graficos, sino saber que paso, donde hay atrasos y que decision debe tomar gerencia sin armar hojas manuales cada semana.',
     intro:
-      'Asystec ayuda a negocios que necesitan convertir datos operativos en reportes utiles para gerencia, administracion y equipos de venta, ya sea desde POS, CobrosApp, FacturacionApp o una plataforma a la medida.',
+      'Asystec ayuda a negocios que necesitan convertir datos operativos en reportes utiles para gerencia, administracion y equipos de venta, ya sea desde POS, Cobros Pro, Factura Pro o una plataforma a la medida.',
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
@@ -1055,7 +1103,7 @@ export const solutionPages: LandingPageData[] = [
       {
         question: 'Los reportes pueden conectarse con POS, inventario y cobros?',
         answer:
-          'Si. La evaluacion puede conectar reportes con Asystec POS, inventario, FacturacionApp, CobrosApp o una plataforma a medida, segun los sistemas que ya usa el negocio.',
+          'Si. La evaluacion puede conectar reportes con Asystec POS, inventario, Factura Pro, Cobros Pro o una plataforma a medida, segun los sistemas que ya usa el negocio.',
       },
       {
         question: 'Puedo pedir una demo basada en mis reportes actuales?',
@@ -1068,8 +1116,8 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Inventario', href: '/soluciones/inventario' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
-      { label: 'CobrosApp', href: '/cobrosapp' },
-      { label: 'FacturacionApp', href: '/facturacionapp' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
+      { label: 'Factura Pro', href: '/facturacionapp' },
       { label: 'Plataformas a medida', href: '/plataformas' },
       { label: 'Coordinar demo', href: '/contact' },
     ],
@@ -1088,14 +1136,14 @@ export const solutionPages: LandingPageData[] = [
     answer:
       'Una pyme en Costa Rica necesita controlar cuentas por cobrar cuando vende a credito, acepta pagos parciales o debe dar seguimiento a clientes con saldos pendientes. El objetivo es saber quien debe, cuanto debe, que se pago, que esta vencido y que accion comercial sigue.',
     intro:
-      'Asystec ayuda a negocios que necesitan ordenar clientes, creditos, pagos, estados de cuenta y reportes de cobranza desde CobrosApp, una integracion con POS/facturacion o una plataforma ajustada al flujo real.',
+      'Asystec ayuda a negocios que necesitan ordenar clientes, creditos, pagos, estados de cuenta y reportes de cobranza desde Cobros Pro, una integracion con POS/facturacion o una plataforma ajustada al flujo real.',
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
       'Aterrizar busquedas sobre software de cuentas por cobrar en Costa Rica.',
       'Conectar cobranza con clientes, pagos, saldos, reportes y gerencia.',
       'Preparar una demo con cartera actual, reglas de pago y estados de cuenta.',
-      'Dirigir a CobrosApp, contacto y WhatsApp sin inventar promesas financieras.',
+      'Dirigir a Cobros Pro, contacto y WhatsApp sin inventar promesas financieras.',
     ],
     modules: [
       'Clientes y creditos',
@@ -1138,7 +1186,7 @@ export const solutionPages: LandingPageData[] = [
       },
       {
         title: 'Como preparar una demo de cuentas por cobrar',
-        body: 'Una demo util debe revisar ejemplos reales de clientes, saldos y pagos. Asi se define si conviene CobrosApp, una integracion o una plataforma a medida para el proceso de cobranza.',
+        body: 'Una demo util debe revisar ejemplos reales de clientes, saldos y pagos. Asi se define si conviene Cobros Pro, una integracion o una plataforma a medida para el proceso de cobranza.',
         items: [
           'Cantidad de clientes con credito o saldos activos',
           'Formas de pago y reglas de abonos parciales',
@@ -1190,9 +1238,9 @@ export const solutionPages: LandingPageData[] = [
           'Conviene cuando hay pagos parciales, varios responsables, saldos vencidos, estados de cuenta frecuentes o reportes que se arman manualmente y atrasan decisiones de ventas, cobros o gerencia.',
       },
       {
-        question: 'CobrosApp sirve para cuentas por cobrar?',
+        question: 'Cobros Pro sirve para cuentas por cobrar?',
         answer:
-          'CobrosApp puede aplicar cuando el negocio necesita administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores de cobranza desde una plataforma web.',
+          'Cobros Pro puede aplicar cuando el negocio necesita administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores de cobranza desde una plataforma web.',
       },
       {
         question: 'Puedo conectar cuentas por cobrar con facturacion o reportes?',
@@ -1201,7 +1249,7 @@ export const solutionPages: LandingPageData[] = [
       },
     ],
     related: [
-      { label: 'CobrosApp', href: '/cobrosapp' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
       { label: 'CRM', href: '/soluciones/crm' },
@@ -1231,7 +1279,7 @@ export const solutionPages: LandingPageData[] = [
     highlights: [
       'Responder a busquedas de CRM para pymes y negocios en Costa Rica.',
       'Conectar clientes, oportunidades, tareas, soporte, cobros y reportes.',
-      'Ayudar a decidir entre CobrosApp, una plataforma CRM o una integracion a medida.',
+      'Ayudar a decidir entre Cobros Pro, una plataforma CRM o una integracion a medida.',
       'Dar una ruta clara hacia demo, WhatsApp y contacto comercial.',
     ],
     modules: [
@@ -1267,7 +1315,7 @@ export const solutionPages: LandingPageData[] = [
       },
       {
         title: 'CRM conectado con ventas, cobros y reportes',
-        body: 'Para muchas pymes, CRM no debe quedar aislado. Puede necesitar relacionarse con facturacion, cuentas por cobrar, CobrosApp, POS, formularios, portales de clientes o reportes gerenciales.',
+        body: 'Para muchas pymes, CRM no debe quedar aislado. Puede necesitar relacionarse con facturacion, cuentas por cobrar, Cobros Pro, POS, formularios, portales de clientes o reportes gerenciales.',
         items: [
           'Cuentas por cobrar cuando el seguimiento depende de saldos y pagos',
           'Reportes cuando gerencia necesita actividad, cartera o conversion',
@@ -1308,7 +1356,8 @@ export const solutionPages: LandingPageData[] = [
         {
           factor: 'Cobros y reportes',
           question: 'El seguimiento depende de saldos, pagos, cartera, reportes o datos de otros sistemas?',
-          impact: 'Puede requerir conexion con CobrosApp, cuentas por cobrar, facturacion, POS o reportes gerenciales.',
+          impact:
+            'Puede requerir conexion con Cobros Pro, cuentas por cobrar, facturacion, POS o reportes gerenciales.',
         },
         {
           factor: 'Integraciones',
@@ -1331,7 +1380,7 @@ export const solutionPages: LandingPageData[] = [
       {
         question: 'El CRM puede conectarse con cobros o facturacion?',
         answer:
-          'Si. La evaluacion puede revisar conexion con CobrosApp, cuentas por cobrar, facturacion electronica, POS, reportes o plataformas internas, segun el flujo real y los datos disponibles.',
+          'Si. La evaluacion puede revisar conexion con Cobros Pro, cuentas por cobrar, facturacion electronica, POS, reportes o plataformas internas, segun el flujo real y los datos disponibles.',
       },
       {
         question: 'Puedo pedir una demo con mi proceso actual de ventas?',
@@ -1340,7 +1389,7 @@ export const solutionPages: LandingPageData[] = [
       },
     ],
     related: [
-      { label: 'CobrosApp', href: '/cobrosapp' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
@@ -1474,7 +1523,7 @@ export const solutionPages: LandingPageData[] = [
       {
         question: 'Asystec puede integrar POS, facturacion, cobros o CRM?',
         answer:
-          'Si. La evaluacion puede revisar Asystec POS, FacturacionApp, CobrosApp, CRM, reportes, plataformas internas o sistemas externos, siempre segun datos disponibles, reglas de negocio y restricciones de cada proveedor.',
+          'Si. La evaluacion puede revisar Asystec POS, Factura Pro, Cobros Pro, CRM, reportes, plataformas internas o sistemas externos, siempre segun datos disponibles, reglas de negocio y restricciones de cada proveedor.',
       },
       {
         question: 'Cuanto tarda una integracion de software?',
@@ -1537,7 +1586,7 @@ const industry = (
     },
     {
       title: 'Soluciones relacionadas',
-      body: 'Segun la operacion, puede aplicar Asystec POS, FacturacionApp, CobrosApp, FitPro o una plataforma a la medida.',
+      body: 'Segun la operacion, puede aplicar Asystec POS, Factura Pro, Cobros Pro, FitPro o una plataforma a la medida.',
     },
   ],
   faqs: [
@@ -2150,7 +2199,7 @@ export const industryPages: LandingPageData[] = [
     ['Clientes', 'Seguimiento', 'Cobros', 'Facturacion', 'Reportes', 'CRM'],
     [
       { label: 'CRM', href: '/soluciones/crm' },
-      { label: 'CobrosApp', href: '/cobrosapp' },
+      { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Plataformas', href: '/plataformas' },
     ],
   ),
@@ -2222,7 +2271,7 @@ export const guidePages: LandingPageData[] = [
         'Software y soporte',
       ],
       [
-        { label: 'FacturacionApp', href: '/facturacionapp' },
+        { label: 'Factura Pro', href: '/facturacionapp' },
         { label: 'Software de facturacion electronica', href: '/soluciones/facturacion-electronica' },
         { label: 'Asystec POS', href: '/asystec-pos' },
         { label: 'Preguntas frecuentes', href: '/faqs' },
@@ -2236,7 +2285,7 @@ export const guidePages: LandingPageData[] = [
       'Entender que es el XML validado por Hacienda y que papel cumple el PDF.',
       'Revisar version 4.4, nuevos ajustes de Anexos y Estructuras y datos obligatorios.',
       'Preparar contribuyente, mecanismo de seguridad, actividad, clientes, CAByS e impuestos.',
-      'Comparar si conviene FacturacionApp, Asystec POS o una integracion a medida.',
+      'Comparar si conviene Factura Pro, Asystec POS o una integracion a medida.',
     ],
     modules: [
       'XML y PDF',
@@ -2301,7 +2350,7 @@ export const guidePages: LandingPageData[] = [
         title: 'Que software conviene elegir',
         body: 'No todos los negocios necesitan lo mismo. Una oficina de servicios puede resolver con una plataforma web de facturacion. Una tienda con caja e inventario necesita que el comprobante salga desde el punto de venta. Una empresa con sistemas propios puede necesitar integraciones.',
         items: [
-          'FacturacionApp si el foco es emitir, consultar, cobrar y reportar',
+          'Factura Pro si el foco es emitir, consultar, cobrar y reportar',
           'Asystec POS si la factura debe nacer desde caja e inventario',
           'Integraciones cuando ya existen ERP, ecommerce, CRM o sistemas internos',
           'Soporte local cuando facturacion, ventas o caja no pueden detenerse',
@@ -2368,7 +2417,7 @@ export const guidePages: LandingPageData[] = [
       },
     ],
     related: [
-      { label: 'FacturacionApp', href: '/facturacionapp' },
+      { label: 'Factura Pro', href: '/facturacionapp' },
       { label: 'Software de facturacion electronica', href: '/soluciones/facturacion-electronica' },
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
