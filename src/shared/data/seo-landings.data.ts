@@ -422,6 +422,10 @@ export const portfolioPages: LandingPageData[] = [
     related: [
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
       { label: 'Guia de factura electronica', href: '/guias/factura-electronica-costa-rica-requisitos' },
+      {
+        label: 'Cambiar de sistema de facturacion',
+        href: '/guias/como-cambiar-sistema-facturacion-electronica',
+      },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Software para pymes', href: '/software-para-negocios-costa-rica' },
     ],
@@ -847,6 +851,10 @@ export const solutionPages: LandingPageData[] = [
     related: [
       { label: 'Factura Pro', href: '/facturacionapp' },
       { label: 'Guia de factura electronica', href: '/guias/factura-electronica-costa-rica-requisitos' },
+      {
+        label: 'Cambiar de sistema de facturacion',
+        href: '/guias/como-cambiar-sistema-facturacion-electronica',
+      },
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
       { label: 'Inventario', href: '/soluciones/inventario' },
@@ -2423,11 +2431,166 @@ export const guidePages: LandingPageData[] = [
     related: [
       { label: 'Factura Pro', href: '/facturacionapp' },
       { label: 'Software de facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      {
+        label: 'Cambiar de sistema de facturacion',
+        href: '/guias/como-cambiar-sistema-facturacion-electronica',
+      },
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
       { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Preguntas frecuentes', href: '/faqs' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+  },
+  {
+    ...guide(
+      'como-cambiar-sistema-facturacion-electronica',
+      'Como cambiar de sistema de facturacion electronica',
+      'Guia para cambiar de sistema de facturacion electronica en Costa Rica: datos, XML, clientes, productos, CAByS, pruebas, integraciones y salida a produccion.',
+      'Para cambiar de sistema de facturacion electronica sin interrumpir el negocio, primero hay que inventariar datos, documentos, configuracion tributaria e integraciones; despues se valida una muestra en el sistema nuevo, se acuerda que historial se conservara y se coordina una fecha de corte con respaldo y responsables.',
+      [
+        'Datos y configuracion actual',
+        'Clientes, productos y CAByS',
+        'XML y respuestas de Hacienda',
+        'Pruebas de emision',
+        'Integraciones y reportes',
+        'Fecha de corte y soporte',
+      ],
+      [
+        { label: 'Factura Pro', href: '/facturacionapp' },
+        { label: 'Software de facturacion electronica', href: '/soluciones/facturacion-electronica' },
+        { label: 'Requisitos de factura electronica', href: '/guias/factura-electronica-costa-rica-requisitos' },
+        { label: 'Integraciones', href: '/soluciones/integraciones' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    intro:
+      'Esta guia ayuda a pymes y profesionales en Costa Rica a preparar un cambio de proveedor o plataforma de facturacion electronica sin asumir que todos los datos, historiales o integraciones se pueden trasladar de la misma forma.',
+    highlights: [
+      'Separar lo obligatorio para operar de lo que solo conviene conservar como consulta.',
+      'Validar clientes, productos, impuestos y CAByS con una muestra real.',
+      'Definir el alcance de XML, respuestas, reportes e integraciones antes del corte.',
+      'Coordinar responsables, respaldo, pruebas y soporte para la salida a produccion.',
+    ],
+    sections: [
+      {
+        title: 'Inventaria el sistema actual antes de elegir otro',
+        body: 'El cambio debe empezar por una lista concreta de lo que hoy sostiene la operacion. No basta con contar facturas: hay que identificar configuracion tributaria, clientes, productos o servicios, impuestos, CAByS, consecutivos, documentos, reportes, usuarios e integraciones.',
+        items: [
+          'Datos de la empresa, actividades y configuracion tributaria',
+          'Clientes, productos, servicios, impuestos y codigos CAByS',
+          'XML emitidos y recibidos, respuestas y representaciones PDF',
+          'Usuarios, permisos, reportes e integraciones que usa el equipo',
+        ],
+      },
+      {
+        title: 'Separa migracion operativa de archivo historico',
+        body: 'No todo el historial necesita quedar cargado dentro del sistema nuevo. Conviene definir que datos deben estar disponibles para facturar desde el primer dia, que saldos o catalogos requieren continuidad y que documentos pueden conservarse en un archivo seguro para consulta.',
+        items: [
+          'Datos maestros necesarios para emitir nuevos comprobantes',
+          'Saldos, pagos o cotizaciones que siguen activos',
+          'Documentos historicos que deben conservarse para consulta',
+          'Formato de exportacion y acceso posterior al sistema anterior',
+        ],
+      },
+      {
+        title: 'Valida una muestra antes de mover todo',
+        body: 'Una muestra permite detectar columnas incompletas, identificaciones invalidas, impuestos mal asignados, codigos duplicados o diferencias entre el archivo fuente y el modelo del sistema nuevo. El alcance de importacion debe acordarse despues de revisar esa evidencia.',
+        items: [
+          'Clientes con distintos tipos de identificacion y ubicacion',
+          'Productos o servicios con impuestos y CAByS diferentes',
+          'Comprobantes, notas y medios de pago representativos',
+          'Reportes que administracion necesita comparar despues del cambio',
+        ],
+      },
+      {
+        title: 'Planifica pruebas, corte y contingencia',
+        body: 'Antes de dejar el sistema anterior, el equipo debe probar el flujo real: crear clientes, emitir comprobantes, revisar respuestas, enviar documentos, consultar reportes y confirmar integraciones. La fecha de corte debe tener responsables, respaldo y una ruta clara si aparece un error.',
+        items: [
+          'Prueba de emision y recepcion con configuracion revisada',
+          'Comparacion de catalogos, saldos y reportes acordados',
+          'Capacitacion de usuarios y canales de soporte',
+          'Respaldo, acceso de consulta y plan de contingencia',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Checklist para cambiar de sistema de facturacion electronica',
+      body: 'Estas preguntas ayudan a convertir una promesa de migracion en un alcance verificable antes de contratar o coordinar la salida a produccion.',
+      rows: [
+        {
+          factor: 'Datos maestros',
+          question: 'Que clientes, productos, servicios, impuestos y CAByS deben quedar listos para operar?',
+          impact: 'Define la muestra, limpieza, mapeo e importacion necesaria antes del primer comprobante.',
+        },
+        {
+          factor: 'Historial',
+          question:
+            'Que XML, respuestas, PDF, cotizaciones, pagos o saldos deben migrarse y cuales solo deben conservarse?',
+          impact:
+            'Evita prometer una migracion total cuando parte del historial puede quedar como archivo de consulta.',
+        },
+        {
+          factor: 'Configuracion fiscal',
+          question:
+            'Que actividades, consecutivos, sucursales, terminales, impuestos y medios de pago usa hoy el negocio?',
+          impact: 'Permite preparar y probar la configuracion que sostendra la emision en el sistema nuevo.',
+        },
+        {
+          factor: 'Integraciones',
+          question: 'La facturacion recibe datos de POS, inventario, cobros, tienda, contabilidad u otra plataforma?',
+          impact: 'Una integracion omitida puede obligar a duplicar datos o detener procesos despues del cambio.',
+        },
+        {
+          factor: 'Salida a produccion',
+          question: 'Quien valida la muestra, capacita usuarios, aprueba el corte y responde si aparece un error?',
+          impact: 'Asigna responsables y reduce el riesgo de improvisar durante el primer dia de operacion.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Se puede cambiar de sistema de facturacion electronica en Costa Rica?',
+        answer:
+          'Si, pero conviene planificar el cambio alrededor de la continuidad operativa. Antes del corte hay que revisar datos, configuracion tributaria, documentos, consecutivos, usuarios, integraciones, respaldo y pruebas en el sistema nuevo.',
+      },
+      {
+        question: 'Hay que migrar todas las facturas y XML historicos?',
+        answer:
+          'No siempre. El alcance depende de los datos que el sistema anterior permita exportar, las necesidades de consulta y lo que acepte el sistema nuevo. Parte del historial puede conservarse en un archivo seguro sin cargarse como operacion activa.',
+      },
+      {
+        question: 'Que informacion conviene exportar antes de cancelar el sistema anterior?',
+        answer:
+          'Conviene respaldar clientes, productos o servicios, impuestos, CAByS, XML, respuestas, PDF, reportes, saldos, pagos, cotizaciones y cualquier configuracion o integracion necesaria para operar y consultar el historial.',
+      },
+      {
+        question: 'Como se valida una migracion de facturacion?',
+        answer:
+          'Se revisa una muestra representativa, se compara el mapeo de datos, se prueban comprobantes y respuestas, se verifican reportes acordados y se documentan diferencias antes de importar el resto o fijar la fecha de corte.',
+      },
+      {
+        question: 'Asystec puede revisar una muestra antes de cambiar de sistema?',
+        answer:
+          'Si. Puedes coordinar una demo para revisar una muestra, el sistema actual, catalogos, comprobantes, integraciones y reportes. Con esa evidencia se define que puede importarse, que requiere limpieza y que conviene conservar como archivo.',
+      },
+    ],
+    finalCta: {
+      title: 'Revisa una muestra antes de cambiar de sistema',
+      body: 'Coordina una demo para revisar catalogos, comprobantes, integraciones y reportes actuales. Con una muestra se puede definir un alcance realista para la migracion y la salida a produccion.',
+      primary: contactCta,
+      secondary: {
+        label: 'Consultar por WhatsApp',
+        href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20evaluar%20un%20cambio%20de%20sistema%20de%20facturacion%20electronica.',
+      },
+    },
+    related: [
+      { label: 'Factura Pro', href: '/facturacionapp' },
+      { label: 'Software de facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Requisitos de factura electronica', href: '/guias/factura-electronica-costa-rica-requisitos' },
+      { label: 'Integraciones', href: '/soluciones/integraciones' },
+      { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
       { label: 'Coordinar demo', href: '/contact' },
     ],
   },
