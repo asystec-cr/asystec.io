@@ -145,6 +145,7 @@ export const retailIndustryPage: LandingPageData = {
     { label: 'Reportes', href: '/soluciones/reportes' },
     { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
     { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+    { label: 'Reducir diferencias de inventario', href: '/guias/como-reducir-diferencias-inventario' },
     { label: 'Coordinar demo', href: '/contact' },
   ],
   finalCta: {
