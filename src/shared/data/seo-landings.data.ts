@@ -90,19 +90,20 @@ export const pillarPage: LandingPageData = {
   seoTitle: 'Software para negocios en Costa Rica | Asystec',
   description:
     'Asystec desarrolla e implementa software para pymes en Costa Rica: POS, facturacion electronica, inventario, reportes, cobros, CRM, multi-sucursal e integraciones.',
-  eyebrow: 'Hub de soluciones Asystec',
+  eyebrow: 'Software empresarial en Costa Rica',
   heroTitle: 'Software para vender, facturar, cobrar y controlar tu negocio en Costa Rica',
   answer:
-    'Asystec crea e implementa software empresarial para pymes que necesitan ordenar ventas, facturacion electronica, inventario, cobros, reportes, usuarios, sucursales e integraciones sin depender de procesos manuales dispersos.',
+    'El software adecuado depende del flujo que necesita ordenar el negocio. Una pyme con ventas de mostrador puede requerir POS e inventario; una empresa de servicios puede empezar con facturacion, clientes y cobros; una operacion con procesos propios puede necesitar integraciones o una plataforma a la medida.',
   intro:
-    'Esta pagina centraliza el portafolio publico de Asystec y conecta cada necesidad comercial con una solucion concreta, una industria y una ruta de contacto.',
+    'Asystec ayuda a negocios en Costa Rica a comparar esas rutas con su operacion real antes de elegir producto, alcance o implementacion.',
   primaryCta: contactCta,
-  secondaryCta: { label: 'Ver Asystec POS', href: '/asystec-pos' },
+  secondaryCta: whatsappCta,
+  heroNote: 'La demo revisa el proceso actual; no obliga a contratar todos los modulos.',
   highlights: [
-    'Soporte local para negocios en Costa Rica.',
-    'Productos propios y plataformas a la medida.',
-    'Enfoque en operacion real: caja, inventario, cobros, facturacion y reportes.',
-    'Integraciones con sistemas externos cuando el proceso lo requiere.',
+    'Elegir por el problema operativo y no por una lista generica de funciones.',
+    'Comparar un producto existente, una integracion o una plataforma a la medida.',
+    'Conectar ventas, facturacion, inventario, cobros y reportes cuando el flujo lo exige.',
+    'Preparar una demo con usuarios, sucursales, datos y controles reales del negocio.',
   ],
   modules: [
     'Punto de venta',
@@ -116,49 +117,126 @@ export const pillarPage: LandingPageData = {
   ],
   sections: [
     {
-      title: 'Arquitectura comercial',
-      body: 'El sitio se organiza por productos, soluciones, industrias y guias para que clientes, buscadores y asistentes de IA puedan entender que ofrece Asystec y para quien aplica.',
+      title: 'Cuando conviene un sistema POS',
+      body: 'Un POS encaja cuando el negocio vende con frecuencia en mostrador o caja y necesita que productos, cobros, facturacion, inventario, cierres y reportes formen parte del mismo flujo.',
       items: [
-        'Productos con pagina publica',
-        'Soluciones por problema operativo',
-        'Industrias con lenguaje especifico',
-        'Guias para preguntas de compra',
+        'Ventas diarias con productos o servicios definidos',
+        'Caja, medios de pago y cierres por usuario o turno',
+        'Inventario que debe rebajarse con cada venta',
+        'Facturacion electronica y reportes conectados con la operacion',
       ],
     },
     {
-      title: 'Como convertimos interes en ventas',
-      body: 'Cada pagina incluye una respuesta directa, contexto suficiente para evaluar la opcion y llamadas a demo, WhatsApp o contacto comercial.',
+      title: 'Cuando basta con facturacion y cobros',
+      body: 'Una empresa que emite pocos comprobantes y no opera una caja de mostrador puede empezar con clientes, cotizaciones, facturacion electronica, pagos y seguimiento de saldos sin implementar un POS completo.',
       items: [
-        'Respuesta corta en el primer bloque',
-        'Modulos y escenarios de uso',
-        'Preguntas frecuentes visibles',
-        'Enlaces internos hacia paginas relacionadas',
+        'Servicios profesionales o ventas por cotizacion',
+        'Comprobantes, clientes y pagos por controlar',
+        'Cuentas por cobrar que requieren seguimiento',
+        'Reportes administrativos sin inventario de mostrador',
+      ],
+    },
+    {
+      title: 'Cuando conectar CRM, sucursales o reportes',
+      body: 'El alcance crece cuando varias personas atienden oportunidades, existen saldos por cobrar, se abren nuevas sucursales o gerencia necesita consolidar informacion que hoy vive en archivos y sistemas separados.',
+      items: [
+        'CRM para contactos, responsables y seguimiento comercial',
+        'Permisos y datos por usuario, caja o ubicacion',
+        'Reportes consolidados para ventas, cobros e inventario',
+        'Integraciones para reducir doble digitacion entre sistemas',
+      ],
+    },
+    {
+      title: 'Cuando evaluar una plataforma a la medida',
+      body: 'Una plataforma propia puede tener sentido si el flujo diferencia al negocio, participan varios roles, existen aprobaciones especiales o las herramientas listas obligan a mantener pasos criticos fuera del sistema.',
+      items: [
+        'Procesos propios que no caben en un producto estandar',
+        'Portales, backoffice o accesos distintos por tipo de usuario',
+        'Integraciones y reportes especificos para la operacion',
+        'Implementacion por etapas para validar primero el proceso critico',
       ],
     },
   ],
+  decisionTable: {
+    title: 'Que tipo de software evaluar segun la necesidad',
+    body: 'Esta tabla sirve como punto de partida para llegar a una demo con un problema concreto. El alcance final depende de usuarios, volumen, datos, sucursales, equipos e integraciones.',
+    headers: {
+      factor: 'Necesidad principal',
+      question: 'Ruta que conviene evaluar',
+      impact: 'Que llevar a la demo',
+    },
+    rows: [
+      {
+        factor: 'Vender en caja y controlar productos',
+        question: 'Asystec POS con ventas, inventario, facturacion y reportes.',
+        impact: 'Cantidad de cajas, usuarios, productos, medios de pago y forma actual de cerrar.',
+      },
+      {
+        factor: 'Emitir comprobantes sin una caja completa',
+        question: 'Factura Pro o la solucion de facturacion electronica.',
+        impact: 'Tipos de comprobante, clientes, cotizaciones, pagos y volumen de documentos.',
+      },
+      {
+        factor: 'Dar seguimiento a saldos y pagos',
+        question: 'Cobros Pro y la solucion de cuentas por cobrar.',
+        impact: 'Cartera actual, responsables, recordatorios, acuerdos de pago y reportes necesarios.',
+      },
+      {
+        factor: 'Ordenar ventas, contactos y seguimiento',
+        question: 'CRM conectado con el proceso comercial y administrativo.',
+        impact: 'Etapas de venta, responsables, fuentes de contactos, tareas e informacion que debe conservarse.',
+      },
+      {
+        factor: 'Resolver un proceso propio o conectar sistemas',
+        question: 'Integracion o plataforma a la medida por etapas.',
+        impact: 'Flujo actual, usuarios, aprobaciones, sistemas existentes, datos criticos y resultado esperado.',
+      },
+    ],
+  },
   faqs: [
     {
-      question: 'Que tipo de software ofrece Asystec?',
+      question: 'Que software necesita una pyme para vender, facturar y controlar inventario?',
       answer:
-        'Asystec ofrece software para POS, facturacion electronica, inventario, cobros, reportes, CRM, operaciones multi-sucursal y plataformas web a la medida.',
+        'Si vende productos en mostrador, normalmente conviene evaluar un POS que conecte caja, ventas, inventario, facturacion electronica y reportes. La cantidad de productos, usuarios, bodegas y sucursales define el alcance real.',
     },
     {
-      question: 'Asystec trabaja solo con un tipo de negocio?',
+      question: 'Todos los negocios necesitan un sistema POS?',
       answer:
-        'No. El portafolio esta pensado para comercios, restaurantes, talleres, gimnasios, servicios profesionales y empresas que necesitan procesos mas ordenados.',
+        'No. Un negocio de servicios que emite pocos comprobantes y no maneja caja ni inventario puede necesitar facturacion, clientes y cobros sin un POS completo. La decision debe partir del flujo de venta y control diario.',
     },
     {
-      question: 'Como se empieza un proyecto?',
+      question: 'Se pueden conectar facturacion, inventario, cobros y CRM?',
       answer:
-        'Normalmente se agenda una demo o diagnostico, se revisan procesos actuales y se define si aplica un producto existente o una plataforma a la medida.',
+        'Se puede evaluar una solucion integrada o integraciones entre sistemas cuando el proceso lo requiere. Antes de prometer una conexion, Asystec revisa las herramientas actuales, datos disponibles y puntos donde existe doble digitacion.',
+    },
+    {
+      question: 'Cuando conviene software a la medida en lugar de un producto listo?',
+      answer:
+        'Conviene evaluarlo cuando el negocio tiene flujos propios, varios roles, aprobaciones, portales o integraciones que una herramienta lista deja fuera. Si el proceso es estandar, un producto existente suele reducir tiempo y complejidad.',
+    },
+    {
+      question: 'Que informacion debo llevar a una demo con Asystec?',
+      answer:
+        'Conviene llevar el problema prioritario, cantidad de usuarios y sucursales, productos o servicios, forma actual de vender y facturar, archivos que se desean migrar, reportes necesarios e integraciones existentes.',
     },
   ],
   related: [
     { label: 'Asystec POS', href: '/asystec-pos' },
-    { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+    { label: 'Factura Pro', href: '/facturacionapp' },
+    { label: 'Cobros Pro', href: '/cobrosapp' },
     { label: 'Inventario', href: '/soluciones/inventario' },
+    { label: 'CRM', href: '/soluciones/crm' },
+    { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
+    { label: 'Integraciones', href: '/soluciones/integraciones' },
     { label: 'Plataformas a medida', href: '/plataformas' },
+    { label: 'Casos y portafolio', href: '/casos' },
   ],
+  finalCta: {
+    title: 'Lleva tu proceso real a una demo',
+    body: 'Revisemos como vendes, facturas, cobras y controlas la operacion para definir si conviene un producto Asystec, una integracion o una plataforma a la medida.',
+    primary: contactCta,
+    secondary: whatsappCta,
+  },
 };
 
 export const portfolioPages: LandingPageData[] = [
