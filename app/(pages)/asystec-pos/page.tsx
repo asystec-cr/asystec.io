@@ -59,6 +59,11 @@ const securityItems = [
 
 const decisionGuides = [
   {
+    title: 'Cómo controlar aperturas y cierres de caja',
+    description: 'Revisa sesiones, medios de pago, ingresos, retiros, responsables y reportes antes de elegir.',
+    href: '/soluciones/control-de-caja',
+  },
+  {
     title: 'POS local/offline vs POS en la nube',
     description: 'Compara continuidad en caja, internet, inventario, facturacion, usuarios y soporte antes de decidir.',
     href: '/guias/pos-local-vs-pos-en-la-nube',
