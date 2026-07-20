@@ -86,6 +86,10 @@ export const headerData: HeaderProps = {
           href: '/soluciones/pos',
         },
         {
+          label: 'Control de caja',
+          href: '/soluciones/control-de-caja',
+        },
+        {
           label: 'Facturacion electronica',
           href: '/soluciones/facturacion-electronica',
         },
@@ -461,6 +465,7 @@ export const footerData2: FooterProps = {
     {
       title: 'Soluciones',
       links: [
+        { label: 'Control de caja', href: '/soluciones/control-de-caja' },
         { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
         { label: 'Inventario', href: '/soluciones/inventario' },
         { label: 'Reportes', href: '/soluciones/reportes' },
