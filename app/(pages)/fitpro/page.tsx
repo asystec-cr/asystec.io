@@ -248,6 +248,14 @@ const Page = () => {
               >
                 Contáctanos
               </a>
+              <a
+                href="/industrias/gimnasios"
+                data-analytics-event="cta_navigation"
+                data-analytics-label="FitPro software para gimnasios"
+                className="inline-flex items-center justify-center rounded-lg border border-emerald-200 bg-white px-5 py-3 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-50 dark:border-emerald-700 dark:bg-transparent dark:text-emerald-300 dark:hover:bg-emerald-900/20"
+              >
+                Ver software para gimnasios
+              </a>
             </div>
           </article>
         </div>

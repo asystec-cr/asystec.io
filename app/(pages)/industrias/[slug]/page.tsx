@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import CommercialLanding from '~/components/seo/CommercialLanding';
 import { clinicasIndustryPage } from '~/shared/data/industries/clinicas.data';
 import { distribuidoresIndustryPage } from '~/shared/data/industries/distribuidores.data';
+import { gimnasiosIndustryPage } from '~/shared/data/industries/gimnasios.data';
 import { restaurantesIndustryPage } from '~/shared/data/industries/restaurantes.data';
 import { retailIndustryPage } from '~/shared/data/industries/retail.data';
 import { salonesBellezaIndustryPage } from '~/shared/data/industries/salones-belleza.data';
@@ -18,6 +19,7 @@ type PageProps = {
 const dedicatedIndustryPages = [
   clinicasIndustryPage,
   distribuidoresIndustryPage,
+  gimnasiosIndustryPage,
   restaurantesIndustryPage,
   retailIndustryPage,
   salonesBellezaIndustryPage,
