@@ -409,48 +409,169 @@ export const portfolioPages: LandingPageData[] = [
     kind: 'product',
     schemaType: 'SoftwareApplication',
     title: 'Cobros Pro',
-    seoTitle: 'Cobros Pro | Software para credito y cobranza',
+    seoTitle: 'Cobros Pro | Plataforma de credito y cobranza en Costa Rica',
     description:
-      'Cobros Pro ayuda a administrar clientes, creditos, pagos, estados de cuenta, reportes e indicadores para operaciones de cobranza.',
+      'Software web para administrar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza en Costa Rica.',
     eyebrow: 'Producto Asystec',
-    heroTitle: 'Software para ordenar creditos, pagos y cuentas por cobrar',
+    heroTitle: 'Cobros Pro para ordenar creditos, pagos y saldos',
     answer:
-      'Cobros Pro es una plataforma para equipos que necesitan controlar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza desde un sistema web.',
+      'Cobros Pro es un software web para negocios que necesitan administrar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza. Ayuda a que ventas, cobros y administracion consulten la misma cartera sin depender de hojas o controles separados.',
     intro:
-      'La pagina publica explica el producto para que clientes y asistentes de IA puedan asociarlo con cobranza, credito, seguimiento y reportes financieros.',
-    primaryCta: { label: 'Abrir Cobros Pro', href: 'https://cobros.asystec.io/login' },
-    secondaryCta: contactCta,
-    highlights: ['Clientes y creditos', 'Pagos y estados de cuenta', 'Reportes financieros', 'Acceso web'],
-    modules: ['Clientes', 'Creditos', 'Pagos', 'Estados de cuenta', 'Reportes', 'Usuarios'],
+      'La demo parte de ejemplos reales de cartera para revisar como se registran creditos y pagos, que debe mostrar cada estado de cuenta y cuales reportes necesita el equipo antes de confirmar el alcance.',
+    primaryCta: contactCta,
+    secondaryCta: {
+      label: 'Consultar por WhatsApp',
+      href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20Cobros%20Pro.',
+    },
+    heroNote:
+      'Recordatorios, canales de contacto, facturacion e integraciones se validan durante la demo; no se asumen como funciones estandar.',
+    highlightsTitle: 'Que puedes evaluar en Cobros Pro',
+    highlights: [
+      'Cartera de clientes y creditos en un sistema web',
+      'Pagos, abonos y saldos vinculados con cada cliente',
+      'Estados de cuenta e historial para responder consultas',
+      'Reportes para revisar la operacion de cobranza',
+    ],
+    modulesTitle: 'Procesos que Cobros Pro ayuda a ordenar',
+    modulesIntro:
+      'El alcance visible cubre la administracion de clientes, creditos, pagos, saldos, estados de cuenta, reportes y usuarios. La configuracion exacta debe comprobarse con la cartera del negocio.',
+    modules: [
+      'Clientes',
+      'Creditos',
+      'Pagos y abonos',
+      'Saldos pendientes',
+      'Estados de cuenta',
+      'Historial por cliente',
+      'Reportes de cobranza',
+      'Usuarios',
+    ],
     sections: [
       {
-        title: 'Problemas que resuelve',
-        body: 'Ayuda cuando la cobranza depende de hojas de calculo, notas manuales o datos repartidos entre varias personas.',
+        title: 'Centraliza clientes, creditos y saldos',
+        body: 'Cuando la cartera vive en hojas, mensajes y reportes separados, ventas y administracion pueden terminar revisando datos distintos. Cobros Pro concentra la informacion necesaria para consultar cada cuenta desde un mismo sistema.',
         items: [
-          'Saldos pendientes visibles',
-          'Historial por cliente',
-          'Reportes de ingresos',
-          'Seguimiento por equipo',
+          'Cliente y credito relacionados en una misma cuenta',
+          'Saldo pendiente visible para el equipo autorizado',
+          'Historial disponible para responder consultas',
+          'Usuarios que trabajan sobre la misma cartera',
+        ],
+      },
+      {
+        title: 'Registra pagos y conserva el historial',
+        body: 'Un control de cobros necesita explicar que se pago y que sigue pendiente. Relacionar pagos y abonos con el cliente ayuda a mantener un saldo comprensible sin reconstruir movimientos manualmente.',
+        items: [
+          'Pagos y abonos asociados con el cliente',
+          'Movimientos disponibles para revisar diferencias',
+          'Saldo actualizado dentro del flujo de cobranza',
+          'Informacion util para preparar estados de cuenta',
+        ],
+      },
+      {
+        title: 'Comparte estados de cuenta y reportes utiles',
+        body: 'Cobros Pro permite evaluar estados de cuenta y reportes para que el equipo consulte cartera, movimientos y resultados de cobranza con criterios consistentes.',
+        items: [
+          'Estados de cuenta por cliente',
+          'Reportes para administracion y gerencia',
+          'Datos de pagos, saldos y creditos en contexto',
+          'Revision periodica sin armar hojas desde cero',
+        ],
+      },
+      {
+        title: 'Valida el alcance antes de implementar',
+        body: 'La demo debe usar ejemplos reales para separar lo que ya cubre Cobros Pro de cualquier configuracion, integracion o desarrollo adicional que necesite la operacion.',
+        items: [
+          'Cantidad de clientes, creditos y usuarios',
+          'Reglas de pagos parciales y ajustes',
+          'Formato de estados de cuenta y reportes',
+          'Facturacion, recordatorios, canales e integraciones por confirmar',
         ],
       },
     ],
+    decisionTable: {
+      title: 'Que revisar en una demo de software de cuentas por cobrar',
+      body: 'Estas preguntas ayudan a comprobar si Cobros Pro encaja con la cartera actual y que necesidades requieren configuracion o alcance adicional.',
+      rows: [
+        {
+          factor: 'Cartera actual',
+          question: 'Cuantos clientes, creditos y saldos activos necesita administrar el negocio?',
+          impact: 'Define la estructura inicial, los usuarios y la forma de consultar la cartera.',
+        },
+        {
+          factor: 'Pagos y abonos',
+          question: 'Como se registran hoy pagos parciales, cancelaciones, ajustes o diferencias?',
+          impact: 'Permite validar que el historial y el saldo resultante sean comprensibles para el equipo.',
+        },
+        {
+          factor: 'Estados de cuenta',
+          question: 'Que movimientos, periodos y datos debe ver el cliente en su estado de cuenta?',
+          impact: 'Ayuda a confirmar el formato y la informacion que necesita entregar la operacion.',
+        },
+        {
+          factor: 'Reportes y usuarios',
+          question: 'Que debe revisar cada responsable y que reportes necesita gerencia?',
+          impact: 'Alinea accesos, seguimiento y decisiones con el trabajo real de cobranza.',
+        },
+        {
+          factor: 'Canales e integraciones',
+          question: 'Se necesitan recordatorios, WhatsApp, correo, facturacion, POS, CRM u otros sistemas?',
+          impact:
+            'Separa las funciones visibles de Cobros Pro de integraciones o automatizaciones que deben cotizarse.',
+        },
+      ],
+    },
     faqs: [
       {
-        question: 'Cobros Pro reemplaza hojas de Excel?',
+        question: 'Que controla Cobros Pro?',
         answer:
-          'Puede reemplazar controles manuales de credito y cobranza cuando se necesita trazabilidad, reportes y estados por cliente.',
+          'Cobros Pro administra clientes, creditos, pagos, abonos, saldos, estados de cuenta, historial, reportes de cobranza y usuarios desde una plataforma web.',
       },
       {
-        question: 'Cobros Pro es parte del portafolio Asystec?',
-        answer: 'Si. Es una de las plataformas publicas vinculadas al portafolio de soluciones de Asystec.',
+        question: 'Cuando conviene dejar Excel para controlar cobros?',
+        answer:
+          'Conviene evaluar un sistema cuando varias personas actualizan la cartera, existen pagos parciales, los estados de cuenta se arman a mano o gerencia no puede consultar saldos y movimientos con rapidez.',
+      },
+      {
+        question: 'Cobros Pro permite registrar pagos parciales y abonos?',
+        answer:
+          'Pagos, abonos y saldos forman parte del alcance visible de cuentas por cobrar. La demo debe confirmar las reglas, ajustes y reportes que usa el negocio para mantener el saldo correcto.',
+      },
+      {
+        question: 'Cobros Pro genera estados de cuenta?',
+        answer:
+          'Los estados de cuenta forman parte del alcance publicado. Conviene llevar un ejemplo a la demo para validar periodos, movimientos, datos del cliente y formato necesario.',
+      },
+      {
+        question: 'Cobros Pro envia recordatorios por WhatsApp o correo?',
+        answer:
+          'Los recordatorios, canales de contacto y automatizaciones deben validarse durante la demo. Esta pagina no los presenta como funciones estandar sin confirmar el flujo requerido.',
+      },
+      {
+        question: 'Cobros Pro se integra con facturacion, POS o CRM?',
+        answer:
+          'Las integraciones dependen de los sistemas actuales, los datos disponibles y el alcance. Asystec revisa esas conexiones antes de confirmar una implementacion.',
       },
     ],
+    relatedTitle: 'Revisa el producto, la guia y el siguiente paso',
+    relatedIntro:
+      'Estas rutas permiten abrir Cobros Pro, consultar su documentacion publica, preparar la cartera y coordinar una demo con Asystec.',
     related: [
+      { label: 'Abrir Cobros Pro', href: 'https://cobros.asystec.io/login' },
+      { label: 'Documentacion de Cobros Pro', href: 'https://docs.cobrosapp.com' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Guía para organizar cobros', href: '/guias/como-organizar-cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'CRM', href: '/soluciones/crm' },
+      { label: 'Casos y portafolio', href: '/casos' },
     ],
+    finalCta: {
+      title: 'Prueba Cobros Pro con una muestra de tu cartera',
+      body: 'Revisemos clientes, creditos, pagos, saldos, estados de cuenta, usuarios y reportes para confirmar que cubre el producto y que requiere alcance adicional.',
+      primary: contactCta,
+      secondary: {
+        label: 'Consultar por WhatsApp',
+        href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20Cobros%20Pro.',
+      },
+    },
     image: '/images/portfolio/cobrosapp.png',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
