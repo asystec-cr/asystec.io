@@ -1,15 +1,9 @@
 import CommercialLanding from '~/components/seo/CommercialLanding';
-import { getPortfolioPage } from '~/shared/data/seo-landings.data';
+import { facturaProProductPage } from '~/shared/data/products/factura-pro.data';
 import { buildPageMetadata } from '~/utils/seo';
 
-const page = getPortfolioPage('facturacionapp');
+export const metadata = buildPageMetadata(facturaProProductPage);
 
-if (!page) {
-  throw new Error('Factura Pro landing data is missing.');
-}
-
-export const metadata = buildPageMetadata(page);
-
-const Page = () => <CommercialLanding page={page} />;
+const Page = () => <CommercialLanding page={facturaProProductPage} />;
 
 export default Page;
