@@ -517,42 +517,160 @@ export const portfolioPages: LandingPageData[] = [
     kind: 'product',
     schemaType: 'SoftwareApplication',
     title: 'TallerApp',
-    seoTitle: 'TallerApp | Software para talleres',
+    seoTitle: 'TallerApp | Software para talleres en Costa Rica',
     description:
-      'TallerApp ayuda a talleres a ordenar clientes, ordenes de trabajo, diagnosticos, aprobaciones, cobros y seguimiento operativo.',
+      'Software para talleres en Costa Rica con clientes, ordenes de trabajo, diagnosticos, aprobaciones, cobros, estados y seguimiento hasta la entrega.',
     eyebrow: 'Producto Asystec',
-    heroTitle: 'Software para talleres con ordenes, clientes y seguimiento',
+    heroTitle: 'Software para talleres con ordenes de trabajo, cobros y seguimiento',
     answer:
-      'TallerApp es una plataforma orientada a talleres que necesitan registrar clientes, ordenes, estados, diagnosticos, aprobaciones, cobros y entrega de trabajos.',
+      'TallerApp es una plataforma para talleres y servicios tecnicos que necesitan registrar clientes, vehiculos o equipos, ordenes de trabajo, diagnosticos, aprobaciones, estados, cobros y entregas en un mismo flujo.',
     intro:
-      'La pagina publica conecta el producto con talleres automotrices, servicios tecnicos y negocios que trabajan por ordenes.',
-    primaryCta: { label: 'Abrir TallerApp', href: 'https://taller.asystec.io/login' },
-    secondaryCta: contactCta,
-    highlights: ['Ordenes de trabajo', 'Clientes', 'Estados operativos', 'Cobros y seguimiento'],
-    modules: ['Ordenes', 'Clientes', 'Diagnosticos', 'Aprobaciones', 'Cobros', 'Reportes'],
+      'Ayuda a recepcion, tecnicos, caja y administracion a seguir cada trabajo desde el ingreso hasta el cobro y la entrega, sin depender de papeles o mensajes dispersos.',
+    primaryCta: contactCta,
+    secondaryCta: {
+      label: 'Consultar por WhatsApp',
+      href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20TallerApp%20para%20mi%20taller.',
+    },
+    heroNote: 'La demo revisa el flujo real del taller antes de confirmar modulos, integraciones o alcance.',
+    highlights: [
+      'Ordenes de trabajo con estados claros',
+      'Clientes, vehiculos o equipos relacionados',
+      'Diagnosticos y aprobaciones dentro del seguimiento',
+      'Cobros, saldos y entregas visibles para el equipo',
+    ],
+    modules: [
+      'Ordenes de trabajo',
+      'Clientes',
+      'Vehiculos o equipos',
+      'Diagnosticos',
+      'Aprobaciones',
+      'Estados operativos',
+      'Cobros y saldos',
+      'Reportes',
+    ],
     sections: [
       {
-        title: 'Para operaciones por orden',
-        body: 'Ayuda a negocios que reciben equipos, vehiculos o trabajos, los procesan por etapas y necesitan visibilidad hasta la entrega.',
-        items: ['Recepcion ordenada', 'Historial por cliente', 'Estados claros', 'Control de saldos y entrega'],
+        title: 'Centraliza cada orden desde la recepcion',
+        body: 'Cada trabajo necesita una referencia comun para que recepcion, tecnico y administracion consulten el mismo cliente, vehiculo o equipo, diagnostico, estado y entrega esperada.',
+        items: [
+          'Datos del cliente y del vehiculo o equipo',
+          'Descripcion inicial del trabajo solicitado',
+          'Orden identificable durante todo el proceso',
+          'Historial disponible para futuras visitas',
+        ],
+      },
+      {
+        title: 'Da seguimiento a diagnosticos y aprobaciones',
+        body: 'Cuando diagnosticos, decisiones y estados quedan repartidos entre papel y mensajes, aumenta el riesgo de trabajar sin una aprobacion clara o perder contexto antes de la entrega.',
+        items: [
+          'Diagnostico asociado con la orden',
+          'Aprobaciones dentro del seguimiento operativo',
+          'Estados para trabajos abiertos, en proceso o listos',
+          'Visibilidad compartida entre los roles del taller',
+        ],
+      },
+      {
+        title: 'Conecta cobros, saldos y entrega',
+        body: 'El seguimiento no termina cuando concluye el trabajo. TallerApp ayuda a relacionar cobros y saldos con la orden para que caja y administracion sepan que falta antes de cerrar o entregar.',
+        items: [
+          'Cobros vinculados con el trabajo atendido',
+          'Saldos pendientes visibles para seguimiento',
+          'Estado de entrega dentro del flujo operativo',
+          'Reportes para revisar trabajos y cobros',
+        ],
+      },
+      {
+        title: 'Valida el alcance con el proceso real',
+        body: 'Antes de elegir software conviene demostrar el recorrido completo con ejemplos del taller. Facturacion, inventario de repuestos, permisos, reportes especiales o integraciones deben confirmarse durante la demo y no asumirse como funciones estandar.',
+        items: [
+          'Tipos de trabajo y volumen de ordenes',
+          'Roles de recepcion, tecnico, caja y gerencia',
+          'Estados, aprobaciones y reportes necesarios',
+          'Sistemas actuales que deban integrarse',
+        ],
       },
     ],
+    decisionTable: {
+      title: 'Que revisar al evaluar software para talleres',
+      body: 'Estas preguntas ayudan a comparar el sistema con la operacion diaria y a llegar a una demo enfocada en el flujo que realmente necesita controlar el taller.',
+      rows: [
+        {
+          factor: 'Tipo de operacion',
+          question: 'El taller trabaja con vehiculos, equipos, servicios tecnicos u otro tipo de orden?',
+          impact: 'Define los datos de recepcion, historial y seguimiento que necesita cada trabajo.',
+        },
+        {
+          factor: 'Estados y responsables',
+          question: 'Que etapas recorre una orden y quien actua en cada una?',
+          impact: 'Permite comprobar si recepcion, tecnicos, caja y administracion comparten el mismo estado.',
+        },
+        {
+          factor: 'Diagnostico y aprobacion',
+          question: 'Como se documenta lo encontrado y quien autoriza continuar?',
+          impact: 'Reduce contexto perdido y ayuda a mantener la decision asociada con la orden correcta.',
+        },
+        {
+          factor: 'Cobro y entrega',
+          question: 'El taller maneja abonos, saldos pendientes o condiciones antes de entregar?',
+          impact: 'Ayuda a verificar que trabajo, cobro, saldo y entrega no queden en controles separados.',
+        },
+        {
+          factor: 'Reportes e integraciones',
+          question: 'Que debe revisar gerencia y que sistemas actuales necesitan conectarse?',
+          impact:
+            'Separa las funciones visibles de cualquier reporte, facturacion o integracion que requiera validacion.',
+        },
+      ],
+    },
     faqs: [
       {
-        question: 'TallerApp sirve para talleres automotrices?',
+        question: 'Que controla TallerApp en un taller?',
         answer:
-          'Si. Tambien puede aplicar a otros servicios que trabajan con ordenes, diagnosticos, aprobaciones y entregas.',
+          'TallerApp organiza clientes, vehiculos o equipos, ordenes de trabajo, diagnosticos, aprobaciones, estados, cobros, saldos, reportes y seguimiento hasta la entrega.',
+      },
+      {
+        question: 'TallerApp sirve solo para talleres automotrices?',
+        answer:
+          'No. Tambien puede evaluarse para servicios tecnicos y otras operaciones que reciben trabajos, los procesan por estados y necesitan controlar diagnosticos, aprobaciones, cobros y entregas.',
+      },
+      {
+        question: 'Como ayuda a controlar trabajos pendientes?',
+        answer:
+          'Cada orden conserva cliente, trabajo, estado y seguimiento para que el equipo pueda distinguir lo recibido, lo que espera diagnostico o aprobacion, lo que esta en proceso y lo que puede entregarse.',
+      },
+      {
+        question: 'TallerApp permite dar seguimiento a cobros y saldos?',
+        answer:
+          'Si. Cobros y saldos forman parte del flujo visible del producto para relacionar el estado financiero con la orden y la entrega. El manejo exacto debe comprobarse con el caso real durante la demo.',
       },
       {
         question: 'TallerApp se conecta con otros sistemas?',
-        answer: 'Las integraciones dependen del alcance del proyecto y se revisan durante la etapa de diagnostico.',
+        answer:
+          'Las integraciones, la facturacion, el inventario de repuestos y los reportes especiales dependen del alcance. Asystec revisa los sistemas actuales y los datos disponibles antes de confirmar una conexion.',
+      },
+      {
+        question: 'Puedo coordinar una demo de TallerApp con el flujo de mi taller?',
+        answer:
+          'Si. Puedes llevar ejemplos de ordenes, estados, roles, aprobaciones, cobros, reportes e integraciones para comprobar que cubre TallerApp y que requiere configuracion o desarrollo adicional.',
       },
     ],
     related: [
+      { label: 'Abrir TallerApp', href: 'https://taller.asystec.io/login' },
       { label: 'Talleres', href: '/industrias/talleres' },
+      { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'CRM', href: '/soluciones/crm' },
+      { label: 'Casos y portafolio', href: '/casos' },
     ],
+    finalCta: {
+      title: 'Prueba TallerApp con una orden real de tu negocio',
+      body: 'Revisemos como recibe, diagnostica, aprueba, cobra y entrega trabajos tu taller para confirmar el alcance antes de implementar.',
+      primary: contactCta,
+      secondary: {
+        label: 'Consultar por WhatsApp',
+        href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20TallerApp%20para%20mi%20taller.',
+      },
+    },
     image: '/images/portfolio/taller-asystec-login.png',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
