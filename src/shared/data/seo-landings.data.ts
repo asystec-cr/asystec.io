@@ -359,49 +359,162 @@ export const portfolioPages: LandingPageData[] = [
     path: '/plataformas',
     kind: 'product',
     schemaType: 'Service',
-    title: 'Diseno y desarrollo de plataformas',
-    seoTitle: 'Diseno y desarrollo de plataformas en Costa Rica | Asystec',
+    title: 'Software a medida para empresas en Costa Rica',
+    seoTitle: 'Software a medida en Costa Rica para empresas | Asystec',
     description:
-      'Diseno y desarrollo de plataformas web, portales operativos y productos SaaS para empresas en Costa Rica.',
-    eyebrow: 'Servicio especializado',
-    heroTitle: 'Plataformas web y productos SaaS para procesos operativos reales',
+      'Desarrollo de software a medida en Costa Rica para empresas que necesitan digitalizar procesos, usuarios, datos, reportes e integraciones.',
+    eyebrow: 'Desarrollo de software a medida en Costa Rica',
+    heroTitle: 'Software a medida para convertir procesos propios en una plataforma operativa',
     answer:
-      'Asystec disena y desarrolla plataformas web para empresas que necesitan digitalizar ventas, cobros, usuarios, permisos, reportes, portales de clientes o integraciones.',
-    intro: 'El servicio combina analisis del proceso, diseno de flujo, desarrollo, despliegue y mejora continua.',
-    primaryCta: contactCta,
+      'El software a medida conviene cuando una empresa tiene reglas, roles, datos o integraciones que una herramienta lista no cubre sin hojas paralelas y trabajo manual. Asystec diseña plataformas web en Costa Rica a partir del proceso real, con alcance, usuarios, permisos, reportes y salida a producción definidos antes de construir.',
+    intro:
+      'Asystec analiza el flujo actual, separa lo estándar de lo específico y convierte el alcance aprobado en una plataforma que el equipo pueda operar, revisar y mejorar por etapas.',
+    primaryCta: { label: 'Coordinar diagnóstico', href: '/contact' },
     secondaryCta: { label: 'Ver portafolio', href: '/plataformas#portfolio-cases' },
-    highlights: ['Backoffice', 'Portales de clientes', 'SaaS', 'Integraciones y reportes'],
-    modules: ['Usuarios', 'Roles', 'Flujos operativos', 'Dashboards', 'Integraciones', 'Seguridad'],
+    highlights: [
+      'El alcance parte de procesos, responsables y excepciones visibles.',
+      'Los roles y permisos se definen según quién crea, aprueba o consulta.',
+      'Las integraciones y migraciones se validan antes de comprometerlas.',
+      'La salida a producción contempla pruebas, soporte y evolución acordada.',
+    ],
+    modules: [
+      'Portales de clientes y proveedores',
+      'Backoffice y flujos por estado',
+      'Usuarios, roles y permisos',
+      'Reportes y tableros operativos',
+      'APIs e integraciones',
+      'Migración y trazabilidad de datos',
+    ],
+    modulesTitle: 'Procesos que puede cubrir una plataforma a medida',
+    modulesIntro:
+      'El alcance no se define por una lista genérica de funciones. Estas son capacidades frecuentes que deben aterrizarse con usuarios, reglas, datos y responsables del negocio.',
+    highlightsTitle: 'Condiciones para que el proyecto sea verificable',
     sections: [
       {
-        title: 'Que se construye',
-        body: 'Se construyen portales y sistemas a la medida cuando un producto existente no cubre el flujo especifico del negocio.',
+        title: 'Cuándo conviene desarrollar software a medida',
+        body: 'Conviene evaluar una plataforma propia cuando el proceso diferencia al negocio, requiere varias aprobaciones o termina dividido entre hojas, mensajes y sistemas que no comparten información.',
         items: [
-          'Portales con login',
-          'Procesos por estado',
-          'Paneles administrativos',
-          'Reportes y control de permisos',
+          'El equipo vuelve a digitar los mismos datos en varias herramientas',
+          'Una operación necesita estados, responsables y reglas particulares',
+          'Clientes o proveedores requieren un portal con información controlada',
+          'Los reportes dependen de consolidar archivos manualmente',
+        ],
+      },
+      {
+        title: 'Qué definir antes de solicitar una cotización',
+        body: 'Una cotización útil necesita más que una lista de pantallas. Debe identificar el problema, los usuarios, el flujo actual, los datos disponibles, las integraciones y el resultado que la empresa necesita comprobar.',
+        items: [
+          'Proceso actual, excepciones y puntos donde se pierde tiempo o control',
+          'Roles que crean, revisan, aprueban, administran o solo consultan',
+          'Archivos y sistemas que deben migrarse, conectarse o conservarse',
+          'Reportes, alertas y criterios de aceptación para cada etapa',
+        ],
+      },
+      {
+        title: 'Cómo se convierte el proceso en una plataforma',
+        body: 'El trabajo se organiza por etapas verificables: diagnóstico, definición del alcance, diseño de flujos, construcción, pruebas y salida a producción. Las prioridades se acuerdan antes de desarrollar para evitar que el proyecto dependa de supuestos.',
+        items: [
+          'Mapear actores, reglas, estados y datos críticos',
+          'Validar el flujo y dividir el alcance en entregas revisables',
+          'Probar con escenarios y datos representativos del negocio',
+          'Preparar capacitación, permisos, soporte y continuidad operativa',
+        ],
+      },
+      {
+        title: 'Qué debe validarse antes de producción',
+        body: 'Una plataforma no está lista solo porque abre en el navegador. Antes de usarla en la operación se deben probar permisos, datos, integraciones, reportes, casos de error y responsables de soporte con criterios acordados.',
+        items: [
+          'Accesos y visibilidad correcta para cada rol',
+          'Calidad de datos, migraciones e historial necesario',
+          'Integraciones, notificaciones y reportes del flujo completo',
+          'Respaldo, monitoreo, contingencia y canal de soporte acordado',
         ],
       },
     ],
+    decisionTable: {
+      title: 'Preguntas para evaluar software a medida antes de contratar',
+      body: 'Esta tabla ayuda a convertir una idea amplia en un alcance que la empresa y el proveedor puedan revisar durante el diagnóstico y la propuesta.',
+      rows: [
+        {
+          factor: 'Ajuste del proceso',
+          question: '¿Qué parte del flujo no resuelve bien un producto existente y qué resultado debe mejorar?',
+          impact: 'Aclara si hace falta desarrollo a medida o si conviene configurar una solución ya disponible.',
+        },
+        {
+          factor: 'Usuarios y permisos',
+          question: '¿Quién registra, revisa, aprueba, administra o consulta información?',
+          impact: 'Define accesos, trazabilidad, responsabilidades y pantallas necesarias para operar.',
+        },
+        {
+          factor: 'Datos y migración',
+          question: '¿Qué archivos, catálogos, documentos o historiales deben quedar disponibles?',
+          impact: 'Permite estimar limpieza, mapeo, carga inicial y acceso al sistema anterior.',
+        },
+        {
+          factor: 'Integraciones',
+          question: '¿Qué sistemas deben intercambiar datos y qué sucede si una conexión falla?',
+          impact:
+            'Evita descubrir tarde dependencias críticas con facturación, pagos, CRM, inventario u otros servicios.',
+        },
+        {
+          factor: 'Operación y soporte',
+          question: '¿Cómo se probará, quién aprobará la salida y qué acompañamiento necesita el equipo?',
+          impact: 'Conecta desarrollo con adopción, continuidad y un criterio verificable de finalización.',
+        },
+      ],
+    },
     faqs: [
       {
-        question: 'Cuando conviene una plataforma a la medida?',
+        question: '¿Cuándo conviene desarrollar software a medida?',
         answer:
-          'Conviene cuando el proceso de negocio es propio, involucra varios roles o requiere integraciones que un sistema estandar no cubre bien.',
+          'Conviene cuando el proceso es propio, involucra varias reglas o aprobaciones, necesita integrar sistemas o mantiene datos críticos en controles manuales que una herramienta estándar no resuelve bien.',
       },
       {
-        question: 'Asystec mantiene las plataformas despues del lanzamiento?',
+        question: '¿Cuándo conviene usar un SaaS existente en vez de construir?',
         answer:
-          'Si. El trabajo puede incluir soporte, mejoras, seguridad, despliegue y evolucion continua segun el acuerdo del proyecto.',
+          'Conviene usar un producto existente cuando cubre el flujo principal con configuración razonable, permite exportar datos y no obliga a mantener procesos críticos por fuera. El diagnóstico debe comparar ambas rutas antes de decidir.',
+      },
+      {
+        question: '¿Cómo se calcula el costo de una plataforma a medida?',
+        answer:
+          'El costo depende del alcance, cantidad de roles, reglas, integraciones, migración, reportes, pruebas, soporte e infraestructura. Para estimarlo se necesita revisar el proceso y priorizar una primera entrega verificable.',
+      },
+      {
+        question: '¿Se puede integrar con los sistemas que la empresa ya utiliza?',
+        answer:
+          'Puede ser posible si los sistemas ofrecen APIs, archivos o mecanismos de intercambio adecuados. Cada integración debe validarse técnicamente antes de incluir alcance, datos, frecuencia y manejo de errores en la propuesta.',
+      },
+      {
+        question: '¿Qué pasa con los datos del sistema actual?',
+        answer:
+          'Primero se revisa qué datos existen, su calidad, formato y uso. Después se acuerda qué debe migrarse para operar, qué puede conservarse como consulta y qué muestra se probará antes de una carga completa.',
+      },
+      {
+        question: '¿Asystec mantiene las plataformas después del lanzamiento?',
+        answer:
+          'El trabajo puede incluir soporte, correcciones, mejoras, seguridad, despliegue y evolución continua según el alcance y el acuerdo de cada proyecto. Estas condiciones deben quedar definidas antes de la salida a producción.',
       },
     ],
     related: [
+      { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
       { label: 'Integraciones', href: '/soluciones/integraciones' },
       { label: 'CRM', href: '/soluciones/crm' },
       { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
       { label: 'Casos y portafolio', href: '/casos' },
     ],
+    relatedTitle: 'Evalúa alcance, integraciones y evidencia',
+    relatedIntro:
+      'Estas páginas ayudan a distinguir entre configurar un producto, conectar sistemas existentes o construir una plataforma para un proceso propio.',
+    finalCta: {
+      title: 'Lleva el proceso real a una conversación de alcance',
+      body: 'Comparte el flujo actual, los usuarios, los datos y el principal punto de fricción. Asystec puede ayudarte a separar lo que conviene configurar, integrar o desarrollar a medida.',
+      primary: { label: 'Coordinar diagnóstico', href: '/contact' },
+      secondary: {
+        label: 'Escribir por WhatsApp',
+        href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20evaluar%20software%20a%20medida%20para%20mi%20empresa.',
+      },
+    },
   },
   {
     slug: 'cobrosapp',

@@ -1,7 +1,7 @@
-import JsonLd from '~/components/seo/JsonLd';
+import CommercialLanding from '~/components/seo/CommercialLanding';
 import PlatformPortfolio from '~/components/widgets/PlatformPortfolio';
 import { getPortfolioPage } from '~/shared/data/seo-landings.data';
-import { buildLandingSchemas, buildPageMetadata } from '~/utils/seo';
+import { buildPageMetadata } from '~/utils/seo';
 
 const seoPage = getPortfolioPage('plataformas');
 
@@ -14,8 +14,8 @@ export const metadata = buildPageMetadata(seoPage);
 const Page = () => {
   return (
     <>
-      <JsonLd data={buildLandingSchemas(seoPage, { includeFaq: false })} />
-      <PlatformPortfolio headingLevel="h1" />
+      <CommercialLanding page={seoPage} />
+      <PlatformPortfolio headingLevel="h2" />
     </>
   );
 };
