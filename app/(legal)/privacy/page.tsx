@@ -6,6 +6,9 @@ import md from 'markdown-it';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad',
+  alternates: {
+    canonical: '/privacy',
+  },
 };
 
 const Page = () => {

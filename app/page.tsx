@@ -31,6 +31,9 @@ import {
 
 export const metadata: Metadata = {
   title: SITE.title,
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function Page() {
