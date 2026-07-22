@@ -6,6 +6,9 @@ import md from 'markdown-it';
 
 export const metadata: Metadata = {
   title: 'Términos y Condiciones',
+  alternates: {
+    canonical: '/terms',
+  },
 };
 
 const Page = () => {
