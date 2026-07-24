@@ -174,6 +174,10 @@ export const headerData: HeaderProps = {
           href: '/guias/como-elegir-sistema-pos',
         },
         {
+          label: 'POS para tienda de ropa',
+          href: '/guias/como-elegir-pos-tienda-ropa',
+        },
+        {
           label: 'Migrar de sistema POS',
           href: '/guias/como-migrar-sistema-pos',
         },
