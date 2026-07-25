@@ -3465,6 +3465,7 @@ export const guidePages: LandingPageData[] = [
     related: [
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
+      { label: 'POS para tienda de ropa', href: '/guias/como-elegir-pos-tienda-ropa' },
       { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
       { label: 'Minisuper', href: '/industrias/minisuper' },
       { label: 'Restaurantes', href: '/industrias/restaurantes' },
@@ -3472,6 +3473,167 @@ export const guidePages: LandingPageData[] = [
       { label: 'Retail', href: '/industrias/retail' },
       { label: 'Coordinar demo', href: '/contact' },
     ],
+  },
+  {
+    ...guide(
+      'como-elegir-pos-tienda-ropa',
+      'Como elegir un POS para tienda de ropa en Costa Rica',
+      'Guia para elegir un POS para tienda de ropa o boutique en Costa Rica: variantes, inventario, caja, facturacion electronica, sucursales y reportes.',
+      'Para elegir un POS para una tienda de ropa en Costa Rica, prueba con prendas reales como se registran tallas, colores, codigos, existencias, cambios, ventas y facturacion. Confirma en la demo que cada variante y ubicacion se controle con el detalle que necesita tu negocio antes de contratar.',
+      [
+        'Tallas, colores y variantes',
+        'Codigos y etiquetas',
+        'Caja y cambios',
+        'Inventario por ubicacion',
+        'Facturacion electronica',
+        'Reportes y temporadas',
+      ],
+      [
+        { label: 'Software retail', href: '/industrias/retail' },
+        { label: 'Sistema POS', href: '/soluciones/pos' },
+        { label: 'Inventario', href: '/soluciones/inventario' },
+        { label: 'Coordinar demo', href: '/contact' },
+      ],
+    ),
+    seoTitle: 'Como elegir un POS para tienda de ropa en Costa Rica | Asystec',
+    intro:
+      'Esta guia ayuda a duenos de boutiques, tiendas de ropa, calzado y accesorios a comparar sistemas sin asumir que todos manejan variantes, cambios, inventario y sucursales de la misma forma.',
+    highlights: [
+      'Probar tallas, colores, estilos y codigos con productos reales.',
+      'Revisar cambios, devoluciones, cierres y facturacion desde caja.',
+      'Confirmar inventario por tienda, bodega o sucursal antes de migrar.',
+      'Pedir reportes que ayuden a comprar y reponer con menos controles paralelos.',
+    ],
+    modules: [
+      'Catalogo y variantes',
+      'Codigos de barras y etiquetas',
+      'Caja, cambios y cierres',
+      'Inventario y ubicaciones',
+      'Facturacion electronica',
+      'Reportes para compras y gerencia',
+    ],
+    sections: [
+      {
+        title: 'Prueba el catalogo con prendas reales',
+        body: 'En una tienda de ropa, un mismo modelo puede tener varias tallas, colores, estilos o presentaciones. La demo debe mostrar como se crea, busca y vende cada combinacion sin duplicar informacion ni perder el detalle de existencias.',
+        items: [
+          'Modelo, marca, categoria, talla, color y temporada',
+          'Codigo de barras o referencia para cada presentacion',
+          'Precio, costo y existencia con el detalle requerido',
+          'Busqueda rapida del producto correcto durante la venta',
+        ],
+      },
+      {
+        title: 'Simula una venta, un cambio y un cierre',
+        body: 'Una lista de funciones no demuestra como operara la caja. Conviene probar una venta con varias prendas, medios de pago, comprobante, cambio de talla, anulacion autorizada y cierre para identificar pasos manuales o permisos faltantes.',
+        items: [
+          'Venta y cobro con los medios usados por la tienda',
+          'Factura electronica o comprobante desde el mismo flujo',
+          'Cambio o devolucion con trazabilidad de inventario',
+          'Permisos de cajero, encargado y administracion',
+        ],
+      },
+      {
+        title: 'Define donde vive cada existencia',
+        body: 'Antes de contratar, documenta si el inventario se controla en una tienda, una bodega o varias sucursales. El sistema debe demostrar movimientos, conteos y consultas por ubicacion segun el alcance acordado.',
+        items: [
+          'Existencias por tienda, bodega o sucursal',
+          'Entradas, ajustes y traslados con responsables',
+          'Conteos para detectar diferencias por variante',
+          'Importacion inicial desde Excel u otro sistema',
+        ],
+      },
+      {
+        title: 'Pide reportes que respondan decisiones',
+        body: 'Los reportes deben ayudar a decidir que comprar, reponer o mover, no solo resumir ventas. Lleva a la demo preguntas concretas sobre productos, periodos, ubicaciones y usuarios para comprobar el nivel de detalle disponible.',
+        items: [
+          'Ventas y existencias por producto o variante',
+          'Productos con mayor o menor movimiento',
+          'Resultados por tienda, caja, usuario o periodo',
+          'Datos exportables para compras y administracion',
+        ],
+      },
+    ],
+    decisionTable: {
+      title: 'Checklist para comparar POS para tiendas de ropa',
+      body: 'Usa estas preguntas con cada proveedor. Marca como pendiente cualquier capacidad que no se pueda demostrar con datos y escenarios cercanos a tu operacion.',
+      rows: [
+        {
+          factor: 'Variantes',
+          question: 'Como registra y consulta tallas, colores, estilos o presentaciones de una misma prenda?',
+          impact: 'Define si caja e inventario identifican la combinacion correcta sin duplicaciones confusas.',
+        },
+        {
+          factor: 'Codigos',
+          question: 'Cada presentacion puede usar el codigo o etiqueta que necesita la tienda?',
+          impact: 'Afecta velocidad de cobro, recepcion de mercaderia, conteos y trazabilidad del catalogo.',
+        },
+        {
+          factor: 'Cambios',
+          question: 'Como quedan registrados un cambio de talla, una devolucion o una anulacion autorizada?',
+          impact: 'Evita diferencias entre caja, comprobantes y existencias despues de atender al cliente.',
+        },
+        {
+          factor: 'Ubicaciones',
+          question: 'El sistema muestra existencias y movimientos por tienda, bodega o sucursal segun el alcance?',
+          impact: 'Permite reponer o trasladar productos con informacion clara y reduce hojas paralelas.',
+        },
+        {
+          factor: 'Facturacion',
+          question: 'La venta genera el comprobante electronico dentro del mismo flujo de caja?',
+          impact: 'Reduce doble digitacion y facilita revisar ventas, impuestos, cierres y reportes.',
+        },
+        {
+          factor: 'Reportes',
+          question: 'Que reportes existen por producto, variante, periodo, usuario y ubicacion?',
+          impact: 'Determina si compras y gerencia pueden decidir con el detalle que realmente necesitan.',
+        },
+      ],
+    },
+    faqs: [
+      {
+        question: 'Que debe tener un POS para una tienda de ropa?',
+        answer:
+          'Debe permitir probar catalogo, variantes, codigos, ventas, cambios, inventario, facturacion electronica, usuarios, cierres y reportes. Si hay varias tiendas o bodegas, tambien debe demostrar el control por ubicacion y la consulta consolidada.',
+      },
+      {
+        question: 'Como confirmo si maneja tallas y colores correctamente?',
+        answer:
+          'Lleva a la demo varios modelos con combinaciones de talla y color. Pide crear, recibir, vender, cambiar y consultar esas prendas para comprobar como se identifican y como cambia la existencia de cada combinacion.',
+      },
+      {
+        question: 'Conviene elegir el POS mas barato?',
+        answer:
+          'No siempre. Compara licencia, configuracion, migracion, soporte, facturacion, usuarios, sucursales e integraciones. Un precio bajo puede salir caro si obliga a mantener catalogo, inventario o reportes en archivos separados.',
+      },
+      {
+        question: 'Que datos debo preparar para la demo?',
+        answer:
+          'Prepara una muestra de productos y variantes, codigos, existencias, tipos de venta, medios de pago, cambios frecuentes, usuarios, ubicaciones y reportes que hoy usa la tienda para comprar o reponer.',
+      },
+      {
+        question: 'Asystec puede evaluar el flujo de mi tienda?',
+        answer:
+          'Si. Puedes coordinar una demo para revisar catalogo, caja, inventario, facturacion, usuarios, ubicaciones, reportes y migracion. El alcance se confirma con el flujo y los datos reales de la tienda.',
+      },
+    ],
+    related: [
+      { label: 'Software retail', href: '/industrias/retail' },
+      { label: 'Asystec POS', href: '/asystec-pos' },
+      { label: 'Sistema POS', href: '/soluciones/pos' },
+      { label: 'Inventario', href: '/soluciones/inventario' },
+      { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
+      { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
+      { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'Migrar desde Excel', href: '/guias/alternativas-excel-inventario' },
+      { label: 'Coordinar demo', href: '/contact' },
+    ],
+    finalCta: {
+      title: 'Lleva el flujo real de tu tienda a una demo',
+      body: 'Prepara productos, variantes, codigos, cambios, ubicaciones y reportes esperados. Asystec puede ayudarte a convertirlos en una prueba concreta antes de definir el alcance.',
+      primary: contactCta,
+      secondary: whatsappCta,
+    },
   },
   {
     ...guide(
