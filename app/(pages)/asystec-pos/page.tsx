@@ -1,6 +1,6 @@
 import JsonLd from '~/components/seo/JsonLd';
 import PosImageCarousel from '~/components/widgets/PosImageCarousel';
-import TrustpilotProof from '~/components/widgets/TrustpilotProof';
+import CustomerOpinions from '~/components/widgets/CustomerOpinions';
 import { getPortfolioPage } from '~/shared/data/seo-landings.data';
 import { buildLandingSchemas, buildPageMetadata } from '~/utils/seo';
 
@@ -284,9 +284,8 @@ const Page = () => {
         </div>
 
         <div className="mt-12">
-          <TrustpilotProof
-            id="trustpilot-proof-asystec-pos"
-            variant="compact"
+          <CustomerOpinions
+            id="opiniones-clientes-asystec-pos"
             hasBackground={false}
             containerClass="px-0 py-0 md:py-0 lg:py-0"
           />

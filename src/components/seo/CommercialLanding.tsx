@@ -4,7 +4,7 @@ import { trustpilotProfile } from '~/shared/data/trustpilot.data';
 import { buildLandingSchemas } from '~/utils/seo';
 import JsonLd from './JsonLd';
 import PosImageCarousel from '../widgets/PosImageCarousel';
-import TrustpilotProof from '../widgets/TrustpilotProof';
+import CustomerOpinions from '../widgets/CustomerOpinions';
 
 type CommercialLandingProps = {
   page: LandingPageData;
@@ -116,24 +116,18 @@ const CommercialLanding = ({ page }: CommercialLandingProps) => {
             aria-label="Confianza y opiniones de clientes"
           >
             <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 text-sm text-neutral-700 sm:flex-row sm:items-center sm:justify-between md:px-6 dark:text-slate-300">
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-                <p>
-                  <strong className="text-neutral-950 dark:text-white">{trustpilotProfile.score}</strong> en Trustpilot
-                </p>
-                <p>{trustpilotProfile.reviewCount} opiniones públicas</p>
-                <p>Soporte local en Costa Rica</p>
-              </div>
+              <p>Soporte local en Costa Rica</p>
               <a
                 href={trustpilotProfile.profileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-emerald-700 underline-offset-4 hover:underline dark:text-emerald-300"
+                className="underline underline-offset-4 hover:text-neutral-950 dark:hover:text-white"
                 data-analytics-event="cta_trustpilot"
                 data-analytics-label="Ver opiniones públicas en Trustpilot"
                 data-analytics-location="trust_strip"
                 data-analytics-type="external"
               >
-                Ver perfil público
+                Consulta las opiniones de Asystec en Trustpilot
               </a>
             </div>
           </section>
@@ -242,7 +236,7 @@ const CommercialLanding = ({ page }: CommercialLandingProps) => {
           </section>
         )}
 
-        <TrustpilotProof variant="landing" id={`trustpilot-proof-${page.slug}`} />
+        <CustomerOpinions id={`opiniones-clientes-${page.slug}`} />
 
         <section className="border-b border-neutral-200 bg-neutral-50 py-12 dark:border-slate-800 dark:bg-slate-900 md:py-16">
           <div className="mx-auto max-w-5xl px-4 md:px-6">
