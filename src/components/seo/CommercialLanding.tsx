@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import type { LandingPageData } from '~/shared/data/seo-landings.data';
-import { trustpilotProfile } from '~/shared/data/trustpilot.data';
 import { buildLandingSchemas } from '~/utils/seo';
 import JsonLd from './JsonLd';
 import PosImageCarousel from '../widgets/PosImageCarousel';
-import CustomerOpinions from '../widgets/CustomerOpinions';
 
 type CommercialLandingProps = {
   page: LandingPageData;
@@ -110,29 +108,6 @@ const CommercialLanding = ({ page }: CommercialLandingProps) => {
           </div>
         </section>
 
-        {page.showTrustpilotStrip && (
-          <section
-            className="border-b border-neutral-200 bg-white py-5 dark:border-slate-800 dark:bg-slate-950"
-            aria-label="Confianza y opiniones de clientes"
-          >
-            <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 text-sm text-neutral-700 sm:flex-row sm:items-center sm:justify-between md:px-6 dark:text-slate-300">
-              <p>Soporte local en Costa Rica</p>
-              <a
-                href={trustpilotProfile.profileUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-neutral-950 dark:hover:text-white"
-                data-analytics-event="cta_trustpilot"
-                data-analytics-label="Ver opiniones públicas en Trustpilot"
-                data-analytics-location="trust_strip"
-                data-analytics-type="external"
-              >
-                Consulta las opiniones de Asystec en Trustpilot
-              </a>
-            </div>
-          </section>
-        )}
-
         <section className="py-12 md:py-16">
           <div className="mx-auto grid max-w-7xl gap-8 px-4 md:px-6 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
@@ -235,8 +210,6 @@ const CommercialLanding = ({ page }: CommercialLandingProps) => {
             </div>
           </section>
         )}
-
-        <CustomerOpinions id={`opiniones-clientes-${page.slug}`} />
 
         <section className="border-b border-neutral-200 bg-neutral-50 py-12 dark:border-slate-800 dark:bg-slate-900 md:py-16">
           <div className="mx-auto max-w-5xl px-4 md:px-6">

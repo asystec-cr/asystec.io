@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE } from '~/config.js';
 import type { FaqItem, LandingPageData } from '~/shared/data/seo-landings.data';
-import { trustpilotProfile } from '~/shared/data/trustpilot.data';
 
 const organizationId = `${SITE.origin}/#organization`;
 const localBusinessId = `${SITE.origin}/#local-business`;
@@ -65,7 +64,6 @@ export const buildOrganizationSchema = () => ({
     'https://www.instagram.com/asystec/',
     'https://www.facebook.com/asysteccr',
     'https://github.com/asystec-cr',
-    trustpilotProfile.profileUrl,
   ],
 });
 
