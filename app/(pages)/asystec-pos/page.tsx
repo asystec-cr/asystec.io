@@ -1,6 +1,5 @@
 import JsonLd from '~/components/seo/JsonLd';
 import PosImageCarousel from '~/components/widgets/PosImageCarousel';
-import CustomerOpinions from '~/components/widgets/CustomerOpinions';
 import { getPortfolioPage } from '~/shared/data/seo-landings.data';
 import { buildLandingSchemas, buildPageMetadata } from '~/utils/seo';
 
@@ -281,14 +280,6 @@ const Page = () => {
               </div>
             </div>
           </article>
-        </div>
-
-        <div className="mt-12">
-          <CustomerOpinions
-            id="opiniones-clientes-asystec-pos"
-            hasBackground={false}
-            containerClass="px-0 py-0 md:py-0 lg:py-0"
-          />
         </div>
 
         <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">

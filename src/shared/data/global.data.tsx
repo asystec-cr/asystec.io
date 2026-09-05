@@ -213,10 +213,6 @@ export const headerData: HeaderProps = {
           label: 'Casos y portafolio',
           href: '/casos',
         },
-        {
-          label: 'Opiniones de clientes',
-          href: '/opiniones',
-        },
       ],
     },
     {
@@ -480,7 +476,6 @@ export const footerData2: FooterProps = {
       title: 'Autoridad',
       links: [
         { label: 'Sobre Asystec', href: '/about' },
-        { label: 'Opiniones de clientes', href: '/opiniones' },
         { label: 'Casos y portafolio', href: '/casos' },
         { label: 'Preguntas frecuentes', href: '/faqs' },
         { label: 'Contacto', href: '/contact' },

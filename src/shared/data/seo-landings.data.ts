@@ -66,7 +66,6 @@ export type LandingPageData = {
   image?: string;
   heroImages?: LandingHeroImage[];
   heroNote?: string;
-  showTrustpilotStrip?: boolean;
   modulesTitle?: string;
   modulesIntro?: string;
   highlightsTitle?: string;
@@ -987,7 +986,6 @@ export const solutionPages: LandingPageData[] = [
     },
     secondaryCta: { label: 'Ver funciones', href: '/asystec-pos' },
     heroNote: 'Agenda una demo para revisar alcance, implementación y acompañamiento según tu operación.',
-    showTrustpilotStrip: true,
     heroImages: [
       { src: '/images/pos/pos0.jpeg', alt: 'Vista general de Asystec POS para comercios' },
       { src: '/images/pos/pos1.jpeg', alt: 'Pantalla operativa de Asystec POS' },

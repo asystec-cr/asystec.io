@@ -156,5 +156,4 @@ export const clinicasIndustryPage: LandingPageData = {
     primary: contactCta,
     secondary: whatsappCta,
   },
-  showTrustpilotStrip: true,
 };
