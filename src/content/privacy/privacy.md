@@ -1,13 +1,13 @@
 # Política de Privacidad
 
-_Última actualización_: 10 de julio de 2026
+_Última actualización_: 8 de septiembre de 2026
 
 La presente Política de Privacidad describe cómo **ASYSTEC IT & TRADING COMPANY S.A.** (en adelante, **“Asystec”**) recopila, utiliza, almacena y protege los datos personales en el marco del sitio web, solicitudes de contacto o demostración, campañas publicitarias y el uso de sus plataformas y servicios. Este tratamiento se realiza conforme a la **Ley N.º 8968, Ley de Protección de la Persona frente al Tratamiento de sus Datos Personales**, y su normativa aplicable en Costa Rica.
 
 ## 1. Identificación del responsable del tratamiento
 
 1. **Responsable**: ASYSTEC IT & TRADING COMPANY S.A.
-2. **Dirección**: Calle 15, Avenida 2, Torre Mercedes
+2. **Dirección**: Esparza, Puntarenas, Costa Rica
 3. **Correo de contacto**: [bryan@asystec.io](mailto:bryan@asystec.io)
 
 ## 2. Definiciones básicas

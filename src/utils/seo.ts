@@ -51,8 +51,8 @@ export const buildOrganizationSchema = () => ({
   telephone: '+50689754741',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Torres Paseo Colon',
-    addressLocality: 'San Jose',
+    addressLocality: 'Esparza',
+    addressRegion: 'Puntarenas',
     addressCountry: 'CR',
   },
   areaServed: {
@@ -78,8 +78,8 @@ export const buildLocalBusinessSchema = () => ({
   email: 'info@asystec.io',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Torres Paseo Colon',
-    addressLocality: 'San Jose',
+    addressLocality: 'Esparza',
+    addressRegion: 'Puntarenas',
     addressCountry: 'CR',
   },
   openingHoursSpecification: [

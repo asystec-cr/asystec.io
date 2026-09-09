@@ -538,7 +538,7 @@ export const contactHome: ContactProps = {
   items: [
     {
       title: 'Dirección',
-      description: ['Torres Paseo Colón', 'San José, Costa Rica'],
+      description: ['Esparza', 'Puntarenas, Costa Rica'],
       icon: IconMapPin,
     },
     {

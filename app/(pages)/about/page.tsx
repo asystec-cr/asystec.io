@@ -28,7 +28,7 @@ const contact = {
   phone: '+50689754741',
   phoneLabel: '+506 8975-4741',
   whatsapp: 'https://wa.me/50689754741',
-  address: 'Torres Paseo Colon, San Jose, Costa Rica',
+  address: 'Esparza, Puntarenas, Costa Rica',
 };
 
 const capabilities = [
@@ -156,8 +156,8 @@ const profileSchema = {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Torres Paseo Colon',
-      addressLocality: 'San Jose',
+      addressLocality: 'Esparza',
+      addressRegion: 'Puntarenas',
       addressCountry: 'CR',
     },
     contactPoint: {

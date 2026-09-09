@@ -483,7 +483,7 @@ export const footerData2: FooterProps = {
     },
     {
       title: 'Contacto',
-      texts: ['Torres Paseo Colon', 'San Jose, Costa Rica', 'Telefono: +506 8975-4741', 'Info: info@asystec.io'],
+      texts: ['Esparza', 'Puntarenas, Costa Rica', 'Telefono: +506 8975-4741', 'Info: info@asystec.io'],
     },
   ],
   socials: [
