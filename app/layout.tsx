@@ -6,6 +6,9 @@ import Providers from '~/components/atoms/Providers';
 import Header from '~/components/widgets/Header';
 import Announcement from '~/components/widgets/Announcement';
 import Footer2 from '~/components/widgets/Footer2';
+import SiteChrome from '~/components/widgets/SiteChrome';
+import NexoHeader from '~/components/nexo/NexoHeader';
+import NexoFooter from '~/components/nexo/NexoFooter';
 import JsonLd from '~/components/seo/JsonLd';
 import MarketingTracking from '~/components/analytics/MarketingTracking';
 import { normalizeGtmId, normalizeMetaPixelId } from '~/components/analytics/tracking.mjs';
@@ -80,19 +83,19 @@ export default function RootLayout({ children }: LayoutProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-adsense-account" content="ca-pub-4933416531249437"></meta>
         <JsonLd data={[buildOrganizationSchema(), buildLocalBusinessSchema()]} />
-        <script
-          src="https://cobros.asystec.io/widget/cobros-chat.js"
-          data-cobros-widget="pk_B8rn2jbyOZKHowj8wXz4dBDLQT1vwvzAeIUK7w3w"
-          async
-        ></script>
       </head>
 
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300 dark:bg-slate-900">
         <Providers>
-          <Announcement />
-          <Header />
-          <main>{children}</main>
-          <Footer2 />
+          <SiteChrome
+            announcement={<Announcement />}
+            header={<Header />}
+            footer={<Footer2 />}
+            nexoHeader={<NexoHeader />}
+            nexoFooter={<NexoFooter />}
+          >
+            {children}
+          </SiteChrome>
           {(gtmId || metaPixelId) && <MarketingTracking gtmId={gtmId} metaPixelId={metaPixelId} />}
         </Providers>
       </body>
