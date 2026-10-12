@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { SITE } from '~/config.js';
 
 import PosHero from '~/components/widgets/PosHero';
+import NexoHero from '~/components/widgets/NexoHero';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Features from '~/components/widgets/Features';
 import PlatformPortfolio from '~/components/widgets/PlatformPortfolio';
@@ -38,12 +39,15 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <PosHero />
+      <NexoHero />
       <div className="mt-6 md:mt-8 lg:mt-10">
         <SocialProof {...socialProofHome} />
       </div>
       <Features {...featuresHome} />
       <PlatformPortfolio portfolioHref="/plataformas#portfolio-cases" />
+      <div className="mt-10">
+        <PosHero />
+      </div>
       {/* <Content {...contentHomeOne} /> */}
       {/* <Content {...contentHomeTwo} /> */}
       {/* <Steps {...stepsHome} /> */}

@@ -37,6 +37,10 @@ export const headerData: HeaderProps = {
           href: '/software-para-negocios-costa-rica',
         },
         {
+          label: 'Agente Nexo',
+          href: '/agente-nexo',
+        },
+        {
           label: 'Asystec POS',
           href: '/asystec-pos',
         },
