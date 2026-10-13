@@ -1,7 +1,7 @@
-export const NEXO_TITLE = 'Agente Nexo | Su agente de IA para empresas, 24/7';
+export const NEXO_TITLE = 'Nexo de Asystec | Agente de IA para empresas en Costa Rica';
 
 export const NEXO_DESCRIPTION =
-  'Un agente de IA que trabaja para su empresa, 24/7. Automatice reportes, ventas, marketing, redes sociales y operaciones con una solución diseñada para su negocio.';
+  'Nexo es el agente de inteligencia artificial de Asystec para empresas en Costa Rica. Automatice reportes, ventas, marketing y operaciones con una solución a medida.';
 
 export const NEXO_CONTACT_HREF =
   'https://wa.me/50689754741?text=' +
@@ -89,7 +89,12 @@ export const nexoFaqs: NexoFaq[] = [
   {
     question: '¿Qué es Agente Nexo?',
     answer:
-      'Es un agente de inteligencia artificial configurado para realizar tareas y automatizar procesos de su empresa. Partimos del trabajo que quiere delegar y definimos qué información utilizará, qué hará y qué resultados entregará.',
+      'Agente Nexo, también llamado Nexo de Asystec, es la solución de inteligencia artificial de Asystec para automatizar tareas y procesos empresariales en Costa Rica. Partimos del trabajo que quiere delegar y definimos qué información utilizará, qué hará y qué resultados entregará.',
+  },
+  {
+    question: '¿Quién desarrolla e implementa Nexo?',
+    answer:
+      'Asystec desarrolla e implementa Agente Nexo desde Esparza, Puntarenas, Costa Rica. Nuestro equipo evalúa su proceso, configura el agente y acuerda con usted las integraciones, las pruebas y el soporte. Esta es la página oficial de Nexo de Asystec: asystec.io/agente-nexo.',
   },
   {
     question: '¿Solo sirve para vender por WhatsApp?',

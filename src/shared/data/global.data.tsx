@@ -37,7 +37,7 @@ export const headerData: HeaderProps = {
           href: '/software-para-negocios-costa-rica',
         },
         {
-          label: 'Agente Nexo',
+          label: 'Nexo de Asystec',
           href: '/agente-nexo',
         },
         {
@@ -461,6 +461,7 @@ export const footerData2: FooterProps = {
       title: 'Software',
       links: [
         { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
+        { label: 'Nexo de Asystec', href: '/agente-nexo' },
         { label: 'Asystec POS', href: '/asystec-pos' },
         { label: 'Cobros Pro', href: '/cobrosapp' },
         { label: 'Factura Pro', href: '/facturacionapp' },

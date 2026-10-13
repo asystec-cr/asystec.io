@@ -1,5 +1,26 @@
 # Tailnext
 
+## SEO de Nexo de Asystec
+
+La página oficial del producto es **https://asystec.io/agente-nexo**. Mantener esa URL como canónica; la portada presenta Asystec y enlaza al producto. Usar «Nexo de Asystec» y «Agente Nexo» de forma consistente en contenido público y perfiles oficiales.
+
+El título y la descripción se definen en `src/shared/data/agente-nexo.data.ts`. Las preguntas de esa misma fuente se muestran en la página y en JSON-LD. Los ejemplos describen procesos configurables, no integraciones garantizadas para todas las empresas. No añadir precios, testimonios ni resultados sin evidencia.
+
+### Publicación y comprobación en buscadores
+
+1. Ejecutar `npm run lint` y `npm run build`. El postbuild genera `robots.txt` y el sitemap; esos archivos están ignorados por Git y deben generarse en cada despliegue.
+2. Tras desplegar, verificar que `/agente-nexo` devuelve HTTP 200, contiene el título y el contenido nuevos en HTML, conserva su canonical y aparece en `/sitemap-0.xml`.
+3. En la propiedad de `asystec.io` de [Google Search Console](https://search.google.com/search-console), inspeccionar `https://asystec.io/agente-nexo`: revisar indexación, último rastreo y canónica elegida por Google. Probar la URL publicada y solicitar indexación una vez que la nueva versión esté en producción. Inspeccionar también la portada actualizada.
+4. Enviar `https://asystec.io/sitemap.xml` en Search Console y Bing Webmaster Tools si todavía no está registrado. No usar los antiguos endpoints de ping de sitemaps ni la Indexing API para una landing comercial.
+5. Si falta verificar la propiedad, usar el registro DNS que indique Google o el valor real de `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (ver `.env.example`). No inventar códigos ni sustituir una verificación existente. La verificación por DNS no necesita una etiqueta HTML.
+
+### Medición y siguientes acciones
+
+- Guardar el estado y las métricas disponibles como referencia. Comparar periodos equivalentes (por ejemplo, 28 días), separando Costa Rica, dispositivo y consultas de marca: «nexo asystec», «nexo de asystec» y «agente nexo». Revisar «nexo» por separado por su ambigüedad con otras marcas y significados.
+- Medir impresiones, clics, CTR, posición media y qué URL aparece para esas consultas; la posición media no representa una posición fija para todos los usuarios. Para consultas de Nexo, observar si Google empieza a elegir la página del producto en vez de la portada.
+- Mantener el enlace a la página oficial en los perfiles propios y, cuando exista material real aprobado, publicar ejemplos de procesos con sus límites, resultados y fuentes. No comprar enlaces ni crear menciones o reseñas ficticias.
+- El rastreo puede tardar días o semanas. Ni los metadatos ni el schema garantizan primer puesto o inclusión en respuestas con IA. Referencias: [solicitar nuevo rastreo](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl), [títulos en Google](https://developers.google.com/search/docs/appearance/title-link), [funciones de IA](https://developers.google.com/search/docs/appearance/ai-features).
+
 **Tailnext** is a free and open-source template to make your website using **[NextJS](https://nextjs.org/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account best practices.
 
 ## Features

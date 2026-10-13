@@ -13,9 +13,10 @@ export default function NexoFooter() {
             </Link>
             <span className={styles.productName}>Agente Nexo</span>
           </div>
-          <p>Tecnología para su empresa. Costa Rica.</p>
+          <p>Nexo es una solución de inteligencia artificial de Asystec, Costa Rica.</p>
         </div>
         <nav aria-label="Información legal y contacto">
+          <Link href="/about">Sobre Asystec</Link>
           <Link href="/privacy">Privacidad</Link>
           <Link href="/terms">Términos</Link>
           <a

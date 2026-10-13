@@ -33,21 +33,44 @@ const benefits = [
   },
 ];
 
-export default function NexoIntro() {
+export default function NexoIntro({ variant = 'product' }: { variant?: 'home' | 'product' }) {
+  const isHome = variant === 'home';
+
   return (
     <section className={`${styles.theme} ${styles.hero}`} aria-labelledby="nexo-title">
       <div className={styles.container}>
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
             <h1 id="nexo-title">
-              Un agente de IA que trabaja para su empresa, <span>24/7.</span>
+              {isHome ? (
+                <>
+                  Asystec: software e IA <span>para su empresa.</span>
+                </>
+              ) : (
+                <>
+                  Nexo de Asystec: su agente de IA, <span>24/7.</span>
+                </>
+              )}
             </h1>
             <p className={styles.heroDescription}>
-              Reportes, ventas, marketing y operaciones. Automatice el trabajo de su negocio con un agente diseñado para
-              lo que usted necesita.
+              {isHome
+                ? 'Conozca Nexo, el agente de inteligencia artificial de Asystec para empresas en Costa Rica. Automatice reportes, ventas, marketing y operaciones según las necesidades de su negocio.'
+                : 'Nexo es el agente de inteligencia artificial de Asystec para empresas en Costa Rica. Automatice reportes, ventas, marketing y operaciones con una solución diseñada para su negocio.'}
             </p>
             <div className={styles.heroActions}>
-              <NexoCta location="hero" />
+              {isHome ? (
+                <a
+                  href="/agente-nexo"
+                  className={styles.button}
+                  data-analytics-event="cta_navigation"
+                  data-analytics-label="Conocer Nexo de Asystec"
+                  data-analytics-location="hero"
+                >
+                  Conocer Nexo de Asystec <IconArrowRight size={20} aria-hidden="true" />
+                </a>
+              ) : (
+                <NexoCta location="hero" />
+              )}
               <a
                 href="/agente-nexo#que-hace"
                 className={styles.textLink}
@@ -55,7 +78,7 @@ export default function NexoIntro() {
                 data-analytics-label="Explorar posibilidades de Nexo"
                 data-analytics-location="hero"
               >
-                Explorar posibilidades <IconArrowRight size={20} aria-hidden="true" />
+                Qué puede hacer Nexo <IconArrowRight size={20} aria-hidden="true" />
               </a>
             </div>
             <p className={styles.heroNote}>Usted define la necesidad. Diseñamos su Nexo.</p>

@@ -12,9 +12,9 @@ const PosHero = () => {
             <span className="inline-flex rounded-full border border-blue-200 bg-white px-3 py-1 text-xs font-semibold text-blue-800 dark:border-blue-700 dark:bg-slate-800 dark:text-blue-300">
               Lanzamiento destacado • Asystec POS
             </span>
-            <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
+            <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
               El POS que mantiene tu negocio activo incluso sin internet
-            </h1>
+            </h2>
             <p className="mt-4 max-w-2xl text-base text-gray-600 sm:text-lg dark:text-slate-300">
               Sistema de escritorio para pymes en Costa Rica con facturación electrónica TRIBU/Hacienda, app móvil,
               seguridad y autoupdate.

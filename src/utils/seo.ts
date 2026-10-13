@@ -7,6 +7,16 @@ const localBusinessId = `${SITE.origin}/#local-business`;
 
 export const absoluteUrl = (path = '/') => new URL(path, SITE.origin).toString();
 
+export const buildWebsiteSchema = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': absoluteUrl('/#website'),
+  name: SITE.name,
+  url: SITE.origin,
+  inLanguage: 'es-CR',
+  publisher: { '@id': organizationId },
+});
+
 export const buildPageMetadata = (page: LandingPageData): Metadata => ({
   title: {
     absolute: page.seoTitle,

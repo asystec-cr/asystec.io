@@ -3,6 +3,7 @@ module.exports.SITE = {
   origin: 'https://asystec.io',
   basePathname: '/',
   trailingSlash: false,
-  title: 'Asystec - Soluciones Integrales para Potenciar tu Negocio',
-  description: 'Transforma y potencia tu negocio con nuestras asesorias y gestión empresarial. En Asystec, lideramos el mercado ofreciendo tecnología personalizada para cada sector, optimizando tus procesos y aumentando tu eficiencia.',
+  title: 'Asystec | Software e inteligencia artificial en Costa Rica',
+  description:
+    'Asystec desarrolla software para empresas en Costa Rica: Agente Nexo con inteligencia artificial, sistemas POS, facturación electrónica y soluciones a medida.',
 };

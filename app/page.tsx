@@ -4,6 +4,8 @@ import { SITE } from '~/config.js';
 
 import PosHero from '~/components/widgets/PosHero';
 import NexoHero from '~/components/widgets/NexoHero';
+import JsonLd from '~/components/seo/JsonLd';
+import { buildWebsiteSchema } from '~/utils/seo';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Features from '~/components/widgets/Features';
 import PlatformPortfolio from '~/components/widgets/PlatformPortfolio';
@@ -30,7 +32,7 @@ import {
 } from '~/shared/data/pages/home.data';
 
 export const metadata: Metadata = {
-  title: SITE.title,
+  title: { absolute: SITE.title },
   alternates: {
     canonical: '/',
   },
@@ -39,7 +41,8 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <NexoHero />
+      <JsonLd data={buildWebsiteSchema()} />
+      <NexoHero variant="home" />
       <div className="mt-6 md:mt-8 lg:mt-10">
         <SocialProof {...socialProofHome} />
       </div>

@@ -47,7 +47,7 @@ export default function NexoDetails() {
       <section id="como-funciona" className={styles.process} aria-labelledby="nexo-process-title">
         <div className={styles.container}>
           <div className={styles.processHeading}>
-            <h2 id="nexo-process-title">Su proceso es el punto de partida.</h2>
+            <h2 id="nexo-process-title">Cómo implementamos Nexo en su empresa.</h2>
             <p>Definimos el trabajo, conectamos la información necesaria y probamos el proceso con usted.</p>
           </div>
 
@@ -91,7 +91,7 @@ export default function NexoDetails() {
       <section id="preguntas" className={styles.faq} aria-labelledby="nexo-faq-title">
         <div className={`${styles.container} ${styles.faqGrid}`}>
           <div className={styles.faqHeading}>
-            <h2 id="nexo-faq-title">Antes de comenzar.</h2>
+            <h2 id="nexo-faq-title">Preguntas sobre Nexo de Asystec.</h2>
             <p>Resolvamos las preguntas sobre su próximo agente.</p>
           </div>
           <div className={styles.questions}>

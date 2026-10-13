@@ -155,6 +155,16 @@ export const pillarPage: LandingPageData = {
         'Implementacion por etapas para validar primero el proceso critico',
       ],
     },
+    {
+      title: 'Cuando delegar tareas a un agente de IA',
+      body: 'Nexo de Asystec es un agente de inteligencia artificial configurable a la medida de tu empresa. Puede ayudar con reportes recurrentes, seguimiento comercial, contenido de marketing y tareas operativas. La evaluacion parte de una tarea concreta, las fuentes de informacion autorizadas y los pasos que necesitan revision humana.',
+      items: [
+        'Reportes y resumenes que el equipo prepara de forma recurrente',
+        'Consultas y oportunidades comerciales que requieren seguimiento',
+        'Borradores de contenido o documentos para revisar',
+        'Herramientas, permisos y alcance definidos antes de implementar',
+      ],
+    },
   ],
   decisionTable: {
     title: 'Que tipo de software evaluar segun la necesidad',
@@ -220,6 +230,7 @@ export const pillarPage: LandingPageData = {
     },
   ],
   related: [
+    { label: 'Nexo de Asystec: agente de IA para empresas', href: '/agente-nexo' },
     { label: 'Asystec POS', href: '/asystec-pos' },
     { label: 'Factura Pro', href: '/facturacionapp' },
     { label: 'Cobros Pro', href: '/cobrosapp' },
@@ -1496,6 +1507,10 @@ export const solutionPages: LandingPageData[] = [
           'Confirmar usuarios, permisos, exportaciones e integraciones necesarias',
         ],
       },
+      {
+        title: 'Reportes recurrentes con Nexo de Asystec',
+        body: 'Si el trabajo se repite cada semana, Nexo puede configurarse para organizar informacion de fuentes autorizadas, preparar resumenes y destacar pendientes para revision del equipo. Antes de automatizar se definen las fuentes disponibles, los indicadores, la frecuencia y quien valida el resultado.',
+      },
     ],
     decisionTable: {
       title: 'Criterios para definir reportes de negocio',
@@ -1555,6 +1570,7 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Inventario', href: '/soluciones/inventario' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
+      { label: 'Nexo de Asystec para reportes recurrentes', href: '/agente-nexo' },
       { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Factura Pro', href: '/facturacionapp' },
       { label: 'Plataformas a medida', href: '/plataformas' },
@@ -1764,6 +1780,10 @@ export const solutionPages: LandingPageData[] = [
         ],
       },
       {
+        title: 'Apoyo al seguimiento comercial con Nexo',
+        body: 'Nexo de Asystec puede configurarse para organizar oportunidades, atender consultas y preparar seguimientos segun las reglas de tu equipo. Para complementarlo con un CRM, primero se revisan las opciones de conexion, los datos autorizados, los responsables y los mensajes que requieren aprobacion.',
+      },
+      {
         title: 'Como preparar una demo util',
         body: 'Una demo comercial debe usar ejemplos reales de clientes, etapas, responsables, seguimientos, reportes e integraciones esperadas. Asi se valida si el CRM reduce trabajo manual o solo agrega otra herramienta.',
         items: [
@@ -1832,6 +1852,7 @@ export const solutionPages: LandingPageData[] = [
       { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
+      { label: 'Nexo de Asystec para seguimiento comercial', href: '/agente-nexo' },
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
       { label: 'Integraciones', href: '/soluciones/integraciones' },
       { label: 'Plataformas a medida', href: '/plataformas' },
@@ -1917,6 +1938,10 @@ export const solutionPages: LandingPageData[] = [
         ],
       },
       {
+        title: 'Integraciones para un agente de IA a medida',
+        body: 'Nexo de Asystec puede formar parte de un proceso que organiza informacion, prepara reportes o da seguimiento a pendientes. Las conexiones se evaluan por herramienta: disponibilidad de API, accesos, permisos, limites y aprobaciones. La propuesta define que puede ejecutar el agente y que configuracion o desarrollo adicional hace falta.',
+      },
+      {
         title: 'Como llevar el caso a una demo',
         body: 'Para que la conversacion sea util, conviene llegar con ejemplos reales: pantallas actuales, archivos que se exportan, campos obligatorios, reportes esperados, responsables y errores que hoy consumen tiempo. Asi se define si basta configurar, integrar o desarrollar una plataforma a medida.',
         items: [
@@ -1979,6 +2004,7 @@ export const solutionPages: LandingPageData[] = [
     related: [
       { label: 'Plataformas a medida', href: '/plataformas' },
       { label: 'Software local vs extranjero', href: '/guias/software-local-vs-extranjero' },
+      { label: 'Nexo de Asystec: automatizacion a medida', href: '/agente-nexo' },
       { label: 'CRM', href: '/soluciones/crm' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Reportes', href: '/soluciones/reportes' },
