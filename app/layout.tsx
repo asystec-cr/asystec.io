@@ -12,7 +12,12 @@ import NexoFooter from '~/components/nexo/NexoFooter';
 import JsonLd from '~/components/seo/JsonLd';
 import MarketingTracking from '~/components/analytics/MarketingTracking';
 import { normalizeGtmId, normalizeMetaPixelId } from '~/components/analytics/tracking.mjs';
-import { buildLocalBusinessSchema, buildOrganizationSchema } from '~/utils/seo';
+import {
+  buildLocalBusinessSchema,
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+  DEFAULT_SOCIAL_IMAGE,
+} from '~/utils/seo';
 
 import { Inter as CustomFont } from 'next/font/google';
 import '~/assets/styles/base.css';
@@ -36,10 +41,10 @@ if (Object.keys(otherVerification).length > 0) {
 }
 
 const socialImage = {
-  url: '/images/pos/pos0.jpeg',
-  width: 1417,
-  height: 897,
-  alt: 'Asystec POS para pymes en Costa Rica',
+  url: DEFAULT_SOCIAL_IMAGE,
+  width: 1200,
+  height: 630,
+  alt: 'Asystec: software e inteligencia artificial en Costa Rica',
 };
 
 export interface LayoutProps {
@@ -82,7 +87,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-adsense-account" content="ca-pub-4933416531249437"></meta>
-        <JsonLd data={[buildOrganizationSchema(), buildLocalBusinessSchema()]} />
+        <JsonLd data={[buildOrganizationSchema(), buildLocalBusinessSchema(), buildWebsiteSchema()]} />
       </head>
 
       <body className="tracking-tight antialiased text-gray-900 dark:text-slate-300 dark:bg-slate-900">

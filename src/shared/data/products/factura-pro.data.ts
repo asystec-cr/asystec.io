@@ -12,11 +12,11 @@ export const facturaProProductPage: LandingPageData = {
   kind: 'product',
   schemaType: 'SoftwareApplication',
   title: 'Factura Pro',
-  seoTitle: 'Factura Pro | Facturacion electronica en Costa Rica',
+  seoTitle: 'Factura Pro de Asystec | Facturación electrónica Costa Rica',
   description:
-    'Evalua Factura Pro para emitir comprobantes electronicos y administrar clientes, productos o servicios, cotizaciones, pagos y reportes en Costa Rica.',
+    'Factura Pro de Asystec permite emitir comprobantes electrónicos y administrar clientes, cotizaciones, pagos y reportes desde la web en Costa Rica.',
   eyebrow: 'Producto Asystec',
-  heroTitle: 'Factura Pro para facturacion electronica y gestion comercial',
+  heroTitle: 'Factura Pro de Asystec: facturación electrónica para tu negocio',
   answer:
     'Factura Pro es una plataforma web de Asystec para negocios en Costa Rica que necesitan emitir comprobantes electronicos y administrar clientes, productos o servicios, cotizaciones, pagos y reportes. La demo permite confirmar si este alcance basta o si la operacion requiere POS, cobros, inventario o integraciones.',
   intro:
@@ -32,7 +32,7 @@ export const facturaProProductPage: LandingPageData = {
   modules: ['Comprobantes', 'Clientes', 'Productos o servicios', 'Cotizaciones', 'Pagos', 'Reportes'],
   modulesTitle: 'Procesos que conviene revisar en Factura Pro',
   modulesIntro:
-    'Estas son las funciones visibles del producto. Lleva ejemplos reales a la demo para confirmar documentos, usuarios, volumen de trabajo y cualquier conexion adicional.',
+    'Lleva ejemplos reales a la demo para revisar el recorrido desde la cotización hasta el comprobante, el pago y el reporte. Confirma documentos, usuarios, volumen de trabajo y conexiones necesarias.',
   sections: [
     {
       title: 'Del cliente y la cotizacion al comprobante',
@@ -108,7 +108,7 @@ export const facturaProProductPage: LandingPageData = {
   },
   faqs: [
     {
-      question: 'Que es Factura Pro?',
+      question: '¿Qué es Factura Pro de Asystec?',
       answer:
         'Factura Pro es un producto web de Asystec para negocios en Costa Rica que necesitan emitir comprobantes electronicos y administrar clientes, productos o servicios, cotizaciones, pagos y reportes.',
     },
@@ -120,7 +120,7 @@ export const facturaProProductPage: LandingPageData = {
     {
       question: 'Factura Pro permite trabajar con productos y servicios?',
       answer:
-        'La pagina publica incluye un catalogo de productos o servicios dentro del alcance visible. La demo debe confirmar como se configuran los datos que necesita tu operacion.',
+        'Factura Pro incluye un catálogo de productos o servicios. La demo permite revisar cómo se configuran los datos que necesita tu operación y qué información debe prepararse antes de comenzar.',
     },
     {
       question: 'Se pueden registrar cotizaciones y pagos?',

@@ -206,6 +206,9 @@ const schemas = [
       'Casos publicos y portafolio de Asystec para POS, facturacion electronica, cobros, talleres, catalogos, portales y plataformas web.',
     url: absoluteUrl('/casos'),
     inLanguage: 'es-CR',
+    isPartOf: { '@id': absoluteUrl('/#website') },
+    publisher: { '@id': absoluteUrl('/#organization') },
+    breadcrumb: { '@id': `${absoluteUrl('/casos')}#breadcrumb` },
     mainEntity: {
       '@id': `${absoluteUrl('/casos')}#item-list`,
     },
@@ -231,6 +234,7 @@ const schemas = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     '@id': `${absoluteUrl('/casos')}#faq`,
+    isPartOf: { '@id': `${absoluteUrl('/casos')}#collection` },
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,

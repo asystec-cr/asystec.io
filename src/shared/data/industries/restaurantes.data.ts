@@ -24,10 +24,10 @@ export const restaurantesIndustryPage: LandingPageData = {
   primaryCta: contactCta,
   secondaryCta: whatsappCta,
   highlights: [
-    'Responder a busquedas de POS para restaurantes en Costa Rica.',
-    'Preparar una demo con caja, menu, facturacion e inventario.',
-    'Conectar la industria con Asystec POS, inventario y reportes.',
-    'Dar una ruta directa a contacto y WhatsApp.',
+    'Evaluar ventas, facturacion y cierres con los turnos reales del restaurante.',
+    'Revisar productos, menu e inventario segun el nivel de control necesario.',
+    'Definir los reportes de caja, productos y usuarios que necesita gerencia.',
+    'Confirmar mesas, cocina e integraciones en la demo antes de definir el alcance.',
   ],
   modules: [
     'Caja rapida y ventas por turno',

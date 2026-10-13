@@ -86,8 +86,12 @@ const decisionGuides = [
 
 const faqs = [
   {
-    q: 'Funciona 100% offline?',
-    a: 'Si. El sistema POS opera localmente en escritorio para ventas y gestion, sin depender de internet para trabajar.',
+    q: '¿Qué es Asystec POS?',
+    a: 'Asystec POS es el sistema de punto de venta de Asystec para Windows. Reúne ventas, caja, inventario, reportes y facturación electrónica para negocios en Costa Rica, con operación local en el equipo.',
+  },
+  {
+    q: '¿Qué puede hacer Asystec POS sin internet?',
+    a: 'La operación de ventas y caja funciona localmente. Las conexiones con servicios externos, el envío de comprobantes y las actualizaciones requieren internet; durante la demo se revisa el flujo de contingencia según la configuración del negocio.',
   },
   {
     q: 'Incluye facturacion electronica para Costa Rica?',
@@ -100,6 +104,10 @@ const faqs = [
   {
     q: 'Como es el proceso de implementacion?',
     a: 'Se coordina una demo, configuracion inicial, capacitacion y acompanamiento para salida en produccion.',
+  },
+  {
+    q: '¿Cómo descargo Asystec POS y preparo una demo?',
+    a: 'El botón Descargar Asystec POS de esta página abre el instalador para Windows. Antes de usarlo en producción, coordina con Asystec la configuración y una prueba con productos, formas de pago, usuarios y cierres de tu negocio.',
   },
 ];
 
@@ -123,16 +131,13 @@ const Page = () => {
                 Asystec POS - Sistema de escritorio para Costa Rica
               </span>
               <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
-                Vende rapido, factura en regla y opera incluso sin internet
+                {seoPage.heroTitle}
               </h1>
-              <p className="mt-4 max-w-2xl text-base text-gray-600 sm:text-lg dark:text-slate-300">
-                Un POS moderno para pymes con facturacion electronica TRIBU/Hacienda, app movil, seguridad avanzada y
-                actualizaciones automaticas para que tu negocio no se detenga.
-              </p>
+              <p className="mt-4 max-w-2xl text-base text-gray-600 sm:text-lg dark:text-slate-300">{seoPage.answer}</p>
 
               <div className="mt-5 grid gap-2 text-sm text-gray-700 dark:text-slate-300 sm:grid-cols-2">
                 <p className="rounded-lg border border-blue-100 bg-white/80 px-3 py-2 dark:border-slate-700 dark:bg-slate-800/80">
-                  100% offline para operacion diaria
+                  Ventas y caja con operación local
                 </p>
                 <p className="rounded-lg border border-blue-100 bg-white/80 px-3 py-2 dark:border-slate-700 dark:bg-slate-800/80">
                   Alto rendimiento para caja e inventario
@@ -265,7 +270,7 @@ const Page = () => {
               </div>
               <div className="rounded-lg border-2 border-blue-600 p-4">
                 <p className="inline-flex rounded-full bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-800">
-                  Mas elegido
+                  Para varios puntos de venta
                 </p>
                 <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">Operacion en crecimiento</h3>
                 <p className="mt-1 text-sm font-medium text-gray-600 dark:text-slate-300">

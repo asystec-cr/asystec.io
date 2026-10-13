@@ -51,6 +51,10 @@ const useCases = [
 
 const faqs = [
   {
+    q: '¿Qué es FitPro de Asystec?',
+    a: 'FitPro es el software web de Asystec para gimnasios y centros fitness. Reúne clientes, membresías, pagos, clases, cupos, asistencia y reportes para recepción y administración.',
+  },
+  {
     q: '¿Qué tipo de negocio puede usar FitPro?',
     a: 'Gimnasios, centros fitness, estudios de entrenamiento y negocios con membresías o clases.',
   },
@@ -64,7 +68,11 @@ const faqs = [
   },
   {
     q: '¿Cómo solicito una demo?',
-    a: 'Desde esta página puedes ir directo a FitPro o escribirnos por WhatsApp para coordinar una presentación.',
+    a: 'Escríbenos por WhatsApp o desde contacto para coordinar una demo. Lleva tus tipos de membresía, horarios, cupos, forma de cobrar y reportes actuales; así podemos revisar FitPro con el flujo de tu centro.',
+  },
+  {
+    q: '¿Dónde ingreso a FitPro?',
+    a: 'El acceso al producto de Asystec está en fitpro.asystec.io. Usa el botón Ir a FitPro de esta página para abrir la plataforma; si todavía no tienes acceso, contacta a Asystec para coordinarlo.',
   },
 ];
 
@@ -85,15 +93,12 @@ const Page = () => {
           <div className="relative grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
               <span className="inline-flex rounded-full border border-emerald-200 bg-white px-3 py-1 text-xs font-semibold text-emerald-800 dark:border-emerald-800 dark:bg-slate-800 dark:text-emerald-300">
-                FitPro • Gestión para gimnasios y centros fitness
+                FitPro de Asystec • Gestión para gimnasios y centros fitness
               </span>
               <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
-                Organiza tu gimnasio, mejora cobros y acelera tu operación diaria
+                {seoPage.heroTitle}
               </h1>
-              <p className="mt-4 max-w-2xl text-base text-gray-600 sm:text-lg dark:text-slate-300">
-                FitPro te ayuda a administrar clientes, membresías, clases y pagos en una sola plataforma, con enfoque
-                en control operativo y crecimiento sostenible.
-              </p>
+              <p className="mt-4 max-w-2xl text-base text-gray-600 sm:text-lg dark:text-slate-300">{seoPage.answer}</p>
 
               <div className="mt-5 grid gap-2 text-sm text-gray-700 dark:text-slate-300 sm:grid-cols-2">
                 <p className="rounded-lg border border-emerald-100 bg-white/80 px-3 py-2 dark:border-slate-700 dark:bg-slate-800/80">
@@ -190,6 +195,28 @@ const Page = () => {
               ))}
             </div>
           </article>
+        </div>
+
+        <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Prepara una demo con tu centro fitness</h2>
+          <p className="mt-3 text-sm leading-7 text-gray-600 dark:text-slate-300">{seoPage.intro}</p>
+          <ul className="mt-4 space-y-2 text-sm text-gray-700 dark:text-slate-300">
+            <li>Tipos de membresía, fechas de vencimiento y forma actual de renovar.</li>
+            <li>Horarios, cupos y registro de asistencia que utiliza recepción.</li>
+            <li>Pagos pendientes y reportes que necesita administración.</li>
+            <li>Usuarios y herramientas que deben revisarse antes de confirmar el alcance.</li>
+          </ul>
+          <nav aria-label="Soluciones relacionadas con FitPro" className="mt-5 flex flex-wrap gap-3">
+            {seoPage.related.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="rounded-lg border border-emerald-200 px-3 py-2 text-sm font-semibold text-emerald-800 hover:bg-emerald-50 dark:border-emerald-800 dark:text-emerald-300 dark:hover:bg-emerald-950"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
         </div>
 
         <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">

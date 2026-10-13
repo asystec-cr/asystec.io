@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
-
 import fs from 'fs';
 import path from 'path';
 import md from 'markdown-it';
+import { buildPageMetadata } from '~/utils/seo';
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: '/terms',
   title: 'Términos y Condiciones',
-  alternates: {
-    canonical: '/terms',
-  },
-};
+  seoTitle: 'Términos y Condiciones de facturación electrónica | Asystec',
+  description:
+    'Consulta las condiciones de acceso y uso del sistema de facturación electrónica de Asystec en Costa Rica: cuentas, responsabilidades, seguridad y soporte.',
+});
 
 const Page = () => {
   const filePath = path.join(process.cwd(), 'src/content/terms/terms.md');

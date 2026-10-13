@@ -24,10 +24,10 @@ export const multiSucursalSolutionPage: LandingPageData = {
   primaryCta: contactCta,
   secondaryCta: whatsappCta,
   highlights: [
-    'Responder a busquedas de software para varias sucursales en Costa Rica.',
-    'Conectar el crecimiento multi-sucursal con POS, inventario y reportes.',
-    'Preparar una demo basada en permisos, ubicaciones y datos reales.',
-    'Dar una ruta clara hacia contacto, WhatsApp y soluciones relacionadas.',
+    'Separar ventas, cierres e inventario por tienda, bodega o punto de venta.',
+    'Definir que datos comparte cada sucursal y que necesita consolidar gerencia.',
+    'Probar permisos y reportes con los usuarios y ubicaciones del negocio.',
+    'Revisar migracion, soporte e integraciones antes de abrir otro local.',
   ],
   modules: [
     'Ventas por sucursal',

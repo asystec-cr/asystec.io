@@ -1,54 +1,56 @@
 'use client';
 
 import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
+import { useId } from 'react';
 import useCollapse from '~/hooks/useCollapse';
 import { CollapseProps } from '~/shared/types';
 
 const Collapse = ({ items, classCollapseItem, iconUp, iconDown }: CollapseProps) => {
   const { activeIndex, handleSetIndex } = useCollapse();
+  const accordionId = useId();
 
   return (
     <>
-      {items.map(({ title, description }, index) => (
-        <div
-          key={`accordion-${index}`}
-          onClick={() => handleSetIndex(index)}
-          className="mx-auto max-w-3xl select-none bg-transparent text-base text-gray-700"
-        >
-          <div className={classCollapseItem}>
-            <div
-              className="align-center flex justify-between"
-              id={`accordion__heading-${index}`}
-              aria-disabled="false"
-              aria-expanded="false"
-              aria-controls={`accordion__panel-${index}`}
-              role="button"
-            >
-              <h2 className="w-full pr-2 text-lg font-medium leading-6 text-gray-900 dark:text-slate-300">{title}</h2>
-              {iconDown && iconUp ? (
-                activeIndex === index ? (
-                  iconUp
-                ) : (
-                  iconDown
-                )
-              ) : activeIndex === index ? (
-                <IconChevronUp className="h-6 w-6 text-primary-600 dark:text-slate-200" />
-              ) : (
-                <IconChevronDown className="h-6 w-6 text-primary-600 dark:text-slate-200" />
-              )}
-            </div>
-            {activeIndex === index && (
-              <div
-                className="mt-3 select-none"
-                aria-labelledby={`accordion__heading-${index}`}
-                id={`accordion__panel-${index}`}
-              >
+      {items.map(({ title, description }, index) => {
+        const isOpen = activeIndex === index;
+        const headingId = `${accordionId}-heading-${index}`;
+        const panelId = `${accordionId}-panel-${index}`;
+
+        return (
+          <div key={`accordion-${index}`} className="mx-auto max-w-3xl bg-transparent text-base text-gray-700">
+            <div className={classCollapseItem}>
+              <h2 className="text-lg font-medium leading-6 text-gray-900 dark:text-slate-300">
+                <button
+                  type="button"
+                  className="flex w-full items-start justify-between gap-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600"
+                  id={headingId}
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                  onClick={() => handleSetIndex(index)}
+                >
+                  <span>{title}</span>
+                  <span aria-hidden="true" className="shrink-0">
+                    {iconDown && iconUp ? (
+                      isOpen ? (
+                        iconUp
+                      ) : (
+                        iconDown
+                      )
+                    ) : isOpen ? (
+                      <IconChevronUp className="h-6 w-6 text-primary-600 dark:text-slate-200" />
+                    ) : (
+                      <IconChevronDown className="h-6 w-6 text-primary-600 dark:text-slate-200" />
+                    )}
+                  </span>
+                </button>
+              </h2>
+              <div className="mt-3" aria-labelledby={headingId} id={panelId} hidden={!isOpen}>
                 <p className="mt-2 text-gray-600 dark:text-slate-400">{description}</p>
               </div>
-            )}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </>
   );
 };

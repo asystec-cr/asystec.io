@@ -5,7 +5,7 @@ import { SITE } from '~/config.js';
 import PosHero from '~/components/widgets/PosHero';
 import NexoHero from '~/components/widgets/NexoHero';
 import JsonLd from '~/components/seo/JsonLd';
-import { buildWebsiteSchema } from '~/utils/seo';
+import { absoluteUrl, buildPageMetadata } from '~/utils/seo';
 import SocialProof from '../src/components/widgets/SocialProof';
 import Features from '~/components/widgets/Features';
 import PlatformPortfolio from '~/components/widgets/PlatformPortfolio';
@@ -31,17 +31,30 @@ import {
   testimonialsHome,
 } from '~/shared/data/pages/home.data';
 
-export const metadata: Metadata = {
-  title: { absolute: SITE.title },
-  alternates: {
-    canonical: '/',
-  },
-};
+export const metadata: Metadata = buildPageMetadata({
+  path: '/',
+  title: SITE.name,
+  seoTitle: SITE.title,
+  description: SITE.description,
+});
 
 export default function Page() {
   return (
     <>
-      <JsonLd data={buildWebsiteSchema()} />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          '@id': absoluteUrl('/#webpage'),
+          url: absoluteUrl('/'),
+          name: SITE.title,
+          description: SITE.description,
+          inLanguage: 'es-CR',
+          isPartOf: { '@id': absoluteUrl('/#website') },
+          about: { '@id': absoluteUrl('/#organization') },
+          publisher: { '@id': absoluteUrl('/#organization') },
+        }}
+      />
       <NexoHero variant="home" />
       <div className="mt-6 md:mt-8 lg:mt-10">
         <SocialProof {...socialProofHome} />

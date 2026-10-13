@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#081d24"/>
+      <stop offset="1" stop-color="#103c39"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <circle cx="1100" cy="70" r="265" fill="#3be0b2" opacity=".07"/>
+  <circle cx="1100" cy="70" r="175" fill="none" stroke="#6be6c5" stroke-width="2" opacity=".3"/>
+  <rect x="76" y="80" width="56" height="7" rx="3" fill="#68e5be"/>
+  <g fill="#fff" font-family="Arial, sans-serif">
+    <text x="76" y="173" font-size="76" font-weight="700">Asystec</text>
+    <text x="76" y="297" font-size="55" font-weight="700">Software e inteligencia</text>
+    <text x="76" y="363" font-size="55" font-weight="700">artificial para su empresa.</text>
+    <text x="76" y="447" font-size="29" fill="#b9d9d3">Desarrollo e implementación en Costa Rica</text>
+    <text x="76" y="553" font-size="28" fill="#68e5be">asystec.io</text>
+  </g>
+</svg>

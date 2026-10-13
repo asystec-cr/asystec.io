@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import JsonLd from '~/components/seo/JsonLd';
 import { SITE } from '~/config.js';
+import { buildPageMetadata } from '~/utils/seo';
 
 const canonicalPath = '/guias/pos-local-vs-pos-en-la-nube';
 const absoluteUrl = `${SITE.origin}${canonicalPath}`;
@@ -9,21 +10,18 @@ const pageTitle = 'POS local/offline vs POS en la nube en Costa Rica';
 const pageDescription =
   'Compara POS local, offline y en la nube para pymes en Costa Rica. Revisa criterios de caja, internet, inventario, facturacion, soporte y demo.';
 
-export const metadata: Metadata = {
-  title: `${pageTitle} | Asystec`,
+const pageMetadata = buildPageMetadata({
+  path: canonicalPath,
+  title: pageTitle,
+  seoTitle: `${pageTitle} | Asystec`,
   description: pageDescription,
-  alternates: {
-    canonical: canonicalPath,
-  },
+});
+
+export const metadata: Metadata = {
+  ...pageMetadata,
   openGraph: {
-    title: pageTitle,
-    description: pageDescription,
-    url: canonicalPath,
+    ...pageMetadata.openGraph,
     type: 'article',
-  },
-  twitter: {
-    title: pageTitle,
-    description: pageDescription,
   },
 };
 
@@ -178,12 +176,6 @@ const schemas = [
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Guias',
-        item: `${SITE.origin}/guias`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
         name: pageTitle,
         item: absoluteUrl,
       },
@@ -195,7 +187,7 @@ const Page = () => {
   return (
     <>
       <JsonLd data={schemas} />
-      <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <article className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
         <section className="border-b border-gray-200 pb-10 dark:border-slate-700">
           <p className="text-sm font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-300">
             Guia POS para Costa Rica
@@ -386,7 +378,7 @@ const Page = () => {
             </a>
           </div>
         </section>
-      </main>
+      </article>
     </>
   );
 };

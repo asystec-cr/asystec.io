@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
-
 import fs from 'fs';
 import path from 'path';
 import md from 'markdown-it';
+import { buildPageMetadata } from '~/utils/seo';
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
+  path: '/privacy',
   title: 'Política de Privacidad',
-  alternates: {
-    canonical: '/privacy',
-  },
-};
+  seoTitle: 'Política de Privacidad | Asystec',
+  description:
+    'Consulta cómo Asystec recopila y trata datos personales en su sitio web, solicitudes comerciales, campañas y servicios, y cómo ejercer tus derechos.',
+});
 
 const Page = () => {
   const filePath = path.join(process.cwd(), 'src/content/privacy/privacy.md');

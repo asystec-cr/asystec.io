@@ -4,6 +4,8 @@ const SITE = require('./src/config.js').SITE;
 module.exports = {
   siteUrl: `${SITE.origin}${SITE.basePathname}`,
   generateRobotsTxt: true,
+  // A deployment time is not a verified modification date for every page.
+  autoLastmod: false,
   exclude: ['/blog', '/pricing', '/services'],
   robotsTxtOptions: {
     policies: [

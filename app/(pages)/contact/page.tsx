@@ -1,33 +1,24 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import JsonLd from '~/components/seo/JsonLd';
 import Contact from '~/components/widgets/Contact';
 import { contactLeadContact } from '~/shared/data/pages/contact.data';
-import { absoluteUrl } from '~/utils/seo';
+import { absoluteUrl, buildPageMetadata } from '~/utils/seo';
 
 const pagePath = '/contact';
 const whatsappUrl =
   'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20para%20mi%20negocio.';
 const contactDescription =
-  'Coordina una demo de software con Asystec en Costa Rica para revisar POS, facturación electrónica, inventario, cobros, CRM, reportes, sucursales o integraciones.';
+  'Contacta a Asystec en Costa Rica para una demo de Nexo con IA, POS, facturación, cobros o software a medida. Revisamos tu proceso y el alcance que necesitas.';
 
-export const metadata: Metadata = {
-  title: 'Solicita una demo de software en Costa Rica',
+const seoPage = {
+  path: pagePath,
+  title: 'Contacto y demo con Asystec',
+  seoTitle: 'Contacto y demo de software e IA en Costa Rica | Asystec',
   description: contactDescription,
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: 'Solicita una demo de software en Costa Rica | Asystec',
-    description: contactDescription,
-    url: pagePath,
-  },
-  twitter: {
-    title: 'Solicita una demo de software en Costa Rica | Asystec',
-    description: contactDescription,
-  },
 };
+
+export const metadata = buildPageMetadata(seoPage);
 
 const solutionGroups = [
   {
@@ -50,8 +41,9 @@ const solutionGroups = [
   },
   {
     title: 'Crecimiento y procesos propios',
-    body: 'Compara multi-sucursal, integraciones o una plataforma a medida cuando el flujo requiere más alcance.',
+    body: 'Compara Nexo con IA, multi-sucursal, integraciones o una plataforma a medida según las tareas y el alcance de tu operación.',
     links: [
+      { label: 'Nexo de Asystec: agente de IA', href: '/agente-nexo' },
       { label: 'Multi-sucursal', href: '/soluciones/multi-sucursal' },
       { label: 'Integraciones', href: '/soluciones/integraciones' },
       { label: 'Software a medida', href: '/plataformas' },
@@ -64,6 +56,7 @@ const demoChecklist = [
   'Cantidad aproximada de usuarios, cajas, sucursales o bodegas.',
   'Cómo vendes, facturas, controlas inventario o das seguimiento hoy.',
   'Reportes, controles o integraciones que necesitas comprobar.',
+  'Si buscas automatizar con IA: una tarea concreta, sus fuentes y quién revisa el resultado.',
   'Una muestra sin datos sensibles cuando quieras revisar una migración.',
 ];
 
@@ -71,7 +64,12 @@ const faqs = [
   {
     question: 'Qué información debo enviar para coordinar una demo?',
     answer:
-      'Indica el tipo de negocio, el problema principal, los usuarios o sucursales involucrados y el proceso que necesitas revisar. Con ese contexto Asystec puede orientar la conversación hacia POS, facturación, inventario, cobros, CRM, reportes, integraciones o una plataforma a medida.',
+      'Indica el tipo de negocio, el problema principal, los usuarios o sucursales involucrados y el proceso que necesitas revisar. Con ese contexto Asystec puede orientar la conversación hacia Nexo con inteligencia artificial, POS, facturación, inventario, cobros, CRM, reportes, integraciones o una plataforma a medida.',
+  },
+  {
+    question: '¿Puedo consultar por Nexo de Asystec?',
+    answer:
+      'Sí. Comparte una tarea que se repita en tu empresa, las herramientas que usa tu equipo y el resultado esperado. Revisaremos qué fuentes pueden utilizarse, los permisos necesarios y los pasos que requieren aprobación antes de definir el alcance de Nexo.',
   },
   {
     question: 'La demo puede concentrarse en un solo problema?',
@@ -96,8 +94,12 @@ const schemas = [
     '@type': 'ContactPage',
     '@id': `${absoluteUrl(pagePath)}#webpage`,
     url: absoluteUrl(pagePath),
-    name: 'Solicita una demo de software en Costa Rica',
+    name: seoPage.seoTitle,
     description: contactDescription,
+    inLanguage: 'es-CR',
+    isPartOf: { '@id': absoluteUrl('/#website') },
+    publisher: { '@id': absoluteUrl('/#organization') },
+    breadcrumb: { '@id': `${absoluteUrl(pagePath)}#breadcrumb` },
     about: {
       '@id': `${absoluteUrl('/')}#organization`,
     },
@@ -125,6 +127,8 @@ const schemas = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     '@id': `${absoluteUrl(pagePath)}#faq`,
+    isPartOf: { '@id': `${absoluteUrl(pagePath)}#webpage` },
+    inLanguage: 'es-CR',
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
@@ -146,12 +150,12 @@ const Page = () => (
             Demo y diagnóstico comercial
           </p>
           <h1 className="mt-3 max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            Coordina una demo de software para tu negocio en Costa Rica
+            Coordina una demo de software e IA con Asystec
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700 dark:text-slate-300">
             Cuéntanos qué necesita resolver tu negocio, cómo opera hoy y qué quieres comprobar. Asystec puede preparar
-            una conversación enfocada en POS, facturación electrónica, inventario, cobros, CRM, reportes,
-            multi-sucursal, integraciones o software a medida.
+            una conversación enfocada en Nexo con inteligencia artificial, POS, facturación electrónica, inventario,
+            cobros, CRM, reportes, multi-sucursal, integraciones o software a medida para tu negocio en Costa Rica.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a

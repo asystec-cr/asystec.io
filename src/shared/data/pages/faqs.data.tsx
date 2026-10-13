@@ -62,7 +62,7 @@ export const faqs4Faqs: FAQsProps = {
   header: {
     title: 'Dudas clave antes de cotizar',
     subtitle:
-      'Estas respuestas ayudan a preparar una demo sin inventar precios ni prometer requisitos fiscales que deben validarse segun cada contribuyente.',
+      'Prepara tu demo con las necesidades de tu negocio, el alcance que buscas y los requisitos que correspondan a tu actividad como contribuyente.',
     position: 'center',
   },
   tabs: [

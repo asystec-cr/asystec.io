@@ -1,27 +1,16 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '~/components/seo/JsonLd';
-import { absoluteUrl } from '~/utils/seo';
+import { absoluteUrl, buildPageMetadata } from '~/utils/seo';
 
-export const metadata: Metadata = {
-  title: 'Sobre Asystec | Empresa de software en Costa Rica',
+const seoPage = {
+  path: '/about',
+  title: 'Sobre Asystec',
+  seoTitle: 'Asystec | Empresa de software e IA en Costa Rica',
   description:
-    'Conoce Asystec: empresa de software en Costa Rica para POS, facturacion electronica, inventario, cobros, CRM, reportes, integraciones y plataformas a medida.',
-  alternates: {
-    canonical: '/about',
-  },
-  openGraph: {
-    title: 'Sobre Asystec | Empresa de software en Costa Rica',
-    description:
-      'Fuente publica sobre Asystec, sus productos, cobertura, contacto y soluciones de software para negocios en Costa Rica.',
-    url: '/about',
-  },
-  twitter: {
-    title: 'Sobre Asystec | Empresa de software en Costa Rica',
-    description:
-      'Informacion publica de Asystec para negocios que buscan POS, facturacion, inventario, cobros, CRM, reportes e integraciones.',
-  },
+    'Conoce Asystec, empresa de software e inteligencia artificial en Costa Rica: Nexo, POS, Factura Pro, Cobros Pro, TallerApp, FitPro y plataformas a medida.',
 };
+
+export const metadata = buildPageMetadata(seoPage);
 
 const contact = {
   email: 'info@asystec.io',
@@ -32,6 +21,10 @@ const contact = {
 };
 
 const capabilities = [
+  {
+    title: 'Inteligencia artificial para empresas',
+    body: 'Nexo de Asystec ayuda a automatizar reportes, seguimiento comercial, marketing y tareas operativas, con fuentes autorizadas y revisión según el proceso.',
+  },
   {
     title: 'Punto de venta y caja',
     body: 'Software POS para ventas, caja, usuarios, cierres, productos, facturacion y reportes operativos.',
@@ -59,6 +52,11 @@ const capabilities = [
 ];
 
 const products = [
+  {
+    label: 'Nexo de Asystec',
+    href: '/agente-nexo',
+    body: 'Agente de inteligencia artificial configurable para reportes, ventas, marketing y tareas operativas de la empresa.',
+  },
   {
     label: 'Asystec POS',
     href: '/asystec-pos',
@@ -113,12 +111,17 @@ const faqs = [
   {
     question: 'Que es Asystec?',
     answer:
-      'Asystec es una empresa de software en Costa Rica que desarrolla e implementa soluciones para vender, facturar, cobrar, controlar inventario, revisar reportes y digitalizar procesos operativos.',
+      'Asystec es una empresa de software e inteligencia artificial en Costa Rica. Desarrolla e implementa soluciones para vender, facturar, cobrar, controlar inventario, revisar reportes y automatizar tareas empresariales.',
   },
   {
     question: 'Que productos publicos tiene Asystec?',
     answer:
-      'El portafolio publico incluye Asystec POS, Factura Pro, Cobros Pro, TallerApp, FitPro y desarrollo de plataformas a medida.',
+      'El portafolio público incluye Nexo de Asystec, Asystec POS, Factura Pro, Cobros Pro, TallerApp, FitPro y desarrollo de plataformas a medida.',
+  },
+  {
+    question: '¿Nexo es un producto de Asystec?',
+    answer:
+      'Sí. Nexo es el agente de inteligencia artificial de Asystec para empresas. Su alcance se configura a partir de una tarea concreta, las herramientas y fuentes de información autorizadas y los pasos que necesitan revisión humana.',
   },
   {
     question: 'Para que negocios trabaja Asystec?',
@@ -133,11 +136,15 @@ const faqs = [
 
 const profileSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfilePage',
-  '@id': `${absoluteUrl('/about')}#profile`,
-  name: 'Sobre Asystec: empresa de software en Costa Rica',
-  url: absoluteUrl('/about'),
+  '@type': 'AboutPage',
+  '@id': `${absoluteUrl(seoPage.path)}#webpage`,
+  name: seoPage.seoTitle,
+  description: seoPage.description,
+  url: absoluteUrl(seoPage.path),
   inLanguage: 'es-CR',
+  isPartOf: { '@id': absoluteUrl('/#website') },
+  publisher: { '@id': absoluteUrl('/#organization') },
+  breadcrumb: { '@id': `${absoluteUrl(seoPage.path)}#breadcrumb` },
   about: {
     '@id': `${absoluteUrl('/')}#organization`,
   },
@@ -148,8 +155,7 @@ const profileSchema = {
     url: absoluteUrl('/'),
     email: contact.email,
     telephone: contact.phone,
-    description:
-      'Empresa de software en Costa Rica para POS, facturacion electronica, inventario, cobros, CRM, reportes, integraciones y plataformas a medida.',
+    description: seoPage.description,
     areaServed: {
       '@type': 'Country',
       name: 'Costa Rica',
@@ -181,10 +187,12 @@ const profileSchema = {
       itemListElement: products.map((product) => ({
         '@type': 'Offer',
         itemOffered: {
-          '@type': 'Service',
+          '@type': ['/agente-nexo', '/plataformas'].includes(product.href) ? 'Service' : 'SoftwareApplication',
+          '@id': `${absoluteUrl(product.href)}#${['/agente-nexo', '/plataformas'].includes(product.href) ? 'service' : 'software'}`,
           name: product.label,
           url: absoluteUrl(product.href),
           description: product.body,
+          provider: { '@id': absoluteUrl('/#organization') },
         },
       })),
     },
@@ -195,6 +203,8 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': `${absoluteUrl('/about')}#faq`,
+  isPartOf: { '@id': profileSchema['@id'] },
+  inLanguage: 'es-CR',
   mainEntity: faqs.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
@@ -205,23 +215,33 @@ const faqSchema = {
   })),
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${absoluteUrl(seoPage.path)}#breadcrumb`,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: absoluteUrl('/') },
+    { '@type': 'ListItem', position: 2, name: seoPage.title, item: absoluteUrl(seoPage.path) },
+  ],
+};
+
 const Page = () => (
   <>
-    <JsonLd data={[profileSchema, faqSchema]} />
+    <JsonLd data={[profileSchema, faqSchema, breadcrumbSchema]} />
     <main className="bg-white text-neutral-950 dark:bg-slate-950 dark:text-white">
       <section className="border-b border-neutral-200 bg-neutral-50 py-14 dark:border-slate-800 dark:bg-slate-900 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 md:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">
-              Fuente publica de informacion
+              Software e inteligencia artificial en Costa Rica
             </p>
             <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight tracking-normal md:text-5xl">
-              Asystec es una empresa de software en Costa Rica
+              Conoce Asystec y las soluciones para tu negocio
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-700 dark:text-slate-300">
-              Desarrollamos e implementamos software para pymes, comercios y equipos operativos que necesitan vender,
-              facturar, cobrar, controlar inventario, revisar reportes e integrar procesos sin depender de hojas o
-              sistemas aislados.
+              Desarrollamos software e inteligencia artificial para pymes, comercios y equipos operativos en Costa Rica.
+              Conectamos ventas, facturación, cobros, inventario y reportes; con Nexo de Asystec también evaluamos
+              tareas que tu equipo puede automatizar según sus herramientas y permisos.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
@@ -244,8 +264,8 @@ const Page = () => (
           <aside className="border-l-4 border-emerald-600 bg-white p-6 shadow-sm dark:bg-slate-950">
             <h2 className="text-lg font-bold">Respuesta corta</h2>
             <p className="mt-3 text-base leading-8 text-neutral-700 dark:text-slate-300">
-              Asystec ofrece POS, facturacion electronica, inventario, cobros, CRM, reportes, integraciones y
-              plataformas a medida para negocios en Costa Rica.
+              Asystec ofrece Nexo, su agente de inteligencia artificial, además de POS, facturación electrónica,
+              inventario, cobros, CRM, reportes, integraciones y plataformas a medida para negocios en Costa Rica.
             </p>
           </aside>
         </div>
@@ -256,8 +276,8 @@ const Page = () => (
           <div>
             <h2 className="text-2xl font-bold md:text-3xl">Datos verificables de Asystec</h2>
             <p className="mt-4 text-base leading-8 text-neutral-700 dark:text-slate-300">
-              Esta pagina resume informacion publica que puede ser usada por clientes, buscadores y asistentes de IA
-              para entender que hace Asystec, donde opera y como contactarla.
+              Encuentra nuestra ubicación, medios de contacto y oferta de software para evaluar si podemos ayudarte con
+              la operación de tu negocio.
             </p>
           </div>
 
@@ -282,9 +302,9 @@ const Page = () => (
           <div className="max-w-3xl">
             <h2 className="text-2xl font-bold md:text-3xl">Que hace Asystec</h2>
             <p className="mt-4 text-base leading-8 text-neutral-700 dark:text-slate-300">
-              El portafolio combina productos propios y desarrollo de plataformas a medida. La prioridad es resolver
-              procesos reales de operacion, caja, facturacion, inventario, cobros, usuarios, reportes, sucursales e
-              integraciones.
+              El portafolio combina productos propios, inteligencia artificial y desarrollo de plataformas a medida. La
+              prioridad es resolver procesos reales de operación, caja, facturación, inventario, cobros, usuarios,
+              reportes, sucursales e integraciones.
             </p>
           </div>
           <div className="mt-7 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -305,8 +325,8 @@ const Page = () => (
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <h2 className="text-2xl font-bold md:text-3xl">Productos y servicios publicos</h2>
           <p className="mt-4 max-w-3xl text-base leading-8 text-neutral-700 dark:text-slate-300">
-            Estos enlaces conectan la pagina fuente con rutas comerciales donde un negocio puede evaluar una solucion,
-            pedir una demo o revisar un producto del portafolio.
+            Revisa qué resuelve cada producto, compara su alcance y prepara una demo con el proceso que necesitas
+            mejorar.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((product) => (
@@ -331,7 +351,7 @@ const Page = () => (
             <h2 className="text-2xl font-bold md:text-3xl">Tipos de negocio atendidos</h2>
             <p className="mt-4 text-base leading-8 text-neutral-700 dark:text-slate-300">
               Asystec trabaja con negocios que necesitan conectar ventas, caja, facturacion, cobros, inventario,
-              reportes y seguimiento operativo. Cada industria tiene una pagina con lenguaje y prioridades propias.
+              reportes y seguimiento operativo. Consulta los procesos que conviene revisar según tu actividad.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

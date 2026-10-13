@@ -4,6 +4,9 @@ import type { FaqItem, LandingPageData } from '~/shared/data/seo-landings.data';
 
 const organizationId = `${SITE.origin}/#organization`;
 const localBusinessId = `${SITE.origin}/#local-business`;
+export const DEFAULT_SOCIAL_IMAGE = '/images/social/asystec.png';
+
+export type PageMetadataInput = Pick<LandingPageData, 'path' | 'title' | 'seoTitle' | 'description' | 'image'>;
 
 export const absoluteUrl = (path = '/') => new URL(path, SITE.origin).toString();
 
@@ -17,13 +20,18 @@ export const buildWebsiteSchema = () => ({
   publisher: { '@id': organizationId },
 });
 
-export const buildPageMetadata = (page: LandingPageData): Metadata => ({
+export const buildPageMetadata = (page: PageMetadataInput): Metadata => ({
   title: {
     absolute: page.seoTitle,
   },
   description: page.description,
   alternates: {
     canonical: page.path,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
   openGraph: {
     type: 'website',
@@ -32,20 +40,18 @@ export const buildPageMetadata = (page: LandingPageData): Metadata => ({
     title: page.seoTitle,
     description: page.description,
     url: page.path,
-    images: page.image
-      ? [
-          {
-            url: page.image,
-            alt: page.title,
-          },
-        ]
-      : undefined,
+    images: [
+      {
+        url: page.image ?? DEFAULT_SOCIAL_IMAGE,
+        alt: page.image ? page.title : 'Asystec: software e inteligencia artificial en Costa Rica',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: page.seoTitle,
     description: page.description,
-    images: page.image ? [page.image] : undefined,
+    images: [page.image ?? DEFAULT_SOCIAL_IMAGE],
   },
 });
 
@@ -113,6 +119,7 @@ const buildFaqSchema = (faqs: FaqItem[], page: LandingPageData) => ({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   '@id': `${absoluteUrl(page.path)}#faq`,
+  isPartOf: { '@id': `${absoluteUrl(page.path)}#webpage` },
   mainEntity: faqs.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
@@ -151,11 +158,14 @@ const buildCommercialSchema = (page: LandingPageData) => {
       '@id': `${absoluteUrl(page.path)}#software`,
       name: page.title,
       description: page.description,
-      url: page.externalUrl ?? absoluteUrl(page.path),
+      url: absoluteUrl(page.path),
+      ...(page.externalUrl ? { sameAs: page.externalUrl } : {}),
+      mainEntityOfPage: { '@id': `${absoluteUrl(page.path)}#webpage` },
       applicationCategory: page.applicationCategory ?? 'BusinessApplication',
       operatingSystem: page.operatingSystem ?? 'Web',
       inLanguage: 'es-CR',
       image: page.image ? absoluteUrl(page.image) : undefined,
+      publisher: { '@id': organizationId },
       provider: {
         '@id': organizationId,
       },
@@ -176,7 +186,8 @@ const buildCommercialSchema = (page: LandingPageData) => {
       publisher: {
         '@id': organizationId,
       },
-      mainEntityOfPage: absoluteUrl(page.path),
+      image: page.image ? absoluteUrl(page.image) : undefined,
+      mainEntityOfPage: { '@id': `${absoluteUrl(page.path)}#webpage` },
     };
   }
 
@@ -195,6 +206,7 @@ const buildCommercialSchema = (page: LandingPageData) => {
       '@id': organizationId,
     },
     url: absoluteUrl(page.path),
+    mainEntityOfPage: { '@id': `${absoluteUrl(page.path)}#webpage` },
   };
 };
 
@@ -204,7 +216,21 @@ type LandingSchemaOptions = {
 };
 
 export const buildLandingSchemas = (page: LandingPageData, options: LandingSchemaOptions = {}) => {
-  const schemas: Array<Record<string, unknown>> = [buildCommercialSchema(page), buildBreadcrumbSchema(page)];
+  const entity = buildCommercialSchema(page);
+  const webpage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${absoluteUrl(page.path)}#webpage`,
+    url: absoluteUrl(page.path),
+    name: page.seoTitle,
+    description: page.description,
+    inLanguage: 'es-CR',
+    isPartOf: { '@id': absoluteUrl('/#website') },
+    publisher: { '@id': organizationId },
+    mainEntity: { '@id': entity['@id'] },
+    breadcrumb: { '@id': `${absoluteUrl(page.path)}#breadcrumb` },
+  };
+  const schemas: Array<Record<string, unknown>> = [webpage, entity, buildBreadcrumbSchema(page)];
   const faqs = options.faqs ?? page.faqs;
 
   if (options.includeFaq !== false && faqs.length > 0) {

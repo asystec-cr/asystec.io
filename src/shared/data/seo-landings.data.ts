@@ -256,13 +256,13 @@ export const portfolioPages: LandingPageData[] = [
     kind: 'product',
     schemaType: 'SoftwareApplication',
     title: 'Asystec POS',
-    seoTitle: 'Asystec POS para pymes en Costa Rica',
+    seoTitle: 'Asystec POS | Sistema de punto de venta en Costa Rica',
     description:
-      'Sistema POS de escritorio para pymes en Costa Rica con operacion offline, facturacion electronica, inventario, reportes, seguridad y soporte local.',
+      'Asystec POS para Windows: ventas, caja, inventario y reportes con operación local y facturación electrónica para negocios en Costa Rica. Coordina una demo.',
     eyebrow: 'Producto Asystec',
-    heroTitle: 'Sistema POS para negocios que necesitan vender aunque internet falle',
+    heroTitle: 'Asystec POS: punto de venta para negocios en Costa Rica',
     answer:
-      'Asystec POS es un sistema de punto de venta para pymes en Costa Rica que combina caja, ventas, inventario, facturacion electronica, reportes y operacion local para mantener el negocio trabajando.',
+      'Asystec POS es el sistema de punto de venta de Asystec para Windows. Combina ventas, caja, inventario, reportes y facturación electrónica para negocios en Costa Rica, con operación local para mantener la atención en caja cuando falla internet.',
     intro:
       'Es una opcion para comercios, talleres, restaurantes y servicios que necesitan velocidad en caja, control operativo y acompanamiento local.',
     primaryCta: contactCta,
@@ -319,15 +319,15 @@ export const portfolioPages: LandingPageData[] = [
     kind: 'product',
     schemaType: 'SoftwareApplication',
     title: 'FitPro',
-    seoTitle: 'FitPro | Software para gimnasios y centros fitness',
+    seoTitle: 'FitPro de Asystec | Software para gimnasios en Costa Rica',
     description:
-      'Software para gimnasios y estudios fitness con membresias, cobros, clases, check-ins y reportes operativos.',
+      'FitPro de Asystec es software web para gimnasios y centros fitness: membresías, pagos, clases, cupos, asistencia y reportes. Conoce el producto y solicita una demo.',
     eyebrow: 'Producto Asystec',
-    heroTitle: 'Software para administrar gimnasios, membresias y clases',
+    heroTitle: 'FitPro de Asystec: software para administrar tu gimnasio',
     answer:
-      'FitPro ayuda a gimnasios y centros fitness a administrar clientes, membresias, pagos, clases, cupos, asistencia y reportes desde una plataforma operativa.',
+      'FitPro es el software web de Asystec para gimnasios y centros fitness. Permite administrar clientes, membresías, pagos, clases, cupos, asistencia y reportes desde una plataforma para recepción y administración.',
     intro:
-      'Esta pagina posiciona FitPro dentro del portafolio Asystec y conecta el producto con industrias y necesidades de cobro recurrente.',
+      'Revisa membresías activas y por vencer, cobros pendientes y ocupación de clases. La demo permite comparar FitPro con los horarios, tipos de membresía y reportes que utiliza tu centro.',
     primaryCta: { label: 'Abrir FitPro', href: 'https://fitpro.asystec.io/' },
     secondaryCta: contactCta,
     highlights: ['Membresias', 'Cobros y vencimientos', 'Agenda de clases', 'Reportes de asistencia e ingresos'],
@@ -345,6 +345,11 @@ export const portfolioPages: LandingPageData[] = [
       },
     ],
     faqs: [
+      {
+        question: '¿Qué es FitPro de Asystec?',
+        answer:
+          'FitPro es una plataforma web de Asystec para administrar gimnasios y centros fitness: clientes, membresías, pagos, clases, cupos, asistencia y reportes.',
+      },
       {
         question: 'FitPro sirve para controlar vencimientos?',
         answer: 'Si. La plataforma esta orientada a dar visibilidad sobre membresias, pagos pendientes y renovaciones.',
@@ -532,13 +537,13 @@ export const portfolioPages: LandingPageData[] = [
     kind: 'product',
     schemaType: 'SoftwareApplication',
     title: 'Cobros Pro',
-    seoTitle: 'Cobros Pro | Plataforma de credito y cobranza en Costa Rica',
+    seoTitle: 'Cobros Pro de Asystec | Software de cuentas por cobrar',
     description:
-      'Software web para administrar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza en Costa Rica.',
+      'Cobros Pro de Asystec organiza clientes, créditos, pagos, saldos y estados de cuenta desde la web. Evalúa tu cartera y reportes de cobranza en una demo.',
     eyebrow: 'Producto Asystec',
-    heroTitle: 'Cobros Pro para ordenar creditos, pagos y saldos',
+    heroTitle: 'Cobros Pro de Asystec: créditos, pagos y saldos en un solo lugar',
     answer:
-      'Cobros Pro es un software web para negocios que necesitan administrar clientes, creditos, pagos, saldos, estados de cuenta y reportes de cobranza. Ayuda a que ventas, cobros y administracion consulten la misma cartera sin depender de hojas o controles separados.',
+      'Cobros Pro es el software web de Asystec para administrar clientes, créditos, pagos, saldos, estados de cuenta y reportes de cobranza. Ayuda a que ventas, cobros y administración consulten la misma cartera sin depender de hojas o controles separados.',
     intro:
       'La demo parte de ejemplos reales de cartera para revisar como se registran creditos y pagos, que debe mostrar cada estado de cuenta y cuales reportes necesita el equipo antes de confirmar el alcance.',
     primaryCta: contactCta,
@@ -644,9 +649,9 @@ export const portfolioPages: LandingPageData[] = [
     },
     faqs: [
       {
-        question: 'Que controla Cobros Pro?',
+        question: '¿Qué es Cobros Pro de Asystec?',
         answer:
-          'Cobros Pro administra clientes, creditos, pagos, abonos, saldos, estados de cuenta, historial, reportes de cobranza y usuarios desde una plataforma web.',
+          'Cobros Pro es una plataforma web de Asystec para administrar clientes, créditos, pagos, abonos, saldos, estados de cuenta, historial, reportes de cobranza y usuarios.',
       },
       {
         question: 'Cuando conviene dejar Excel para controlar cobros?',
@@ -666,7 +671,7 @@ export const portfolioPages: LandingPageData[] = [
       {
         question: 'Cobros Pro envia recordatorios por WhatsApp o correo?',
         answer:
-          'Los recordatorios, canales de contacto y automatizaciones deben validarse durante la demo. Esta pagina no los presenta como funciones estandar sin confirmar el flujo requerido.',
+          'Los recordatorios, canales de contacto y automatizaciones se revisan durante la demo según el flujo que necesita el negocio. La propuesta debe detallar los canales, la configuración y los costos que apliquen.',
       },
       {
         question: 'Cobros Pro se integra con facturacion, POS o CRM?',
@@ -705,15 +710,15 @@ export const portfolioPages: LandingPageData[] = [
     kind: 'product',
     schemaType: 'SoftwareApplication',
     title: 'Factura Pro',
-    seoTitle: 'Factura Pro | Facturacion electronica en Costa Rica',
+    seoTitle: 'Factura Pro de Asystec | Facturación electrónica Costa Rica',
     description:
-      'Factura Pro es una solucion para emitir y administrar comprobantes electronicos, clientes, pagos, cotizaciones y reportes en Costa Rica.',
+      'Factura Pro de Asystec permite emitir comprobantes electrónicos y administrar clientes, cotizaciones, pagos y reportes desde la web en Costa Rica.',
     eyebrow: 'Producto Asystec',
-    heroTitle: 'Facturacion electronica y gestion comercial para pymes',
+    heroTitle: 'Factura Pro de Asystec: facturación electrónica para tu negocio',
     answer:
-      'Factura Pro ayuda a negocios en Costa Rica a emitir comprobantes electronicos, administrar clientes, cotizaciones, pagos y reportes desde una plataforma web.',
+      'Factura Pro es una plataforma web de Asystec para negocios en Costa Rica que necesitan emitir comprobantes electrónicos y administrar clientes, productos o servicios, cotizaciones, pagos y reportes.',
     intro:
-      'La pagina posiciona el producto dentro del portafolio Asystec y lo conecta con preguntas frecuentes de facturacion electronica.',
+      'Revisa el recorrido desde la cotización hasta el comprobante y el pago. Si también necesitas caja, inventario o cuentas por cobrar, la demo ayuda a definir qué producto y alcance corresponden.',
     primaryCta: { label: 'Abrir Factura Pro', href: 'https://app.asystec.io/login' },
     secondaryCta: contactCta,
     highlights: ['Comprobantes electronicos', 'Clientes', 'Cotizaciones', 'Pagos y reportes'],
@@ -733,7 +738,8 @@ export const portfolioPages: LandingPageData[] = [
     faqs: [
       {
         question: 'Factura Pro es para Costa Rica?',
-        answer: 'Si. La pagina esta orientada a empresas y pymes que necesitan facturacion electronica en Costa Rica.',
+        answer:
+          'Sí. Factura Pro es una plataforma web de Asystec para empresas y pymes que necesitan facturación electrónica y gestión comercial en Costa Rica.',
       },
       {
         question: 'Cuando elegir Factura Pro frente a un POS?',
@@ -761,13 +767,13 @@ export const portfolioPages: LandingPageData[] = [
     kind: 'product',
     schemaType: 'SoftwareApplication',
     title: 'TallerApp',
-    seoTitle: 'TallerApp | Software para talleres en Costa Rica',
+    seoTitle: 'TallerApp de Asystec | Software para talleres en Costa Rica',
     description:
-      'Software para talleres en Costa Rica con clientes, ordenes de trabajo, diagnosticos, aprobaciones, cobros, estados y seguimiento hasta la entrega.',
+      'TallerApp de Asystec organiza clientes, órdenes de trabajo, diagnósticos, aprobaciones y cobros en talleres. Sigue cada servicio desde recepción hasta entrega.',
     eyebrow: 'Producto Asystec',
-    heroTitle: 'Software para talleres con ordenes de trabajo, cobros y seguimiento',
+    heroTitle: 'TallerApp de Asystec: órdenes de trabajo, cobros y seguimiento',
     answer:
-      'TallerApp es una plataforma para talleres y servicios tecnicos que necesitan registrar clientes, vehiculos o equipos, ordenes de trabajo, diagnosticos, aprobaciones, estados, cobros y entregas en un mismo flujo.',
+      'TallerApp es la plataforma web de Asystec para talleres y servicios técnicos. Permite registrar clientes, vehículos o equipos, órdenes de trabajo, diagnósticos, aprobaciones, estados, cobros y entregas en un mismo flujo.',
     intro:
       'Ayuda a recepcion, tecnicos, caja y administracion a seguir cada trabajo desde el ingreso hasta el cobro y la entrega, sin depender de papeles o mensajes dispersos.',
     primaryCta: contactCta,
@@ -868,9 +874,9 @@ export const portfolioPages: LandingPageData[] = [
     },
     faqs: [
       {
-        question: 'Que controla TallerApp en un taller?',
+        question: '¿Qué es TallerApp de Asystec?',
         answer:
-          'TallerApp organiza clientes, vehiculos o equipos, ordenes de trabajo, diagnosticos, aprobaciones, estados, cobros, saldos, reportes y seguimiento hasta la entrega.',
+          'TallerApp es una plataforma de Asystec para organizar clientes, vehículos o equipos, órdenes de trabajo, diagnósticos, aprobaciones, estados, cobros, saldos, reportes y seguimiento hasta la entrega.',
       },
       {
         question: 'TallerApp sirve solo para talleres automotrices?',
@@ -939,7 +945,8 @@ const solution = (
   eyebrow: 'Solucion Asystec',
   heroTitle: title,
   answer,
-  intro: 'Esta solucion conecta una necesidad operativa especifica con productos, plataformas y asesorias de Asystec.',
+  intro:
+    'Asystec revisa el proceso, los usuarios y los sistemas actuales para definir qué puede resolver un producto existente y qué requiere configuración o desarrollo a medida.',
   primaryCta: contactCta,
   secondaryCta: whatsappCta,
   highlights: [
@@ -1179,10 +1186,10 @@ export const solutionPages: LandingPageData[] = [
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
-      'Responder a busquedas de facturacion electronica para pymes en Costa Rica.',
+      'Emitir comprobantes con clientes y productos organizados.',
       'Conectar comprobantes con clientes, ventas, pagos, inventario y reportes.',
       'Ayudar a comparar si conviene Factura Pro, Asystec POS o una plataforma a medida.',
-      'Dar una ruta clara hacia demo, WhatsApp y contacto comercial.',
+      'Validar tipos de comprobante, usuarios y volumen con ejemplos reales.',
     ],
     modules: [
       'Comprobantes electronicos',
@@ -1321,10 +1328,10 @@ export const solutionPages: LandingPageData[] = [
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
-      'Responder a busquedas de sistema de inventario para tiendas en Costa Rica.',
+      'Consultar existencias y movimientos para decidir qué reponer.',
       'Conectar inventario con ventas, POS, facturacion y reportes.',
       'Ayudar a preparar una demo con productos, bodegas y movimientos reales.',
-      'Dar una ruta clara hacia Asystec POS, contacto y WhatsApp.',
+      'Comprobar permisos, conteos y ajustes con el flujo de la tienda.',
     ],
     modules: [
       'Productos y categorias',
@@ -1453,10 +1460,10 @@ export const solutionPages: LandingPageData[] = [
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
-      'Responder a busquedas sobre reportes para pymes y gerencia en Costa Rica.',
+      'Identificar indicadores que ayudan a decidir compras, cobros y ventas.',
       'Conectar ventas, caja, inventario, cobros y facturacion con decisiones reales.',
       'Ayudar a preparar una demo con indicadores y fuentes de datos actuales.',
-      'Dirigir a contacto, WhatsApp y productos Asystec segun el flujo del negocio.',
+      'Definir frecuencia, responsables y acceso a cada reporte.',
     ],
     modules: [
       'Ventas y caja',
@@ -1595,10 +1602,10 @@ export const solutionPages: LandingPageData[] = [
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
-      'Aterrizar busquedas sobre software de cuentas por cobrar en Costa Rica.',
+      'Consultar quién debe, cuánto debe y qué movimientos tiene cada cuenta.',
       'Conectar cobranza con clientes, pagos, saldos, reportes y gerencia.',
       'Preparar una demo con cartera actual, reglas de pago y estados de cuenta.',
-      'Dirigir a Cobros Pro, contacto y WhatsApp sin inventar promesas financieras.',
+      'Comparar Cobros Pro con las necesidades de seguimiento de la cartera.',
     ],
     modules: [
       'Clientes y creditos',
@@ -1733,10 +1740,10 @@ export const solutionPages: LandingPageData[] = [
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
-      'Responder a busquedas de CRM para pymes y negocios en Costa Rica.',
+      'Mantener el contexto de cada cliente y oportunidad comercial.',
       'Conectar clientes, oportunidades, tareas, soporte, cobros y reportes.',
       'Ayudar a decidir entre Cobros Pro, una plataforma CRM o una integracion a medida.',
-      'Dar una ruta clara hacia demo, WhatsApp y contacto comercial.',
+      'Definir etapas, responsables y próximos pasos con el equipo comercial.',
     ],
     modules: [
       'Clientes y contactos',
@@ -1891,10 +1898,10 @@ export const solutionPages: LandingPageData[] = [
     primaryCta: contactCta,
     secondaryCta: whatsappCta,
     highlights: [
-      'Responder a busquedas de integraciones de software en Costa Rica.',
+      'Reducir la digitación repetida entre los sistemas de la empresa.',
       'Conectar la necesidad con plataformas, POS, cobros, CRM y reportes.',
       'Preparar una demo tecnica-comercial con datos, sistemas y responsables.',
-      'Evitar promesas genericas: cada integracion depende del proceso real.',
+      'Confirmar APIs, permisos, manejo de errores y mantenimiento antes de implementar.',
     ],
     modules: [
       'APIs y conectores entre sistemas',
@@ -2034,7 +2041,7 @@ const industry = (
   heroTitle: title,
   answer,
   intro:
-    'Cada industria necesita lenguaje, prioridades y flujos distintos. Esta pagina aterriza las soluciones Asystec al tipo de negocio.',
+    'Compara el proceso de tu negocio con las soluciones de Asystec. En la demo revisamos ventas, clientes, usuarios y reportes para definir el producto, las conexiones y el alcance que necesitas.',
   primaryCta: contactCta,
   secondaryCta: whatsappCta,
   highlights: [
@@ -2353,7 +2360,7 @@ export const industryPages: LandingPageData[] = [
     kind: 'industry',
     schemaType: 'Service',
     title: 'Software para distribuidores',
-    seoTitle: 'Software para distribuidores en Costa Rica',
+    seoTitle: 'Software para distribuidores en Costa Rica | Asystec',
     description:
       'Software para distribuidores en Costa Rica con ventas, inventario, cuentas por cobrar, facturacion, rutas, reportes y control multi-sucursal.',
     eyebrow: 'Industria',
@@ -3678,6 +3685,62 @@ export const guidePages: LandingPageData[] = [
       'Separar control de productos, ventas, compras y reportes.',
       'Reducir errores por archivos duplicados o ediciones sin historial.',
       'Preparar una demo con datos reales del negocio.',
+    ],
+    intro:
+      'La decisión depende de quién actualiza las existencias, cuántas ventas y movimientos ocurren y qué sucede cuando un dato está equivocado. Compara las opciones con una muestra de tus productos antes de trasladar todo el inventario.',
+    sections: [
+      {
+        title: 'Cuándo una hoja todavía puede ser suficiente',
+        body: 'Una hoja puede servir cuando una sola persona controla pocos movimientos y puede verificar las existencias con frecuencia. Define códigos únicos, responsables y una copia de respaldo para no depender de varias versiones del mismo archivo.',
+        items: [
+          'Un registro por producto con código y unidad de medida',
+          'Entradas, salidas y ajustes separados de las existencias iniciales',
+          'Una persona responsable de revisar diferencias',
+          'Conteos físicos para comprobar que el archivo refleja lo disponible',
+        ],
+      },
+      {
+        title: 'Qué alternativa comparar según el problema',
+        body: 'Un sistema de inventario ayuda a controlar productos y movimientos. Un POS conviene cuando las ventas de caja deben actualizar existencias. Una plataforma a medida se evalúa cuando existen reglas, ubicaciones o integraciones que los productos disponibles no resuelven.',
+        items: [
+          'Inventario: entradas, salidas, ajustes y consulta de existencias',
+          'POS: venta, caja y movimiento de productos en un mismo flujo',
+          'Integración: conexión con los sistemas que ya utiliza el negocio',
+          'Desarrollo a medida: procesos propios que necesitan validación específica',
+        ],
+      },
+      {
+        title: 'Cómo probar el cambio sin perder el control',
+        body: 'Limpia una muestra de productos, registra un conteo de referencia y simula una entrada, una venta y un ajuste. Compara los saldos con la hoja antes de acordar la fecha de corte y el responsable de validar la migración.',
+        items: [
+          'Corregir códigos duplicados, unidades y nombres inconsistentes',
+          'Separar catálogo, existencias e historial que realmente se necesita',
+          'Probar permisos y reportes con las personas que usarán el sistema',
+          'Conservar el archivo original y documentar las diferencias detectadas',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: '¿Cuándo conviene cambiar Excel por un sistema de inventario?',
+        answer:
+          'Conviene evaluarlo cuando varias personas editan el archivo, las ventas no rebajan existencias a tiempo, hay diferencias frecuentes en los conteos o se necesita conocer los movimientos por usuario o ubicación.',
+      },
+      {
+        question: '¿Necesito un POS o solo un sistema de inventario?',
+        answer:
+          'Si el problema principal es registrar entradas, salidas y ajustes, comienza por inventario. Si además vendes en caja y necesitas que cada venta afecte productos, cobros y comprobantes, compara un POS con tu flujo real.',
+      },
+      {
+        question: '¿Se puede importar el inventario que tengo en Excel?',
+        answer:
+          'La importación depende de los campos, la calidad de los datos y el sistema elegido. Asystec revisa una muestra para confirmar códigos, unidades, existencias, duplicados y alcance antes de acordar la migración.',
+      },
+      {
+        question: '¿Qué debo llevar a una demo para reemplazar Excel?',
+        answer:
+          'Lleva una muestra del catálogo, el último conteo, ejemplos de entradas y ventas, los usuarios que actualizan existencias y los reportes que necesitas. Así puedes comparar el resultado con tu control actual.',
+      },
     ],
   },
   {
