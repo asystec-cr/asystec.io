@@ -1,3 +1,5 @@
+import { restauranteProProductPage } from './products/restaurante-pro.data';
+
 export type FaqItem = {
   question: string;
   answer: string;
@@ -250,6 +252,7 @@ export const pillarPage: LandingPageData = {
 };
 
 export const portfolioPages: LandingPageData[] = [
+  restauranteProProductPage,
   {
     slug: 'asystec-pos',
     path: '/asystec-pos',

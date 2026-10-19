@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { SITE } from '~/config.js';
 
 import PosHero from '~/components/widgets/PosHero';
+import RestauranteProHero from '~/components/widgets/RestauranteProHero';
 import NexoHero from '~/components/widgets/NexoHero';
 import JsonLd from '~/components/seo/JsonLd';
 import { absoluteUrl, buildPageMetadata } from '~/utils/seo';
@@ -63,6 +64,7 @@ export default function Page() {
       <PlatformPortfolio portfolioHref="/plataformas#portfolio-cases" />
       <div className="mt-10">
         <PosHero />
+        <RestauranteProHero />
       </div>
       {/* <Content {...contentHomeOne} /> */}
       {/* <Content {...contentHomeTwo} /> */}

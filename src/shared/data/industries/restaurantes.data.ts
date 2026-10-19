@@ -128,6 +128,7 @@ export const restaurantesIndustryPage: LandingPageData = {
     },
   ],
   related: [
+    { label: 'Restaurante Pro: mesas, cocina y caja', href: '/restaurante-pro' },
     { label: 'Asystec POS', href: '/asystec-pos' },
     { label: 'Sistema POS', href: '/soluciones/pos' },
     { label: 'Inventario', href: '/soluciones/inventario' },

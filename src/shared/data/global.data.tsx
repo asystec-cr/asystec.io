@@ -45,6 +45,10 @@ export const headerData: HeaderProps = {
           href: '/asystec-pos',
         },
         {
+          label: 'Restaurante Pro',
+          href: '/restaurante-pro',
+        },
+        {
           label: 'FitPro',
           href: '/fitpro',
         },
@@ -463,6 +467,7 @@ export const footerData2: FooterProps = {
         { label: 'Software para negocios', href: '/software-para-negocios-costa-rica' },
         { label: 'Nexo de Asystec', href: '/agente-nexo' },
         { label: 'Asystec POS', href: '/asystec-pos' },
+        { label: 'Restaurante Pro', href: '/restaurante-pro' },
         { label: 'Cobros Pro', href: '/cobrosapp' },
         { label: 'Factura Pro', href: '/facturacionapp' },
       ],
