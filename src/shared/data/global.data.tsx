@@ -278,6 +278,11 @@ export const headerData: HeaderProps = {
           href: 'https://drive.google.com/open?id=1DKoEH4aZJ8ZzITyEzV6oGHh0_A2XISpL&usp=drive_fs',
           target: 'blank',
         },
+        {
+          label: 'Descargar RustDesk',
+          href: 'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/herramientas/Asystec-RustDesk-Instalador.zip',
+          target: 'blank',
+        },
       ],
     },
     {
