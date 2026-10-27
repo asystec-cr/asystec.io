@@ -1,5 +1,15 @@
 # Tailnext
 
+## Descarga de Asystec Desk
+
+El menú Herramientas usa el enlace permanente
+`https://github.com/asystec-io/asystec-desk/releases/latest/download/Asystec-Desk-Setup.exe`.
+Para actualizar la descarga, publicar en ese repositorio una versión normal con
+el archivo `Asystec-Desk-Setup.exe` y marcarla como Latest después de verificar
+los archivos. Las versiones preliminares no sustituyen esa descarga.
+No cambiar el enlace de la web por una URL con versión fija. Este enlace
+actualiza la descarga del instalador; no actualiza aplicaciones ya instaladas.
+
 ## SEO de Nexo de Asystec
 
 La página oficial del producto es **https://asystec.io/agente-nexo**. Mantener esa URL como canónica; la portada presenta Asystec y enlaza al producto. Usar «Nexo de Asystec» y «Agente Nexo» de forma consistente en contenido público y perfiles oficiales.

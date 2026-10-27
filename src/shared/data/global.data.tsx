@@ -279,8 +279,8 @@ export const headerData: HeaderProps = {
           target: 'blank',
         },
         {
-          label: 'Descargar RustDesk',
-          href: 'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/herramientas/Asystec-Soporte-Setup.exe',
+          label: 'Descargar Asystec Desk',
+          href: 'https://github.com/asystec-io/asystec-desk/releases/latest/download/Asystec-Desk-Setup.exe',
           target: 'blank',
         },
       ],
