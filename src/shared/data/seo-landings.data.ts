@@ -1,3 +1,4 @@
+import { hardwareDemoHref, hardwareWhatsAppMessage } from '../marketing/hardware-lead';
 import { restauranteProProductPage } from './products/restaurante-pro.data';
 
 export type FaqItem = {
@@ -81,6 +82,13 @@ export type LandingPageData = {
 
 const contactCta = { label: 'Coordinar demo', href: '/contact' };
 const whatsappCta = { label: 'Escribir por WhatsApp', href: 'https://wa.me/50689754741' };
+const hardwareGuideLink = { label: 'Prueba de POS para ferreterías', href: '/guias/como-probar-pos-para-ferreteria' };
+const hardwareContactCta = { ...contactCta, href: hardwareDemoHref };
+const hardwareWhatsAppCta = {
+  ...whatsappCta,
+  href: `${whatsappCta.href}?text=${encodeURIComponent(hardwareWhatsAppMessage)}`,
+};
+
 
 export const pillarPage: LandingPageData = {
   slug: 'software-para-negocios-costa-rica',
@@ -1151,6 +1159,7 @@ export const solutionPages: LandingPageData[] = [
     relatedIntro:
       'Revisa el producto y las guías de decisión; si el alcance encaja, agenda una demostración con el contexto de tu negocio.',
     related: [
+      hardwareGuideLink,
       { label: 'Producto Asystec POS', href: '/asystec-pos' },
       { label: 'Opciones de implementación', href: '/asystec-pos#planes-pos' },
       { label: 'Cómo elegir un POS', href: '/guias/como-elegir-sistema-pos' },
@@ -1435,6 +1444,7 @@ export const solutionPages: LandingPageData[] = [
       },
     ],
     related: [
+      hardwareGuideLink,
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS', href: '/soluciones/pos' },
       { label: 'Alternativas a Excel', href: '/guias/alternativas-excel-inventario' },
@@ -2232,18 +2242,18 @@ export const industryPages: LandingPageData[] = [
     path: '/industrias/ferreterias',
     kind: 'industry',
     schemaType: 'Service',
-    title: 'Software para ferreterias',
-    seoTitle: 'Software para ferreterias en Costa Rica | Asystec',
+    title: 'Software para ferreterías',
+    seoTitle: 'POS para ferreterías en Costa Rica | Asystec',
     description:
-      'Software para ferreterias en Costa Rica con POS, inventario, catalogo amplio, codigos, facturacion electronica, reportes y control operativo.',
+      'Evalúa un POS para tu ferretería en Costa Rica. Prueba búsqueda por código, ventas de mostrador, inventario y facturación electrónica con tu propio flujo.',
     eyebrow: 'Industria',
-    heroTitle: 'Software para ferreterias con POS, inventario y facturacion',
+    heroTitle: 'POS para ferreterías: encuentra el código correcto y controla las existencias',
     answer:
-      'Una ferreteria en Costa Rica necesita encontrar productos rapido, controlar un catalogo amplio, revisar existencias, vender en caja, emitir comprobantes y ver reportes sin depender de hojas separadas. Asystec conecta POS, inventario, facturacion y control operativo para reducir errores en ventas y bodega.',
+      'Cuando dos tornillos se parecen en el catálogo, vender el código equivocado afecta la caja y también el inventario. Evalúa cómo Asystec POS registra una venta de mostrador, descuenta existencias y deja el movimiento disponible para revisión.',
     intro:
-      'Esta landing aterriza la demanda de software para ferreterias hacia soluciones Asystec que ordenan caja, catalogo, inventario, facturacion electronica y reportes para comercios con muchos productos.',
-    primaryCta: contactCta,
-    secondaryCta: whatsappCta,
+      'Para la demo, trae dos productos parecidos y una venta típica. Si compras por caja, vendes por unidad o por metro, o manejas varias bodegas, revisemos esas reglas en la configuración que necesitaría tu negocio.',
+    primaryCta: hardwareContactCta,
+    secondaryCta: hardwareWhatsAppCta,
     highlights: [
       'Catalogo amplio con busqueda rapida',
       'Inventario, existencias y movimientos',
@@ -2342,8 +2352,14 @@ export const industryPages: LandingPageData[] = [
       { label: 'Inventario', href: '/soluciones/inventario' },
       { label: 'Alternativas a Excel', href: '/guias/alternativas-excel-inventario' },
       { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
-      { label: 'Coordinar demo', href: '/contact' },
+      hardwareGuideLink,
     ],
+    finalCta: {
+      title: 'Probemos una venta de tu ferretería',
+      body: 'Trae dos códigos similares y una situación de mostrador. Verifiquemos qué registra caja y qué cambia en el inventario.',
+      primary: hardwareContactCta,
+      secondary: hardwareWhatsAppCta,
+    },
   },
   industry(
     'retail',
@@ -3355,6 +3371,7 @@ export const guidePages: LandingPageData[] = [
       },
     ],
     related: [
+      hardwareGuideLink,
       { label: 'Asystec POS', href: '/asystec-pos' },
       { label: 'Sistema POS para comercios', href: '/soluciones/pos' },
       { label: 'Cómo elegir un POS', href: '/guias/como-elegir-sistema-pos' },
@@ -3665,6 +3682,72 @@ export const guidePages: LandingPageData[] = [
     finalCta: {
       title: 'Lleva el flujo real de tu tienda a una demo',
       body: 'Prepara productos, variantes, codigos, cambios, ubicaciones y reportes esperados. Asystec puede ayudarte a convertirlos en una prueba concreta antes de definir el alcance.',
+      primary: contactCta,
+      secondary: whatsappCta,
+    },
+  },
+  {
+    ...guide(
+      'como-probar-pos-para-ferreteria',
+      'Cómo probar un POS para ferretería antes de comprarlo',
+      'Prueba un POS para ferretería con un guion de caja e inventario: productos parecidos, venta por unidad, devoluciones y cierre.',
+      'Pide una demo con dos productos de nombre parecido. Empieza con 100 unidades de uno, vende 12 y comprueba que queden 88. Si una devolución de una unidad vuelve a inventario, el saldo esperado es 89.',
+      ['Búsqueda por código', 'Venta por unidad', 'Devoluciones', 'Inventario', 'Cierre de caja'],
+      [
+        { label: 'Software para ferreterías', href: '/industrias/ferreterias' },
+        { label: 'Control de inventario', href: '/soluciones/inventario' },
+        { label: 'Cómo migrar de POS', href: '/guias/como-migrar-sistema-pos' },
+      ],
+    ),
+    intro:
+      'Una lista de funciones no te dice qué pasa cuando dos tornillos tienen nombres parecidos o cuando un cliente devuelve solo una pieza. Usa esta prueba de mostrador en un ambiente de demostración, con datos ficticios y sin emitir documentos fiscales reales.',
+    sections: [
+      {
+        title: '1. Prepara dos productos que se puedan confundir',
+        body: 'Usa, por ejemplo, “Tornillo ¼ × 1” y “Tornillo ¼ × 1½”, con códigos distintos. Carga 100 unidades del primero en una sola ubicación y anota el saldo del segundo. Busca por código y por descripción antes de vender.',
+      },
+      {
+        title: '2. Vende 12 unidades y compara los saldos',
+        body: 'Comprueba que aparezca el código exacto en la venta. Consulta el movimiento de inventario: el primer producto debe pasar de 100 a 88, y el segundo no debe cambiar. Verifica la cantidad, el importe y el medio de pago en el comprobante de prueba.',
+      },
+      {
+        title: '3. Distingue devolución, reintegro y cierre',
+        body: 'Si el flujo admite devolver una unidad apta para la venta y reponerla al inventario, el saldo esperado es 89. Comprueba que la devolución haga referencia a la venta y que el cierre de caja cumpla lo esperado según el medio de pago. Pregunta qué cambia si la pieza no se puede revender.',
+      },
+      {
+        title: '4. Separa las pruebas de unidad, caja y metro',
+        body: 'Si compras por caja y vendes por unidad, pide que te muestren una recepción realista y el saldo en la unidad de venta. Si vendes por metro, prueba una venta fraccionaria y revisa el redondeo. Si tienes bodegas o sucursales, comprueba existencias por ubicación. No des estos flujos por incluidos sin verlos en el plan y configuración que vas a usar.',
+      },
+    ],
+    decisionTable: {
+      title: 'Resultados que puedes anotar en la demo',
+      body: 'Marca cada prueba como aprobada, pendiente o no aplicable. Pide que se repita cualquier paso cuyo resultado no puedas verificar en pantalla.',
+      rows: [
+        {
+          factor: 'Código correcto',
+          question: '¿Se vendió el primer producto y no el parecido?',
+          impact: 'Reduce el riesgo de cobrar y descontar inventario del artículo incorrecto.',
+        },
+        {
+          factor: 'Venta de 12',
+          question: '¿El saldo pasó de 100 a 88?',
+          impact: 'Permite comprobar el vínculo entre la venta y el inventario.',
+        },
+        {
+          factor: 'Devolución',
+          question: 'Cuando se repuso una unidad, ¿el saldo pasó de 88 a 89?',
+          impact: 'Separa reposición física y devolución de dinero según el caso.',
+        },
+        {
+          factor: 'Cierre',
+          question: '¿El resumen refleja la venta, la devolución y el medio de pago?',
+          impact: 'Permite comparar los movimientos con el total contado.',
+        },
+      ],
+    },
+    finalCta: {
+      title: 'Trae un caso de mostrador a la demo',
+      body: 'Escoge dos códigos parecidos y una forma de venta que uses a diario. Con una muestra sin datos sensibles, puedes revisar el flujo de caja e inventario antes de decidir.',
       primary: contactCta,
       secondary: whatsappCta,
     },
