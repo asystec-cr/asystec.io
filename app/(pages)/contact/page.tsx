@@ -3,11 +3,11 @@ import Link from 'next/link';
 import JsonLd from '~/components/seo/JsonLd';
 import Contact from '~/components/widgets/Contact';
 import { contactLeadContact } from '~/shared/data/pages/contact.data';
+import { getHardwareLeadReference } from '~/shared/marketing/hardware-lead';
 import { absoluteUrl, buildPageMetadata } from '~/utils/seo';
 
 const pagePath = '/contact';
-const whatsappUrl =
-  'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20para%20mi%20negocio.';
+const contactWhatsAppMessage = 'Hola Asystec, quiero coordinar una demo para mi negocio.';
 const contactDescription =
   'Contacta a Asystec en Costa Rica para una demo de Nexo con IA, POS, facturación, cobros o software a medida. Revisamos tu proceso y el alcance que necesitas.';
 
@@ -140,7 +140,13 @@ const schemas = [
   },
 ];
 
-const Page = () => (
+const ContactPageContent = ({
+  whatsappUrl,
+  contact,
+}: {
+  whatsappUrl: string;
+  contact: typeof contactLeadContact;
+}) => (
   <>
     <JsonLd data={schemas} />
     <main className="bg-white text-gray-950 dark:bg-slate-950 dark:text-white">
@@ -225,7 +231,7 @@ const Page = () => (
         </div>
       </section>
 
-      <Contact {...contactLeadContact} />
+      <Contact {...contact} />
 
       <section className="py-14 md:py-20" aria-labelledby="demo-checklist-title">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -304,5 +310,18 @@ const Page = () => (
     </main>
   </>
 );
+
+const Page = ({ searchParams }: { searchParams: { ref?: string | string[] } }) => {
+  const leadReference = getHardwareLeadReference(searchParams.ref);
+  const messagePrefix = [contactWhatsAppMessage, leadReference].filter(Boolean).join('\n');
+  const whatsappUrl = `https://wa.me/50689754741?text=${encodeURIComponent(messagePrefix)}`;
+  const form = contactLeadContact.form;
+  const contact =
+    form?.submitAction?.type === 'whatsapp' && leadReference
+      ? { ...contactLeadContact, form: { ...form, submitAction: { ...form.submitAction, messagePrefix } } }
+      : contactLeadContact;
+
+  return <ContactPageContent contact={contact} whatsappUrl={whatsappUrl} />;
+};
 
 export default Page;
