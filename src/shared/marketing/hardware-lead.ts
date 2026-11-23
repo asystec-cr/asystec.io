@@ -1,9 +1,17 @@
-const HARDWARE_LEAD_REF = 'AS-WEB-FERRE';
+const LEAD_REFERENCES = {
+  hardwareLanding: 'AS-WEB-FERRE',
+  hardwareGuide: 'AS-WEB-FERRE-GUIA',
+  miniSuperLanding: 'AS-WEB-MINISUPER',
+} as const;
 
-export const hardwareDemoHref = `/contact?ref=${HARDWARE_LEAD_REF}#coordinar-demo`;
+type LeadPage = keyof typeof LEAD_REFERENCES;
 
-export const getHardwareLeadReference = (ref: string | string[] | undefined) =>
-  ref === HARDWARE_LEAD_REF ? `Referencia: ${HARDWARE_LEAD_REF}` : undefined;
+export const leadDemoHref = (page: LeadPage) => `/contact?ref=${LEAD_REFERENCES[page]}#coordinar-demo`;
 
-export const hardwareWhatsAppMessage =
-  `Hola Asystec, quiero evaluar un POS para mi ferretería.\nReferencia: ${HARDWARE_LEAD_REF}`;
+export const getWebsiteLeadReference = (ref: string | string[] | undefined) =>
+  typeof ref === 'string' && Object.values(LEAD_REFERENCES).some((code) => code === ref)
+    ? `Referencia: ${ref}`
+    : undefined;
+
+export const websiteLeadMessage = (page: LeadPage, message: string) =>
+  `${message}\nReferencia: ${LEAD_REFERENCES[page]}`;
