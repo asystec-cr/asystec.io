@@ -18,7 +18,14 @@ const load = () => {
       }),
   );
 
-  return posts;
+  return posts.then((entries) =>
+    entries
+      .filter(Boolean)
+      .sort(
+        (a, b) =>
+          String(b.publishDate ?? '').localeCompare(String(a.publishDate ?? '')) || a.slug.localeCompare(b.slug),
+      ),
+  );
 };
 
 let _posts;
@@ -35,7 +42,7 @@ export const findLatestPosts = async ({ count } = {}) => {
   const _count = count || 4;
   const posts = await fetchPosts();
 
-  return posts ? posts.slice(_count * -1) : [];
+  return posts ? posts.slice(0, _count) : [];
 };
 
 /** */

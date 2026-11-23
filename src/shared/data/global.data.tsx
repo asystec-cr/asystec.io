@@ -177,6 +177,7 @@ export const headerData: HeaderProps = {
       label: 'Guias',
       icon: IconChevronDown,
       links: [
+        { label: 'Blog de Asystec', href: '/blog' },
         {
           label: 'Elegir sistema POS',
           href: '/guias/como-elegir-sistema-pos',

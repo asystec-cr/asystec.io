@@ -2,22 +2,27 @@ import md from 'markdown-it';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
-import { findPostBySlug, findLatestPosts } from '~/utils/posts';
+import { findPostBySlug, fetchPosts } from '~/utils/posts';
 
 export const dynamicParams = false;
 
 const getFormattedDate = (date) => date;
 
-export async function generateMetadata({ params}) {
+export async function generateMetadata({ params }) {
   const post = await findPostBySlug(params.slug);
   if (!post) {
     return notFound();
   }
-  return { title: post.title, description: post.description };
+  return {
+    title: post.title,
+    description: post.description,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: { type: 'article', url: `/blog/${post.slug}` },
+  };
 }
 
 export async function generateStaticParams() {
-  return (await findLatestPosts()).map(({ slug }) => ({ slug }));
+  return (await fetchPosts()).map(({ slug }) => ({ slug }));
 }
 
 export default async function Page({ params }) {
@@ -32,7 +37,7 @@ export default async function Page({ params }) {
       <article>
         <header className={post.image ? 'text-center' : ''}>
           <p className="mx-auto max-w-3xl px-4 sm:px-6">
-            <time dateTime={post.publishDate}>{getFormattedDate(post.publishDate)}</time> ~{' '}
+            <time dateTime={post.publishDate}>{getFormattedDate(post.publishDate)}</time>
             {/* {Math.ceil(post.readingTime)} min read */}
           </p>
           <h1 className="leading-tighter font-heading mx-auto mb-8 max-w-3xl px-4 text-4xl font-bold tracking-tighter sm:px-6 md:text-5xl">
@@ -58,9 +63,7 @@ export default async function Page({ params }) {
         <div
           className="prose-md prose-headings:font-heading prose-headings:leading-tighter container prose prose-lg mx-auto mt-8 max-w-3xl px-6 prose-headings:font-bold prose-headings:tracking-tighter prose-a:text-primary-600 prose-img:rounded-md prose-img:shadow-lg dark:prose-invert dark:prose-headings:text-slate-300 dark:prose-a:text-primary-400 sm:px-6 lg:prose-xl"
           dangerouslySetInnerHTML={{
-            __html: md({
-              html: true,
-            }).render(post.content),
+            __html: md().render(post.content),
           }}
         />
       </article>
