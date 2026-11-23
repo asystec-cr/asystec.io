@@ -3,7 +3,7 @@ import Link from 'next/link';
 import JsonLd from '~/components/seo/JsonLd';
 import Contact from '~/components/widgets/Contact';
 import { contactLeadContact } from '~/shared/data/pages/contact.data';
-import { getHardwareLeadReference } from '~/shared/marketing/hardware-lead';
+import { getWebsiteLeadReference } from '~/shared/marketing/hardware-lead';
 import { absoluteUrl, buildPageMetadata } from '~/utils/seo';
 
 const pagePath = '/contact';
@@ -312,7 +312,7 @@ const ContactPageContent = ({
 );
 
 const Page = ({ searchParams }: { searchParams: { ref?: string | string[] } }) => {
-  const leadReference = getHardwareLeadReference(searchParams.ref);
+  const leadReference = getWebsiteLeadReference(searchParams.ref);
   const messagePrefix = [contactWhatsAppMessage, leadReference].filter(Boolean).join('\n');
   const whatsappUrl = `https://wa.me/50689754741?text=${encodeURIComponent(messagePrefix)}`;
   const form = contactLeadContact.form;
