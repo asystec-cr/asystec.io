@@ -1,37 +1,45 @@
 import type { Metadata } from 'next';
-
-import Image from 'next/image';
 import Link from 'next/link';
 
-import { findLatestPosts } from '~/utils/posts';
+import { fetchPosts } from '~/utils/posts';
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  robots: {
-    index: false,
-    follow: false,
-  },
+  title: 'Blog de Asystec',
+  description:
+    'Artículos prácticos para operar comercios en Costa Rica: caja, inventario, facturación electrónica y cobros.',
+  alternates: { canonical: '/blog' },
 };
 
-export default async function Home({}) {
-  const posts = await findLatestPosts();
+type BlogPost = { slug: string; title: string; description?: string; publishDate?: string };
+
+export default async function Blog() {
+  const posts = (await fetchPosts()) as BlogPost[];
+
   return (
-    <section className="mx-auto max-w-3xl px-6 py-12 sm:px-6 sm:py-16 lg:py-20">
-      <header>
-        <h1 className="leading-tighter font-heading mb-8 text-center text-4xl font-bold tracking-tighter md:mb-16 md:text-5xl">
-          Blog
-        </h1>
+    <section className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
+      <header className="mb-10">
+        <h1 className="font-heading text-4xl font-bold tracking-tight md:text-5xl">Blog de Asystec</h1>
+        <p className="mt-4 max-w-2xl text-lg">
+          Ideas y ejemplos para resolver tareas de caja, inventario, facturación y cobros en comercios de Costa Rica.
+        </p>
       </header>
-      <div className="grid grid-cols-1 gap-6  p-4 md:p-0 lg:grid-cols-2">
-        {posts.map(({ slug, title, image }: { slug: string; title: string; image: string }) => (
-          <div key={slug} className="flex flex-col overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-            <Link href={`/${slug}`}>
-              <Image width={650} height={340} alt={title} src={`${image}`} />
-              <h2 className="p-4 font-bold">{title}</h2>
-            </Link>
-          </div>
+      <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {posts.map(({ slug, title, description, publishDate }) => (
+          <li key={slug} className="rounded-xl border border-gray-200 p-6 dark:border-slate-700">
+            {publishDate && (
+              <time dateTime={publishDate} className="text-sm">
+                {publishDate}
+              </time>
+            )}
+            <h2 className="mt-2 text-xl font-bold">
+              <Link href={`/blog/${slug}`} className="underline-offset-4 hover:underline focus-visible:underline">
+                {title}
+              </Link>
+            </h2>
+            {description && <p className="mt-3">{description}</p>}
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

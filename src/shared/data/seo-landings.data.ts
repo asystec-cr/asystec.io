@@ -1,3 +1,4 @@
+import { agingGuideLink, agingGuidePage } from './guides/antiguedad-cuentas-por-cobrar.data';
 import { leadDemoHref, websiteLeadMessage } from '../marketing/hardware-lead';
 import { restauranteProProductPage } from './products/restaurante-pro.data';
 
@@ -699,6 +700,7 @@ export const portfolioPages: LandingPageData[] = [
       { label: 'Documentacion de Cobros Pro', href: 'https://docs.cobrosapp.com' },
       { label: 'Cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Guía para organizar cobros', href: '/guias/como-organizar-cuentas-por-cobrar' },
+      agingGuideLink,
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'CRM', href: '/soluciones/crm' },
       { label: 'Casos y portafolio', href: '/casos' },
@@ -1727,6 +1729,7 @@ export const solutionPages: LandingPageData[] = [
     related: [
       { label: 'Cobros Pro', href: '/cobrosapp' },
       { label: 'Cómo organizar cuentas por cobrar', href: '/guias/como-organizar-cuentas-por-cobrar' },
+      agingGuideLink,
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
       { label: 'CRM', href: '/soluciones/crm' },
@@ -2116,16 +2119,16 @@ export const industryPages: LandingPageData[] = [
     path: '/industrias/minisuper',
     kind: 'industry',
     schemaType: 'Service',
-    title: 'Sistema POS para minisuper',
-    seoTitle: 'Sistema POS para minisuper en Costa Rica | Asystec',
+    title: 'Sistema POS para minisúper',
+    seoTitle: 'Sistema POS para minisúper en Costa Rica | Asystec',
     description:
-      'Sistema POS para minisuper en Costa Rica con caja rapida, codigos, inventario, facturacion electronica, cierres y reportes.',
+      'Evalúa un POS para tu minisúper en Costa Rica: cobro por código, inventario y cierre de efectivo, tarjeta y SINPE. Trae una venta típica a la demo.',
     eyebrow: 'Industria',
-    heroTitle: 'Sistema POS para minisuper con caja rapida, inventario y facturacion',
+    heroTitle: 'POS para minisúper: cobra por código, controla inventario y revisa el cierre',
     answer:
-      'Un minisuper en Costa Rica necesita vender rapido en caja, encontrar productos por codigo, controlar existencias, emitir comprobantes y revisar cierres sin frenar la atencion. Asystec POS conecta ventas, inventario, facturacion electronica y reportes para operar con menos controles separados.',
+      'En un minisúper, el cierre empieza con la primera venta del turno. En una demo de Asystec POS, prueba si tu equipo puede encontrar un producto por código, registrar la venta, comprobar la salida de inventario y distinguir los medios de pago al cerrar.',
     intro:
-      'Esta landing ayuda a duenos y administradores de minisuper, abastecedores y tiendas de conveniencia a evaluar que debe cubrir un POS antes de coordinar una demo.',
+      'Trae un producto común y un cierre típico de tu minisúper, abastecedor o tienda de conveniencia. Si vendes por peso o usas una balanza, trae una etiqueta de muestra sin datos de clientes o indícanos el modelo para revisar el flujo.',
     primaryCta: miniSuperCtas.demo,
     secondaryCta: miniSuperCtas.whatsapp,
     highlights: [
@@ -2169,7 +2172,8 @@ export const industryPages: LandingPageData[] = [
         items: [
           'Cantidad aproximada de productos y categorias',
           'Numero de cajas, usuarios y turnos',
-          'Uso actual de inventario, codigos y facturacion',
+          'Uso actual de inventario, códigos y facturación',
+          'Si vendes por peso, una etiqueta de muestra o el modelo de la balanza',
           'Reportes necesarios para compras, ventas y cierre diario',
         ],
       },
@@ -2222,6 +2226,11 @@ export const industryPages: LandingPageData[] = [
           'Si. Una implementacion puede iniciar con ventas, productos, inventario y facturacion, y luego ampliar usuarios, reportes, permisos o sucursales segun el crecimiento.',
       },
       {
+        question: '¿Cómo puedo probar la venta de productos por peso?',
+        answer:
+          'Lleva una etiqueta de muestra y el modelo de la balanza. Con datos ficticios, verifica que 0,625 kg a ₡2.400 por kg den ₡1.500 antes de ajustes y que el inventario por peso baje 0,625 kg. Confirma la lectura de esa etiqueta y la compatibilidad del equipo durante la demo.',
+      },
+      {
         question: 'Que informacion conviene llevar a la demo?',
         answer:
           'Conviene llevar cantidad de productos, cajas, usuarios, categorias, forma actual de facturar, reportes necesarios y problemas concretos de inventario o cierres.',
@@ -2235,6 +2244,7 @@ export const industryPages: LandingPageData[] = [
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
       { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
+      { label: 'Cómo cuadrar la caja de un minisúper', href: '/blog/como-cuadrar-caja-minisuper' },
       miniSuperCtas.demo,
     ],
   },
@@ -2749,6 +2759,7 @@ const guide = (
 });
 
 export const guidePages: LandingPageData[] = [
+  agingGuidePage,
   {
     ...guide(
       'factura-electronica-costa-rica-requisitos',
@@ -3214,6 +3225,7 @@ export const guidePages: LandingPageData[] = [
     related: [
       { label: 'Software de cuentas por cobrar', href: '/soluciones/cuentas-por-cobrar' },
       { label: 'Cobros Pro', href: '/cobrosapp' },
+      agingGuideLink,
       { label: 'Reportes para pymes', href: '/soluciones/reportes' },
       { label: 'CRM y seguimiento de clientes', href: '/soluciones/crm' },
       { label: 'Facturación electrónica', href: '/soluciones/facturacion-electronica' },

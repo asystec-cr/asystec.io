@@ -6,7 +6,7 @@ module.exports = {
   generateRobotsTxt: true,
   // A deployment time is not a verified modification date for every page.
   autoLastmod: false,
-  exclude: ['/blog', '/pricing', '/services'],
+  exclude: ['/pricing', '/services'],
   robotsTxtOptions: {
     policies: [
       {
