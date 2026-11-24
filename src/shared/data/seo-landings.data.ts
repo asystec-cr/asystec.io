@@ -1,4 +1,4 @@
-import { hardwareDemoHref, hardwareWhatsAppMessage } from '../marketing/hardware-lead';
+import { leadDemoHref, websiteLeadMessage } from '../marketing/hardware-lead';
 import { restauranteProProductPage } from './products/restaurante-pro.data';
 
 export type FaqItem = {
@@ -83,12 +83,13 @@ export type LandingPageData = {
 const contactCta = { label: 'Coordinar demo', href: '/contact' };
 const whatsappCta = { label: 'Escribir por WhatsApp', href: 'https://wa.me/50689754741' };
 const hardwareGuideLink = { label: 'Prueba de POS para ferreterías', href: '/guias/como-probar-pos-para-ferreteria' };
-const hardwareContactCta = { ...contactCta, href: hardwareDemoHref };
-const hardwareWhatsAppCta = {
-  ...whatsappCta,
-  href: `${whatsappCta.href}?text=${encodeURIComponent(hardwareWhatsAppMessage)}`,
-};
-
+const leadCtas = (page: Parameters<typeof leadDemoHref>[0], message: string) => ({
+  demo: { ...contactCta, href: leadDemoHref(page) },
+  whatsapp: { ...whatsappCta, href: `${whatsappCta.href}?text=${encodeURIComponent(websiteLeadMessage(page, message))}` },
+});
+const hardwareCtas = leadCtas('hardwareLanding', 'Hola Asystec, quiero evaluar un POS para mi ferretería.');
+const hardwareGuideCtas = leadCtas('hardwareGuide', 'Hola Asystec, leí la guía y quiero probar el POS para mi ferretería.');
+const miniSuperCtas = leadCtas('miniSuperLanding', 'Hola Asystec, quiero evaluar un POS para mi minisúper.');
 
 export const pillarPage: LandingPageData = {
   slug: 'software-para-negocios-costa-rica',
@@ -2125,8 +2126,8 @@ export const industryPages: LandingPageData[] = [
       'Un minisuper en Costa Rica necesita vender rapido en caja, encontrar productos por codigo, controlar existencias, emitir comprobantes y revisar cierres sin frenar la atencion. Asystec POS conecta ventas, inventario, facturacion electronica y reportes para operar con menos controles separados.',
     intro:
       'Esta landing ayuda a duenos y administradores de minisuper, abastecedores y tiendas de conveniencia a evaluar que debe cubrir un POS antes de coordinar una demo.',
-    primaryCta: contactCta,
-    secondaryCta: whatsappCta,
+    primaryCta: miniSuperCtas.demo,
+    secondaryCta: miniSuperCtas.whatsapp,
     highlights: [
       'Caja rapida para ventas de alto movimiento',
       'Productos, codigos y existencias conectados',
@@ -2234,7 +2235,7 @@ export const industryPages: LandingPageData[] = [
       { label: 'Reportes', href: '/soluciones/reportes' },
       { label: 'Cuanto cuesta un POS', href: '/guias/cuanto-cuesta-un-pos-costa-rica' },
       { label: 'Como elegir un POS', href: '/guias/como-elegir-sistema-pos' },
-      { label: 'Coordinar demo', href: '/contact' },
+      miniSuperCtas.demo,
     ],
   },
   {
@@ -2252,8 +2253,8 @@ export const industryPages: LandingPageData[] = [
       'Cuando dos tornillos se parecen en el catálogo, vender el código equivocado afecta la caja y también el inventario. Evalúa cómo Asystec POS registra una venta de mostrador, descuenta existencias y deja el movimiento disponible para revisión.',
     intro:
       'Para la demo, trae dos productos parecidos y una venta típica. Si compras por caja, vendes por unidad o por metro, o manejas varias bodegas, revisemos esas reglas en la configuración que necesitaría tu negocio.',
-    primaryCta: hardwareContactCta,
-    secondaryCta: hardwareWhatsAppCta,
+    primaryCta: hardwareCtas.demo,
+    secondaryCta: hardwareCtas.whatsapp,
     highlights: [
       'Catalogo amplio con busqueda rapida',
       'Inventario, existencias y movimientos',
@@ -2357,8 +2358,8 @@ export const industryPages: LandingPageData[] = [
     finalCta: {
       title: 'Probemos una venta de tu ferretería',
       body: 'Trae dos códigos similares y una situación de mostrador. Verifiquemos qué registra caja y qué cambia en el inventario.',
-      primary: hardwareContactCta,
-      secondary: hardwareWhatsAppCta,
+      primary: hardwareCtas.demo,
+      secondary: hardwareCtas.whatsapp,
     },
   },
   industry(
@@ -3699,6 +3700,8 @@ export const guidePages: LandingPageData[] = [
         { label: 'Cómo migrar de POS', href: '/guias/como-migrar-sistema-pos' },
       ],
     ),
+    primaryCta: hardwareGuideCtas.demo,
+    secondaryCta: hardwareGuideCtas.whatsapp,
     intro:
       'Una lista de funciones no te dice qué pasa cuando dos tornillos tienen nombres parecidos o cuando un cliente devuelve solo una pieza. Usa esta prueba de mostrador en un ambiente de demostración, con datos ficticios y sin emitir documentos fiscales reales.',
     sections: [
@@ -3748,8 +3751,8 @@ export const guidePages: LandingPageData[] = [
     finalCta: {
       title: 'Trae un caso de mostrador a la demo',
       body: 'Escoge dos códigos parecidos y una forma de venta que uses a diario. Con una muestra sin datos sensibles, puedes revisar el flujo de caja e inventario antes de decidir.',
-      primary: contactCta,
-      secondary: whatsappCta,
+      primary: hardwareGuideCtas.demo,
+      secondary: hardwareGuideCtas.whatsapp,
     },
   },
   {

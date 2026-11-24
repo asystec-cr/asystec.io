@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import type { ComponentPropsWithoutRef } from 'react';
 import {
   IconArrowRight,
   IconCheck,
@@ -82,7 +84,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     name: 'Factura Pro',
     category: 'Facturación electrónica',
-    href: 'https://facturacionapp.com/',
+    href: '/facturacionapp',
     image: '/images/portfolio/facturacionapp.png',
     alt: 'Factura Pro',
     summary: 'Sitio y producto en línea para emitir comprobantes electrónicos de forma rápida y segura en Costa Rica.',
@@ -96,7 +98,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     name: 'Cobros Pro',
     category: 'Créditos y cobros',
-    href: 'https://cobrosapp.com/',
+    href: '/cobrosapp',
     image: '/images/portfolio/cobrosapp.png',
     alt: 'Cobros Pro',
     summary:
@@ -170,6 +172,13 @@ const portfolioItems: PortfolioItem[] = [
   },
 ];
 
+const PortfolioLink = ({ href, ...props }: ComponentPropsWithoutRef<'a'> & { href: string }) =>
+  href.startsWith('/') ? (
+    <Link href={href} {...props} />
+  ) : (
+    <a href={href} target="_blank" rel="noopener noreferrer" {...props} />
+  );
+
 const PlatformPortfolio = ({ headingLevel = 'h2', portfolioHref = '#portfolio-cases' }: PlatformPortfolioProps) => {
   const HeadingTag = headingLevel;
 
@@ -241,10 +250,8 @@ const PlatformPortfolio = ({ headingLevel = 'h2', portfolioHref = '#portfolio-ca
                 key={name}
                 className="flex min-w-0 flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900"
               >
-                <a
+                <PortfolioLink
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="group relative block aspect-[16/10] overflow-hidden bg-neutral-100 dark:bg-neutral-800"
                   aria-label={`Abrir ${name}`}
                 >
@@ -255,21 +262,23 @@ const PlatformPortfolio = ({ headingLevel = 'h2', portfolioHref = '#portfolio-ca
                     sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover object-top transition duration-300 group-hover:scale-[1.03]"
                   />
-                </a>
+                </PortfolioLink>
 
                 <div className="flex flex-1 flex-col p-5">
                   <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-300">{category}</p>
                   <div className="mt-2 flex items-start justify-between gap-3">
                     <h4 className="min-w-0 break-words text-xl font-bold">{name}</h4>
-                    <a
+                    <PortfolioLink
                       href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-neutral-200 text-neutral-700 transition hover:border-emerald-600 hover:text-emerald-700 dark:border-neutral-700 dark:text-neutral-200 dark:hover:border-emerald-300 dark:hover:text-emerald-300"
                       aria-label={`Visitar ${name}`}
                     >
-                      <IconExternalLink className="h-4 w-4" aria-hidden="true" />
-                    </a>
+                      {href.startsWith('/') ? (
+                        <IconArrowRight className="h-4 w-4" aria-hidden="true" />
+                      ) : (
+                        <IconExternalLink className="h-4 w-4" aria-hidden="true" />
+                      )}
+                    </PortfolioLink>
                   </div>
                   <p className="mt-3 text-sm leading-6 text-neutral-700 dark:text-neutral-300">{summary}</p>
 
