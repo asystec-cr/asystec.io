@@ -86,6 +86,16 @@ export const aperturaLocalGuidePage: LandingPageData = {
         'Define el canal de soporte y una contingencia para la apertura.',
       ],
     },
+    {
+      title: 'Si vas a abrir con una caja y todavía no tenés equipo',
+      body: 'Empezá por el flujo del primer día, no por una lista de compras. Contanos cuándo abrís y si cobrás solo en mostrador o también tomás pedidos en mesa. Con eso podés decidir qué necesitás instalar y qué puede esperar.',
+      items: [
+        'Hacé una lista corta: terminal o computadora, impresora si necesitás un comprobante impreso y, solo si tu operación lo pide, gaveta o lector. Confirmá modelos y conexiones antes de comprar.',
+        'Prepará una muestra de tu catálogo o menú: un producto frecuente, uno con una variación y un precio que el cajero deba distinguir sin ayuda.',
+        'Probá con datos ficticios una venta y un cierre: desde buscar el producto y cobrar hasta revisar qué queda registrado por medio de pago. Si atendés mesas, probá también el recorrido del pedido al cobro.',
+        'Pedí que la propuesta separe equipo, instalación, capacitación y soporte. Definí quién prepara cada cosa y cómo vas a atender si falla un dispositivo el primer día.',
+      ],
+    },
   ],
   decisionTable: {
     title: 'Checklist para llevar a la demo del sistema',

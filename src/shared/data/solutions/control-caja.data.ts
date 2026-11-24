@@ -81,6 +81,15 @@ export const controlCajaSolutionPage: LandingPageData = {
         'Reporte de cierre y diferencias que hoy se investigan',
       ],
     },
+    {
+      title: 'Probá una promoción con dos productos parecidos',
+      body: 'Usá una caja de demo y dos productos ficticios con códigos distintos. El primero cuesta ₡10.000 y baja a ₡8.000 durante la oferta; el segundo, aunque se parece, conserva su precio habitual. No usés tarjetas, cuentas ni comprobantes reales.',
+      items: [
+        'Escaneá ambos productos por separado. Confirmá que solo el primero muestre ₡8.000 y revisá que el monto del cobro simulado coincida con el recibo de prueba.',
+        'Al cerrar la caja de demo, verificá que los ₡8.000 quedaron en el medio de pago correcto. En el inventario de prueba, comprobá que se descontó una unidad del primer código y ninguna del segundo si solo cobraste el primero.',
+        'Después de la hora de finalización, volvé a escanear el primer producto y comprobá que muestre ₡10.000 sin hacer otra venta. Preguntá quién puede aplicar descuentos y si tu configuración permite programar el fin de la oferta. Si se controla a mano, asigná una persona para retirar el descuento y verificar el precio.',
+      ],
+    },
   ],
   decisionTable: {
     title: 'Checklist para evaluar un sistema de control de caja',
