@@ -3310,6 +3310,16 @@ export const guidePages: LandingPageData[] = [
         ],
       },
       {
+        title: 'Prueba que el CSV conserve los ceros iniciales',
+        body: 'Imagina dos productos distintos con códigos internos 00123 y 123. Si una hoja de cálculo convierte los códigos en números al abrir el CSV, ambos pueden quedar como 123. Guarda el archivo original e importa la columna de códigos como texto, en vez de abrir el CSV con doble clic.',
+        items: [
+          'Revisa en una copia del archivo final que 00123 y 123 sigan escritos tal como aparecen en el catálogo de origen.',
+          'En el sistema de prueba, busca los dos códigos y confirma que encuentras un producto distinto con cada uno.',
+          'Si se perdieron ceros o dos códigos quedaron iguales, vuelve a la fuente antes de aprobar la carga. No agregues ceros por adivinación.',
+          'En la demo, pregunta qué formatos admite el sistema y cómo se revisan las filas que no cargaron.',
+        ],
+      },
+      {
         title: 'Prueba el flujo completo antes del cambio',
         body: 'La validación no termina cuando el archivo carga. Hay que probar una venta, el movimiento de inventario, la facturación electrónica, el cierre y los reportes que usará el negocio, y comparar resultados con la fuente acordada.',
         items: [
