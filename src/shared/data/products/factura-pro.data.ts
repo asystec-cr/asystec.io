@@ -143,6 +143,10 @@ export const facturaProProductPage: LandingPageData = {
     { label: 'Facturacion electronica', href: '/soluciones/facturacion-electronica' },
     { label: 'Requisitos de factura electronica', href: '/guias/factura-electronica-costa-rica-requisitos' },
     {
+      label: 'Cómo probar la facturación de dos empresas',
+      href: '/blog/facturacion-electronica-varias-empresas',
+    },
+    {
       label: 'Cambiar de sistema de facturacion',
       href: '/guias/como-cambiar-sistema-facturacion-electronica',
     },
