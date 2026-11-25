@@ -853,6 +853,16 @@ export const portfolioPages: LandingPageData[] = [
           'Sistemas actuales que deban integrarse',
         ],
       },
+      {
+        title: 'Probá qué pasa si el cliente autoriza solo parte del trabajo',
+        body: 'En la demo, usá una orden ficticia: el cliente aprueba un cambio de aceite por ₡35.000 y deja para después un cambio de escobillas por ₡12.000. La prueba no es emitir una factura: es que recepción, el técnico y caja puedan distinguir qué se aprobó y qué quedó pendiente.',
+        items: [
+          'Pedí que la orden muestre qué se aprobó, cuándo y cómo se registró la autorización. No des por hecho que se recoge por un enlace o por WhatsApp.',
+          'Consultá la misma orden como parte de la prueba de recepción, taller y caja. Con los montos del ejemplo, el trabajo aprobado suma ₡35.000 y el pendiente no debe aparecer como realizado ni cobrado.',
+          'Si el control de repuestos es indispensable, pedí que te muestren dónde confirmar la salida del filtro usado y que las escobillas siguen en existencias. Verificá por separado si eso se lleva en TallerApp o en otro sistema.',
+          'Si necesitás un comprobante, definí si esperás un documento interno de la orden o una factura electrónica, y pedí que te muestren el flujo aplicable sin emitir un documento real.',
+        ],
+      },
     ],
     decisionTable: {
       title: 'Que revisar al evaluar software para talleres',
