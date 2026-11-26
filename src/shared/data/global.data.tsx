@@ -68,21 +68,6 @@ export const headerData: HeaderProps = {
           label: 'TallerApp',
           href: '/tallerapp',
         },
-        {
-          label: 'Jas Admin',
-          href: 'https://jas.asystec.io',
-          target: 'blank',
-        },
-        {
-          label: 'Instaladores',
-          href: 'https://drive.google.com/drive/u/0/folders/1x78WOg_WMsivxhi6UwAUC_vua-LHhIa-',
-          target: 'blank',
-        },
-        {
-          label: 'Recursos',
-          href: 'https://drive.google.com/drive/folders/17-r9wm4TyOd2Q9rWzOvQ2z0fSZszj3gJ?usp=drive_link',
-          target: 'blank',
-        },
       ],
     },
     {
@@ -225,9 +210,25 @@ export const headerData: HeaderProps = {
       ],
     },
     {
-      label: 'Documentación',
+      label: 'Ingresar',
       icon: IconChevronDown,
       links: [
+        { label: 'Factura Pro', href: 'https://app.asystec.io/login', target: 'blank' },
+        { label: 'Cobros Pro', href: 'https://cobros.asystec.io/login', target: 'blank' },
+        { label: 'TallerApp', href: 'https://taller.asystec.io/login', target: 'blank' },
+        { label: 'FitPro', href: 'https://fitpro.asystec.io/', target: 'blank' },
+        {
+          label: 'Jas Admin',
+          href: 'https://jas.asystec.io',
+          target: 'blank',
+        },
+      ],
+    },
+    {
+      label: 'Soporte',
+      icon: IconChevronDown,
+      links: [
+        { label: 'Pedir soporte por WhatsApp', href: '/contact#soporte' },
         {
           label: 'Asystec POS',
           href: 'https://asystec.gitbook.io/pos',
@@ -248,12 +249,16 @@ export const headerData: HeaderProps = {
           href: 'https://docs.jrestaurante.asystec.io',
           target: 'blank',
         },
-      ],
-    },
-    {
-      label: 'Herramientas',
-      icon: IconChevronDown,
-      links: [
+        {
+          label: 'Instaladores',
+          href: 'https://drive.google.com/drive/u/0/folders/1x78WOg_WMsivxhi6UwAUC_vua-LHhIa-',
+          target: 'blank',
+        },
+        {
+          label: 'Recursos',
+          href: 'https://drive.google.com/drive/folders/17-r9wm4TyOd2Q9rWzOvQ2z0fSZszj3gJ?usp=drive_link',
+          target: 'blank',
+        },
         {
           label: 'Estado Sistemas Asystec',
           href: 'https://status.asysteccr.com',
@@ -293,8 +298,8 @@ export const headerData: HeaderProps = {
   ],
   actions: [
     {
-      text: 'Solicitar demo',
-      href: '/contact',
+      text: 'Ver demo',
+      href: '/contact#coordinar-demo',
       icon: IconKey,
       trackingEvent: 'cta_demo',
       trackingLabel: 'Header solicitar demo',

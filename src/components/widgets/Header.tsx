@@ -57,7 +57,8 @@ const Header = () => {
   };
 
   const handleToggleMenuOnClick = () => {
-    setIsToggleMenuOpen(!isToggleMenuOpen);
+    setIsToggleMenuOpen((open) => !open);
+    setIsDropdownOpen(updatedIsDropdownOpen as boolean[]);
   };
 
   useOnClickOutside(ref, () => {
@@ -121,15 +122,15 @@ const Header = () => {
                           <Icon
                             className={`${
                               isDropdownOpen[index] ? 'rotate-180' : ''
-                            } ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden h-3.5 w-3.5 lg:inline`}
+                            } ml-0.5 rtl:ml-0 rtl:mr-0.5 h-3.5 w-3.5`}
                           />
                         )}
                       </button>
                       <ul
                         id={`header-dropdown-${index}`}
                         className={`${
-                          isDropdownOpen[index] ? 'block' : 'lg:hidden'
-                        } rounded pl-4 font-medium drop-shadow-xl lg:absolute lg:min-w-[200px] lg:bg-white/90 lg:pl-0 lg:backdrop-blur-md dark:lg:bg-slate-900/90 lg:border lg:border-gray-200 lg:dark:border-slate-700`}
+                          isDropdownOpen[index] ? 'block' : 'hidden'
+                        } rounded pl-4 font-medium drop-shadow-xl lg:absolute lg:max-h-[65vh] lg:overflow-y-auto lg:min-w-[200px] lg:bg-white/90 lg:pl-0 lg:backdrop-blur-md dark:lg:bg-slate-900/90 lg:border lg:border-gray-200 lg:dark:border-slate-700`}
                       >
                         {links.map(({ label: label2, target: target, href: href2 }, index2) => (
                           <li key={`item-link-${index2}`}>

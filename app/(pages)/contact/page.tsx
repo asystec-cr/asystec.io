@@ -263,6 +263,23 @@ const ContactPageContent = ({
         </div>
       </section>
 
+      <section id="soporte" aria-labelledby="soporte-title" className="scroll-mt-32 py-10">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 id="soporte-title" className="text-2xl font-bold">Soporte para clientes</h2>
+          <p className="mt-3 leading-7 text-gray-700 dark:text-slate-300">
+            Si ya usás Asystec, indicá el producto y contanos brevemente qué pasó. No compartás contraseñas.
+          </p>
+          <a
+            href={`https://wa.me/50689754741?text=${encodeURIComponent('Hola Asystec, necesito soporte. Producto: ')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn mt-4"
+          >
+            Abrir WhatsApp para soporte
+          </a>
+        </div>
+      </section>
+
       <section className="border-y border-gray-200 bg-gray-50 py-14 dark:border-slate-800 dark:bg-slate-900 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Preguntas frecuentes antes de contactar</h2>
@@ -271,6 +288,11 @@ const ContactPageContent = ({
               <article key={faq.question} className="py-6 first:pt-0 last:pb-0">
                 <h3 className="text-xl font-bold">{faq.question}</h3>
                 <p className="mt-3 leading-7 text-gray-700 dark:text-slate-300">{faq.answer}</p>
+                {faq.question.startsWith('Dónde solicito soporte') && (
+                  <Link href="#soporte" className="mt-2 inline-block font-semibold text-blue-700 underline dark:text-blue-300">
+                    Ir a soporte para clientes
+                  </Link>
+                )}
               </article>
             ))}
           </div>
