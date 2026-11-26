@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 import { SITE } from '~/config.js';
 
@@ -39,6 +40,13 @@ export const metadata: Metadata = buildPageMetadata({
   description: SITE.description,
 });
 
+const businessNeeds = [
+  { title: 'Vender en caja', description: 'Explorá cómo manejar ventas, inventario y cierre de caja.', href: '/asystec-pos' },
+  { title: 'Facturar', description: 'Conocé Factura Pro para emitir comprobantes electrónicos.', href: '/facturacionapp' },
+  { title: 'Cobrar', description: 'Conocé Cobros Pro para dar seguimiento a cuentas por cobrar.', href: '/cobrosapp' },
+  { title: 'Gestionar varias empresas', description: 'Revisá qué validar cuando facturás para más de una empresa.', href: '/blog/facturacion-electronica-varias-empresas' },
+] as const;
+
 export default function Page() {
   return (
     <>
@@ -57,6 +65,24 @@ export default function Page() {
         }}
       />
       <NexoHero variant="home" />
+      <section aria-labelledby="necesidades-negocio" className="mx-auto mt-8 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <h2 id="necesidades-negocio" className="text-2xl font-bold text-slate-900 dark:text-white">
+          ¿Qué necesitás resolver en tu negocio?
+        </h2>
+        <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {businessNeeds.map(({ title, description, href }) => (
+            <li key={href} className="flex">
+              <Link
+                href={href}
+                className="block w-full rounded-xl border border-slate-300 bg-white p-4 transition hover:border-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:border-slate-600 dark:bg-slate-800 dark:hover:border-blue-400"
+              >
+                <span className="block font-semibold text-blue-800 dark:text-blue-300">{title}</span>
+                <span className="mt-1 block text-sm text-slate-700 dark:text-slate-200">{description}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
       <div className="mt-6 md:mt-8 lg:mt-10">
         <SocialProof {...socialProofHome} />
       </div>
