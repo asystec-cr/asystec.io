@@ -184,11 +184,11 @@ const ContactPageContent = ({
               data-analytics-location="contact_hero"
               data-analytics-type="secondary"
             >
-              Escribir por WhatsApp
+              Continuar en WhatsApp
             </a>
           </div>
           <p className="mt-5 max-w-3xl text-sm leading-6 text-gray-600 dark:text-slate-400">
-            Para una migración, basta con describir el origen y el resultado esperado. No envíes contraseñas, llaves,
+            Se abre un mensaje preparado. Revisalo y envialo desde WhatsApp. Para una migración, basta con describir el origen y el resultado esperado. No envíes contraseñas, llaves,
             certificados ni datos sensibles por este formulario.
           </p>
         </div>
@@ -267,7 +267,7 @@ const ContactPageContent = ({
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <h2 id="soporte-title" className="text-2xl font-bold">Soporte para clientes</h2>
           <p className="mt-3 leading-7 text-gray-700 dark:text-slate-300">
-            Si ya usás Asystec, indicá el producto y contanos brevemente qué pasó. No compartás contraseñas.
+            Si ya usás Asystec, completá el mensaje con el producto y lo que pasó. Envialo desde WhatsApp y no compartás contraseñas.
           </p>
           <a
             href={`https://wa.me/50689754741?text=${encodeURIComponent('Hola Asystec, necesito soporte. Producto: ')}`}
@@ -305,8 +305,8 @@ const ContactPageContent = ({
             <div className="max-w-3xl">
               <h2 className="text-3xl font-bold tracking-tight">¿Listo para revisar tu operación?</h2>
               <p className="mt-4 text-lg leading-8 text-blue-100">
-                Envía el contexto básico por WhatsApp o revisa primero el portafolio y las opiniones públicas de
-                clientes.
+                Revisá y enviá el mensaje desde WhatsApp, o explorá primero el portafolio y las opiniones públicas
+                de clientes.
               </p>
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:flex-col">
@@ -320,7 +320,7 @@ const ContactPageContent = ({
                 data-analytics-location="contact_final"
                 data-analytics-type="primary"
               >
-                Coordinar por WhatsApp
+                Continuar en WhatsApp
               </a>
               <Link className="text-center font-semibold text-blue-100 hover:text-white hover:underline" href="/casos">
                 Ver casos y portafolio

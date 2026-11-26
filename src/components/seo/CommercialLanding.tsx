@@ -20,12 +20,14 @@ const LandingLink = ({
   variant = 'primary',
   location = 'content',
   analyticsType,
+  analyticsLabel,
 }: {
   href: string;
   label: string;
   variant?: 'primary' | 'secondary';
   location?: string;
   analyticsType?: string;
+  analyticsLabel?: string;
 }) => {
   const isExternal = href.startsWith('http');
   const resolvedAnalyticsType = analyticsType ?? variant;
@@ -42,7 +44,7 @@ const LandingLink = ({
         rel="noopener noreferrer"
         className={className}
         data-analytics-event={getEventName(href)}
-        data-analytics-label={label}
+        data-analytics-label={analyticsLabel ?? label}
         data-analytics-location={location}
         data-analytics-type={resolvedAnalyticsType}
       >
@@ -56,7 +58,7 @@ const LandingLink = ({
       className={className}
       href={href}
       data-analytics-event={getEventName(href)}
-      data-analytics-label={label}
+      data-analytics-label={analyticsLabel ?? label}
       data-analytics-location={location}
       data-analytics-type={resolvedAnalyticsType}
     >

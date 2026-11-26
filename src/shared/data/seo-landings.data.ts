@@ -10,6 +10,7 @@ export type FaqItem = {
 export type LandingLink = {
   label: string;
   href: string;
+  analyticsLabel?: string;
 };
 
 export type LandingSection = {
@@ -561,11 +562,12 @@ export const portfolioPages: LandingPageData[] = [
       'La demo parte de ejemplos reales de cartera para revisar como se registran creditos y pagos, que debe mostrar cada estado de cuenta y cuales reportes necesita el equipo antes de confirmar el alcance.',
     primaryCta: contactCta,
     secondaryCta: {
-      label: 'Consultar por WhatsApp',
+      label: 'Continuar en WhatsApp',
+      analyticsLabel: 'Consultar por WhatsApp',
       href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20Cobros%20Pro.',
     },
     heroNote:
-      'Recordatorios, canales de contacto, facturacion e integraciones se validan durante la demo; no se asumen como funciones estandar.',
+      'Recordatorios, canales de contacto, facturacion e integraciones se validan durante la demo; no se asumen como funciones estandar. Si continuás en WhatsApp, revisá y enviá el mensaje ahí.',
     highlightsTitle: 'Que puedes evaluar en Cobros Pro',
     highlights: [
       'Cartera de clientes y creditos en un sistema web',
@@ -707,10 +709,11 @@ export const portfolioPages: LandingPageData[] = [
     ],
     finalCta: {
       title: 'Prueba Cobros Pro con una muestra de tu cartera',
-      body: 'Revisemos clientes, creditos, pagos, saldos, estados de cuenta, usuarios y reportes para confirmar que cubre el producto y que requiere alcance adicional.',
+      body: 'Revisemos clientes, creditos, pagos, saldos, estados de cuenta, usuarios y reportes para confirmar que cubre el producto y que requiere alcance adicional. Si continuás en WhatsApp, revisá y enviá el mensaje ahí.',
       primary: contactCta,
       secondary: {
-        label: 'Consultar por WhatsApp',
+        label: 'Continuar en WhatsApp',
+        analyticsLabel: 'Consultar por WhatsApp',
         href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20Cobros%20Pro.',
       },
     },

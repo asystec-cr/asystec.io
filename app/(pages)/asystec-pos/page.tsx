@@ -324,7 +324,7 @@ const Page = () => {
             <div>
               <h2 className="text-2xl font-bold">Contacto por WhatsApp</h2>
               <p className="mt-1 text-sm text-green-50">
-                Escribinos y coordinamos una demo personalizada para tu negocio.
+                Abrí el chat y envianos un mensaje para coordinar una demo personalizada para tu negocio.
               </p>
             </div>
             <a
