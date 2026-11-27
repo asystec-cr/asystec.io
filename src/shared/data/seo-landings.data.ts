@@ -3637,6 +3637,15 @@ export const guidePages: LandingPageData[] = [
           'Datos exportables para compras y administracion',
         ],
       },
+      {
+        title: 'Comprueba si detectas un faltante por talla y color',
+        body: 'En una tienda de prueba, registra dos camisetas negras talla S y una azul talla M del mismo modelo. Simula vender la única azul M. El total del modelo baja de 3 a 2, pero ya no queda ninguna azul M. Las dos negras S siguen disponibles.',
+        items: [
+          'Busca la camiseta azul M en caja y revisa si puedes distinguir que esa combinación está agotada.',
+          'Pide que te muestren si el reporte de reposición separa tallas y colores, en lugar de mostrar solo el total del modelo.',
+          'Si tienes varias tiendas, confirma si puedes distinguir las existencias de cada local.',
+        ],
+      },
     ],
     decisionTable: {
       title: 'Checklist para comparar POS para tiendas de ropa',
