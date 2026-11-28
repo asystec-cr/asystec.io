@@ -1,8 +1,15 @@
+import type { MouseEventHandler } from 'react';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 import { CallToActionType, LinkOrButton } from '~/shared/types';
 
-const CTA = ({ callToAction, containerClass, linkClass, iconClass }: LinkOrButton) => {
+const CTA = ({
+  callToAction,
+  containerClass,
+  linkClass,
+  iconClass,
+  onClick,
+}: LinkOrButton & { onClick?: MouseEventHandler<HTMLAnchorElement> }) => {
   const { text, href, icon: Icon, targetBlank, trackingEvent, trackingLabel } = callToAction as CallToActionType;
   const analyticsProps = {
     'data-analytics-event': trackingEvent,
@@ -17,6 +24,7 @@ const CTA = ({ callToAction, containerClass, linkClass, iconClass }: LinkOrButto
             <Link
               className={twMerge('inline-flex items-center justify-center w-full sm:mb-0', linkClass)}
               href={href}
+              onClick={onClick}
               target="_blank"
               rel="noopener noreferrer"
               {...analyticsProps}
@@ -28,6 +36,7 @@ const CTA = ({ callToAction, containerClass, linkClass, iconClass }: LinkOrButto
             <Link
               className={twMerge('inline-flex items-center justify-center w-full sm:mb-0 ', linkClass)}
               href={href}
+              onClick={onClick}
               {...analyticsProps}
             >
               {Icon && <Icon className={twMerge(`w-5 h-5 ${text ? 'mr-1 rtl:mr-0 rtl:ml-1' : ''}`, iconClass)} />}

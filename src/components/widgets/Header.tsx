@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { type KeyboardEvent, useRef, useState } from 'react';
 import { IconRss } from '@tabler/icons-react';
 import { useOnClickOutside } from '~/hooks/useOnClickOutside';
 import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
@@ -61,20 +61,72 @@ const Header = () => {
     setIsDropdownOpen(updatedIsDropdownOpen as boolean[]);
   };
 
+  const handleNavigationEscape = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key !== 'Escape' || event.defaultPrevented) return;
+
+    const openIndex = isDropdownOpen.indexOf(true);
+    if (openIndex !== -1) {
+      const trigger = event.currentTarget.querySelector<HTMLButtonElement>(
+        `button[aria-controls="header-dropdown-${openIndex}"]`,
+      );
+      if (trigger?.offsetParent) {
+        event.preventDefault();
+        handleCloseDropdownOnClick(openIndex);
+        trigger.focus();
+        return;
+      }
+    }
+
+    const menu = event.currentTarget.querySelector<HTMLButtonElement>('button[aria-controls="primary-navigation"]');
+    if (isToggleMenuOpen && menu?.offsetParent) {
+      event.preventDefault();
+      handleToggleMenuOnClick();
+      menu.focus();
+    }
+  };
+
   useOnClickOutside(ref, () => {
     setIsDropdownOpen(updatedIsDropdownOpen as boolean[]);
   });
+
+  const renderHeaderActions = (onClick?: () => void) => (
+    <div className="flex w-full items-center justify-between lg:w-auto lg:gap-2">
+      {showToggleTheme && <ToggleDarkMode />}
+      {showRssFeed && (
+        <Link
+          className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+          aria-label="RSS Feed"
+          href=""
+        >
+          <IconRss className="h-5 w-5" />
+        </Link>
+      )}
+      {actions && actions.length > 0 && (
+        <div className="ml-3 flex shrink-0 justify-end rtl:ml-0 rtl:mr-3">
+          {actions.map((callToAction, index) => (
+            <CTA
+              key={`item-action-${index}`}
+              callToAction={callToAction as CallToActionType}
+              onClick={onClick}
+              linkClass="btn btn-primary m-1 min-h-11 whitespace-nowrap px-4 py-2 text-sm font-semibold shadow-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xl:px-5"
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <header
       className={`top-0 z-40 mx-auto w-full flex-none bg-white transition-all duration-100 ease-in dark:bg-slate-900 lg:bg-white/90 lg:backdrop-blur-sm dark:lg:bg-slate-900/90 ${
         isSticky ? 'sticky' : 'relative'
-      } ${isToggleMenuOpen ? 'h-screen lg:h-auto' : 'h-auto'}`}
+      } ${isToggleMenuOpen ? 'h-[100dvh] lg:h-auto' : 'h-auto'}`}
       id="header"
+      onKeyDown={handleNavigationEscape}
     >
-      <div className="mx-auto w-full max-w-7xl lg:flex lg:min-w-0 lg:items-center lg:justify-between lg:gap-3 lg:py-3.5 lg:px-4">
+      <div className="mx-auto flex h-full w-full max-w-7xl flex-col lg:h-auto lg:min-w-0 lg:flex-row lg:items-center lg:justify-between lg:gap-3 lg:px-4 lg:py-3.5">
         <div
-          className={`flex justify-between py-3 px-3 lg:py-0 lg:px-0 ${
+          className={`flex shrink-0 justify-between py-3 px-3 lg:py-0 lg:px-0 ${
             isToggleMenuOpen
               ? 'lg:bg-transparent lg:dark:bg-transparent lg:border-none bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-600'
               : ''
@@ -93,12 +145,17 @@ const Header = () => {
             <ToggleMenu handleToggleMenuOnClick={handleToggleMenuOnClick} isToggleMenuOpen={isToggleMenuOpen} />
           </div>
         </div>
+        {isToggleMenuOpen && (
+          <div className="shrink-0 border-b border-gray-200 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-900 lg:hidden">
+            {renderHeaderActions(handleToggleMenuOnClick)}
+          </div>
+        )}
         <nav
           id="primary-navigation"
-          className={`${isToggleMenuOpen ? 'block px-3' : 'hidden'} h-screen lg:w-full ${
+          className={`${isToggleMenuOpen ? 'block min-h-0 flex-1 px-3' : 'hidden'} lg:w-full ${
             position === 'right' ? 'justify-end' : position === 'left' ? 'justify-start' : 'justify-center'
           } w-auto overflow-y-auto dark:text-slate-200 lg:mx-3 lg:flex lg:h-auto lg:min-w-0 lg:flex-1 lg:items-center lg:overflow-visible xl:mx-4`}
-          aria-label="Main navigation"
+          aria-label="Navegación principal"
         >
           <ul
             ref={ref}
@@ -111,8 +168,7 @@ const Header = () => {
                     <>
                       <button
                         type="button"
-                        className="flex items-center whitespace-nowrap px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white lg:px-2 lg:py-2 xl:px-3 2xl:px-4"
-                        aria-haspopup="true"
+                        className="flex items-center whitespace-nowrap px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600 dark:hover:text-white lg:px-2 lg:py-2 xl:px-3 2xl:px-4"
                         aria-expanded={isDropdownOpen[index]}
                         aria-controls={`header-dropdown-${index}`}
                         onClick={() => handleDropdownOnClick(index)}
@@ -135,7 +191,7 @@ const Header = () => {
                         {links.map(({ label: label2, target: target, href: href2 }, index2) => (
                           <li key={`item-link-${index2}`}>
                             <Link
-                              className="whitespace-no-wrap block py-2 px-5 first:rounded-t last:rounded-b dark:hover:bg-gray-700 lg:hover:bg-gray-200"
+                              className="whitespace-no-wrap block py-2 px-5 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-blue-600 first:rounded-t last:rounded-b dark:hover:bg-gray-700 lg:hover:bg-gray-200"
                               href={href2 as string}
                               {...getLinkTargetProps(target)}
                               onClick={() =>
@@ -150,7 +206,7 @@ const Header = () => {
                     </>
                   ) : (
                     <Link
-                      className="flex items-center whitespace-nowrap px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 dark:hover:text-white lg:px-2 lg:py-2 xl:px-3 2xl:px-4"
+                      className="flex items-center whitespace-nowrap px-4 py-3 font-medium transition duration-150 ease-in-out hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600 dark:hover:text-white lg:px-2 lg:py-2 xl:px-3 2xl:px-4"
                       href={href as string}
                       {...getLinkTargetProps(target)}
                       onClick={() => (isToggleMenuOpen ? handleToggleMenuOnClick() : handleDropdownOnClick(index))}
@@ -162,35 +218,7 @@ const Header = () => {
               ))}
           </ul>
         </nav>
-        <div
-          className={`${
-            isToggleMenuOpen ? 'block' : 'hidden'
-          } fixed bottom-0 left-0 w-full justify-end p-3 lg:static lg:mb-0 lg:flex lg:w-auto lg:shrink-0 lg:self-center lg:p-0 lg:bg-transparent lg:dark:bg-transparent lg:border-none bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-600`}
-        >
-          <div className="flex w-full items-center justify-between lg:w-auto lg:gap-2">
-            {showToggleTheme && <ToggleDarkMode />}
-            {showRssFeed && (
-              <Link
-                className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-                aria-label="RSS Feed"
-                href=""
-              >
-                <IconRss className="h-5 w-5" />
-              </Link>
-            )}
-            {actions && actions.length > 0 && (
-              <div className="ml-3 flex shrink-0 justify-end rtl:ml-0 rtl:mr-3">
-                {actions.map((callToAction, index) => (
-                  <CTA
-                    key={`item-action-${index}`}
-                    callToAction={callToAction as CallToActionType}
-                    linkClass="btn btn-primary m-1 whitespace-nowrap py-2 px-4 text-sm font-semibold shadow-none xl:px-5"
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
+        <div className="hidden lg:flex lg:w-auto lg:shrink-0 lg:self-center">{renderHeaderActions()}</div>
       </div>
     </header>
   );
