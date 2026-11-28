@@ -1,6 +1,7 @@
 import { productDemoHref } from '~/shared/marketing/demo-contact.mjs';
 import JsonLd from '~/components/seo/JsonLd';
 import PosImageCarousel from '~/components/widgets/PosImageCarousel';
+import PosOfflineDemo from '~/components/widgets/PosOfflineDemo';
 import { getPortfolioPage } from '~/shared/data/seo-landings.data';
 import { buildLandingSchemas, buildPageMetadata } from '~/utils/seo';
 
@@ -214,6 +215,8 @@ const Page = () => {
             ))}
           </div>
         </div>
+
+        <PosOfflineDemo />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <article className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-800">
