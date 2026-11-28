@@ -1,4 +1,5 @@
-import PosImageCarousel from './PosImageCarousel';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const PosHero = () => {
   return (
@@ -10,30 +11,22 @@ const PosHero = () => {
         <div className="relative grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <span className="inline-flex rounded-full border border-blue-200 bg-white px-3 py-1 text-xs font-semibold text-blue-800 dark:border-blue-700 dark:bg-slate-800 dark:text-blue-300">
-              Lanzamiento destacado • Asystec POS
+              Asystec POS · Caja de escritorio
             </span>
             <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
-              El POS que mantiene tu negocio activo incluso sin internet
+              Registrá ventas en caja aunque se caiga internet
             </h2>
             <p className="mt-4 max-w-2xl text-base text-gray-600 sm:text-lg dark:text-slate-300">
-              Sistema de escritorio para pymes en Costa Rica con facturación electrónica TRIBU/Hacienda, app móvil,
-              seguridad y autoupdate.
+              Con Asystec POS podés registrar una venta en efectivo en la caja local sin conexión. Enviar o consultar
+              un comprobante electrónico con Hacienda requiere conexión.
             </p>
 
-            <div className="mt-5 grid gap-2 text-sm text-gray-700 dark:text-slate-300 sm:grid-cols-2">
-              <p className="rounded-lg border border-blue-100 bg-white/80 px-3 py-2 dark:border-slate-700 dark:bg-slate-800/80">
-                100% offline para operación diaria
-              </p>
-              <p className="rounded-lg border border-blue-100 bg-white/80 px-3 py-2 dark:border-slate-700 dark:bg-slate-800/80">
-                Alto rendimiento en caja e inventario
-              </p>
-              <p className="rounded-lg border border-blue-100 bg-white/80 px-3 py-2 dark:border-slate-700 dark:bg-slate-800/80">
-                Integración con TRIBU/Hacienda
-              </p>
-              <p className="rounded-lg border border-blue-100 bg-white/80 px-3 py-2 dark:border-slate-700 dark:bg-slate-800/80">
-                Soporte y mejora continua
-              </p>
-            </div>
+            <Link
+              href="/asystec-pos#demo-venta-sin-internet"
+              className="mt-3 inline-flex min-h-11 items-center rounded text-sm font-semibold text-blue-800 underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700 dark:text-blue-300"
+            >
+              Simular una venta en efectivo
+            </Link>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -53,31 +46,19 @@ const PosHero = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <PosImageCarousel
-              images={[
-                { src: '/images/pos/pos0.jpeg', alt: 'Asystec POS en entorno de trabajo profesional' },
-                { src: '/images/pos/pos1.jpeg', alt: 'Vista adicional de Asystec POS' },
-                { src: '/images/pos/pos2.jpeg', alt: 'Módulo adicional de Asystec POS' },
-              ]}
-              heightClassName="h-[360px] sm:h-[430px]"
+          <figure>
+            <Image
+              src="/images/pos/pos0.jpeg"
+              alt="Pantalla de caja de Asystec POS con el carrito vacío y el método de pago en efectivo seleccionado"
+              width={1417}
+              height={897}
+              sizes="(min-width: 1280px) 540px, (min-width: 1024px) 43vw, 90vw"
+              className="h-auto w-full rounded-xl border border-blue-100 dark:border-slate-700"
             />
-
-            <div className="mt-3 grid grid-cols-3 rounded-xl border border-blue-100 bg-white/95 text-center dark:border-slate-700 dark:bg-slate-900/95">
-              <div className="px-3 py-3">
-                <p className="text-xl font-bold text-gray-900 dark:text-white">24/7</p>
-                <p className="text-xs text-gray-500 dark:text-slate-400">Operación local</p>
-              </div>
-              <div className="border-x border-blue-100 px-3 py-3 dark:border-slate-700">
-                <p className="text-xl font-bold text-gray-900 dark:text-white">CR</p>
-                <p className="text-xs text-gray-500 dark:text-slate-400">Facturación al día</p>
-              </div>
-              <div className="px-3 py-3">
-                <p className="text-xl font-bold text-gray-900 dark:text-white">Auto</p>
-                <p className="text-xs text-gray-500 dark:text-slate-400">Update continuo</p>
-              </div>
-            </div>
-          </div>
+            <figcaption className="mt-2 text-xs text-gray-600 dark:text-slate-300">
+              Pantalla de caja de Asystec POS antes de agregar productos.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
