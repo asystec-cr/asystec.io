@@ -4,20 +4,17 @@ import {
   IconBrandGithub,
   IconBrandTailwind,
   IconBrandTwitter,
-  IconBulb,
   IconCheck,
   IconClock,
   IconComponents,
   IconDownload,
   IconListCheck,
+  IconCashRegister,
   IconMail,
   IconMapPin,
   IconPhoneCall,
-  IconRocket,
   IconBrandWhatsapp,
   IconHelpCircle,
-  IconClockHour5,
-  IconClipboardData,
 } from '@tabler/icons-react';
 import {
   CallToActionProps,
@@ -91,74 +88,31 @@ export const featuresHome: FeaturesProps = {
   hasBackground: false,
   columns: 3,
   header: {
-    title: (
-      <>
-        ¿Por qué elegir <span className="whitespace-nowrap">Asystec?</span>
-      </>
-    ),
-    subtitle: 'Aquí tienes algunas razones por las que deberías adquirir nuestras soluciones de software',
-    tagline: 'Beneficios',
+    title: 'Mirá qué podés hacer con Asystec',
+    subtitle: 'Probá una venta en caja, revisá cómo se aplica un abono o encontrá el canal de soporte.',
+    tagline: 'Asystec en la práctica',
   },
   items: [
     {
-      title: 'Soporte y servicio al cliente excepcionales',
+      title: 'Registrar una venta sin internet',
       description:
-        'Estamos aquí para ti. Nuestro excepcional servicio al cliente brinda soporte confiable y soluciones efectivas a tus necesidades.',
-      icon: IconHelpCircle,
-      // callToAction: {
-      //   text: 'Discover now',
-      //   href: '/',
-      // },
+        'Probá una venta ficticia en efectivo y mirá cómo queda guardada en caja local. El envío y la consulta con Hacienda requieren internet.',
+      icon: IconCashRegister,
+      callToAction: { text: 'Probar la venta simulada', href: '/asystec-pos#demo-venta-sin-internet' },
     },
     {
-      title: 'Eficiencia y ahorro de tiempo',
+      title: 'Revisar qué queda por cobrar',
       description:
-        'Gana tiempo para disfrutar con tu familia. Nuestra solución eficiente automatiza tareas, liberándote para compartir con los que más amas.',
-      icon: IconClockHour5,
-      // callToAction: {
-      //   text: 'Discover now',
-      //   href: '/',
-      // },
-    },
-    {
-      title: 'Acceso a información y análisis en tiempo real',
-      description:
-        'Toma decisiones estratégicas con información actualizada al instante. Accede a datos y análisis en tiempo real para impulsar tu negocio.',
+        'Si un cliente paga solo una parte, podés registrar el abono en Cobros Pro y consultar el saldo pendiente y el historial de movimientos.',
       icon: IconListCheck,
-      // callToAction: {
-      //   text: 'Discover now',
-      //   href: '/',
-      // },
+      callToAction: { text: 'Ver abonos en Cobros Pro', href: '/cobrosapp' },
     },
     {
-      title: 'Innovación y actualización constante',
+      title: 'Encontrar soporte en Costa Rica',
       description:
-        'Destaca en el mercado. Nuestra solución se actualiza constantemente con innovaciones que te mantienen por delante de la competencia.',
-      icon: IconRocket,
-      // callToAction: {
-      //   text: 'Discover now',
-      //   href: '/',
-      // },
-    },
-    {
-      title: 'Reducción de costos',
-      description:
-        'Optimiza tus recursos y maximiza tu rentabilidad. Nuestra solución reduce costos al automatizar tareas y optimizar procesos.',
-      icon: IconBulb,
-      // callToAction: {
-      //   text: 'Discover now',
-      //   href: '/',
-      // },
-    },
-    {
-      title: 'Facilidad de uso e interfaz intuitiva',
-      description:
-        'Simplifica tu experiencia. Nuestra interfaz intuitiva y fácil de usar te permite aprovechar al máximo nuestra solución sin complicaciones.',
-      icon: IconClipboardData,
-      // callToAction: {
-      //   text: 'Discover now',
-      //   href: '/',
-      // },
+        'Asystec está en Esparza, Puntarenas. Si ya usás un producto de Asystec, indicá cuál y qué pasó en el canal oficial de soporte para clientes.',
+      icon: IconHelpCircle,
+      callToAction: { text: 'Ir a soporte para clientes', href: '/contact#soporte' },
     },
   ],
 };
