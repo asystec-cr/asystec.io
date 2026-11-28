@@ -6,8 +6,8 @@ import { ToggleMenuProps } from '~/shared/types';
 const ToggleMenu = ({ handleToggleMenuOnClick, isToggleMenuOpen }: ToggleMenuProps) => (
   <button
     type="button"
-    className="ml-1.5 inline-flex items-center rounded-lg p-2.5 text-sm text-gray-500 transition hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-700"
-    aria-label={isToggleMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
+    className="ml-1.5 inline-flex items-center rounded-lg p-2.5 text-sm text-gray-500 transition hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-blue-400"
+    aria-label={isToggleMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
     aria-controls="primary-navigation"
     aria-expanded={isToggleMenuOpen}
     onClick={handleToggleMenuOnClick}
