@@ -2,7 +2,8 @@ import type { LandingPageData } from '../seo-landings.data';
 
 const contactCta = { label: 'Coordinar demo', href: '/contact' };
 const whatsappCta = {
-  label: 'Consultar por WhatsApp',
+  label: 'Continuar en WhatsApp',
+  analyticsLabel: 'Consultar por WhatsApp',
   href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20evaluar%20Factura%20Pro%20para%20mi%20negocio.',
 };
 
@@ -23,6 +24,7 @@ export const facturaProProductPage: LandingPageData = {
     'Revisa el flujo desde el cliente y la cotizacion hasta el comprobante, el pago y el reporte. Asi puedes comparar el producto con tu operacion real sin asumir funciones que deban validarse.',
   primaryCta: contactCta,
   secondaryCta: whatsappCta,
+  heroNote: 'Se abre un mensaje preparado. Revisalo y envialo desde WhatsApp.',
   highlights: [
     'Comprobantes electronicos y datos comerciales en un solo flujo.',
     'Clientes y catalogo de productos o servicios.',
@@ -161,7 +163,7 @@ export const facturaProProductPage: LandingPageData = {
     'Estas paginas ayudan a separar facturacion, venta presencial, cobranza, migracion y necesidades propias de una empresa de servicios.',
   finalCta: {
     title: 'Prueba Factura Pro con una muestra real',
-    body: 'Comparte ejemplos de clientes, productos o servicios, cotizaciones, comprobantes, pagos y reportes para confirmar el alcance antes de cambiar de sistema.',
+    body: 'Comparte ejemplos de clientes, productos o servicios, cotizaciones, comprobantes, pagos y reportes para confirmar el alcance antes de cambiar de sistema. Si continuás en WhatsApp, revisá y enviá el mensaje ahí.',
     primary: contactCta,
     secondary: whatsappCta,
   },

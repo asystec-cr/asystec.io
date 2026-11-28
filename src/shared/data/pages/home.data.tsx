@@ -554,6 +554,7 @@ export const contactHome: ContactProps = {
   ],
   form: {
     title: '¿Listo para empezar?',
+    description: 'Completá tus datos para preparar el mensaje. Revisalo y envialo desde WhatsApp.',
     inputs: [
       {
         type: 'text',
@@ -576,7 +577,7 @@ export const contactHome: ContactProps = {
       placeholder: 'Escribe aquí tu mensaje...',
     },
     btn: {
-      title: 'Enviar Mensaje',
+      title: 'Continuar en WhatsApp',
       type: 'submit',
     },
     submitAction: {
@@ -600,9 +601,9 @@ export const callToAction2Home: CallToActionProps = {
       href: '/contact',
     },
     {
-      title: 'Escribir por WhatsApp',
+      title: 'Continuar en WhatsApp',
       description:
-        'Contacto directo para demos, dudas de implementación o una cotización inicial sin pasar por formularios largos.',
+        'Abrí un mensaje preparado para coordinar una demo sin llenar el formulario. Revisalo y envialo desde WhatsApp.',
       href: 'https://wa.me/50689754741?text=Hola%20Asystec%2C%20quiero%20coordinar%20una%20demo%20de%20software%20para%20mi%20negocio.',
     },
     {

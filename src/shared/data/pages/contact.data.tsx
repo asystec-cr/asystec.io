@@ -49,7 +49,7 @@ export const contactLeadContact: ContactProps = {
   ],
   form: {
     title: 'Preparar mensaje por WhatsApp',
-    description: 'Completa los datos básicos y agrega el contexto de la operación.',
+    description: 'Completá el contexto para preparar el mensaje. Revisalo y envialo desde WhatsApp.',
     inputs: [
       {
         type: 'text',
