@@ -2,12 +2,13 @@ import Link from 'next/link';
 
 import JsonLd from '~/components/seo/JsonLd';
 import Contact from '~/components/widgets/Contact';
+import DemoContactForm from '~/components/widgets/DemoContactForm';
 import { contactLeadContact } from '~/shared/data/pages/contact.data';
+import { demoWhatsAppHref, getDemoProduct } from '~/shared/marketing/demo-contact.mjs';
 import { getWebsiteLeadReference } from '~/shared/marketing/hardware-lead';
 import { absoluteUrl, buildPageMetadata } from '~/utils/seo';
 
 const pagePath = '/contact';
-const contactWhatsAppMessage = 'Hola Asystec, quiero coordinar una demo para mi negocio.';
 const contactDescription =
   'Contacta a Asystec en Costa Rica para una demo de Nexo con IA, POS, facturación, cobros o software a medida. Revisamos tu proceso y el alcance que necesitas.';
 
@@ -142,10 +143,12 @@ const schemas = [
 
 const ContactPageContent = ({
   whatsappUrl,
-  contact,
+  productKey,
+  leadReference,
 }: {
   whatsappUrl: string;
-  contact: typeof contactLeadContact;
+  productKey?: string;
+  leadReference?: string;
 }) => (
   <>
     <JsonLd data={schemas} />
@@ -231,7 +234,9 @@ const ContactPageContent = ({
         </div>
       </section>
 
-      <Contact {...contact} />
+      <Contact {...contactLeadContact}>
+        <DemoContactForm key={productKey} productKey={productKey} leadReference={leadReference} />
+      </Contact>
 
       <section className="py-14 md:py-20" aria-labelledby="demo-checklist-title">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -333,17 +338,19 @@ const ContactPageContent = ({
   </>
 );
 
-const Page = ({ searchParams }: { searchParams: { ref?: string | string[] } }) => {
+const Page = ({ searchParams }: { searchParams: { ref?: string | string[]; producto?: string | string[] } }) => {
   const leadReference = getWebsiteLeadReference(searchParams.ref);
-  const messagePrefix = [contactWhatsAppMessage, leadReference].filter(Boolean).join('\n');
-  const whatsappUrl = `https://wa.me/50689754741?text=${encodeURIComponent(messagePrefix)}`;
-  const form = contactLeadContact.form;
-  const contact =
-    form?.submitAction?.type === 'whatsapp' && leadReference
-      ? { ...contactLeadContact, form: { ...form, submitAction: { ...form.submitAction, messagePrefix } } }
-      : contactLeadContact;
+  const productKey = typeof searchParams.producto === 'string' && getDemoProduct(searchParams.producto)
+    ? searchParams.producto
+    : undefined;
 
-  return <ContactPageContent contact={contact} whatsappUrl={whatsappUrl} />;
+  return (
+    <ContactPageContent
+      productKey={productKey}
+      leadReference={leadReference}
+      whatsappUrl={demoWhatsAppHref(productKey, leadReference)}
+    />
+  );
 };
 
 export default Page;

@@ -1,9 +1,13 @@
+import type { ReactNode } from 'react';
 import Form from '../common/Form';
 import Headline from '../common/Headline';
 import { ContactProps } from '~/shared/types';
 import WidgetWrapper from '../common/WidgetWrapper';
 
-const Contact = ({ header, content, items, form, id, hasBackground = false }: ContactProps) => (
+type ContactWidgetProps = Omit<ContactProps, 'form'> &
+  ({ form: ContactProps['form']; children?: never } | { form?: never; children: ReactNode });
+
+const Contact = ({ header, content, items, form, id, hasBackground = false, children }: ContactWidgetProps) => (
   <WidgetWrapper id={id ? id : ''} hasBackground={hasBackground} containerClass="max-w-6xl">
     {header && <Headline header={header} titleClass="text-3xl sm:text-5xl" />}
     <div className="flex items-stretch justify-center">
@@ -36,7 +40,7 @@ const Contact = ({ header, content, items, form, id, hasBackground = false }: Co
               ))}
           </ul>
         </div>
-        <Form {...form} containerClass="card h-fit max-w-2xl mx-auto p-5 md:p-12" btnPosition="center" />
+        {children ?? (form && <Form {...form} containerClass="card h-fit max-w-2xl mx-auto p-5 md:p-12" btnPosition="center" />)}
       </div>
     </div>
   </WidgetWrapper>

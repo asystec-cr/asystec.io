@@ -19,17 +19,16 @@ export const heroContact: HeroProps = {
   tagline: 'Contacto',
 };
 
-export const contactLeadContact: ContactProps = {
-  id: 'coordinar-demo',
+export const contactLeadContact: Omit<ContactProps, 'form'> = {
   hasBackground: true,
   header: {
     title: 'Cuéntanos qué necesitas resolver',
     subtitle:
-      'Comparte el contexto básico y WhatsApp abrirá un mensaje listo para enviar al equipo comercial de Asystec.',
+      'Elegí lo que querés revisar y continuá por WhatsApp con un mensaje preparado.',
     tagline: 'Contacto comercial',
   },
   content:
-    'Para preparar una demo útil, describe el giro del negocio, el problema principal y el resultado que necesitas comprobar. No incluyas contraseñas, certificados ni datos sensibles.',
+    'Con el problema principal podés iniciar la conversación. No hace falta compartir nombre, correo, contraseñas, certificados ni datos de clientes para preparar el mensaje.',
   items: [
     {
       title: 'Operación actual',
@@ -47,45 +46,6 @@ export const contactLeadContact: ContactProps = {
       icon: IconChartBar,
     },
   ],
-  form: {
-    title: 'Preparar mensaje por WhatsApp',
-    description: 'Completá el contexto para preparar el mensaje. Revisalo y envialo desde WhatsApp.',
-    inputs: [
-      {
-        type: 'text',
-        label: 'Nombre',
-        name: 'name',
-        autocomplete: 'name',
-        placeholder: 'Tu nombre',
-      },
-      {
-        type: 'email',
-        label: 'Correo electrónico',
-        name: 'email',
-        autocomplete: 'email',
-        placeholder: 'correo@negocio.com',
-      },
-    ],
-    textarea: {
-      cols: 30,
-      rows: 6,
-      label: 'Contexto para la demo',
-      name: 'textarea',
-      placeholder:
-        'Ejemplo: tienda con dos cajas; necesito conectar ventas, inventario, facturación y cierres por usuario.',
-    },
-    btn: {
-      title: 'Continuar en WhatsApp',
-      type: 'submit',
-    },
-    submitAction: {
-      type: 'whatsapp',
-      phone: '50689754741',
-      messagePrefix: 'Hola Asystec, quiero coordinar una demo para mi negocio.',
-      trackingEvent: 'contact_whatsapp_form_submit',
-      trackingLabel: 'Formulario de demo en contacto',
-    },
-  },
 };
 
 // Contact data on Contact page *******************

@@ -1,3 +1,4 @@
+import { productDemoHref } from '~/shared/marketing/demo-contact.mjs';
 import JsonLd from '~/components/seo/JsonLd';
 import PosImageCarousel from '~/components/widgets/PosImageCarousel';
 import { getPortfolioPage } from '~/shared/data/seo-landings.data';
@@ -358,7 +359,7 @@ const Page = () => {
                 Solicitar demo
               </a>
               <a
-                href="/contact"
+                href={productDemoHref('asystec-pos')}
                 data-analytics-event="cta_contact"
                 data-analytics-label="Asystec POS contacto"
                 data-analytics-location="product_final_cta"
