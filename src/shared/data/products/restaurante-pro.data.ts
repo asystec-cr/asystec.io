@@ -1,10 +1,11 @@
+import { productDemoHref } from '~/shared/marketing/demo-contact.mjs';
 import type { LandingPageData } from '../seo-landings.data';
 
 export const restauranteProDownloadUrl =
   'https://asystec-apps.s3.us-east-2.amazonaws.com/updates/restaurante-pro/latest/RestaurantePro-Setup.exe';
 
 const downloadCta = { label: 'Descargar Restaurante Pro', href: restauranteProDownloadUrl };
-const demoCta = { label: 'Coordinar demo', href: '/contact' };
+const demoCta = { label: 'Coordinar demo', href: productDemoHref('restaurante-pro') };
 
 export const restauranteProProductPage: LandingPageData = {
   slug: 'restaurante-pro',

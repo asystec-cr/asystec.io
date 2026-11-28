@@ -1,6 +1,7 @@
+import { productDemoHref } from '~/shared/marketing/demo-contact.mjs';
 import type { LandingPageData } from '../seo-landings.data';
 
-const contactCta = { label: 'Coordinar demo', href: '/contact' };
+const contactCta = { label: 'Coordinar demo', href: productDemoHref('factura-pro') };
 const whatsappCta = {
   label: 'Continuar en WhatsApp',
   analyticsLabel: 'Consultar por WhatsApp',
