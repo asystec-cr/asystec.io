@@ -14,7 +14,11 @@ const DemoContactForm = ({ productKey, leadReference }: { productKey?: string; l
   const whatsappUrl = demoWhatsAppHref(productKey, leadReference, problem, range);
 
   return (
-    <section className="card mx-auto w-full max-w-2xl self-start p-5 md:p-12" aria-labelledby="demo-form-title">
+    <section
+      id="coordinar-demo"
+      className="card mx-auto w-full max-w-2xl scroll-mt-32 self-start p-5 md:p-12"
+      aria-labelledby="demo-form-title"
+    >
       <h2 id="demo-form-title" className="mb-3 text-2xl font-bold">
         Prepará tu mensaje
       </h2>

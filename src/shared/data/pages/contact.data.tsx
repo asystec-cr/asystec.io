@@ -20,7 +20,6 @@ export const heroContact: HeroProps = {
 };
 
 export const contactLeadContact: Omit<ContactProps, 'form'> = {
-  id: 'coordinar-demo',
   hasBackground: true,
   header: {
     title: 'Cuéntanos qué necesitas resolver',
